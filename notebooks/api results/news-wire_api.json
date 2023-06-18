@@ -1,0 +1,1846 @@
+{   'copyright': 'Copyright (c) 2023 The New York Times Company.  All Rights '
+                 'Reserved.',
+    'num_results': 1,
+    'results': [   {   'book_author': 'Jerry Seinfeld',
+                       'book_title': 'SeinLanguage',
+                       'byline': 'ANITA GATES',
+                       'isbn13': ['9780792719120'],
+                       'publication_dt': '1993-10-10',
+                       'summary': '',
+                       'uri': 'nyt://book/00000000-0000-0000-0000-000000000000',
+                       'url': 'http://www.nytimes.com/1993/10/10/books/in-short-nonfiction-748993.html',
+                       'uuid': '00000000-0000-0000-0000-000000000000'}],
+    'status': 'OK'}
+{   'copyright': 'Copyright (c) 2023 The New York Times Company. All Rights '
+                 'Reserved.',
+    'has_more': True,
+    'num_results': 20,
+    'results': [   {   'byline': 'Nicolas Rapold',
+                       'critics_pick': 0,
+                       'date_updated': '2023-06-08 16:05:02',
+                       'display_title': 'A Woman Escapes',
+                       'headline': '‘A Woman Escapes’ Review: Screen Sharing',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of A '
+                                                          'Woman Escapes',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/06/08/movies/a-woman-escapes-review.html'},
+                       'mpaa_rating': '',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/06/07/multimedia/a-woman-escapes-kjqm/a-woman-escapes-kjqm-mediumThreeByTwo440.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': None,
+                       'publication_date': '2023-06-08',
+                       'summary_short': 'In this moody epistolary film, a '
+                                        'woman in Paris works through a close '
+                                        'friend’s death with the help of video '
+                                        'correspondences.'},
+...
+                       'opening_date': None,
+                       'publication_date': '1982-09-15',
+                       'summary_short': ''}],
+    'status': 'OK'}
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+{   'copyright': 'Copyright (c) 2023 The New York Times Company.  All Rights '
+                 'Reserved.',
+    'num_results': 500,
+    'results': [   {   'abstract': 'While the world’s eyes were on the '
+                                   'pandemic, the war in Ukraine and China, '
+                                   'the paths to prosperity and shared '
+                                   'interests have grown murkier.',
+                       'byline': 'BY PATRICIA COHEN',
+                       'created_date': '2023-06-18T03:00:36-04:00',
+                       'des_facet': [   'International Trade and World Market',
+                                        'United States Economy',
+                                        'Economic Conditions and Trends',
+                                        'International Relations',
+                                        'Developing Countries',
+                                        'Capitalism (Theory and Philosophy)',
+                                        'Supply Chain',
+                                        'Global Warming',
+                                        'Energy and Power',
+                                        'Socialism (Theory and Philosophy)'],
+                       'first_published_date': '2023-06-18T03:00:36-04:00',
+                       'geo_facet': [   'China',
+                                        'East Asia',
+                                        'Southeast Asia',
+                                        'Europe',
+                                        'United States'],
+                       'item_type': 'Article',
+                       'kicker': '',
+                       'material_type_facet': 'News',
+                       'multimedia': [   {   'caption': 'Factory workers at a '
+                                                        'Chinese company in '
+                                                        'Mexico. Communist-led '
+                                                        'China turned out to '
+                                                        'be the global '
+                                                        'economic system’s '
+                                                        'biggest beneficiary.',
+                                             'copyright': 'Luis Antonio Rojas '
+                                                          'for The New York '
+                                                          'Times',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/multimedia/18econ-rethink-01-hfmj/00econ-rethink-01-hfmj-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': 'Factory workers at a '
+                                                        'Chinese company in '
+                                                        'Mexico. Communist-led '
+                                                        'China turned out to '
+                                                        'be the global '
+                                                        'economic system’s '
+                                                        'biggest beneficiary.',
+                                             'copyright': 'Luis Antonio Rojas '
+                                                          'for The New York '
+                                                          'Times',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/multimedia/18econ-rethink-01-hfmj/00econ-rethink-01-hfmj-mediumThreeByTwo210.jpg',
+                                             'width': 210},
+                                         {   'caption': 'Factory workers at a '
+                                                        'Chinese company in '
+                                                        'Mexico. Communist-led '
+                                                        'China turned out to '
+                                                        'be the global '
+                                                        'economic system’s '
+                                                        'biggest beneficiary.',
+                                             'copyright': 'Luis Antonio Rojas '
+                                                          'for The New York '
+                                                          'Times',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/multimedia/18econ-rethink-01-hfmj/00econ-rethink-01-hfmj-mediumThreeByTwo440.jpg',
+                                             'width': 440},
+                                         {   'caption': 'Factory workers at a '
+                                                        'Chinese company in '
+                                                        'Mexico. Communist-led '
+                                                        'China turned out to '
+                                                        'be the global '
+                                                        'economic system’s '
+                                                        'biggest beneficiary.',
+                                             'copyright': 'Luis Antonio Rojas '
+                                                          'for The New York '
+                                                          'Times',
+                                             'format': 'Normal',
+                                             'height': 152,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/multimedia/18econ-rethink-01-hfmj/00econ-rethink-01-hfmj-articleInline.jpg',
+                                             'width': 190}],
+                       'org_facet': ['International Monetary Fund'],
+                       'per_facet': None,
+                       'published_date': '2023-06-18T03:00:36-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '18Econ-Rethink',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': 'Economy',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/18/multimedia/18econ-rethink-01-hfmj/00econ-rethink-01-hfmj-thumbStandard.jpg',
+                       'title': 'Why It Seems Everything We Knew About the '
+                                'Global Economy Is No Longer True',
+                       'updated_date': '2023-06-18T03:00:36-04:00',
+                       'uri': 'nyt://article/d83813aa-3c91-5f0a-b189-4f030e0b33ff',
+                       'url': 'https://www.nytimes.com/2023/06/18/business/economy/global-economy-us-china.html'},
+                   {   'abstract': 'Estimated to be worth about $460 billion, '
+                                   'space businesses sometimes operate in '
+                                   'legal black holes.',
+                       'byline': 'BY EPHRAT LIVNI AND SARAH KESSLER',
+                       'created_date': '2023-06-17T08:08:33-04:00',
+                       'des_facet': [   'Regulation and Deregulation of '
+                                        'Industry',
+                                        'Private Spaceflight',
+                                        'International Relations',
+                                        'Artificial Intelligence',
+                                        'Law and Legislation'],
+                       'first_published_date': '2023-06-17T08:08:33-04:00',
+                       'geo_facet': None,
+                       'item_type': 'Article',
+                       'kicker': 'DealBook Newsletter',
+                       'material_type_facet': 'News',
+                       'multimedia': [   {   'caption': 'Revenue from private '
+                                                        'space ventures will '
+                                                        'reach a trillion '
+                                                        'dollars by 2040, '
+                                                        'Citigroup analysts '
+                                                        'predict.',
+                                             'copyright': 'Terry '
+                                                          'Renna/Associated '
+                                                          'Press',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/17/business/17DB-SPACE/17DB-SPACE-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': 'Revenue from private '
+                                                        'space ventures will '
+                                                        'reach a trillion '
+                                                        'dollars by 2040, '
+                                                        'Citigroup analysts '
+                                                        'predict.',
+                                             'copyright': 'Terry '
+                                                          'Renna/Associated '
+                                                          'Press',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/17/business/17DB-SPACE/17DB-SPACE-mediumThreeByTwo210.jpg',
+                                             'width': 210},
+                                         {   'caption': 'Revenue from private '
+                                                        'space ventures will '
+                                                        'reach a trillion '
+                                                        'dollars by 2040, '
+                                                        'Citigroup analysts '
+                                                        'predict.',
+                                             'copyright': 'Terry '
+                                                          'Renna/Associated '
+                                                          'Press',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/17/business/17DB-SPACE/17DB-SPACE-mediumThreeByTwo440.jpg',
+                                             'width': 440},
+                                         {   'caption': 'Revenue from private '
+                                                        'space ventures will '
+                                                        'reach a trillion '
+                                                        'dollars by 2040, '
+                                                        'Citigroup analysts '
+                                                        'predict.',
+                                             'copyright': 'Terry '
+                                                          'Renna/Associated '
+                                                          'Press',
+                                             'format': 'Normal',
+                                             'height': 127,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/17/business/17DB-SPACE/17DB-SPACE-articleInline.jpg',
+                                             'width': 190}],
+                       'org_facet': None,
+                       'per_facet': None,
+                       'published_date': '2023-06-17T08:08:33-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '17DB-SPACE-WEB',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': 'DealBook',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/17/business/17DB-SPACE/17DB-SPACE-thumbStandard.jpg',
+                       'title': 'The Space Industry Is Taking Off. Space Law '
+                                'Is Still a Mystery.',
+                       'updated_date': '2023-06-17T08:08:33-04:00',
+                       'uri': 'nyt://article/b982afb3-f1e8-54af-9641-e5838d3d1013',
+                       'url': 'https://www.nytimes.com/2023/06/17/business/dealbook/space-industry-laws.html'},
+                   {   'abstract': 'Chief executives in the U.S. have long '
+                                   'pushed for closer ties between the two '
+                                   'countries. Now they just hope a rocky '
+                                   'situation won’t get worse.',
+                       'byline': 'BY ANA SWANSON AND DAVID MCCABE',
+                       'created_date': '2023-06-17T05:00:36-04:00',
+                       'des_facet': [   'International Relations',
+                                        'Politics and Government',
+                                        'Foreign Investments',
+                                        'Economic Conditions and Trends'],
+                       'first_published_date': '2023-06-17T05:00:36-04:00',
+                       'geo_facet': None,
+                       'item_type': 'Article',
+                       'kicker': '',
+                       'material_type_facet': 'News',
+                       'multimedia': [   {   'caption': 'Secretary of State '
+                                                        'Antony J. Blinken is '
+                                                        'due to arrive in '
+                                                        'China on Sunday for '
+                                                        'meetings. U.S. '
+                                                        'business leaders have '
+                                                        'been pushing the '
+                                                        'Biden administration '
+                                                        'to restore some '
+                                                        'stability in the '
+                                                        'countries’ '
+                                                        'relationship.',
+                                             'copyright': 'Haiyun Jiang for '
+                                                          'The New York Times',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/17/multimedia/17dc-china-business-hkvg/17dc-china-business-hkvg-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': 'Secretary of State '
+                                                        'Antony J. Blinken is '
+                                                        'due to arrive in '
+                                                        'China on Sunday for '
+                                                        'meetings. U.S. '
+                                                        'business leaders have '
+                                                        'been pushing the '
+                                                        'Biden administration '
+                                                        'to restore some '
+                                                        'stability in the '
+                                                        'countries’ '
+                                                        'relationship.',
+                                             'copyright': 'Haiyun Jiang for '
+                                                          'The New York Times',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/17/multimedia/17dc-china-business-hkvg/17dc-china-business-hkvg-mediumThreeByTwo210.jpg',
+                                             'width': 210},
+                                         {   'caption': 'Secretary of State '
+                                                        'Antony J. Blinken is '
+                                                        'due to arrive in '
+                                                        'China on Sunday for '
+                                                        'meetings. U.S. '
+                                                        'business leaders have '
+                                                        'been pushing the '
+                                                        'Biden administration '
+                                                        'to restore some '
+                                                        'stability in the '
+                                                        'countries’ '
+                                                        'relationship.',
+                                             'copyright': 'Haiyun Jiang for '
+                                                          'The New York Times',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/17/multimedia/17dc-china-business-hkvg/17dc-china-business-hkvg-mediumThreeByTwo440.jpg',
+                                             'width': 440},
+                                         {   'caption': 'Secretary of State '
+                                                        'Antony J. Blinken is '
+                                                        'due to arrive in '
+                                                        'China on Sunday for '
+                                                        'meetings. U.S. '
+                                                        'business leaders have '
+                                                        'been pushing the '
+                                                        'Biden administration '
+                                                        'to restore some '
+                                                        'stability in the '
+                                                        'countries’ '
+                                                        'relationship.',
+                                             'copyright': 'Haiyun Jiang for '
+                                                          'The New York Times',
+                                             'format': 'Normal',
+                                             'height': 127,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/17/multimedia/17dc-china-business-hkvg/17dc-china-business-hkvg-articleInline.jpg',
+                                             'width': 190}],
+                       'org_facet': [   'State Department',
+                                        'Apple Inc',
+                                        'Facebook Inc',
+                                        'General Motors',
+                                        'JPMorgan Chase & Company',
+                                        'Meta Platforms Inc',
+                                        'OpenAI Labs',
+                                        'Tesla Motors Inc',
+                                        'TikTok (ByteDance)'],
+                       'per_facet': [   'Barra, Mary T',
+                                        'Cook, Timothy D',
+                                        'Blinken, Antony J',
+                                        'Dimon, James',
+                                        'Musk, Elon',
+                                        'Schwarzman, Stephen A'],
+                       'published_date': '2023-06-17T05:00:36-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '17dc-china-business',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': 'Economy',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/17/multimedia/17dc-china-business-hkvg/17dc-china-business-hkvg-thumbStandard.jpg',
+                       'title': 'As U.S. and Chinese Officials Meet, '
+                                'Businesses Temper Their Hopes',
+                       'updated_date': '2023-06-17T10:03:57-04:00',
+                       'uri': 'nyt://article/7192a360-ebca-5eca-a5a2-9bb41cf7d8f4',
+                       'url': 'https://www.nytimes.com/2023/06/17/business/economy/china-united-states-business.html'},
+                   {   'abstract': 'After accusations were published in '
+                                   'Britain, Crispin Odey was severed from his '
+                                   'own investment firm, which is now '
+                                   'dissolving itself.',
+                       'byline': 'BY MICHAEL J. DE LA MERCED',
+                       'created_date': '2023-06-17T00:01:08-04:00',
+                       'des_facet': [   'Sexual Harassment',
+                                        'Hedge Funds',
+                                        'Banking and Financial Institutions'],
+                       'first_published_date': '2023-06-17T00:01:08-04:00',
+                       'geo_facet': ['London (England)'],
+                       'item_type': 'Article',
+                       'kicker': '',
+                       'material_type_facet': 'News',
+                       'multimedia': [   {   'caption': 'Crispin Odey in 2021. '
+                                                        'At its height, Odey '
+                                                        'Asset Management '
+                                                        'managed more than $13 '
+                                                        'billion.',
+                                             'copyright': 'Henry '
+                                                          'Nicholls/Reuters',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/15/multimedia/00db-odey-pqgc/00db-odey-pqgc-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': 'Crispin Odey in 2021. '
+                                                        'At its height, Odey '
+                                                        'Asset Management '
+                                                        'managed more than $13 '
+                                                        'billion.',
+                                             'copyright': 'Henry '
+                                                          'Nicholls/Reuters',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/15/multimedia/00db-odey-pqgc/00db-odey-pqgc-mediumThreeByTwo210.jpg',
+                                             'width': 210},
+                                         {   'caption': 'Crispin Odey in 2021. '
+                                                        'At its height, Odey '
+                                                        'Asset Management '
+                                                        'managed more than $13 '
+                                                        'billion.',
+                                             'copyright': 'Henry '
+                                                          'Nicholls/Reuters',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/15/multimedia/00db-odey-pqgc/00db-odey-pqgc-mediumThreeByTwo440.jpg',
+                                             'width': 440},
+                                         {   'caption': 'Crispin Odey in 2021. '
+                                                        'At its height, Odey '
+                                                        'Asset Management '
+                                                        'managed more than $13 '
+                                                        'billion.',
+                                             'copyright': 'Henry '
+                                                          'Nicholls/Reuters',
+                                             'format': 'Normal',
+                                             'height': 127,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/15/multimedia/00db-odey-pqgc/00db-odey-pqgc-articleInline.jpg',
+                                             'width': 190}],
+                       'org_facet': [   'Odey Asset Management LLP',
+                                        'Financial Times'],
+                       'per_facet': ['Odey, Crispin'],
+                       'published_date': '2023-06-17T00:01:08-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '17db-odey',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': 'DealBook',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/15/multimedia/00db-odey-pqgc/00db-odey-pqgc-thumbStandard.jpg',
+                       'title': 'Investor and His Hedge Fund Are Rocked by Sex '
+                                'Assault Allegations',
+                       'updated_date': '2023-06-17T16:02:14-04:00',
+                       'uri': 'nyt://article/3d228480-e8f0-5fa4-a74b-1f5136dc3d21',
+                       'url': 'https://www.nytimes.com/2023/06/17/business/dealbook/crispin-odey-asset-management.html'},
+                   {   'abstract': 'The homes of New Hampshire Public Radio '
+                                   'journalists were vandalized after they '
+                                   'aired a sexual harassment investigation '
+                                   'involving a prominent businessman in the '
+                                   'state.',
+                       'byline': 'BY DAVID ENRICH',
+                       'created_date': '2023-06-16T19:03:37-04:00',
+                       'des_facet': [   'Stalking (Crime)',
+                                        'News and News Media',
+                                        'Vandalism'],
+                       'first_published_date': '2023-06-16T19:03:37-04:00',
+                       'geo_facet': None,
+                       'item_type': 'Article',
+                       'kicker': '',
+                       'material_type_facet': 'News',
+                       'multimedia': [   {   'caption': 'Lauren Chooljian of '
+                                                        'New Hampshire Public '
+                                                        'Radio became the '
+                                                        'victim of threats and '
+                                                        'attacks after '
+                                                        'publishing an '
+                                                        'investigation about a '
+                                                        'prominent businessman '
+                                                        'in the state.',
+                                             'copyright': 'John Tully for The '
+                                                          'New York Times',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16NHPR-lvwj/16NHPR-lvwj-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': 'Lauren Chooljian of '
+                                                        'New Hampshire Public '
+                                                        'Radio became the '
+                                                        'victim of threats and '
+                                                        'attacks after '
+                                                        'publishing an '
+                                                        'investigation about a '
+                                                        'prominent businessman '
+                                                        'in the state.',
+                                             'copyright': 'John Tully for The '
+                                                          'New York Times',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16NHPR-lvwj/16NHPR-lvwj-mediumThreeByTwo210.jpg',
+                                             'width': 210},
+                                         {   'caption': 'Lauren Chooljian of '
+                                                        'New Hampshire Public '
+                                                        'Radio became the '
+                                                        'victim of threats and '
+                                                        'attacks after '
+                                                        'publishing an '
+                                                        'investigation about a '
+                                                        'prominent businessman '
+                                                        'in the state.',
+                                             'copyright': 'John Tully for The '
+                                                          'New York Times',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16NHPR-lvwj/16NHPR-lvwj-mediumThreeByTwo440.jpg',
+                                             'width': 440},
+                                         {   'caption': 'Lauren Chooljian of '
+                                                        'New Hampshire Public '
+                                                        'Radio became the '
+                                                        'victim of threats and '
+                                                        'attacks after '
+                                                        'publishing an '
+                                                        'investigation about a '
+                                                        'prominent businessman '
+                                                        'in the state.',
+                                             'copyright': 'John Tully for The '
+                                                          'New York Times',
+                                             'format': 'Normal',
+                                             'height': 127,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16NHPR-lvwj/16NHPR-lvwj-articleInline.jpg',
+                                             'width': 190}],
+                       'org_facet': ['New Hampshire Public Radio'],
+                       'per_facet': ['Spofford, Eric'],
+                       'published_date': '2023-06-16T19:03:37-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '16nhpr',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': 'Media',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/16/multimedia/16NHPR-lvwj/16NHPR-lvwj-thumbStandard.jpg',
+                       'title': '3 Men Charged in Case That Spotlights Attacks '
+                                'on the Media',
+                       'updated_date': '2023-06-16T20:50:49-04:00',
+                       'uri': 'nyt://article/13917a33-c6c9-54b7-8fca-1361b7e07151',
+                       'url': 'https://www.nytimes.com/2023/06/16/business/media/nhpr-attacks-arrests.html'},
+                   {   'abstract': 'The departures are the latest fallout '
+                                   'since the network sidelined Mr. Carlson in '
+                                   'April.',
+                       'byline': 'BY KATIE ROBERTSON',
+                       'created_date': '2023-06-16T17:29:36-04:00',
+                       'des_facet': [   'Television',
+                                        'News and News Media',
+                                        'Suits and Litigation (Civil)'],
+                       'first_published_date': '2023-06-16T17:29:36-04:00',
+                       'geo_facet': None,
+                       'item_type': 'Article',
+                       'kicker': '',
+                       'material_type_facet': 'News',
+                       'multimedia': [   {   'caption': 'Tucker Carlson in '
+                                                        'December. Fox News '
+                                                        'took his show off the '
+                                                        'air after settling a '
+                                                        'defamation suit filed '
+                                                        'by Dominion Voting '
+                                                        'Systems.',
+                                             'copyright': 'Rebecca Noble for '
+                                                          'The New York Times',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16fox-tucker-mbwl/16fox-tucker-mbwl-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': 'Tucker Carlson in '
+                                                        'December. Fox News '
+                                                        'took his show off the '
+                                                        'air after settling a '
+                                                        'defamation suit filed '
+                                                        'by Dominion Voting '
+                                                        'Systems.',
+                                             'copyright': 'Rebecca Noble for '
+                                                          'The New York Times',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16fox-tucker-mbwl/16fox-tucker-mbwl-mediumThreeByTwo210.jpg',
+                                             'width': 210},
+                                         {   'caption': 'Tucker Carlson in '
+                                                        'December. Fox News '
+                                                        'took his show off the '
+                                                        'air after settling a '
+                                                        'defamation suit filed '
+                                                        'by Dominion Voting '
+                                                        'Systems.',
+                                             'copyright': 'Rebecca Noble for '
+                                                          'The New York Times',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16fox-tucker-mbwl/16fox-tucker-mbwl-mediumThreeByTwo440.jpg',
+                                             'width': 440},
+                                         {   'caption': 'Tucker Carlson in '
+                                                        'December. Fox News '
+                                                        'took his show off the '
+                                                        'air after settling a '
+                                                        'defamation suit filed '
+                                                        'by Dominion Voting '
+                                                        'Systems.',
+                                             'copyright': 'Rebecca Noble for '
+                                                          'The New York Times',
+                                             'format': 'Normal',
+                                             'height': 127,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16fox-tucker-mbwl/16fox-tucker-mbwl-articleInline.jpg',
+                                             'width': 190}],
+                       'org_facet': ['Fox News Channel'],
+                       'per_facet': ['Carlson, Tucker', 'Grossberg, Abby'],
+                       'published_date': '2023-06-16T17:29:36-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '16fox',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': 'Media',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/16/multimedia/16fox-tucker-mbwl/16fox-tucker-mbwl-thumbStandard.jpg',
+                       'title': 'Two Former Tucker Carlson Producers Exit Fox '
+                                'News',
+                       'updated_date': '2023-06-16T18:43:05-04:00',
+                       'uri': 'nyt://article/cc7599fe-d745-5752-9a88-8e95156bd8b7',
+                       'url': 'https://www.nytimes.com/2023/06/16/business/media/tucker-carlson-producers-leave-fox.html'},
+                   {   'abstract': 'The deal signed by Félix Lengyel, known as '
+                                   'xQc, matches traditional athletes’ '
+                                   'contracts, and is another sign of Twitch’s '
+                                   'tense relationship with its top streamers.',
+                       'byline': 'BY KELLEN BROWNING',
+                       'created_date': '2023-06-16T17:00:10-04:00',
+                       'des_facet': [   'Video Recordings, Downloads and '
+                                        'Streaming',
+                                        'Computer and Video Games',
+                                        'Computers and the Internet'],
+                       'first_published_date': '2023-06-16T17:00:10-04:00',
+                       'geo_facet': None,
+                       'item_type': 'Article',
+                       'kicker': '',
+                       'material_type_facet': 'News',
+                       'multimedia': [   {   'caption': 'xQc is a star in the '
+                                                        'livestreaming world, '
+                                                        'where he has amassed '
+                                                        'nearly 12 million '
+                                                        'Twitch followers.',
+                                             'copyright': 'Matt '
+                                                          'Winkelmeyer/Getty '
+                                                          'Images',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16TWITCH-xQc-mpqt/16TWITCH-xQc-mpqt-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': 'xQc is a star in the '
+                                                        'livestreaming world, '
+                                                        'where he has amassed '
+                                                        'nearly 12 million '
+                                                        'Twitch followers.',
+                                             'copyright': 'Matt '
+                                                          'Winkelmeyer/Getty '
+                                                          'Images',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16TWITCH-xQc-mpqt/16TWITCH-xQc-mpqt-mediumThreeByTwo210.jpg',
+                                             'width': 210},
+                                         {   'caption': 'xQc is a star in the '
+                                                        'livestreaming world, '
+                                                        'where he has amassed '
+                                                        'nearly 12 million '
+                                                        'Twitch followers.',
+                                             'copyright': 'Matt '
+                                                          'Winkelmeyer/Getty '
+                                                          'Images',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16TWITCH-xQc-mpqt/16TWITCH-xQc-mpqt-mediumThreeByTwo440.jpg',
+                                             'width': 440},
+                                         {   'caption': 'xQc is a star in the '
+                                                        'livestreaming world, '
+                                                        'where he has amassed '
+                                                        'nearly 12 million '
+                                                        'Twitch followers.',
+                                             'copyright': 'Matt '
+                                                          'Winkelmeyer/Getty '
+                                                          'Images',
+                                             'format': 'Normal',
+                                             'height': 245,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16TWITCH-xQc-mpqt/16TWITCH-xQc-mpqt-articleInline.jpg',
+                                             'width': 190}],
+                       'org_facet': ['Kick.com', 'Twitch Interactive Inc'],
+                       'per_facet': ['Lengyel, Felix (xQc)'],
+                       'published_date': '2023-06-16T17:00:10-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '16twitch',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': '',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/16/multimedia/16TWITCH-xQc-mpqt/16TWITCH-xQc-mpqt-thumbStandard.jpg',
+                       'title': 'Twitch Star Signs $100 Million Deal With '
+                                'Rival Platform',
+                       'updated_date': '2023-06-16T17:00:10-04:00',
+                       'uri': 'nyt://article/d7e4135d-4ca6-531a-9fe9-6f8d3ecc3fdd',
+                       'url': 'https://www.nytimes.com/2023/06/16/business/twitch-kick-xqc.html'},
+                   {   'abstract': 'A federal grand jury is scheduled to hear '
+                                   'evidence about Sherry-Lehmann, whose '
+                                   'customers and former employees have '
+                                   'complained about missing wine.',
+                       'byline': 'BY JAMES B. STEWART',
+                       'created_date': '2023-06-16T16:48:33-04:00',
+                       'des_facet': ['Wines'],
+                       'first_published_date': '2023-06-16T16:48:33-04:00',
+                       'geo_facet': ['New York City'],
+                       'item_type': 'Article',
+                       'kicker': '',
+                       'material_type_facet': 'News',
+                       'multimedia': [   {   'caption': 'Customers of '
+                                                        'Sherry-Lehmann Wine & '
+                                                        'Spirits said it had '
+                                                        'failed to deliver '
+                                                        'prepaid wine, and '
+                                                        'former employees said '
+                                                        'it was improperly '
+                                                        'selling rare bottles '
+                                                        'out of clients’ '
+                                                        'storage.',
+                                             'copyright': 'Jeenah Moon for The '
+                                                          'New York Times',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16Sherry-Lehmann-sub-whtj/16Sherry-Lehmann-sub-whtj-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': 'Customers of '
+                                                        'Sherry-Lehmann Wine & '
+                                                        'Spirits said it had '
+                                                        'failed to deliver '
+                                                        'prepaid wine, and '
+                                                        'former employees said '
+                                                        'it was improperly '
+                                                        'selling rare bottles '
+                                                        'out of clients’ '
+                                                        'storage.',
+                                             'copyright': 'Jeenah Moon for The '
+                                                          'New York Times',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16Sherry-Lehmann-sub-whtj/16Sherry-Lehmann-sub-whtj-mediumThreeByTwo210-v2.jpg',
+                                             'width': 210},
+                                         {   'caption': 'Customers of '
+                                                        'Sherry-Lehmann Wine & '
+                                                        'Spirits said it had '
+                                                        'failed to deliver '
+                                                        'prepaid wine, and '
+                                                        'former employees said '
+                                                        'it was improperly '
+                                                        'selling rare bottles '
+                                                        'out of clients’ '
+                                                        'storage.',
+                                             'copyright': 'Jeenah Moon for The '
+                                                          'New York Times',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16Sherry-Lehmann-sub-whtj/16Sherry-Lehmann-sub-whtj-mediumThreeByTwo440-v2.jpg',
+                                             'width': 440},
+                                         {   'caption': 'Customers of '
+                                                        'Sherry-Lehmann Wine & '
+                                                        'Spirits said it had '
+                                                        'failed to deliver '
+                                                        'prepaid wine, and '
+                                                        'former employees said '
+                                                        'it was improperly '
+                                                        'selling rare bottles '
+                                                        'out of clients’ '
+                                                        'storage.',
+                                             'copyright': 'Jeenah Moon for The '
+                                                          'New York Times',
+                                             'format': 'Normal',
+                                             'height': 152,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16Sherry-Lehmann-sub-whtj/16Sherry-Lehmann-sub-whtj-articleInline-v2.jpg',
+                                             'width': 190}],
+                       'org_facet': [   'Sherry-Lehmann Wine & Spirits',
+                                        'State Liquor Authority',
+                                        'Federal Bureau of Investigation',
+                                        'Justice Department'],
+                       'per_facet': ['Gilmer, Shyda', 'Green, Kris'],
+                       'published_date': '2023-06-16T16:48:33-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '16sherry-lehmann',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': '',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/16/multimedia/16Sherry-Lehmann-sub-whtj/16Sherry-Lehmann-sub-whtj-thumbStandard.jpg',
+                       'title': 'Famed Wine Store Sherry-Lehmann Faces '
+                                'Criminal Investigation',
+                       'updated_date': '2023-06-16T17:51:26-04:00',
+                       'uri': 'nyt://article/85dc3ba2-2ab1-535d-b046-e1de864ef254',
+                       'url': 'https://www.nytimes.com/2023/06/16/business/sherry-lehmann-wine-investigation.html'},
+                   {   'abstract': 'The milestone follows a recent '
+                                   'congressional showdown over lifting the '
+                                   'debt ceiling. Another spending fight looms '
+                                   'this year.',
+                       'byline': 'BY ALAN RAPPEPORT',
+                       'created_date': '2023-06-16T16:05:37-04:00',
+                       'des_facet': [   'National Debt (US)',
+                                        'Federal Budget (US)',
+                                        'Law and Legislation',
+                                        'Federal Taxes (US)',
+                                        'United States Economy',
+                                        'United States Politics and '
+                                        'Government'],
+                       'first_published_date': '2023-06-16T16:05:37-04:00',
+                       'geo_facet': None,
+                       'item_type': 'Article',
+                       'kicker': '',
+                       'material_type_facet': 'News',
+                       'multimedia': [   {   'caption': 'The national debt is '
+                                                        'on track to continue '
+                                                        'climbing over the '
+                                                        'next decade, even '
+                                                        'after spending cuts '
+                                                        'passed this month by '
+                                                        'Congress.',
+                                             'copyright': 'Kenny Holston/The '
+                                                          'New York Times',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16dc-debt-pwjh/16dc-debt-pwjh-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': 'The national debt is '
+                                                        'on track to continue '
+                                                        'climbing over the '
+                                                        'next decade, even '
+                                                        'after spending cuts '
+                                                        'passed this month by '
+                                                        'Congress.',
+                                             'copyright': 'Kenny Holston/The '
+                                                          'New York Times',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16dc-debt-pwjh/16dc-debt-pwjh-mediumThreeByTwo210.jpg',
+                                             'width': 210},
+                                         {   'caption': 'The national debt is '
+                                                        'on track to continue '
+                                                        'climbing over the '
+                                                        'next decade, even '
+                                                        'after spending cuts '
+                                                        'passed this month by '
+                                                        'Congress.',
+                                             'copyright': 'Kenny Holston/The '
+                                                          'New York Times',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16dc-debt-pwjh/16dc-debt-pwjh-mediumThreeByTwo440.jpg',
+                                             'width': 440},
+                                         {   'caption': 'The national debt is '
+                                                        'on track to continue '
+                                                        'climbing over the '
+                                                        'next decade, even '
+                                                        'after spending cuts '
+                                                        'passed this month by '
+                                                        'Congress.',
+                                             'copyright': 'Kenny Holston/The '
+                                                          'New York Times',
+                                             'format': 'Normal',
+                                             'height': 127,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16dc-debt-pwjh/16dc-debt-pwjh-articleInline.jpg',
+                                             'width': 190}],
+                       'org_facet': [   'House of Representatives',
+                                        'Senate',
+                                        'Treasury Department'],
+                       'per_facet': None,
+                       'published_date': '2023-06-16T16:05:37-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '16dc-debt',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': 'Economy',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/16/multimedia/16dc-debt-pwjh/16dc-debt-pwjh-thumbStandard.jpg',
+                       'title': 'U.S. National Debt Tops $32 Trillion for '
+                                'First Time',
+                       'updated_date': '2023-06-16T16:05:37-04:00',
+                       'uri': 'nyt://article/5b438434-6eda-58fc-9d50-6853fc8b9d36',
+                       'url': 'https://www.nytimes.com/2023/06/16/business/economy/federal-debt-32-trillion.html'},
+                   {   'abstract': 'He challenged a company’s prerogative to '
+                                   'transfer an employee and a news '
+                                   'organization’s ability to assert '
+                                   'publishing rights when a reporter’s '
+                                   'articles are used for a book.',
+                       'byline': 'BY SAM ROBERTS',
+                       'created_date': '2023-06-16T13:44:10-04:00',
+                       'des_facet': [   'Deaths (Obituaries)',
+                                        'News and News Media',
+                                        'Writing and Writers',
+                                        'Book Trade and Publishing'],
+                       'first_published_date': '2023-06-16T13:44:10-04:00',
+                       'geo_facet': None,
+                       'item_type': 'Article',
+                       'kicker': '',
+                       'material_type_facet': 'Obituary (Obit)',
+                       'multimedia': [   {   'caption': 'Richard Severo, with '
+                                                        'a colleague, Barbara '
+                                                        'Campbell, at work in '
+                                                        'the Times newsroom in '
+                                                        '1969. He was a '
+                                                        'prizewinning reporter '
+                                                        'before running afoul '
+                                                        'of his bosses.',
+                                             'copyright': 'Ernie Sisto/The New '
+                                                          'York Times',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/multimedia/14severo-lqwh-print1/14severo-lqwh-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': 'Richard Severo, with '
+                                                        'a colleague, Barbara '
+                                                        'Campbell, at work in '
+                                                        'the Times newsroom in '
+                                                        '1969. He was a '
+                                                        'prizewinning reporter '
+                                                        'before running afoul '
+                                                        'of his bosses.',
+                                             'copyright': 'Ernie Sisto/The New '
+                                                          'York Times',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/multimedia/14severo-lqwh-print1/14severo-lqwh-mediumThreeByTwo210.jpg',
+                                             'width': 210},
+                                         {   'caption': 'Richard Severo, with '
+                                                        'a colleague, Barbara '
+                                                        'Campbell, at work in '
+                                                        'the Times newsroom in '
+                                                        '1969. He was a '
+                                                        'prizewinning reporter '
+                                                        'before running afoul '
+                                                        'of his bosses.',
+                                             'copyright': 'Ernie Sisto/The New '
+                                                          'York Times',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/multimedia/14severo-lqwh-print1/14severo-lqwh-mediumThreeByTwo440.jpg',
+                                             'width': 440},
+                                         {   'caption': 'Richard Severo, with '
+                                                        'a colleague, Barbara '
+                                                        'Campbell, at work in '
+                                                        'the Times newsroom in '
+                                                        '1969. He was a '
+                                                        'prizewinning reporter '
+                                                        'before running afoul '
+                                                        'of his bosses.',
+                                             'copyright': 'Ernie Sisto/The New '
+                                                          'York Times',
+                                             'format': 'Normal',
+                                             'height': 127,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/multimedia/14severo-lqwh-print1/14severo-lqwh-articleInline.jpg',
+                                             'width': 190}],
+                       'org_facet': ['New York Times'],
+                       'per_facet': ['Severo, Richard'],
+                       'published_date': '2023-06-16T13:44:10-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '16severo',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': 'Media',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/18/multimedia/14severo-lqwh-print1/14severo-lqwh-thumbStandard.jpg',
+                       'title': 'Richard Severo, Times Reporter in Internal '
+                                'Clash Over Book, Dies at 90',
+                       'updated_date': '2023-06-17T09:39:33-04:00',
+                       'uri': 'nyt://article/dc2b6406-72f7-5f05-9958-9220279856c6',
+                       'url': 'https://www.nytimes.com/2023/06/16/business/media/richard-severo-dead.html'},
+                   {   'abstract': 'A walkout is possible after the contract '
+                                   'for more than 325,000 workers expires this '
+                                   'summer. Negotiations began in April but '
+                                   'have yet to resolve pay.',
+                       'byline': 'BY NOAM SCHEIBER',
+                       'created_date': '2023-06-16T12:08:09-04:00',
+                       'des_facet': [   'Organized Labor',
+                                        'Delivery Services',
+                                        'Strikes',
+                                        'Labor and Jobs',
+                                        'United States Economy',
+                                        'Wages and Salaries',
+                                        'Workplace Environment',
+                                        'Part-Time Employment'],
+                       'first_published_date': '2023-06-16T12:08:09-04:00',
+                       'geo_facet': None,
+                       'item_type': 'Article',
+                       'kicker': '',
+                       'material_type_facet': 'News',
+                       'multimedia': [   {   'caption': 'A prolonged UPS '
+                                                        'strike could have '
+                                                        'significant economic '
+                                                        'fallout.',
+                                             'copyright': 'Gabby Jones for The '
+                                                          'New York Times',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/15/multimedia/00teamsters-ups-vbwt/00teamsters-ups-vbwt-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': 'A prolonged UPS '
+                                                        'strike could have '
+                                                        'significant economic '
+                                                        'fallout.',
+                                             'copyright': 'Gabby Jones for The '
+                                                          'New York Times',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/15/multimedia/00teamsters-ups-vbwt/00teamsters-ups-vbwt-mediumThreeByTwo210.jpg',
+                                             'width': 210},
+                                         {   'caption': 'A prolonged UPS '
+                                                        'strike could have '
+                                                        'significant economic '
+                                                        'fallout.',
+                                             'copyright': 'Gabby Jones for The '
+                                                          'New York Times',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/15/multimedia/00teamsters-ups-vbwt/00teamsters-ups-vbwt-mediumThreeByTwo440.jpg',
+                                             'width': 440},
+                                         {   'caption': 'A prolonged UPS '
+                                                        'strike could have '
+                                                        'significant economic '
+                                                        'fallout.',
+                                             'copyright': 'Gabby Jones for The '
+                                                          'New York Times',
+                                             'format': 'Normal',
+                                             'height': 127,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/15/multimedia/00teamsters-ups-vbwt/00teamsters-ups-vbwt-articleInline.jpg',
+                                             'width': 190}],
+                       'org_facet': [   'International Brotherhood of '
+                                        'Teamsters',
+                                        'United Parcel Service Inc'],
+                       'per_facet': ["O'Brien, Sean M"],
+                       'published_date': '2023-06-16T12:08:09-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '16teamsters-vote',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': 'Economy',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/15/multimedia/00teamsters-ups-vbwt/00teamsters-ups-vbwt-thumbStandard.jpg',
+                       'title': 'UPS Workers Authorize Teamsters Union to Call '
+                                'Strike',
+                       'updated_date': '2023-06-16T14:30:37-04:00',
+                       'uri': 'nyt://article/65aa1000-2d05-510d-8c19-1c66c24b3435',
+                       'url': 'https://www.nytimes.com/2023/06/16/business/economy/ups-union-workers-strike.html'},
+                   {   'abstract': 'In a move that took Wall Street aback, the '
+                                   'Fed signaled that it would bring its '
+                                   'benchmark interest rate up to 5.6 percent '
+                                   'this year.',
+                       'byline': 'BY MARIE SOLIS',
+                       'created_date': '2023-06-16T12:03:28-04:00',
+                       'des_facet': [   'Interest Rates',
+                                        'Inflation (Economics)',
+                                        'Recession and Depression',
+                                        'Labor and Jobs',
+                                        'Consumer Behavior'],
+                       'first_published_date': '2023-06-16T12:03:28-04:00',
+                       'geo_facet': None,
+                       'item_type': 'Interactive',
+                       'kicker': '',
+                       'material_type_facet': 'Interactive Feature',
+                       'multimedia': [   {   'caption': '',
+                                             'copyright': 'Allie Sullberg',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/business/18BigNumber-illo/18BigNumber-illo-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': '',
+                                             'copyright': 'Allie Sullberg',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/business/18BigNumber-illo/18BigNumber-illo-mediumThreeByTwo210.jpg',
+                                             'width': 210},
+                                         {   'caption': '',
+                                             'copyright': 'Allie Sullberg',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/business/18BigNumber-illo/18BigNumber-illo-mediumThreeByTwo440.jpg',
+                                             'width': 440},
+                                         {   'caption': '',
+                                             'copyright': 'Allie Sullberg',
+                                             'format': 'Normal',
+                                             'height': 127,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/business/18BigNumber-illo/18BigNumber-illo-articleInline.jpg',
+                                             'width': 190}],
+                       'org_facet': ['Federal Reserve System'],
+                       'per_facet': ['Powell, Jerome H'],
+                       'published_date': '2023-06-16T12:03:28-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': 'federal-reserve-interest-rates-economy',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': 'Economy',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/18/business/18BigNumber-illo/18BigNumber-illo-thumbStandard.jpg',
+                       'title': 'The Big Number: 5.6%',
+                       'updated_date': '2023-06-16T16:42:03-04:00',
+                       'uri': 'nyt://interactive/76afce6f-d725-5f2b-8699-85a768e97bcc',
+                       'url': 'https://www.nytimes.com/interactive/2023/06/16/business/economy/federal-reserve-interest-rates-economy.html'},
+                   {   'abstract': 'The stock market is on its longest winning '
+                                   'streak since 2021. Some investors see '
+                                   'trouble ahead.',
+                       'byline': 'BY JOE RENNISON',
+                       'created_date': '2023-06-16T09:50:40-04:00',
+                       'des_facet': [   'Stocks and Bonds',
+                                        "Standard & Poor's 500-Stock Index",
+                                        'Interest Rates',
+                                        'Inflation (Economics)',
+                                        'United States Economy'],
+                       'first_published_date': '2023-06-16T09:50:40-04:00',
+                       'geo_facet': None,
+                       'item_type': 'Article',
+                       'kicker': '',
+                       'material_type_facet': 'News',
+                       'multimedia': [   {   'caption': '',
+                                             'copyright': 'The New York Times',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/us/2023-06-16-sp500-promo-index/2023-06-16-sp500-promo-index-thumbStandard.png',
+                                             'width': 75},
+                                         {   'caption': '',
+                                             'copyright': 'The New York Times',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/us/2023-06-16-sp500-promo-index/2023-06-16-sp500-promo-index-mediumThreeByTwo210.png',
+                                             'width': 210},
+                                         {   'caption': '',
+                                             'copyright': 'The New York Times',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/us/2023-06-16-sp500-promo-index/2023-06-16-sp500-promo-index-mediumThreeByTwo440.png',
+                                             'width': 440},
+                                         {   'caption': '',
+                                             'copyright': 'The New York Times',
+                                             'format': 'Normal',
+                                             'height': 127,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/us/2023-06-16-sp500-promo-index/2023-06-16-sp500-promo-index-articleInline.png',
+                                             'width': 190}],
+                       'org_facet': None,
+                       'per_facet': None,
+                       'published_date': '2023-06-16T09:50:40-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '16stocks',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': '',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/16/us/2023-06-16-sp500-promo-index/2023-06-16-sp500-promo-index-thumbStandard.png',
+                       'title': 'Market Rally Intensifies Debate Over What '
+                                'Will Come Next',
+                       'updated_date': '2023-06-16T16:46:51-04:00',
+                       'uri': 'nyt://article/153e3c39-b13c-5a55-876a-344f8ddb94ba',
+                       'url': 'https://www.nytimes.com/2023/06/16/business/stocks-bull-bear-forecast.html'},
+                   {   'abstract': 'On the short-form video app, '
+                                   'long-established facts about the 1912 '
+                                   'disaster at sea are being newly litigated '
+                                   'as musty rumors merge with fresh '
+                                   'misinformation and manipulated content.',
+                       'byline': 'BY TIFFANY HSU AND SAPNA MAHESHWARI',
+                       'created_date': '2023-06-16T09:00:20-04:00',
+                       'des_facet': [   'internal-sub-only',
+                                        'Social Media',
+                                        'Titanic (Ship)',
+                                        'Rumors and Misinformation',
+                                        'Conspiracy Theories'],
+                       'first_published_date': '2023-06-16T09:00:20-04:00',
+                       'geo_facet': None,
+                       'item_type': 'Article',
+                       'kicker': '',
+                       'material_type_facet': 'News',
+                       'multimedia': [   {   'caption': 'The Titanic in 1996. '
+                                                        'The video app TikTok '
+                                                        'is just the latest '
+                                                        'avenue for false '
+                                                        'narratives about the '
+                                                        'ship. ',
+                                             'copyright': 'Getty Images',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/multimedia/16Titanic-01-hjfc/16Titanic-01-hjfc-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': 'The Titanic in 1996. '
+                                                        'The video app TikTok '
+                                                        'is just the latest '
+                                                        'avenue for false '
+                                                        'narratives about the '
+                                                        'ship. ',
+                                             'copyright': 'Getty Images',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/multimedia/16Titanic-01-hjfc/16Titanic-01-hjfc-mediumThreeByTwo210.jpg',
+                                             'width': 210},
+                                         {   'caption': 'The Titanic in 1996. '
+                                                        'The video app TikTok '
+                                                        'is just the latest '
+                                                        'avenue for false '
+                                                        'narratives about the '
+                                                        'ship. ',
+                                             'copyright': 'Getty Images',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/multimedia/16Titanic-01-hjfc/16Titanic-01-hjfc-mediumThreeByTwo440.jpg',
+                                             'width': 440},
+                                         {   'caption': 'The Titanic in 1996. '
+                                                        'The video app TikTok '
+                                                        'is just the latest '
+                                                        'avenue for false '
+                                                        'narratives about the '
+                                                        'ship. ',
+                                             'copyright': 'Getty Images',
+                                             'format': 'Normal',
+                                             'height': 127,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/multimedia/16Titanic-01-hjfc/16Titanic-01-hjfc-articleInline.jpg',
+                                             'width': 190}],
+                       'org_facet': ['TikTok (ByteDance)'],
+                       'per_facet': None,
+                       'published_date': '2023-06-16T09:00:20-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '16titanic-tiktok',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': '',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/18/multimedia/16Titanic-01-hjfc/16Titanic-01-hjfc-thumbStandard.jpg',
+                       'title': 'The Titanic Truthers of TikTok',
+                       'updated_date': '2023-06-16T12:02:11-04:00',
+                       'uri': 'nyt://article/161cc544-5ebd-527f-9aba-5ecc623ce9a4',
+                       'url': 'https://www.nytimes.com/2023/06/16/business/titanic-tiktok-misinformation.html'},
+                   {   'abstract': 'A contingent from the kingdom, including '
+                                   'its powerful crown prince, are in the '
+                                   'French capital looking to spend big on '
+                                   'investments.',
+                       'byline': 'BY ANDREW ROSS SORKIN, RAVI MATTU, BERNHARD '
+                                 'WARNER, SARAH KESSLER, MICHAEL J. DE LA '
+                                 'MERCED, LAUREN HIRSCH, EPHRAT LIVNI AND '
+                                 'VIVIENNE WALT',
+                       'created_date': '2023-06-16T07:57:12-04:00',
+                       'des_facet': [   'internal-storyline-no',
+                                        'Foreign Investments'],
+                       'first_published_date': '2023-06-16T07:57:12-04:00',
+                       'geo_facet': ['Saudi Arabia', 'France'],
+                       'item_type': 'Article',
+                       'kicker': 'DealBook Newsletter',
+                       'material_type_facet': 'News',
+                       'multimedia': [   {   'caption': 'Crown Prince Mohammed '
+                                                        'bin Salman of Saudi '
+                                                        'Arabia wants to '
+                                                        'transform the '
+                                                        'country’s economy and '
+                                                        'its role on the '
+                                                        'global stage.',
+                                             'copyright': 'Saudi Royal Court, '
+                                                          'via Reuters',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16db-mbs-lkhm/16db-mbs-lkhm-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': 'Crown Prince Mohammed '
+                                                        'bin Salman of Saudi '
+                                                        'Arabia wants to '
+                                                        'transform the '
+                                                        'country’s economy and '
+                                                        'its role on the '
+                                                        'global stage.',
+                                             'copyright': 'Saudi Royal Court, '
+                                                          'via Reuters',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16db-mbs-lkhm/16db-mbs-lkhm-mediumThreeByTwo210.jpg',
+                                             'width': 210},
+                                         {   'caption': 'Crown Prince Mohammed '
+                                                        'bin Salman of Saudi '
+                                                        'Arabia wants to '
+                                                        'transform the '
+                                                        'country’s economy and '
+                                                        'its role on the '
+                                                        'global stage.',
+                                             'copyright': 'Saudi Royal Court, '
+                                                          'via Reuters',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16db-mbs-lkhm/16db-mbs-lkhm-mediumThreeByTwo440.jpg',
+                                             'width': 440},
+                                         {   'caption': 'Crown Prince Mohammed '
+                                                        'bin Salman of Saudi '
+                                                        'Arabia wants to '
+                                                        'transform the '
+                                                        'country’s economy and '
+                                                        'its role on the '
+                                                        'global stage.',
+                                             'copyright': 'Saudi Royal Court, '
+                                                          'via Reuters',
+                                             'format': 'Normal',
+                                             'height': 145,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16db-mbs-lkhm/16db-mbs-lkhm-articleInline.jpg',
+                                             'width': 190}],
+                       'org_facet': None,
+                       'per_facet': ['Mohammed bin Salman (1985- )'],
+                       'published_date': '2023-06-16T07:57:12-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '16db-newsletter-web',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': 'DealBook',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/16/multimedia/16db-mbs-lkhm/16db-mbs-lkhm-thumbStandard.jpg',
+                       'title': 'Saudi Arabia Arrives in Paris, Shopping for '
+                                'Deals',
+                       'updated_date': '2023-06-16T07:57:12-04:00',
+                       'uri': 'nyt://article/6271fc3a-fb78-58ba-8f55-ef8ba1e3b6bf',
+                       'url': 'https://www.nytimes.com/2023/06/16/business/dealbook/saudi-paris-deals.html'},
+                   {   'abstract': 'China’s president, Xi Jinping, called Mr. '
+                                   'Gates “the first American friend I met in '
+                                   'Beijing this year.”',
+                       'byline': 'BY CHANG CHE',
+                       'created_date': '2023-06-16T05:37:19-04:00',
+                       'des_facet': [   'Politics and Government',
+                                        'Philanthropy',
+                                        'Foreign Aid',
+                                        'United States International '
+                                        'Relations'],
+                       'first_published_date': '2023-06-16T05:37:19-04:00',
+                       'geo_facet': ['China', 'United States'],
+                       'item_type': 'Article',
+                       'kicker': '',
+                       'material_type_facet': 'News',
+                       'multimedia': [   {   'caption': 'A photo released by '
+                                                        'Chinese state media '
+                                                        'showed Bill Gates '
+                                                        'with Xi Jinping, '
+                                                        'China’s leader, in '
+                                                        'Beijing on Friday.',
+                                             'copyright': 'Yin Bogu/Xinhua, '
+                                                          'via Associated '
+                                                          'Press',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16China-Gates-hbfg/16China-Gates-hbfg-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': 'A photo released by '
+                                                        'Chinese state media '
+                                                        'showed Bill Gates '
+                                                        'with Xi Jinping, '
+                                                        'China’s leader, in '
+                                                        'Beijing on Friday.',
+                                             'copyright': 'Yin Bogu/Xinhua, '
+                                                          'via Associated '
+                                                          'Press',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16China-Gates-hbfg/16China-Gates-hbfg-mediumThreeByTwo210.jpg',
+                                             'width': 210},
+                                         {   'caption': 'A photo released by '
+                                                        'Chinese state media '
+                                                        'showed Bill Gates '
+                                                        'with Xi Jinping, '
+                                                        'China’s leader, in '
+                                                        'Beijing on Friday.',
+                                             'copyright': 'Yin Bogu/Xinhua, '
+                                                          'via Associated '
+                                                          'Press',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16China-Gates-hbfg/16China-Gates-hbfg-mediumThreeByTwo440.jpg',
+                                             'width': 440},
+                                         {   'caption': 'A photo released by '
+                                                        'Chinese state media '
+                                                        'showed Bill Gates '
+                                                        'with Xi Jinping, '
+                                                        'China’s leader, in '
+                                                        'Beijing on Friday.',
+                                             'copyright': 'Yin Bogu/Xinhua, '
+                                                          'via Associated '
+                                                          'Press',
+                                             'format': 'Normal',
+                                             'height': 127,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16China-Gates-hbfg/16China-Gates-hbfg-articleInline.jpg',
+                                             'width': 190}],
+                       'org_facet': [   'Microsoft Corp',
+                                        'Gates, Bill and Melinda, Foundation'],
+                       'per_facet': [   'Gates, Bill',
+                                        'Xi Jinping',
+                                        'Blinken, Antony J'],
+                       'published_date': '2023-06-16T05:37:19-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '16China-Gates',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': '',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/16/multimedia/16China-Gates-hbfg/16China-Gates-hbfg-thumbStandard.jpg',
+                       'title': 'Bill Gates, in First Visit to China Since '
+                                '2019, Meets With Xi',
+                       'updated_date': '2023-06-16T14:22:51-04:00',
+                       'uri': 'nyt://article/f35b4cda-e0fe-5319-b1cf-8f7fa4a77198',
+                       'url': 'https://www.nytimes.com/2023/06/16/business/bill-gates-xi-jinping.html'},
+                   {   'abstract': 'The couple’s production company and the '
+                                   'streaming service announced an end to '
+                                   'their relationship, less than a year after '
+                                   'Meghan’s podcast debuted on the platform.',
+                       'byline': 'BY DERRICK BRYSON TAYLOR',
+                       'created_date': '2023-06-16T05:31:07-04:00',
+                       'des_facet': ['Podcasts', 'Royal Families'],
+                       'first_published_date': '2023-06-16T05:31:07-04:00',
+                       'geo_facet': ['Great Britain'],
+                       'item_type': 'Article',
+                       'kicker': '',
+                       'material_type_facet': 'News',
+                       'multimedia': [   {   'caption': 'Prince Harry and his '
+                                                        'wife, Meghan, last '
+                                                        'year. Their audio '
+                                                        'production company '
+                                                        'and Spotify have '
+                                                        'announced an end to '
+                                                        'their partnership.',
+                                             'copyright': 'Mike Coppola/Getty '
+                                                          'Images for 2022 '
+                                                          'Robert F. Kennedy '
+                                                          'Human Rights Ripple '
+                                                          'of Hope Gala',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/world/16xp-royals-spotify/16xp-royals-spotify-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': 'Prince Harry and his '
+                                                        'wife, Meghan, last '
+                                                        'year. Their audio '
+                                                        'production company '
+                                                        'and Spotify have '
+                                                        'announced an end to '
+                                                        'their partnership.',
+                                             'copyright': 'Mike Coppola/Getty '
+                                                          'Images for 2022 '
+                                                          'Robert F. Kennedy '
+                                                          'Human Rights Ripple '
+                                                          'of Hope Gala',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/world/16xp-royals-spotify/16xp-royals-spotify-mediumThreeByTwo210.jpg',
+                                             'width': 210},
+                                         {   'caption': 'Prince Harry and his '
+                                                        'wife, Meghan, last '
+                                                        'year. Their audio '
+                                                        'production company '
+                                                        'and Spotify have '
+                                                        'announced an end to '
+                                                        'their partnership.',
+                                             'copyright': 'Mike Coppola/Getty '
+                                                          'Images for 2022 '
+                                                          'Robert F. Kennedy '
+                                                          'Human Rights Ripple '
+                                                          'of Hope Gala',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/world/16xp-royals-spotify/16xp-royals-spotify-mediumThreeByTwo440.jpg',
+                                             'width': 440},
+                                         {   'caption': 'Prince Harry and his '
+                                                        'wife, Meghan, last '
+                                                        'year. Their audio '
+                                                        'production company '
+                                                        'and Spotify have '
+                                                        'announced an end to '
+                                                        'their partnership.',
+                                             'copyright': 'Mike Coppola/Getty '
+                                                          'Images for 2022 '
+                                                          'Robert F. Kennedy '
+                                                          'Human Rights Ripple '
+                                                          'of Hope Gala',
+                                             'format': 'Normal',
+                                             'height': 139,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/world/16xp-royals-spotify/16xp-royals-spotify-articleInline.jpg',
+                                             'width': 190}],
+                       'org_facet': ['Spotify', 'Archewell Inc'],
+                       'per_facet': ['Harry, Duke of Sussex', 'Markle, Meghan'],
+                       'published_date': '2023-06-16T05:31:07-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '16xp-royals-spotify',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': '',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/16/world/16xp-royals-spotify/16xp-royals-spotify-thumbStandard.jpg',
+                       'title': 'Prince Harry and Meghan to Part Ways With '
+                                'Spotify',
+                       'updated_date': '2023-06-16T05:31:07-04:00',
+                       'uri': 'nyt://article/d2dbfe99-3aeb-50e9-bf74-a67aeb400018',
+                       'url': 'https://www.nytimes.com/2023/06/16/business/archewell-spotify-meghan-harry.html'},
+                   {   'abstract': 'The free, ad-supported streaming service '
+                                   'is quadrupling down on Judge Judith '
+                                   'Sheindlin. And she’s bringing her “nepo '
+                                   'babies” along.',
+                       'byline': 'BY BROOKS BARNES',
+                       'created_date': '2023-06-16T05:01:08-04:00',
+                       'des_facet': [   'Television',
+                                        'Reality Television',
+                                        'Video Recordings, Downloads and '
+                                        'Streaming',
+                                        'Nepotism',
+                                        'Content Type: Personal Profile',
+                                        'Suits and Litigation (Civil)',
+                                        'Courts and the Judiciary'],
+                       'first_published_date': '2023-06-16T05:01:08-04:00',
+                       'geo_facet': None,
+                       'item_type': 'Article',
+                       'kicker': '',
+                       'material_type_facet': 'News',
+                       'multimedia': [   {   'caption': '“Judy Justice,” now '
+                                                        'in its second season, '
+                                                        'helped put Freevee on '
+                                                        'the map. “Judge '
+                                                        'Sheindlin is a '
+                                                        'brand,” one executive '
+                                                        'said.',
+                                             'copyright': 'Alex Welsh for The '
+                                                          'New York Times',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/14/multimedia/00JudyVerse-01-fhkl/00JudyVerse-01-fhkl-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': '“Judy Justice,” now '
+                                                        'in its second season, '
+                                                        'helped put Freevee on '
+                                                        'the map. “Judge '
+                                                        'Sheindlin is a '
+                                                        'brand,” one executive '
+                                                        'said.',
+                                             'copyright': 'Alex Welsh for The '
+                                                          'New York Times',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/14/multimedia/00JudyVerse-01-fhkl/00JudyVerse-01-fhkl-mediumThreeByTwo210.jpg',
+                                             'width': 210},
+                                         {   'caption': '“Judy Justice,” now '
+                                                        'in its second season, '
+                                                        'helped put Freevee on '
+                                                        'the map. “Judge '
+                                                        'Sheindlin is a '
+                                                        'brand,” one executive '
+                                                        'said.',
+                                             'copyright': 'Alex Welsh for The '
+                                                          'New York Times',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/14/multimedia/00JudyVerse-01-fhkl/00JudyVerse-01-fhkl-mediumThreeByTwo440.jpg',
+                                             'width': 440},
+                                         {   'caption': '“Judy Justice,” now '
+                                                        'in its second season, '
+                                                        'helped put Freevee on '
+                                                        'the map. “Judge '
+                                                        'Sheindlin is a '
+                                                        'brand,” one executive '
+                                                        'said.',
+                                             'copyright': 'Alex Welsh for The '
+                                                          'New York Times',
+                                             'format': 'Normal',
+                                             'height': 237,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/14/multimedia/00JudyVerse-01-fhkl/00JudyVerse-01-fhkl-articleInline.jpg',
+                                             'width': 190}],
+                       'org_facet': ['Amazon Freevee (Streaming Service)'],
+                       'per_facet': [   'Sheindlin, Judith B',
+                                        'Levy, Adam (Attorney)',
+                                        'Mentzer, Daniel T'],
+                       'published_date': '2023-06-16T05:01:08-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '16judyverse',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': '',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/14/multimedia/00JudyVerse-01-fhkl/00JudyVerse-01-fhkl-thumbStandard.jpg',
+                       'title': 'Amazon’s Freevee Embraces the Judy-Verse',
+                       'updated_date': '2023-06-16T12:11:40-04:00',
+                       'uri': 'nyt://article/b4dce78b-ab6a-511d-b7fb-e742ad65881d',
+                       'url': 'https://www.nytimes.com/2023/06/16/business/amazon-freevee-judge-judy.html'},
+                   {   'abstract': 'An innovative E.V. ride-sharing program is '
+                                   'bringing low-cost clean transportation to '
+                                   'an agricultural town in California’s '
+                                   'Central Valley. Others are following suit.',
+                       'byline': 'BY PATRICIA LEIGH BROWN',
+                       'created_date': '2023-06-16T05:00:58-04:00',
+                       'des_facet': [   'Electric and Hybrid Vehicles',
+                                        'Car-Pooling and Ride-Sharing',
+                                        'Volunteers and Community Service',
+                                        'Hispanic-Americans',
+                                        'Poverty',
+                                        'Sustainable Living',
+                                        'Global Warming',
+                                        'Air Pollution'],
+                       'first_published_date': '2023-06-16T05:00:58-04:00',
+                       'geo_facet': [   'Huron (Calif)',
+                                        'Los Angeles (Calif)',
+                                        'Central Valley (Calif)'],
+                       'item_type': 'Article',
+                       'kicker': '',
+                       'material_type_facet': 'News',
+                       'multimedia': [   {   'caption': '',
+                                             'copyright': 'Alex Welsh for The '
+                                                          'New York Times',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16evs-for-all-promo-mplt/16evs-for-all-promo-mplt-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': '',
+                                             'copyright': 'Alex Welsh for The '
+                                                          'New York Times',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16evs-for-all-promo-mplt/16evs-for-all-promo-mplt-mediumThreeByTwo210.jpg',
+                                             'width': 210},
+                                         {   'caption': '',
+                                             'copyright': 'Alex Welsh for The '
+                                                          'New York Times',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16evs-for-all-promo-mplt/16evs-for-all-promo-mplt-mediumThreeByTwo440.jpg',
+                                             'width': 440},
+                                         {   'caption': '',
+                                             'copyright': 'Alex Welsh for The '
+                                                          'New York Times',
+                                             'format': 'Normal',
+                                             'height': 127,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/16/multimedia/16evs-for-all-promo-mplt/16evs-for-all-promo-mplt-articleInline.jpg',
+                                             'width': 190}],
+                       'org_facet': ['Green Raiteros (Nonprofit)'],
+                       'per_facet': ['Leon, Rey (Mayor)'],
+                       'published_date': '2023-06-16T05:00:58-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '16evs-for-all',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': '',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/16/multimedia/16evs-for-all-promo-mplt/16evs-for-all-promo-mplt-thumbStandard.jpg',
+                       'title': 'There’s No Uber or Lyft. There Is a Communal '
+                                'Tesla.',
+                       'updated_date': '2023-06-16T14:29:59-04:00',
+                       'uri': 'nyt://article/08bd3c55-455e-5ccc-acc6-177a42bf256f',
+                       'url': 'https://www.nytimes.com/2023/06/16/business/ev-ride-sharing-volunteers.html'},
+                   {   'abstract': 'Stocks still haven’t returned to their '
+                                   'last peak, and our columnist is in the '
+                                   'camp that says this isn’t a bull market '
+                                   'yet. But he’s buying stock anyway.',
+                       'byline': 'BY JEFF SOMMER',
+                       'created_date': '2023-06-16T05:00:18-04:00',
+                       'des_facet': [   "Standard & Poor's 500-Stock Index",
+                                        'Stocks and Bonds',
+                                        'Content Type: Service',
+                                        'Personal Finances'],
+                       'first_published_date': '2023-06-16T05:00:18-04:00',
+                       'geo_facet': None,
+                       'item_type': 'Article',
+                       'kicker': 'Strategies',
+                       'material_type_facet': 'News',
+                       'multimedia': [   {   'caption': '',
+                                             'copyright': 'Tom Grillo',
+                                             'format': 'Standard Thumbnail',
+                                             'height': 75,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/business/18Strategies-illo/18Strategies-illo-thumbStandard.jpg',
+                                             'width': 75},
+                                         {   'caption': '',
+                                             'copyright': 'Tom Grillo',
+                                             'format': 'mediumThreeByTwo210',
+                                             'height': 140,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/business/18Strategies-illo/18Strategies-illo-mediumThreeByTwo210-v2.jpg',
+                                             'width': 210},
+                                         {   'caption': '',
+                                             'copyright': 'Tom Grillo',
+                                             'format': 'mediumThreeByTwo440',
+                                             'height': 293,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/business/18Strategies-illo/18Strategies-illo-mediumThreeByTwo440-v2.jpg',
+                                             'width': 440},
+                                         {   'caption': '',
+                                             'copyright': 'Tom Grillo',
+                                             'format': 'Normal',
+                                             'height': 190,
+                                             'subtype': 'photo',
+                                             'type': 'image',
+                                             'url': 'https://static01.nyt.com/images/2023/06/18/business/18Strategies-illo/18Strategies-illo-articleInline.jpg',
+                                             'width': 190}],
+                       'org_facet': [   'Federal Reserve System',
+                                        'S & P Dow Jones Indices'],
+                       'per_facet': ['Newton, Isaac', 'Swift, Jonathan'],
+                       'published_date': '2023-06-16T05:00:18-04:00',
+                       'related_urls': None,
+                       'section': 'Business',
+                       'slug_name': '16strategies',
+                       'source': 'New York Times',
+                       'subheadline': '',
+                       'subsection': '',
+                       'thumbnail_standard': 'https://static01.nyt.com/images/2023/06/18/business/18Strategies-illo/18Strategies-illo-thumbStandard.jpg',
+                       'title': 'A Bull or a Bear Market? It Doesn’t Matter.',
+                       'updated_date': '2023-06-16T15:44:42-04:00',
+                       'uri': 'nyt://article/dfbc4373-fec9-596f-ab84-e5d4a3cc08bb',
+                       'url': 'https://www.nytimes.com/2023/06/16/business/bull-bear-market-investors.html'}],
+    'status': 'OK'}
+{   'copyright': 'Copyright (c) 2023 The New York Times Company. All Rights '
+                 'Reserved.',
+    'last_updated': '2023-06-16T17:06:02-04:00',
+    'num_results': 29,
+    'results': [   {   'abstract': 'The company has reached out to regulators '
+                                   'about its plans, which could set off '
+                                   'privacy and safety concerns for parents '
+                                   'and watchdogs.',
+                       'byline': 'By Mike Isaac, Adam Satariano and Natasha '
+                                 'Singer',
+                       'created_date': '2023-06-16T15:41:28-04:00',
+                       'des_facet': [   'Virtual Reality (Computers)',
+                                        'Headphones and Headsets',
+                                        'Regulation and Deregulation of '
+                                        'Industry',
+                                        'Age, Chronological',
+                                        'Teenagers and Adolescence',
+                                        'Social Media',
+                                        'Parenting',
+                                        'Computers and the Internet'],
+                       'geo_facet': [],
+                       'item_type': 'Article',
+                       'kicker': '',
+                       'material_type_facet': '',
+                       'multimedia': [   {   'caption': 'Over the past year, '
+...
+                       'uri': 'nyt://article/a0ae427e-f950-5a27-9789-0becdb2ddfa4',
+                       'url': 'https://www.nytimes.com/2023/06/11/technology/silicon-valley-confronts-the-idea-that-the-singularity-is-here.html'}],
+    'section': 'Technology',
+    'status': 'OK'}
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
