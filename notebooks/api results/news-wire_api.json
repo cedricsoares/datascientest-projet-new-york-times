@@ -1,47 +1,4 @@
-{   'copyright': 'Copyright (c) 2023 The New York Times Company.  All Rights '
-                 'Reserved.',
-    'num_results': 1,
-    'results': [   {   'book_author': 'Jerry Seinfeld',
-                       'book_title': 'SeinLanguage',
-                       'byline': 'ANITA GATES',
-                       'isbn13': ['9780792719120'],
-                       'publication_dt': '1993-10-10',
-                       'summary': '',
-                       'uri': 'nyt://book/00000000-0000-0000-0000-000000000000',
-                       'url': 'http://www.nytimes.com/1993/10/10/books/in-short-nonfiction-748993.html',
-                       'uuid': '00000000-0000-0000-0000-000000000000'}],
-    'status': 'OK'}
-{   'copyright': 'Copyright (c) 2023 The New York Times Company. All Rights '
-                 'Reserved.',
-    'has_more': True,
-    'num_results': 20,
-    'results': [   {   'byline': 'Nicolas Rapold',
-                       'critics_pick': 0,
-                       'date_updated': '2023-06-08 16:05:02',
-                       'display_title': 'A Woman Escapes',
-                       'headline': '‘A Woman Escapes’ Review: Screen Sharing',
-                       'link': {   'suggested_link_text': 'Read the New York '
-                                                          'Times Review of A '
-                                                          'Woman Escapes',
-                                   'type': 'article',
-                                   'url': 'https://www.nytimes.com/2023/06/08/movies/a-woman-escapes-review.html'},
-                       'mpaa_rating': '',
-                       'multimedia': {   'height': 140,
-                                         'src': 'https://static01.nyt.com/images/2023/06/07/multimedia/a-woman-escapes-kjqm/a-woman-escapes-kjqm-mediumThreeByTwo440.jpg',
-                                         'type': 'mediumThreeByTwo210',
-                                         'width': 210},
-                       'opening_date': None,
-                       'publication_date': '2023-06-08',
-                       'summary_short': 'In this moody epistolary film, a '
-                                        'woman in Paris works through a close '
-                                        'friend’s death with the help of video '
-                                        'correspondences.'},
-...
-                       'opening_date': None,
-                       'publication_date': '1982-09-15',
-                       'summary_short': ''}],
-    'status': 'OK'}
-Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+
 {   'copyright': 'Copyright (c) 2023 The New York Times Company.  All Rights '
                  'Reserved.',
     'num_results': 500,
