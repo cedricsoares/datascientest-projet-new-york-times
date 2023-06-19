@@ -1770,34 +1770,3 @@
                        'uri': 'nyt://article/dfbc4373-fec9-596f-ab84-e5d4a3cc08bb',
                        'url': 'https://www.nytimes.com/2023/06/16/business/bull-bear-market-investors.html'}],
     'status': 'OK'}
-{   'copyright': 'Copyright (c) 2023 The New York Times Company. All Rights '
-                 'Reserved.',
-    'last_updated': '2023-06-16T17:06:02-04:00',
-    'num_results': 29,
-    'results': [   {   'abstract': 'The company has reached out to regulators '
-                                   'about its plans, which could set off '
-                                   'privacy and safety concerns for parents '
-                                   'and watchdogs.',
-                       'byline': 'By Mike Isaac, Adam Satariano and Natasha '
-                                 'Singer',
-                       'created_date': '2023-06-16T15:41:28-04:00',
-                       'des_facet': [   'Virtual Reality (Computers)',
-                                        'Headphones and Headsets',
-                                        'Regulation and Deregulation of '
-                                        'Industry',
-                                        'Age, Chronological',
-                                        'Teenagers and Adolescence',
-                                        'Social Media',
-                                        'Parenting',
-                                        'Computers and the Internet'],
-                       'geo_facet': [],
-                       'item_type': 'Article',
-                       'kicker': '',
-                       'material_type_facet': '',
-                       'multimedia': [   {   'caption': 'Over the past year, '
-...
-                       'uri': 'nyt://article/a0ae427e-f950-5a27-9789-0becdb2ddfa4',
-                       'url': 'https://www.nytimes.com/2023/06/11/technology/silicon-valley-confronts-the-idea-that-the-singularity-is-here.html'}],
-    'section': 'Technology',
-    'status': 'OK'}
-Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
