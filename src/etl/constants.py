@@ -3,7 +3,7 @@ INDEXES_SETTINGS = {
     "number_of_replicas": 2
 }
 
-INDEXEXES_NAMES = ['newswire', 'books', 'movies']
+INDEXEXES_NAMES = ['news', 'books', 'movies']
 
 NEWSWIRE_MAPPING = {
         'properties': {
