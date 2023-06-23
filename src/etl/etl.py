@@ -3,7 +3,7 @@ import json
 import logging
 import os
 import time
-from typing import Dict, List, Optional 
+from typing import Dict, List, Optional, Any
 
 import requests
 from constants import (API_CALL_DAILY_INDEX, BOOKS_MAPPING, END_POINT_HITS,
@@ -29,8 +29,7 @@ def create_index(con: Elasticsearch, name: str,
     mapping: Dict[str, Dict[str, str]],
     settings: Dict[str, int]) -> None:
 
-    """ 
-    Create an index in Elasticsearch database
+    """Create an index in Elasticsearch database
 
     Args:
         con (Elasticsearch): Connector object used to connect to database
@@ -56,9 +55,9 @@ def create_index(con: Elasticsearch, name: str,
 def build_query(index_name: str, api_key: str, 
                 start_offset: Optional[int], news_section: Optional[str],
                 movies_type: Optional[str]) -> str:
-    """
-    Build query to pass to the NYT API
-    orccording to type of content we try to get data
+    """ Build query to pass to the NYT API
+        
+        Query is built according to type of content we try to get data
 
     Args:
         index_name (str): Specify type of the content we want to retrieve
@@ -86,16 +85,36 @@ def build_query(index_name: str, api_key: str,
         return query
 
     if index_name == 'movies':
-        query = f'https://api.nytimes.com/svc/movies/v2/reviews/{movies_type}.json?offset={start_offset}&api-key={api_key}'
+        query = f'https://api.nytimes.com/svc/movies/v2/reviews/all.json?offset={start_offset}&api-key={api_key}'
         logging.info(f'----- Builded querry {query} -----')
         return query
+    
+def results_to_list(index_name: str,
+                    results: List[Dict[str, Any]]) -> List[Dict[str, Dict[Any]]]:
+    """Transform a list of documents from NTY API to dict to bulk on Elasticsearch
+  
+    Args:
+        index_name (str): index_name to provide to bulk data to Elasticsearch
+        results (list): A list of documents retrived by NYT API
 
+    Retuns
+        bulk_list (lits): A list of index_name / documents ready to bulk on Elasticsearch
+    """
+    logging.info(f'----- Start building bulk list for {index_name} index -----')
+    actions = []
+    for doc in results:
+        action = {
+            "_index": index_name,
+            "_source": doc
+        }
+        actions.append(action)
+    logging.info(f'----- List to bulk on Elasticsearch : \n {actions} \n -----')
+    return actions
 
 def get_books_or_movies(con: Elasticsearch, index_name: str, endpoint_hits: int,
                 start_offset: int, results_by_page: int,
-                max_api_calls: int) -> None:
-    """
-    Get documents from books API
+                max_api_calls: int, api_key: str) -> int:
+    """Get documents from books API
 
     Args:
         con (Elasticsearch): Connector object used to connect to database
@@ -106,41 +125,34 @@ def get_books_or_movies(con: Elasticsearch, index_name: str, endpoint_hits: int,
             order to specify where to start retrieving data
         results_by_page (int): Number of results of each reponse from NYT API calls
         max_api_calls (int): Maximum of dailly calls allowed by the NYT API
+        api_key (str): Used NYT api key to retrieve data
 
     Returns:
-        None
-
-
+        api_call (int): number api calls used by the function
     """
 
-    logging.info("----- Start getting articles from newswire API -----")
+    logging.info(f'----- Start getting {index_name} from NYT API -----')
 
     api_calls = 1
 
     while (api_calls < max_api_calls):
 
         now = datetime.datetime.now()
+        logging.info(f'----- Number of NYT API calls {api_calls} \n -----')
         logging.info(f'----- query starts at offset:{api_calls} at: {now} -----')
 
 
         # Request the Api
-        content = requests.get(f"")
+        query = build_query(index_name=index_name, start_offset=start_offset)
+        content = requests.get(query)
 
         # save into the ES DB
         res = content.json()
         logging.info(f"----- Json response page regarding start_offset: {start_offset} \n {res} -----")
 
         docs = res['results']
+        actions = results_by_page(index_name=index_name, results=docs)
         
-    # Prepare the documents for bulk indexing
-        actions = []
-        for doc in docs:
-            action = {
-                "_index": index_name,
-                "_source": doc
-            }
-            actions.append(action)
-
         # Perform the bulk indexing
         response = bulk(con, actions)
 
