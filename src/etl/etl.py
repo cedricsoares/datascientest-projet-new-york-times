@@ -89,7 +89,8 @@ def build_query(index_name: str, api_key: str,
         query = f'https://api.nytimes.com/svc/movies/v2/reviews/all.json?offset={start_offset}&api-key={api_key}'
         logging.info(f'----- Builded querry {query} -----')
         return query
-    
+
+
 def results_to_list(index_name: str,
                     results: List[Dict[str, Any]]) -> List[Dict[str, Dict[Any]]]:
     """Transform a list of documents from NTY API to dict to bulk on Elasticsearch
@@ -129,7 +130,7 @@ def bulk_to_elasticsearch(
     bulk(con, bulk_list)
     
 
-def get_books_or_movies(con: Elasticsearch, index_name: str, endpoint_hits: int,
+def get_books_or_movies(con: Elasticsearch, index_name: str,
                 start_offset: int, results_by_page: int,
                 max_api_calls: int, api_key: str) -> int:
     """Get documents from books API
@@ -166,6 +167,8 @@ def get_books_or_movies(con: Elasticsearch, index_name: str, endpoint_hits: int,
 
         # save into the ES DB
         res = content.json()
+        endpoint_hits = res['num_results']
+
         logging.info(f"----- Json response page regarding start_offset: {start_offset} \n {res} -----")
 
         docs = res['results']
