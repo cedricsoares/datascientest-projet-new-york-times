@@ -30,7 +30,7 @@ def create_index(con: Elasticsearch, name: str,
     settings: Dict[str, int]) -> None:
 
     """ 
-    CReate an index in Elasticsearch database
+    Create an index in Elasticsearch database
 
     Args:
         con (Elasticsearch): Connector object used to connect to database
@@ -54,30 +54,44 @@ def create_index(con: Elasticsearch, name: str,
 
 
 def get_books(con: Elasticsearch, index_name: str, endpoint_hits: int,
-                api_call_daily_index: int, offset_value: int,
-                offset_factor: int, max_api_calls: int = 2,
-                list_lenght: int = 2) -> None:
+                start_offset: int, results_by_page: int,
+                max_api_calls: int) -> None:
     """
     Get documents from books API
-    
-    Args
+
+    Args:
+        con (Elasticsearch): Connector object used to connect to database
+        index_name (str): Name of the Elasticsearch index where documents
+            are added
+        enpoint_hits (int): Number of returned hits from API books
+        start_offset (int): Offset number to pass to the API call in
+            order to specify where to start retrieving data
+        results_by_page (int): Number of results of each reponse from API calls
+        max_api_calls (int): Maximum of dailly calls allowed by the API
+
+    Returns:
+        None
+
 
     """
     continue_loading = True
 
     logging.info("----- Start getting articles from newswire API -----")
 
-    while (continue_loading):
+    api_calls = 1
 
-        api_call_daily_index += 1
-        continue_loading = api_call_daily_index < max_api_calls
+    while (continue_loading):
+        now = datetime.datetime.now()
+        logging.info(f'----- query starts at offset:{api_calls} at: {now} -----')
+
+        continue_loading = api_calls < max_api_calls
 
         # Request the Api
-        content = requests.get(f"https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?offset={offset_value}&api-key={API_KEY}")
+        content = requests.get(f"https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?offset={start_offset}&api-key={API_KEY}")
 
         # save into the ES DB
         res = content.json()
-        logging.info(f"----- Json response page regarding offset_value: {offset_value} \n {res} -----")
+        logging.info(f"----- Json response page regarding start_offset: {start_offset} \n {res} -----")
 
         docs = res['results']
         
@@ -90,23 +104,34 @@ def get_books(con: Elasticsearch, index_name: str, endpoint_hits: int,
             }
             actions.append(action)
 
-        now = datetime.datetime.now()
-        logging.info(f'----- query index:{api_call_daily_index} at: {now} -----')
-
         # Perform the bulk indexing
         response = bulk(con, actions)
 
         # Check the response
         if not response[1]:
-            logging.info(f'----- {api_call_daily_index * offset_factor} /35311 books saved successfully -----')
+            saved_books = api_calls * results_by_page
+            logging.info(f'----- {saved_books} books saved successfully  -----')
+            logging.info(f'----- Remaining books save regarding endpoints hits: {endpoint_hits - saved_books} -----')
         else:
             logging.warning('----- Failed to save content. -----')
+
+        start_offset += results_by_page
+
+        api_calls += 1
 
         ######################################################
         time.sleep(12)  ##### TO MODIFY ACCORDING API ALLOWANCE
         ######################################################
 
-    logging.info('----- end of the API loop -----')
+        logging.info(f'----- Next offset to use on API call: {start_offset} -----')
+
+
+
+    
+
+    
+
+    
 
 
 

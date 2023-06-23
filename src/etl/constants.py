@@ -124,7 +124,6 @@ movies_settings = {
     "number_of_replicas": 2
 }
 
-OFFSET_VALUE = 0
-OFFSET_FACTOR = 20
+RSEULTS_BY_PAGE = 20
 END_POINT_HITS = 35311
-API_CALL_DAILY_INDEX = 0
+MAX_API_CALLS = 500
