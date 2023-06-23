@@ -61,7 +61,7 @@ def get_news_sections(con: Elasticsearch, api_key: str,
     Args:
         con (Elasticsearch): Connector object used to connect to database
         api_key (str): Used NYT api key to retrieve data
-        api_call (int): Number of API calls
+        api_calls (int): Number of API calls
 
     Returns:
         sections (list): List of news sections retrieved from NYT API
@@ -76,6 +76,58 @@ def get_news_sections(con: Elasticsearch, api_key: str,
     api_calls += 1
 
     return sections, api_calls
+
+
+def get_news_data(con: Elasticsearch, api_key: str, api_calls: int) -> int:
+    """Get news documents from NYT newswire API
+
+    Args:
+        con (Elasticsearch): Connector object used to connect to database
+        api_key (str): Used NYT api key to retrieve data
+        api_calls (int): Number of API calls used by the script
+    
+    Returns:
+        int: Number of API calls all along the script
+    """
+
+    logging.info('----- Start geting news data from NYT API -----')
+
+    sections = get_news_sections(con=con, api_key=api_key, api_calls=api_calls)
+
+    for section in sections:
+
+        logging.info(f'----- Start retriving data from section: {section} -----')
+
+        #Request the Api
+        query = build_query(index_name='news', news_section=section, api_key=api_key)
+        content = requests.get(query)
+
+        #save into the ES DB
+        res = content.json()
+        logging.info(f'----- Retrieved results: \n {res} \n -----')       
+
+        docs = res['results']
+
+        # Prepare the documents for bulk indexing
+        actions = results_to_list(index_name='news', results=docs)
+
+        # Perform the bulk indexing
+        response = bulk_to_elasticsearch(con=con, bulk_list=actions)
+
+        # Check the response
+        if not response[1]:
+            print(f'{section} saved successfully')
+        else:
+            print('Failed to save content.')
+
+        api_calls += 1
+        
+        ######################################################
+        time.sleep(13) ##### TO MODIFY ACCORDING API ALLOWANCE
+        #################### 5 requests max per minute ######
+        ######################################################
+
+        return api_calls
 
 
 def get_books_or_movies_data(con: Elasticsearch, index_name: str,
@@ -122,7 +174,7 @@ def get_books_or_movies_data(con: Elasticsearch, index_name: str,
         actions = results_to_list(index_name=index_name, results=docs)
 
         # Perform the bulk indexing
-        response = bulk_to_elasticsearch(con, actions)
+        response = bulk_to_elasticsearch(con=con, bulk_list=actions)
 
         # Check the response
         if not response[1]:
@@ -141,7 +193,5 @@ def get_books_or_movies_data(con: Elasticsearch, index_name: str,
         ######################################################
 
         logging.info(f'----- Next offset to use on API call: {start_offset} -----')
-        
-        return api_cals
 
-
+        return api_calls
