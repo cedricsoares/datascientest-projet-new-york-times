@@ -125,5 +125,4 @@ movies_settings = {
 }
 
 RSEULTS_BY_PAGE = 20
-END_POINT_HITS = 35311
 MAX_API_CALLS = 500
