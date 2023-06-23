@@ -12,6 +12,7 @@ from constants import (API_CALL_DAILY_INDEX, BOOKS_MAPPING, END_POINT_HITS,
 
 from dotenv import load_dotenv
 from elasticsearch import Elasticsearch
+from elastic_transport import ObjectApiResponse
 from elasticsearch.helpers import bulk
 
 load_dotenv()
@@ -111,6 +112,23 @@ def results_to_list(index_name: str,
     logging.info(f'----- List to bulk on Elasticsearch : \n {actions} \n -----')
     return actions
 
+
+def bulk_to_elasticsearch(
+        con: Elasticsearch, bulk_list: Dict[str, Dict[Any]]
+        ) -> ObjectApiResponse[Any][Any]:
+    """ Run Elasticsearch Bulk API with results from NYT API 
+    
+    Args:
+        con (Elasticsearch): 
+        bult_list (list): A list of documents with index_names from NYT API results
+
+    Returns:
+        ObjectApiREsponse : Response from Elasticsearh Bulk API call
+    """
+    logging.info('----- Start calling Elasticsearck Bulk API -----')
+    bulk(con, bulk_list)
+    
+
 def get_books_or_movies(con: Elasticsearch, index_name: str, endpoint_hits: int,
                 start_offset: int, results_by_page: int,
                 max_api_calls: int, api_key: str) -> int:
@@ -152,9 +170,9 @@ def get_books_or_movies(con: Elasticsearch, index_name: str, endpoint_hits: int,
 
         docs = res['results']
         actions = results_by_page(index_name=index_name, results=docs)
-        
+
         # Perform the bulk indexing
-        response = bulk(con, actions)
+        response = bulk_to_elasticsearch(con, actions)
 
         # Check the response
         if not response[1]:
