@@ -1,9 +1,15 @@
+"""Helpers functions"""
 from typing import Dict, List, Optional, Any
 from elasticsearch import Elasticsearch
 from elastic_transport import ObjectApiResponse
 from elasticsearch.helpers import bulk
 import logging
 
+
+def get_elasctic_connection():
+        """Generate elactic connector """
+
+        return Elasticsearch(hosts="http://@localhost:9200")  # To be changed if Elasticsearch will not remain locally
 
 def build_query(index_name: str, api_key: str, 
                 start_offset: Optional[int], news_section: Optional[str],
