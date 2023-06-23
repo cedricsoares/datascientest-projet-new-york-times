@@ -3,7 +3,7 @@ import json
 import logging
 import os
 import time
-from typing import Dict, List
+from typing import Dict, List, Optional 
 
 import requests
 from constants import (API_CALL_DAILY_INDEX, BOOKS_MAPPING, END_POINT_HITS,
@@ -53,7 +53,22 @@ def create_index(con: Elasticsearch, name: str,
         logging.warning(f'----- Failed to create {name} index. -----')
 
 
-def get_books(con: Elasticsearch, index_name: str, endpoint_hits: int,
+def build_query(content_type: str, start_offset: int,
+                api_key: str, news_section: Optional[str],
+                movies_type: Optional[str]) -> str:
+    
+    if content_type == 'news':
+        return 'https://api.nytimes.com/svc/news/v3/content/all/{section}.json?&api-key={api_key}'
+    
+    if content_type == 'books':
+        return f'https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?offset={start_offset}&api-key={api_key}'
+    
+    if content_type == 'movies':
+        return f'https://api.nytimes.com/svc/movies/v2/reviews/{movies_type}.json?offset={start_offset}&api-key={api_key}'
+    
+
+
+def get_books_or_movies(con: Elasticsearch, index_name: str, endpoint_hits: int,
                 start_offset: int, results_by_page: int,
                 max_api_calls: int) -> None:
     """
@@ -80,14 +95,14 @@ def get_books(con: Elasticsearch, index_name: str, endpoint_hits: int,
 
     api_calls = 1
 
-    while (continue_loading):
+    while (api_calls < max_api_calls):
+
         now = datetime.datetime.now()
         logging.info(f'----- query starts at offset:{api_calls} at: {now} -----')
 
-        continue_loading = api_calls < max_api_calls
 
         # Request the Api
-        content = requests.get(f"https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?offset={start_offset}&api-key={API_KEY}")
+        content = requests.get(f"")
 
         # save into the ES DB
         res = content.json()
