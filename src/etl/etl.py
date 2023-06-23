@@ -53,19 +53,42 @@ def create_index(con: Elasticsearch, name: str,
         logging.warning(f'----- Failed to create {name} index. -----')
 
 
-def build_query(content_type: str, start_offset: int,
-                api_key: str, news_section: Optional[str],
+def build_query(index_name: str, api_key: str, 
+                start_offset: Optional[int], news_section: Optional[str],
                 movies_type: Optional[str]) -> str:
-    
-    if content_type == 'news':
-        return 'https://api.nytimes.com/svc/news/v3/content/all/{section}.json?&api-key={api_key}'
-    
-    if content_type == 'books':
-        return f'https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?offset={start_offset}&api-key={api_key}'
-    
-    if content_type == 'movies':
-        return f'https://api.nytimes.com/svc/movies/v2/reviews/{movies_type}.json?offset={start_offset}&api-key={api_key}'
-    
+    """
+    Build query to pass to the NYT API
+    orccording to type of content we try to get data
+
+    Args:
+        index_name (str): Specify type of the content we want to retrieve
+            via NYT API. Must be news, books, movies
+        start_offset (int): Specify the offset number to start retriving data.
+            Only used for books and movies
+        news_section: Name of the news section.
+            Only used for news.
+        movies_type: Name of type of movies.
+            Only used on movirs.
+
+    Return:
+        str: Builded querry regarding passed parameters
+    """
+    logging.info('----- Strat building querry for NYT API -----')
+
+    if index_name == 'news':
+        query = 'https://api.nytimes.com/svc/news/v3/content/all/{news_section}.json?&api-key={api_key}'
+        logging.info(f'----- Builded querry {query} -----')
+        return query
+
+    if index_name == 'books':
+        query = f'https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?offset={start_offset}&api-key={api_key}'
+        logging.info(f'----- Builded querry {query} -----')
+        return query
+
+    if index_name == 'movies':
+        query = f'https://api.nytimes.com/svc/movies/v2/reviews/{movies_type}.json?offset={start_offset}&api-key={api_key}'
+        logging.info(f'----- Builded querry {query} -----')
+        return query
 
 
 def get_books_or_movies(con: Elasticsearch, index_name: str, endpoint_hits: int,
@@ -76,20 +99,19 @@ def get_books_or_movies(con: Elasticsearch, index_name: str, endpoint_hits: int,
 
     Args:
         con (Elasticsearch): Connector object used to connect to database
-        index_name (str): Name of the Elasticsearch index where documents
+        content_type (str): Name of the Elasticsearch index where documents
             are added
-        enpoint_hits (int): Number of returned hits from API books
+        enpoint_hits (int): Number of returned hits from NYT API books
         start_offset (int): Offset number to pass to the API call in
             order to specify where to start retrieving data
-        results_by_page (int): Number of results of each reponse from API calls
-        max_api_calls (int): Maximum of dailly calls allowed by the API
+        results_by_page (int): Number of results of each reponse from NYT API calls
+        max_api_calls (int): Maximum of dailly calls allowed by the NYT API
 
     Returns:
         None
 
 
     """
-    continue_loading = True
 
     logging.info("----- Start getting articles from newswire API -----")
 
