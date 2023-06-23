@@ -1,19 +1,17 @@
 import datetime
-import json
 import logging
 import os
 import time
-from typing import Dict, List, Tuple, Optional, Any
-
+from typing import Any, Dict, List,  Tuple, Optional
 import requests
-from constants import (API_CALL_DAILY_INDEX, BOOKS_MAPPING, END_POINT_HITS,
-                       INDEXES_SETTINGS, INDEXEXES_NAMES, NEWSWIRE_MAPPING,
-                       OFFSET_FACTOR)
-from elasticsearch import Elasticsearch
-from utils.get_information_helpers import (build_query, results_to_list, 
-                                           bulk_to_elasticsearch)
-
 from dotenv import load_dotenv
+from elasticsearch import Elasticsearch
+
+from constants import (MAX_API_CALLS, RSEULTS_BY_PAGE, BOOKS_MAPPING,
+                       INDEXES_SETTINGS, INDEXEXES_NAMES, NEWSWIRE_MAPPING)
+
+from utils.get_information_helpers import (build_query, bulk_to_elasticsearch,
+                                           results_to_list)
 
 load_dotenv()
 
