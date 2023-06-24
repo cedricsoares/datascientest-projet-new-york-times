@@ -4,6 +4,7 @@ from typing import Optional
 import requests
 
 from elasticsearch import Elasticsearch
+from constants import RESULTS_BY_PAGE
 
 #from session import Session
 
@@ -57,8 +58,11 @@ def get_start_offset(con: Elasticsearch, endpoints_hits: int, index_name: str) -
     """
     if not con.indices.exists(index=index_name):
         return 0
+    
+    if con.count(index=index_name).get('count') == 0:
+        return 0
 
-    return (con.count(index=index_name).get('count') + 1)
+    return (con.count(index=index_name).get('count') + RESULTS_BY_PAGE)
 
 
 def build_query(index_name: str, api_key: Optional[str], start_offset: int = 0,
