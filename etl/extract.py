@@ -9,7 +9,7 @@ import requests
 
 
 from session import Session
-from utils import build_query, get_start_offset, get_endpoint_hits
+from utils import build_query, get_start_offset
 from load import bulk_to_elasticsearch
 from transform import results_to_list
 
@@ -79,9 +79,7 @@ def get_news_data(session: Session, sections: List[str], max_api_calls: int) -> 
             continue
         if session.is_remaining_api_calls(max_api_calls=max_api_calls):
             logger.info(f'----- Start retriving data from section: {section} -----')
-            
 
-            # Request the Api
             query = build_query(index_name='news', news_section=section,
                                 api_key=session.api_key)
             content = requests.get(query)
@@ -125,16 +123,9 @@ def get_books_or_movies(index_name: str,
 
     internal_api_calls = 0
 
-    logger.info(f'----- Number of NYT API calls {internal_api_calls} -----')
-
-    endpoint_hits = get_endpoint_hits(api_key=session.api_key,
-                                      api_calls=session.api_calls,
-                                      index_name=index_name)
-
-    internal_api_calls += 1  # A first API call is used to get endpoint_hits
+    logger.info(f'----- Number of NYT API calls {session.api_calls} -----')
 
     start_offset = get_start_offset(con=session.con,
-                                    endpoints_hits=endpoint_hits,
                                     index_name=index_name)
 
     while (session.is_remaining_api_calls(max_api_calls=max_api_calls)):
@@ -148,6 +139,7 @@ def get_books_or_movies(index_name: str,
         content = requests.get(query)
 
         res = content.json()
+        endpoint_hits = endpoint_hits = res['num_results']
         docs = res['results']
 
         actions = results_to_list(index_name=index_name, results=docs)
