@@ -36,6 +36,11 @@ class Session:
     def con(self):
         """_con getter"""
         return self._con
+    
+    @property
+    def api_key(self):
+        """_api_key getter"""
+        return self._api_key
 
     @property
     def api_calls(self):
