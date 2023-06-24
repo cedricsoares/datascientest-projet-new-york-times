@@ -1,15 +1,15 @@
 """Helpers functions"""
-from typing import Dict, List, Optional, Any
-from elasticsearch import Elasticsearch
-from elastic_transport import ObjectApiResponse
-from elasticsearch.helpers import bulk
 import logging
+from typing import Optional
+
+from elasticsearch import Elasticsearch
 
 
 def get_elasctic_connection():
         """Generate elactic connector """
 
         return Elasticsearch(hosts="http://@localhost:9200")  # To be changed if Elasticsearch will not remain locally
+
 
 def build_query(index_name: str, api_key: str, 
                 start_offset: Optional[int], news_section: Optional[str],
@@ -52,41 +52,3 @@ def build_query(index_name: str, api_key: str,
         query = f'https://api.nytimes.com/svc/movies/v2/reviews/all.json?offset={start_offset}&api-key={api_key}'
         logging.info(f'----- Builded querry {query} -----')
         return query
-    
-def results_to_list(index_name: str,
-                    results: List[Dict[str, Any]]) -> List[Dict[str, Dict[Any]]]:
-    """Transform a list of documents from NTY API to dict to bulk on Elasticsearch
-  
-    Args:
-        index_name (str): index_name to provide to bulk data to Elasticsearch
-        results (list): A list of documents retrived by NYT API
-
-    Retuns
-        bulk_list (lits): A list of index_name / documents ready to bulk on Elasticsearch
-    """
-    logging.info(f'----- Start building bulk list for {index_name} index -----')
-    actions = []
-    for doc in results:
-        action = {
-            "_index": index_name,
-            "_source": doc
-        }
-        actions.append(action)
-    logging.info(f'----- List to bulk on Elasticsearch : \n {actions} \n -----')
-    return actions
-
-
-def bulk_to_elasticsearch(
-        con: Elasticsearch, bulk_list: Dict[str, Dict[Any]]
-        ) -> ObjectApiResponse[Any][Any]:
-    """ Run Elasticsearch Bulk API with results from NYT API 
-    
-    Args:
-        con (Elasticsearch): 
-        bult_list (list): A list of documents with index_names from NYT API results
-
-    Returns:
-        ObjectApiREsponse : Response from Elasticsearh Bulk API call
-    """
-    logging.info('----- Start calling Elasticsearck Bulk API -----')
-    bulk(con, bulk_list)
