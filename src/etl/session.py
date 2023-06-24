@@ -1,14 +1,15 @@
+import logging
+import os
+from typing import Any, Dict
+
+import click
 from dotenv import load_dotenv
 from elasticsearch import Elasticsearch
-from utils import get_elasctic_connection
-import os
-import logging
-from typing import List, Dict, Any
-import click
-from constants import CONFIGURATIONS, MAX_API_CALLS, RESULTS_BY_PAGE
-from extract import get_news, get_books_or_movies
-from load import create_index
-from utils import is_remaining_api_calls
+
+from constants import MAX_API_CALLS, RESULTS_BY_PAGE
+from extract import get_books_or_movies, get_news
+from load import create_index, ddelete_index
+from utils import get_elasctic_connection, is_remaining_api_calls
 
 load_dotenv()
 logger = logging.getLogger(__name__)
@@ -62,8 +63,8 @@ class Session:
     @click.option("--movies", default=False, help="Set True to run ETL on movies")
     @staticmethod
     def get_session_confifurations(
-                                    news: bool, 
-                                    books: bool, 
+                                    news: bool,
+                                    books: bool,
                                     movies: bool,
                                     configurations: Dict[str, Dict[str, Any]]
                                 ) -> Dict[str, Any]:
@@ -112,9 +113,9 @@ class Session:
             logger.info(f'----- Starts runing ETL on {configuration_name} -----')
 
             if configuration_name == 'news':
-                drop_index(index_name=index_name, session=session) #TODO: code method in load module
+                delete_index(name=configuration_name, con=self.con)
 
-            if not self.con.indices.exists(index=configuration_name): # Check if an index exists on Elasticsearch
+            if not self.con.indices.exists(index=configuration_name): # Check if index exists on Elasticsearch
                 
                 name = configuration_name
                 mapping = configuration_params['mapping']
@@ -131,8 +132,8 @@ class Session:
                 else:
                     get_books_or_movies(index_name=configuration_name,
                                         results_by_page=RESULTS_BY_PAGE,
-                                         session=self,
-                                         max_api_calls=MAX_API_CALLS)
+                                        session=self,
+                                        max_api_calls=MAX_API_CALLS)
 
             logger.info(f'----- ETL finished to run on {configuration_name}  -----')
 

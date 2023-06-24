@@ -6,7 +6,7 @@ from typing import Any, Dict
 from elastic_transport import ObjectApiResponse
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
-from session import Session
+
 
 logger = logging.getLogger(__name__)
 
@@ -27,7 +27,7 @@ def create_index(con: Elasticsearch, name: str,
             None
         """
 
-        logger.info(f'----- Star index {name} creation -----')
+        logger.info(f'----- Start index {name} creation -----')
 
         response = con.indices.create(index=name, mappings=mapping,
                                       settings=settings)
@@ -36,6 +36,22 @@ def create_index(con: Elasticsearch, name: str,
             logger.info(f'----- Index {name} created successfully. -----')
         else:
             logger.warning(f'----- Failed to create {name} index. -----')
+
+
+def delete_index(name: str, con: Elasticsearch) -> None:
+    """Drop an index in Elastiseacrh
+
+    Args:
+            con (Elasticsearch): Connector object used to connect to database
+            name (str): Index name
+
+    Return:
+        None
+    """
+
+    logger.info(f'----- deleting {name} index -----')
+    con.indices.delete(index=name)
+    logger.info(f'----- {name} index deleted -----')
 
 
 def bulk_to_elasticsearch(
@@ -50,5 +66,6 @@ def bulk_to_elasticsearch(
     Returns:
         ObjectApiREsponse : Response from Elasticsearh Bulk API call
     """
-    logger.info('----- Start calling Elasticsearck Bulk API -----')
+    logger.info('----- Start saving documents ----')
     bulk(con, bulk_list)
+    logger.info('----- Finish saving documents -----')
