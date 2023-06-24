@@ -4,6 +4,7 @@ import logging
 from typing import Dict, Any
 
 import fire
+import time
 
 from session import Session
 from constants import MAX_API_CALLS, RESULTS_BY_PAGE, CONFIGURATIONS
@@ -112,6 +113,10 @@ def run(session: Session, selected_configurations: Dict[str, Any]) -> None:
 
 
 if __name__ == '__main__':
+    start = time.time()
     session = Session()
     selected_configurations = fire.Fire(get_session_configurations)
     run(session=session, selected_configurations=selected_configurations)
+    end = time.time()
+    runtime = end - start
+    logger.info(f'----- ETL took {runtime} seconds to run -----')
