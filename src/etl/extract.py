@@ -2,44 +2,46 @@
 
 
 import logging
+import time
+from datetime import datetime
+from typing import List
 
 import requests
 from elasticsearch import Elasticsearch
 from load import bulk_to_elasticsearch
+from session import Session
 from transform import results_to_list
 from utils import build_query
 
 
-def get_news_sections(self, con: Elasticsearch,
-                          api_key: str) -> List(str):
+def get_news_sections(con: Elasticsearch, session: Session) -> List(str):
         """ Get list of news section from NYT API
 
         Args:
             con (Elasticsearch): Connector object used to connect to database
-            api_key (str): Used NYT api key to retrieve data
+            session (Session): Used ETL session
 
         Returns:
             sections (list): List of news sections retrieved from NYT API
         """
         logging.info('----- Retrieving news sections -----')
-        query = build_query(index_name='news_sections', api_key=api_key)
+        query = build_query(index_name='news_sections',
+                            api_key=session.api_key)
         results = requests.get(query)
         sections = [item['section'] for item in results.json()['results']]
         logging.info(f'----- News sections: \n {sections} \n')
 
-        self.api_calls += 1
+        session.api_calls += 1
 
         return sections
 
 
-def get_news_data(self, con: Elasticsearch, api_key: str,
-                    api_calls: int) -> None:
+def get_news_data(con: Elasticsearch, session: Session) -> None:
     """Get news documents from NYT newswire API
 
     Args:
         con (Elasticsearch): Connector object used to connect to database
-        api_key (str): Used NYT api key to retrieve data
-        api_calls (int): Number of API calls used by the script
+        session (Session): Used ETL session
     
     Returns:
         None
@@ -47,17 +49,19 @@ def get_news_data(self, con: Elasticsearch, api_key: str,
 
     logging.info('----- Start geting news data from NYT API -----')
 
-    sections = self.get_news_sections(con=con, api_key=api_key, api_calls=api_calls)
+    sections = get_news_sections(con=con, api_key=session.api_key,
+                                 api_calls=session.api_calls)
 
     for section in sections:
 
         logging.info(f'----- Start retriving data from section: {section} -----')
 
-        #Request the Api
-        query = build_query(index_name='news', news_section=section, api_key=api_key)
+        # Request the Api
+        query = build_query(index_name='news', news_section=section,
+                            api_key=session.api_key)
         content = requests.get(query)
 
-        #save into the ES DB
+        # save into the ES DB
         res = content.json()
         logging.info(f'----- Retrieved results: \n {res} \n -----')       
 
@@ -75,7 +79,7 @@ def get_news_data(self, con: Elasticsearch, api_key: str,
         else:
             print('Failed to save content.')
 
-        self.api_calls += 1
+        session.api_calls += 1
         
         ######################################################
         time.sleep(13) ##### TO MODIFY ACCORDING API ALLOWANCE
@@ -83,9 +87,9 @@ def get_news_data(self, con: Elasticsearch, api_key: str,
         ######################################################
 
 
-def get_books_or_movies_data(self, con: Elasticsearch, index_name: str,
-                start_offset: int, results_by_page: int, api_cals: int,
-                max_api_calls: int, api_key: str) -> None:
+def get_books_or_movies_data(con: Elasticsearch, index_name: str,
+                start_offset: int, results_by_page: int,
+                max_api_calls: int, session: Session) -> None:
     """Get books or movies documents from books API
         For both logic is the same due to API calls limites
 
@@ -93,13 +97,11 @@ def get_books_or_movies_data(self, con: Elasticsearch, index_name: str,
         con (Elasticsearch): Connector object used to connect to database
         content_type (str): Name of the Elasticsearch index where documents
             are added
-        enpoint_hits (int): Number of returned hits from NYT API books
         start_offset (int): Offset number to pass to the API call in
             order to specify where to start retrieving data
-        api_calls (int): Number of API calls since start of the script 
         results_by_page (int): Number of results of each reponse from NYT API calls
         max_api_calls (int): Maximum of dailly calls allowed by the NYT API
-        api_key (str): Used NYT api key to retrieve data
+        session (Session): Used ETL session
 
     Returns:
         None
@@ -108,7 +110,7 @@ def get_books_or_movies_data(self, con: Elasticsearch, index_name: str,
 
     internal_api_calls = 0
 
-    while (self.api_calls < max_api_calls):
+    while (session.api_calls < max_api_calls):
 
         now = datetime.datetime.now()
         logging.info(f'----- Number of NYT API calls {internal_api_calls} \n -----')
@@ -140,7 +142,7 @@ def get_books_or_movies_data(self, con: Elasticsearch, index_name: str,
 
         start_offset += results_by_page
 
-        self.api_calls += 1
+        session.api_calls += 1
         internal_api_calls += 1
 
         ######################################################
