@@ -139,7 +139,7 @@ def get_books_or_movies(index_name: str,
 
     while (session.is_remaining_api_calls(max_api_calls=max_api_calls)):
 
-        logger.info(f'----- Number of NYT API calls {internal_api_calls} -----')
+        logger.info(f'----- Number of NYT API calls {session.api_calls} -----')
         logger.info(f'----- query starts at offset:{start_offset} -----')
 
         query = build_query(index_name=index_name, api_key=session._api_key,
@@ -149,8 +149,6 @@ def get_books_or_movies(index_name: str,
 
         res = content.json()
         docs = res['results']
-
-        logger.info(f"----- Json response page regarding start_offset: {start_offset} \n {docs} \n-----")
 
         actions = results_to_list(index_name=index_name, results=docs)
 
