@@ -7,7 +7,6 @@ from datetime import datetime
 from typing import List
 
 import requests
-from elasticsearch import Elasticsearch
 from load import bulk_to_elasticsearch
 from session import Session
 from transform import results_to_list
@@ -16,32 +15,29 @@ from utils import build_query, is_remaining_api_calls, get_start_offset
 logger = logging.getLogger(__name__)
 
 
-def get_news(con: Elasticsearch, session: Session, max_api_calls: int) -> None:
+def get_news(session: Session, max_api_calls: int) -> None:
     """Run entire process to get news data from NYT API
 
-            It runs get_news_sections() and get_news_data()
-            and check between if it remains any NYT API calls
-            in the ETL Session
+            It runs get_news_sections() to get section and get_news_data()
+            if it remains any NYT API calls in the ETL Session
 
     Args:
-        con (Elasticsearch): Connector object used to connect to database
         session (Session): Used ETL session
         max_api_calls (int): Maximum of dailly calls allowed by the NYT API  
 
     Returns:
         None
     """
-    get_news_sections(con=con, session=session)
+    sections = get_news_sections(session=session)
 
     if (is_remaining_api_calls(session=session, max_api_calls=max_api_calls)):
-        get_news_data(con=con, session=session)
+        get_news_data(session=session, sections=sections)
 
 
-def get_news_sections(con: Elasticsearch, session: Session) -> List(str):
+def get_news_sections(session: Session) -> List(str):
         """ Get list of news section from NYT API
 
         Args:
-            con (Elasticsearch): Connector object used to connect to database
             session (Session): Used ETL session
 
         Returns:
@@ -59,21 +55,18 @@ def get_news_sections(con: Elasticsearch, session: Session) -> List(str):
         return sections
 
 
-def get_news_data(con: Elasticsearch, session: Session) -> None:
+def get_news_data(session: Session, sections: List[str]) -> None:
     """Get news documents from NYT newswire API
 
     Args:
-        con (Elasticsearch): Connector object used to connect to database
         session (Session): Used ETL session
+        sections (list): List of news sections
     
     Returns:
         None
     """
 
     logger.info('----- Start geting news data from NYT API -----')
-
-    sections = get_news_sections(con=con, api_key=session.api_key,
-                                 api_calls=session.api_calls)
 
     for section in sections:
 
@@ -94,7 +87,7 @@ def get_news_data(con: Elasticsearch, session: Session) -> None:
         actions = results_to_list(index_name='news', results=docs)
 
         # Perform the bulk indexing
-        response = bulk_to_elasticsearch(con=con, bulk_list=actions)
+        response = bulk_to_elasticsearch(con=session.con, bulk_list=actions)
 
         # Check the response
         if not response[1]:
@@ -110,14 +103,13 @@ def get_news_data(con: Elasticsearch, session: Session) -> None:
         ######################################################
 
 
-def get_books_or_movies(con: Elasticsearch, index_name: str,
+def get_books_or_movies(index_name: str,
                         results_by_page: int, session: Session,
                         max_api_calls: int) -> None:
     """Get books or movies documents from books API
         For both logic is the same due to API calls limites
 
     Args:
-        con (Elasticsearch): Connector object used to connect to database
         index_name (str): Name of the Elasticsearch index where documents
             are added
         results_by_page (int): Number of results of each reponse from NYT API calls
@@ -145,7 +137,7 @@ def get_books_or_movies(con: Elasticsearch, index_name: str,
         res = content.json()
         endpoint_hits = res['num_results']
 
-        start_offset = get_start_offset(con=con, endpoints_hits=endpoint_hits,
+        start_offset = get_start_offset(con=session.con, endpoints_hits=endpoint_hits,
                                         index_name=index_name)
 
         logger.info(f"----- Json response page regarding start_offset: {start_offset} \n {res} -----")
@@ -154,7 +146,7 @@ def get_books_or_movies(con: Elasticsearch, index_name: str,
         actions = results_to_list(index_name=index_name, results=docs)
 
         # Perform the bulk indexing
-        response = bulk_to_elasticsearch(con=con, bulk_list=actions)
+        response = bulk_to_elasticsearch(con=session.con, bulk_list=actions)
 
         # Check the response
         if not response[1]:

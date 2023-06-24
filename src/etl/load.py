@@ -6,6 +6,7 @@ from typing import Any, Dict
 from elastic_transport import ObjectApiResponse
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
+from session import Session
 
 logger = logging.getLogger(__name__)
 
@@ -29,7 +30,7 @@ def create_index(con: Elasticsearch, name: str,
         logger.info(f'----- Star index {name} creation -----')
 
         response = con.indices.create(index=name, mappings=mapping,
-                                        settings=settings)
+                                      settings=settings)
     
         if response['acknowledged']:
             logger.info(f'----- Index {name} created successfully. -----')
