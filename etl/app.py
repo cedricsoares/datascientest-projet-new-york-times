@@ -17,11 +17,8 @@ logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(message)s')
 
 
-def get_session_configurations(
-                                news: bool,
-                                books: bool,
-                                movies: bool
-                            ) -> Dict[str, Any]:
+def get_session_configurations(news: bool, books: bool,
+                               movies: bool) -> Dict[str, Any]:
     """Build a list of configurarations to run a ETL session
 
         If an argument is True, its configuration will be appended
@@ -68,7 +65,7 @@ def run(session: Session, selected_configurations: Dict[str, Any]) -> None:
 
         logger.info(f'----- Starts runing ETL on {configuration_name} -----')
 
-        if (configuration_name == 'news') and (session.con.indices.exists(index='news')) :
+        if (configuration_name == 'news') and (session.con.indices.exists(index='news')):
             delete_index(name=configuration_name, con=session.con)
 
         if not session.con.indices.exists(index=configuration_name):  # Check if index exists on Elasticsearch
