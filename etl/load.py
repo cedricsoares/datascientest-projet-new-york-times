@@ -3,7 +3,6 @@
 import logging
 from typing import Any, Dict, List
 
-from elastic_transport import ObjectApiResponse
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
 
