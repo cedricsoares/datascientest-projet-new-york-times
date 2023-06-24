@@ -11,7 +11,7 @@ from elasticsearch import Elasticsearch
 from load import bulk_to_elasticsearch
 from session import Session
 from transform import results_to_list
-from utils import build_query, is_remaining_api_calls
+from utils import build_query, is_remaining_api_calls, get_start_offset
 
 
 def get_news(con: Elasticsearch, session: Session, max_api_calls: int) -> None:
@@ -116,7 +116,7 @@ def get_books_or_movies(con: Elasticsearch, index_name: str,
 
     Args:
         con (Elasticsearch): Connector object used to connect to database
-        content_type (str): Name of the Elasticsearch index where documents
+        index_name (str): Name of the Elasticsearch index where documents
             are added
         results_by_page (int): Number of results of each reponse from NYT API calls
         session (Session): Used ETL session
@@ -143,7 +143,8 @@ def get_books_or_movies(con: Elasticsearch, index_name: str,
         res = content.json()
         endpoint_hits = res['num_results']
 
-        start_offset = get_start_offset(con=con, endpoints_hits=endpoint_hits) # TODO: get_start_offset_method code method 
+        start_offset = get_start_offset(con=con, endpoints_hits=endpoint_hits,
+                                        index_name=index_name)
 
         logging.info(f"----- Json response page regarding start_offset: {start_offset} \n {res} -----")
 
