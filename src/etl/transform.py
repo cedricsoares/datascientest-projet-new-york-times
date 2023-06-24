@@ -3,6 +3,8 @@
 import logging
 from typing import Any, Dict, List
 
+logger = logging.getLogger(__name__)
+
 
 def results_to_list(index_name: str,
                     results: List[Dict[str, Any]]) -> List[Dict[str, Dict[Any]]]:
@@ -15,7 +17,7 @@ def results_to_list(index_name: str,
     Retuns
         bulk_list (lits): A list of index_name / documents ready to bulk on Elasticsearch
     """
-    logging.info(f'----- Start building bulk list for {index_name} index -----')
+    logger.info(f'----- Start building bulk list for {index_name} index -----')
     
     actions = []
 
@@ -26,5 +28,5 @@ def results_to_list(index_name: str,
         }
         actions.append(action)
 
-    logging.info(f'----- List to bulk on Elasticsearch : \n {actions} \n -----')
+    logger.info(f'----- List to bulk on Elasticsearch : \n {actions} \n -----')
     return actions

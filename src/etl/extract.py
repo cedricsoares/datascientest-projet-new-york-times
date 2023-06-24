@@ -13,6 +13,8 @@ from session import Session
 from transform import results_to_list
 from utils import build_query, is_remaining_api_calls, get_start_offset
 
+logger = logging.getLogger(__name__)
+
 
 def get_news(con: Elasticsearch, session: Session, max_api_calls: int) -> None:
     """Run entire process to get news data from NYT API
@@ -45,12 +47,12 @@ def get_news_sections(con: Elasticsearch, session: Session) -> List(str):
         Returns:
             sections (list): List of news sections retrieved from NYT API
         """
-        logging.info('----- Retrieving news sections -----')
+        logger.info('----- Retrieving news sections -----')
         query = build_query(index_name='news_sections',
                             api_key=session.api_key)
         results = requests.get(query)
         sections = [item['section'] for item in results.json()['results']]
-        logging.info(f'----- News sections: \n {sections} \n')
+        logger.info(f'----- News sections: \n {sections} \n')
 
         session.api_calls += 1
 
@@ -68,14 +70,14 @@ def get_news_data(con: Elasticsearch, session: Session) -> None:
         None
     """
 
-    logging.info('----- Start geting news data from NYT API -----')
+    logger.info('----- Start geting news data from NYT API -----')
 
     sections = get_news_sections(con=con, api_key=session.api_key,
                                  api_calls=session.api_calls)
 
     for section in sections:
 
-        logging.info(f'----- Start retriving data from section: {section} -----')
+        logger.info(f'----- Start retriving data from section: {section} -----')
 
         # Request the Api
         query = build_query(index_name='news', news_section=section,
@@ -84,7 +86,7 @@ def get_news_data(con: Elasticsearch, session: Session) -> None:
 
         # save into the ES DB
         res = content.json()
-        logging.info(f'----- Retrieved results: \n {res} \n -----')       
+        logger.info(f'----- Retrieved results: \n {res} \n -----')       
 
         docs = res['results']
 
@@ -125,15 +127,15 @@ def get_books_or_movies(con: Elasticsearch, index_name: str,
     Returns:
         None
     """
-    logging.info(f'----- Start getting {index_name} from NYT API -----')
+    logger.info(f'----- Start getting {index_name} from NYT API -----')
 
     internal_api_calls = 0
 
     while (is_remaining_api_calls(session=session, max_api_calls=max_api_calls)):
 
         now = datetime.datetime.now()
-        logging.info(f'----- Number of NYT API calls {internal_api_calls} \n -----')
-        logging.info(f'----- query starts at offset:{internal_api_calls} at: {now} -----')
+        logger.info(f'----- Number of NYT API calls {internal_api_calls} \n -----')
+        logger.info(f'----- query starts at offset:{internal_api_calls} at: {now} -----')
 
         # Request the Api
         query = build_query(index_name=index_name, start_offset=start_offset)
@@ -146,7 +148,7 @@ def get_books_or_movies(con: Elasticsearch, index_name: str,
         start_offset = get_start_offset(con=con, endpoints_hits=endpoint_hits,
                                         index_name=index_name)
 
-        logging.info(f"----- Json response page regarding start_offset: {start_offset} \n {res} -----")
+        logger.info(f"----- Json response page regarding start_offset: {start_offset} \n {res} -----")
 
         docs = res['results']
         actions = results_to_list(index_name=index_name, results=docs)
@@ -157,10 +159,10 @@ def get_books_or_movies(con: Elasticsearch, index_name: str,
         # Check the response
         if not response[1]:
             saved_books = internal_api_calls * results_by_page
-            logging.info(f'----- {saved_books} books saved successfully  -----')
-            logging.info(f'----- Remaining books save regarding endpoints hits: {endpoint_hits - saved_books} -----')
+            logger.info(f'----- {saved_books} books saved successfully  -----')
+            logger.info(f'----- Remaining books save regarding endpoints hits: {endpoint_hits - saved_books} -----')
         else:
-            logging.warning('----- Failed to save content. -----')
+            logger.warning('----- Failed to save content. -----')
 
         start_offset += results_by_page
 
@@ -171,4 +173,4 @@ def get_books_or_movies(con: Elasticsearch, index_name: str,
         time.sleep(12)  ##### TO MODIFY ACCORDING API ALLOWANCE
         ######################################################
 
-    logging.info(f'----- Next offset to use on API call: {start_offset} -----')
+    logger.info(f'----- Next offset to use on API call: {start_offset} -----')

@@ -6,6 +6,8 @@ from elasticsearch import Elasticsearch
 
 from session import Session
 
+logger = logging.getLogger(__name__)
+
 
 def get_elasctic_connection():
         """Generate elactic connector"""
@@ -65,26 +67,26 @@ def build_query(index_name: str, api_key: str,
     Return:
         str: Builded querry regarding passed parameters
     """
-    logging.info('----- Strat building querry for NYT API -----')
+    logger.info('----- Strat building querry for NYT API -----')
 
     if index_name == 'news':
         query = 'https://api.nytimes.com/svc/news/v3/content/all/{news_section}.json?&api-key={api_key}'
-        logging.info(f'----- Builded querry {query} -----')
+        logger.info(f'----- Builded querry {query} -----')
         return query
 
     if index_name == 'news_sections':
         query = f'https://api.nytimes.com/svc/news/v3/content/section-list.json?&api-key={api_key}'
-        logging.info(f'----- Builded querry {query} -----')
+        logger.info(f'----- Builded querry {query} -----')
         return query
 
     if index_name == 'books':
         query = f'https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?offset={start_offset}&api-key={api_key}'
-        logging.info(f'----- Builded querry {query} -----')
+        logger.info(f'----- Builded querry {query} -----')
         return query
 
     if index_name == 'movies':
         query = f'https://api.nytimes.com/svc/movies/v2/reviews/all.json?offset={start_offset}&api-key={api_key}'
-        logging.info(f'----- Builded querry {query} -----')
+        logger.info(f'----- Builded querry {query} -----')
         return query
     
 

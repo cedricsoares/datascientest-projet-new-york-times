@@ -1,9 +1,12 @@
 from dotenv import load_dotenv
 from elasticsearch import Elasticsearch
 from utils import get_elasctic_connection
+import os
+import logging
 
 
 load_dotenv()
+logger = logging.getLogger(__name__)
 
 
 class Session:
@@ -15,7 +18,7 @@ class Session:
         _api_calls (int): Number of calls to NYT APIs during session
     """
 
-    def __init__(self, con: Elasticsearch, api_key: str, api_calls:int):
+    def __init__(self, _con: Elasticsearch, _api_key: str, _api_calls:int, ):
         """Init method for Session class
         
         Args:
@@ -24,14 +27,20 @@ class Session:
             _api_calls (int): Number of calls to NYT APIs during session
         
         """
+        logger.info('----- Initiate Session -----')
         self._con = get_elasctic_connection()
         self._api_key = os.getenv("API_KEY")
         self._api_calls = 0
 
     @property
+    def con(self):
+        """_con getter"""
+        return self._con
+
+    @property
     def api_calls(self):
         """_api_calls getter"""
-        return self.api_calls
+        return self._api_calls
 
     @api_calls.setter
     def api_calls(self, new_api_calls: int):

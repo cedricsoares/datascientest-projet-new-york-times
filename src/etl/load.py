@@ -7,6 +7,8 @@ from elastic_transport import ObjectApiResponse
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
 
+logger = logging.getLogger(__name__)
+
 
 def create_index(con: Elasticsearch, name: str,
         mapping: Dict[str, Dict[str, str]],
@@ -24,15 +26,15 @@ def create_index(con: Elasticsearch, name: str,
             None
         """
 
-        logging.info(f'----- Star index {name} creation -----')
+        logger.info(f'----- Star index {name} creation -----')
 
         response = con.indices.create(index=name, mappings=mapping,
                                         settings=settings)
     
         if response['acknowledged']:
-            logging.info(f'----- Index {name} created successfully. -----')
+            logger.info(f'----- Index {name} created successfully. -----')
         else:
-            logging.warning(f'----- Failed to create {name} index. -----')
+            logger.warning(f'----- Failed to create {name} index. -----')
 
 
 def bulk_to_elasticsearch(
@@ -47,5 +49,5 @@ def bulk_to_elasticsearch(
     Returns:
         ObjectApiREsponse : Response from Elasticsearh Bulk API call
     """
-    logging.info('----- Start calling Elasticsearck Bulk API -----')
+    logger.info('----- Start calling Elasticsearck Bulk API -----')
     bulk(con, bulk_list)
