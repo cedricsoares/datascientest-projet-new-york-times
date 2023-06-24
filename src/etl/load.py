@@ -8,7 +8,7 @@ from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
 
 
-def create_index(self, con: Elasticsearch, name: str,
+def create_index(con: Elasticsearch, name: str,
         mapping: Dict[str, Dict[str, str]],
         settings: Dict[str, int]) -> None:
 
