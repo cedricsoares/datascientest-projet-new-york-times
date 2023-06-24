@@ -52,7 +52,7 @@ class Session:
         return self._api_calls
 
     @api_calls.setter
-    def api_calls(self, new_api_calls: int):
+    def api_calls(self, new_api_calls: int) -> None:
         """_api_calls setter"""
         self._api_calls = new_api_calls
 
