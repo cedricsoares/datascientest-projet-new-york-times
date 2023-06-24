@@ -75,7 +75,9 @@ def get_news_data(session: Session, sections: List[str], max_api_calls: int) -> 
     logger.info('----- Start geting news data from NYT API -----')
 
     for section in sections:
-        while (session.is_remaining_api_calls(max_api_calls=max_api_calls)):
+        if section == 'multimedia/photos': # multimedia/photos section name causes an error when sending query to NYT Api
+            continue
+        if session.is_remaining_api_calls(max_api_calls=max_api_calls):
             logger.info(f'----- Start retriving data from section: {section} -----')
             
 

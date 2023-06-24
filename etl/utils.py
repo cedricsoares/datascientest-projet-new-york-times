@@ -82,22 +82,22 @@ def build_query(index_name: str, api_key: Optional[str], start_offset: int = 0,
 
     if index_name == 'news':
         query = f'https://api.nytimes.com/svc/news/v3/content/all/{news_section}.json?&api-key={api_key}'
-        logger.info(f'----- Builded querry {query} -----')
+        logger.info(f'----- Builded querry for {index_name}-----')
         return query
 
     if index_name == 'news_sections':
         query = f'https://api.nytimes.com/svc/news/v3/content/section-list.json?&api-key={api_key}'
-        logger.info(f'----- Builded querry {query} -----')
+        logger.info(f'----- Builded querry for {index_name} -----')
         return query
 
     if index_name == 'books':
         query = f'https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?offset={start_offset}&api-key={api_key}'
-        logger.info(f'----- Builded querry {query} -----')
+        logger.info(f'----- Builded querry {index_name} -----')
         return query
 
     if index_name == 'movies':
         query = f'https://api.nytimes.com/svc/movies/v2/reviews/all.json?offset={start_offset}&api-key={api_key}'
-        logger.info(f'----- Builded querry {query} -----')
+        logger.info(f'----- Builded querry {index_name} -----')
         return query
 
     else:

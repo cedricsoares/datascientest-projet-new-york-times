@@ -71,7 +71,7 @@ def bulk_to_elasticsearch(
     """
     logger.info('----- Start saving documents ----')
     response = bulk(con, bulk_list)
-    print(f'reponse[1] : {response[1]}')
+
     if not response[1]:
         saved_documents = len(bulk_list)
         logger.info(f'----- {saved_documents} docuemnts saved successfully  -----')
