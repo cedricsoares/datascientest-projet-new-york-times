@@ -1,11 +1,12 @@
-INDEXES_SETTINGS = {
+RSEULTS_BY_PAGE = 20
+MAX_API_CALLS = 500
+
+INDEX_SETTINGS = {
     "number_of_shards": 2,
     "number_of_replicas": 2
 }
 
-INDEXEXES_NAMES = ['news', 'books', 'movies']
-
-NEWSWIRE_MAPPING = {
+NEWS_MAPPING = {
         'properties': {
             'abstract': {'type': 'text', 'analyzer': 'english'},
             'byline': {'type': 'text', 'analyzer': 'english'},
@@ -119,10 +120,23 @@ MOVIES_MAPPING = {
     }
 }
 
-movies_settings = {
-    "number_of_shards": 2,
-    "number_of_replicas": 2
+NEWS_CONFIGURATION = {
+    'mapping': NEWS_MAPPING,
+    'settings': INDEX_SETTINGS,
 }
 
-RSEULTS_BY_PAGE = 20
-MAX_API_CALLS = 500
+BOOKS_CONFIGURATION = {
+    'mapping': BOOKS_MAPPING,
+    'settings': INDEX_SETTINGS,
+}
+
+MOVIES_CONFIGURATION = {
+    'mapping': MOVIES_MAPPING,
+    'settings': INDEX_SETTINGS,
+}
+
+CONFIGURATIONS = {
+    'news': NEWS_CONFIGURATION,
+    'books': BOOKS_CONFIGURATION,
+    'movies': MOVIES_CONFIGURATION
+}
