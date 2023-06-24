@@ -29,7 +29,8 @@ def get_news(con: Elasticsearch, session: Session) -> None:
         None
     """
     get_news_sections(con=con, session=session)
-    if (is_remaining_api_calls(session=session)):  #TODO: Write the method in utils.py
+
+    if (is_remaining_api_calls(session=session, max_api_calls=max_api_calls)):  # TODO: Write the method in utils.py (   max_api_calls (int): Maximum of dailly calls allowed by the NYT API)
         get_news_data(con=con, session=session)
 
 
@@ -53,7 +54,6 @@ def get_news_sections(con: Elasticsearch, session: Session) -> List(str):
         session.api_calls += 1
 
         return sections
-
 
 def get_news_data(con: Elasticsearch, session: Session) -> None:
     """Get news documents from NYT newswire API
@@ -106,9 +106,9 @@ def get_news_data(con: Elasticsearch, session: Session) -> None:
         ######################################################
 
 
-def get_books_or_movies_data(con: Elasticsearch, index_name: str,
-                start_offset: int, results_by_page: int,
-                max_api_calls: int, session: Session) -> None:
+def get_books_or_movies(con: Elasticsearch, index_name: str,
+                             results_by_page: int, session: Session,
+                             max_api_calls: int) -> None:
     """Get books or movies documents from books API
         For both logic is the same due to API calls limites
 
@@ -116,11 +116,9 @@ def get_books_or_movies_data(con: Elasticsearch, index_name: str,
         con (Elasticsearch): Connector object used to connect to database
         content_type (str): Name of the Elasticsearch index where documents
             are added
-        start_offset (int): Offset number to pass to the API call in
-            order to specify where to start retrieving data
         results_by_page (int): Number of results of each reponse from NYT API calls
-        max_api_calls (int): Maximum of dailly calls allowed by the NYT API
         session (Session): Used ETL session
+        max_api_calls (int): Maximum of dailly calls allowed by the NYT API
 
     Returns:
         None
@@ -129,7 +127,7 @@ def get_books_or_movies_data(con: Elasticsearch, index_name: str,
 
     internal_api_calls = 0
 
-    while (session.api_calls < max_api_calls):
+    while (is_remaining_api_calls(session=session, max_api_calls=max_api_calls)):
 
         now = datetime.datetime.now()
         logging.info(f'----- Number of NYT API calls {internal_api_calls} \n -----')
@@ -142,6 +140,8 @@ def get_books_or_movies_data(con: Elasticsearch, index_name: str,
         # save into the ES DB
         res = content.json()
         endpoint_hits = res['num_results']
+
+        start_offset = get_start_offset(con=con, endpoints_hits=endpoint_hits) # TODO: get_start_offset_method code method 
 
         logging.info(f"----- Json response page regarding start_offset: {start_offset} \n {res} -----")
 
