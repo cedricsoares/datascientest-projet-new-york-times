@@ -1,5 +1,5 @@
 RESULTS_BY_PAGE = 20
-MAX_API_CALLS = 200
+MAX_API_CALLS = 500
 
 INDEX_SETTINGS = {
     "number_of_shards": 2,
