@@ -83,10 +83,10 @@ def run(session: Session, selected_configurations: Dict[str, Any]) -> None:
                 get_news(session=session, max_api_calls=MAX_API_CALLS)
 
             else:
-                strat_offset = get_start_offset(con=session.con,
+                start_offset = get_start_offset(con=session.con,
                                                 index_name=configuration_name)
 
-                if is_start_offset_valid(start_offset=strat_offset,
+                if is_start_offset_valid(start_offset=start_offset,
                                          results_by_page=RESULTS_BY_PAGE):
 
                     logger.info(f'----- start_offset for {configuration_name} is valid -----')
