@@ -64,7 +64,7 @@ class Session:
             max_api_calls: Maximum of dailly calls allowed by the NYT API
 
         Returns:
-            bolean: True if session.api_calls < max_api_calls else False
+            bool: True if session.api_calls < max_api_calls else False
         """
 
         return True if self.api_calls < max_api_calls else False
