@@ -11,26 +11,27 @@ from elasticsearch import Elasticsearch
 from load import bulk_to_elasticsearch
 from session import Session
 from transform import results_to_list
-from utils import build_query
+from utils import build_query, is_remaining_api_calls
 
 
-def get_news(con: Elasticsearch, session: Session) -> None:
+def get_news(con: Elasticsearch, session: Session, max_api_calls: int) -> None:
     """Run entire process to get news data from NYT API
 
             It runs get_news_sections() and get_news_data()
-            and check between if it remains any NYT API calls 
+            and check between if it remains any NYT API calls
             in the ETL Session
 
     Args:
         con (Elasticsearch): Connector object used to connect to database
         session (Session): Used ETL session
+        max_api_calls (int): Maximum of dailly calls allowed by the NYT API  
 
     Returns:
         None
     """
     get_news_sections(con=con, session=session)
 
-    if (is_remaining_api_calls(session=session, max_api_calls=max_api_calls)):  # TODO: Write the method in utils.py (   max_api_calls (int): Maximum of dailly calls allowed by the NYT API)
+    if (is_remaining_api_calls(session=session, max_api_calls=max_api_calls)):
         get_news_data(con=con, session=session)
 
 
@@ -54,6 +55,7 @@ def get_news_sections(con: Elasticsearch, session: Session) -> List(str):
         session.api_calls += 1
 
         return sections
+
 
 def get_news_data(con: Elasticsearch, session: Session) -> None:
     """Get news documents from NYT newswire API
@@ -107,8 +109,8 @@ def get_news_data(con: Elasticsearch, session: Session) -> None:
 
 
 def get_books_or_movies(con: Elasticsearch, index_name: str,
-                             results_by_page: int, session: Session,
-                             max_api_calls: int) -> None:
+                        results_by_page: int, session: Session,
+                        max_api_calls: int) -> None:
     """Get books or movies documents from books API
         For both logic is the same due to API calls limites
 

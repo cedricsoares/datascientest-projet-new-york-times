@@ -4,11 +4,26 @@ from typing import Optional
 
 from elasticsearch import Elasticsearch
 
+from session import Session
+
 
 def get_elasctic_connection():
-        """Generate elactic connector """
+        """Generate elactic connector"""
 
         return Elasticsearch(hosts="http://@localhost:9200")  # To be changed if Elasticsearch will not remain locally
+
+
+def is_remaining_api_calls(session: Session, max_api_calls: int) -> bool:
+    """Check if it remains available NYT API calls in ETL session
+
+    Args:
+        session (Session): Used ETL session
+        max_api_calls: Maximum of dailly calls allowed by the NYT API
+
+    Returns:
+        bolean: True if session.api_calls < max_api_calls else False
+    """
+    return True if session.api_calls < max_api_calls else False
 
 
 def build_query(index_name: str, api_key: str, 
@@ -52,3 +67,6 @@ def build_query(index_name: str, api_key: str,
         query = f'https://api.nytimes.com/svc/movies/v2/reviews/all.json?offset={start_offset}&api-key={api_key}'
         logging.info(f'----- Builded querry {query} -----')
         return query
+    
+
+
