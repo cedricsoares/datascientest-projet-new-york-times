@@ -14,6 +14,25 @@ from transform import results_to_list
 from utils import build_query
 
 
+def get_news(con: Elasticsearch, session: Session) -> None:
+    """Run entire process to get news data from NYT API
+
+            It runs get_news_sections() and get_news_data()
+            and check between if it remains any NYT API calls 
+            in the ETL Session
+
+    Args:
+        con (Elasticsearch): Connector object used to connect to database
+        session (Session): Used ETL session
+
+    Returns:
+        None
+    """
+    get_news_sections(con=con, session=session)
+    if (is_remaining_api_calls(session=session)):  #TODO: Write the method in utils.py
+        get_news_data(con=con, session=session)
+
+
 def get_news_sections(con: Elasticsearch, session: Session) -> List(str):
         """ Get list of news section from NYT API
 
