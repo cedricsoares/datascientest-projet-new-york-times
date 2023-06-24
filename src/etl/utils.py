@@ -1,6 +1,7 @@
 """Helpers functions"""
 import logging
 from typing import Optional
+import requests
 
 from elasticsearch import Elasticsearch
 
@@ -12,9 +13,9 @@ logger.conifig(level=logging.INFO,
 
 
 def get_elasctic_connection():
-        """Generate elactic connector"""
+    """Generate elactic connector"""
 
-        return Elasticsearch(hosts="http://@localhost:9200")  # To be changed if Elasticsearch will not remain locally
+    return Elasticsearch(hosts="http://@localhost:9200")  # To be changed if Elasticsearch will not remain locally
 
 
 def is_remaining_api_calls(session: Session, max_api_calls: int) -> bool:
@@ -29,6 +30,30 @@ def is_remaining_api_calls(session: Session, max_api_calls: int) -> bool:
     """
 
     return True if session.api_calls < max_api_calls else False
+
+
+def get_endpoint_hits(session: Session, index_name: str) -> int:
+    """get amount of endpoint hits from NYT Api for books or movies
+
+            it executes a querry with offset = 0 to get amount of hits.
+            it consumes one NYT api call
+
+    Args:
+        session (Session): Used running ETL session
+        index_name (str): Name of the Elasticsearch index where documents
+            are added
+
+    Returns:
+        endpoint_hits (int): Amount of endpoint hits returned by NTY Api
+    """
+    query = build_query(index_name=index_name, start_offset=0)
+    content = requests.get(query)
+
+    res = content.json()
+    endpoint_hits = res['num_results']
+    session.api_calls += 1
+
+    return endpoint_hits
 
 
 def get_start_offset(con: Elasticsearch, endpoints_hits: int, index_name: str) -> int:

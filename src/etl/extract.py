@@ -3,14 +3,14 @@
 
 import logging
 import time
-from datetime import datetime
 from typing import List
 
 import requests
 from load import bulk_to_elasticsearch
 from session import Session
 from transform import results_to_list
-from utils import build_query, is_remaining_api_calls, get_start_offset
+from utils import (build_query, is_remaining_api_calls,
+                   get_start_offset, get_endpoint_hits)
 
 logger = logging.getLogger(__name__)
 logger.conifig(level=logging.INFO,
@@ -37,24 +37,24 @@ def get_news(session: Session, max_api_calls: int) -> None:
 
 
 def get_news_sections(session: Session) -> List(str):
-        """ Get list of news section from NYT API
+    """ Get list of news section from NYT API
 
-        Args:
-            session (Session): Used ETL session
+    Args:
+        session (Session): Used ETL session
 
-        Returns:
-            sections (list): List of news sections retrieved from NYT API
-        """
-        logger.info('----- Retrieving news sections -----')
-        query = build_query(index_name='news_sections',
-                            api_key=session.api_key)
-        results = requests.get(query)
-        sections = [item['section'] for item in results.json()['results']]
-        logger.info(f'----- News sections: \n {sections} \n')
+    Returns:
+        sections (list): List of news sections retrieved from NYT API
+    """
+    logger.info('----- Retrieving news sections -----')
+    query = build_query(index_name='news_sections',
+                        api_key=session.api_key)
+    results = requests.get(query)
+    sections = [item['section'] for item in results.json()['results']]
+    logger.info(f'----- News sections: \n {sections} \n')
 
-        session.api_calls += 1
+    session.api_calls += 1
 
-        return sections
+    return sections
 
 
 def get_news_data(session: Session, sections: List[str]) -> None:
@@ -125,24 +125,21 @@ def get_books_or_movies(index_name: str,
 
     internal_api_calls = 0
 
+    endpoint_hits = get_endpoint_hits(session=session, index_name=index_name)
+    
+    internal_api_calls += 1  # A first API call is used to get endpoint_hits
+
+    start_offset = get_start_offset(con=session.con, endpoints_hits=endpoint_hits,
+                                    index_name=index_name)
+    
+    logger.info(f"----- Json response page regarding start_offset: {start_offset} \n {res} -----")
+
     while (is_remaining_api_calls(session=session, max_api_calls=max_api_calls)):
 
-        now = datetime.datetime.now()
-        logger.info(f'----- Number of NYT API calls {internal_api_calls} \n -----')
-        logger.info(f'----- query starts at offset:{internal_api_calls} at: {now} -----')
+        logger.info(f'----- Number of NYT API calls {internal_api_calls} -----')
+        logger.info(f'----- query starts at offset:{internal_api_calls} -----')
 
-        # Request the Api
-        query = build_query(index_name=index_name, start_offset=start_offset)
-        content = requests.get(query)
-
-        # save into the ES DB
-        res = content.json()
-        endpoint_hits = res['num_results']
-
-        start_offset = get_start_offset(con=session.con, endpoints_hits=endpoint_hits,
-                                        index_name=index_name)
-
-        logger.info(f"----- Json response page regarding start_offset: {start_offset} \n {res} -----")
+        
 
         docs = res['results']
         actions = results_to_list(index_name=index_name, results=docs)
