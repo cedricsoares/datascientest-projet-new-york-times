@@ -9,6 +9,8 @@ from elasticsearch.helpers import bulk
 
 
 logger = logging.getLogger(__name__)
+logger.conifig(level=logging.INFO,
+               format='%(asctime)s - %(message)s')
 
 
 def create_index(con: Elasticsearch, name: str,

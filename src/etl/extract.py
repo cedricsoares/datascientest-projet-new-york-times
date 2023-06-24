@@ -13,6 +13,8 @@ from transform import results_to_list
 from utils import build_query, is_remaining_api_calls, get_start_offset
 
 logger = logging.getLogger(__name__)
+logger.conifig(level=logging.INFO,
+               format='%(asctime)s - %(message)s')
 
 
 def get_news(session: Session, max_api_calls: int) -> None:

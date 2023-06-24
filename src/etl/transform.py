@@ -4,6 +4,8 @@ import logging
 from typing import Any, Dict, List
 
 logger = logging.getLogger(__name__)
+logger.conifig(level=logging.INFO,
+               format='%(asctime)s - %(message)s')
 
 
 def results_to_list(index_name: str,

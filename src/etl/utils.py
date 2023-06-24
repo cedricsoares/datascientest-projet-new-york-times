@@ -7,6 +7,8 @@ from elasticsearch import Elasticsearch
 from session import Session
 
 logger = logging.getLogger(__name__)
+logger.conifig(level=logging.INFO,
+               format='%(asctime)s - %(message)s')
 
 
 def get_elasctic_connection():

@@ -13,6 +13,8 @@ from utils import get_elasctic_connection, is_remaining_api_calls
 
 load_dotenv()
 logger = logging.getLogger(__name__)
+logger.conifig(level=logging.INFO,
+               format='%(asctime)s - %(message)s')
 
 
 class Session:
