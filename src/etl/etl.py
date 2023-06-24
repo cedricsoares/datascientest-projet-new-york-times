@@ -6,8 +6,8 @@ from constants import CONFIGURATIONS
 from session import Session
 
 logger = logging.getLogger(__name__)
-logger.conifig(level=logging.INFO,
-               format='%(asctime)s - %(message)s')
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s - %(message)s')
 
 
 if __name__ == '__main__':

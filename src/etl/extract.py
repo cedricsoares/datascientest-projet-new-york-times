@@ -13,8 +13,8 @@ from utils import (build_query, is_remaining_api_calls,
                    get_start_offset, get_endpoint_hits)
 
 logger = logging.getLogger(__name__)
-logger.conifig(level=logging.INFO,
-               format='%(asctime)s - %(message)s')
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s - %(message)s')
 
 
 def get_news(session: Session, max_api_calls: int) -> None:
@@ -25,7 +25,7 @@ def get_news(session: Session, max_api_calls: int) -> None:
 
     Args:
         session (Session): Used ETL session
-        max_api_calls (int): Maximum of dailly calls allowed by the NYT API  
+        max_api_calls (int): Maximum of dailly calls allowed by the NYT API
 
     Returns:
         None
@@ -36,7 +36,7 @@ def get_news(session: Session, max_api_calls: int) -> None:
         get_news_data(session=session, sections=sections)
 
 
-def get_news_sections(session: Session) -> List(str):
+def get_news_sections(session: Session) -> List[str]:
     """ Get list of news section from NYT API
 
     Args:
@@ -46,8 +46,7 @@ def get_news_sections(session: Session) -> List(str):
         sections (list): List of news sections retrieved from NYT API
     """
     logger.info('----- Retrieving news sections -----')
-    query = build_query(index_name='news_sections',
-                        api_key=session.api_key)
+    query = build_query(index_name='news_sections', api_key=session.api_key)
     results = requests.get(query)
     sections = [item['section'] for item in results.json()['results']]
     logger.info(f'----- News sections: \n {sections} \n')
@@ -63,7 +62,7 @@ def get_news_data(session: Session, sections: List[str]) -> None:
     Args:
         session (Session): Used ETL session
         sections (list): List of news sections
-    
+
     Returns:
         None
     """
@@ -81,7 +80,7 @@ def get_news_data(session: Session, sections: List[str]) -> None:
 
         # save into the ES DB
         res = content.json()
-        logger.info(f'----- Retrieved results: \n {res} \n -----')       
+        logger.info(f'----- Retrieved results: \n {res} \n -----')
 
         docs = res['results']
 
@@ -98,7 +97,7 @@ def get_news_data(session: Session, sections: List[str]) -> None:
             print('Failed to save content.')
 
         session.api_calls += 1
-        
+
         ######################################################
         time.sleep(13)  ##### TO MODIFY ACCORDING API ALLOWANCE
         #################### 5 requests max per minute ######
@@ -124,23 +123,25 @@ def get_books_or_movies(index_name: str,
     logger.info(f'----- Start getting {index_name} from NYT API -----')
 
     internal_api_calls = 0
-    
+
     logger.info(f'----- Number of NYT API calls {internal_api_calls} -----')
 
     endpoint_hits = get_endpoint_hits(session=session, index_name=index_name)
-    
+
     internal_api_calls += 1  # A first API call is used to get endpoint_hits
 
     start_offset = get_start_offset(con=session.con,
                                     endpoints_hits=endpoint_hits,
                                     index_name=index_name)
-    
+
     while (is_remaining_api_calls(session=session, max_api_calls=max_api_calls)):
 
         logger.info(f'----- Number of NYT API calls {internal_api_calls} -----')
         logger.info(f'----- query starts at offset:{start_offset} -----')
 
-        query = build_query(index_name=index_name, start_offset=start_offset)
+        query = build_query(index_name=index_name, api_key=session._api_key,
+                            start_offset=start_offset)
+
         content = requests.get(query)
 
         res = content.json()

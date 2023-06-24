@@ -1,9 +1,10 @@
 import logging
 import os
-from typing import Any, Dict
+from typing import Any, Dict, Optional
 
 import click
 from dotenv import load_dotenv
+from elasticsearch import Elasticsearch
 
 from constants import MAX_API_CALLS, RESULTS_BY_PAGE
 from extract import get_books_or_movies, get_news
@@ -12,8 +13,8 @@ from utils import get_elasctic_connection, is_remaining_api_calls
 
 load_dotenv()
 logger = logging.getLogger(__name__)
-logger.conifig(level=logging.INFO,
-               format='%(asctime)s - %(message)s')
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s - %(message)s')
 
 
 class Session:
@@ -35,22 +36,22 @@ class Session:
 
         """
         logger.info('----- Initiate ETL Session -----')
-        self._con = get_elasctic_connection()
-        self._api_key = os.getenv("API_KEY")
-        self._api_calls = 0
+        self._con: Elasticsearch = get_elasctic_connection()
+        self._api_key: Optional[str] = os.getenv("API_KEY")
+        self._api_calls: int = 0
 
     @property
-    def con(self):
+    def con(self) -> Elasticsearch:
         """_con getter"""
         return self._con
 
     @property
-    def api_key(self):
+    def api_key(self) -> Optional[str]:
         """_api_key getter"""
         return self._api_key
 
     @property
-    def api_calls(self):
+    def api_calls(self) -> int:
         """_api_calls getter"""
         return self._api_calls
 
@@ -64,10 +65,10 @@ class Session:
     @click.option("--movies", default=False, help="Set True to run ETL on movies")
     @staticmethod
     def get_session_configurations(
-                                    news: bool,
-                                    books: bool,
-                                    movies: bool,
-                                    configurations: Dict[str, Dict[str, Any]]
+                                    configurations: Dict[str, Dict[str, Any]],
+                                    news: bool = False,
+                                    books: bool = False,
+                                    movies: bool = False
                                 ) -> Dict[str, Any]:
         """Build a list of configurarations to run a ETL session
 
@@ -116,7 +117,7 @@ class Session:
             if configuration_name == 'news':
                 delete_index(name=configuration_name, con=self.con)
 
-            if not self.con.indices.exists(index=configuration_name): # Check if index exists on Elasticsearch
+            if not self.con.indices.exists(index=configuration_name):  # Check if index exists on Elasticsearch
 
                 name = configuration_name
                 mapping = configuration_params['mapping']
@@ -125,7 +126,7 @@ class Session:
                 create_index(con=self.con, name=name, mapping=mapping,
                              settings=settings)
 
-            if is_remaining_api_calls(session=self, max_api_call=MAX_API_CALLS):
+            if is_remaining_api_calls(session=self, max_api_calls=MAX_API_CALLS):
 
                 if configuration_name == 'news':
                     get_news(session=self, max_api_calls=MAX_API_CALLS)

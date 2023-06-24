@@ -8,8 +8,8 @@ from elasticsearch import Elasticsearch
 from session import Session
 
 logger = logging.getLogger(__name__)
-logger.conifig(level=logging.INFO,
-               format='%(asctime)s - %(message)s')
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s - %(message)s')
 
 
 def get_elasctic_connection():
@@ -46,7 +46,7 @@ def get_endpoint_hits(session: Session, index_name: str) -> int:
     Returns:
         endpoint_hits (int): Amount of endpoint hits returned by NTY Api
     """
-    query = build_query(index_name=index_name, start_offset=0)
+    query = build_query(index_name=index_name, api_key=session.api_key, start_offset=0)
     content = requests.get(query)
 
     res = content.json()
@@ -70,15 +70,14 @@ def get_start_offset(con: Elasticsearch, endpoints_hits: int, index_name: str) -
     """
     if not con.indices.exists(index=index_name):
         return 0
-    
+
     return (con.count(index=index_name).get('count') + 1)
 
 
-def build_query(index_name: str, api_key: str,
-                start_offset: Optional[int], news_section: Optional[str],
-                movies_type: Optional[str]) -> str:
+def build_query(index_name: str, api_key: Optional[str], start_offset: int = 0,
+                news_section: str = '') -> str:
     """ Build query to pass to the NYT API
-        
+
         Query is built according to type of content we try to get data
 
     Args:
@@ -88,8 +87,6 @@ def build_query(index_name: str, api_key: str,
             Only used for books and movies
         news_section: Name of the news section.
             Only used for news.
-        movies_type: Name of type of movies.
-            Only used on movirs.
 
     Return:
         str: Builded querry regarding passed parameters
@@ -97,7 +94,7 @@ def build_query(index_name: str, api_key: str,
     logger.info('----- Strat building querry for NYT API -----')
 
     if index_name == 'news':
-        query = 'https://api.nytimes.com/svc/news/v3/content/all/{news_section}.json?&api-key={api_key}'
+        query = f'https://api.nytimes.com/svc/news/v3/content/all/{news_section}.json?&api-key={api_key}'
         logger.info(f'----- Builded querry {query} -----')
         return query
 
@@ -115,6 +112,6 @@ def build_query(index_name: str, api_key: str,
         query = f'https://api.nytimes.com/svc/movies/v2/reviews/all.json?offset={start_offset}&api-key={api_key}'
         logger.info(f'----- Builded querry {query} -----')
         return query
-    
 
-
+    else:
+        return " "

@@ -1,7 +1,7 @@
 """load module"""
 
 import logging
-from typing import Any, Dict
+from typing import Any, Dict, List
 
 from elastic_transport import ObjectApiResponse
 from elasticsearch import Elasticsearch
@@ -9,8 +9,8 @@ from elasticsearch.helpers import bulk
 
 
 logger = logging.getLogger(__name__)
-logger.conifig(level=logging.INFO,
-               format='%(asctime)s - %(message)s')
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s - %(message)s')
 
 
 def create_index(con: Elasticsearch, name: str,
@@ -57,8 +57,8 @@ def delete_index(name: str, con: Elasticsearch) -> None:
 
 
 def bulk_to_elasticsearch(
-        con: Elasticsearch, bulk_list: Dict[str, Dict[Any]]
-        ) -> ObjectApiResponse[Any][Any]:
+        con: Elasticsearch, bulk_list: List[Dict[str, Dict[str, Any]]]
+        ) -> ObjectApiResponse:
     """ Run Elasticsearch Bulk API with results from NYT API
 
     Args:
