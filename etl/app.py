@@ -30,7 +30,7 @@ def get_session_configurations(news: bool, books: bool,
         Args:
             news (bool): If True news configuration will be appended
             books (bool): If True books configuration will be appended
-            movies (bool): If true, movies configuration will be appended
+            movies (bool): If True, movies configuration will be appended
 
         Returns:
             selected_configuurations (dict): dictionary of configurations to use
