@@ -4,11 +4,10 @@ from typing import Any, Dict
 
 import click
 from dotenv import load_dotenv
-from elasticsearch import Elasticsearch
 
 from constants import MAX_API_CALLS, RESULTS_BY_PAGE
 from extract import get_books_or_movies, get_news
-from load import create_index, ddelete_index
+from load import create_index, delete_index
 from utils import get_elasctic_connection, is_remaining_api_calls
 
 load_dotenv()
@@ -26,16 +25,16 @@ class Session:
         _api_calls (int): Number of calls to NYT APIs during session
     """
 
-    def __init__(self, _con: Elasticsearch, _api_key: str, _api_calls:int, ):
+    def __init__(self):
         """Init method for Session class
-        
+
         Args:
             _con (Elasticsearch): Connector object used to connect to database
             _api_key (str): Used api_key to connect to NYT APIs
             _api_calls (int): Number of calls to NYT APIs during session
-        
+
         """
-        logger.info('----- Initiate Session -----')
+        logger.info('----- Initiate ETL Session -----')
         self._con = get_elasctic_connection()
         self._api_key = os.getenv("API_KEY")
         self._api_calls = 0
@@ -44,7 +43,7 @@ class Session:
     def con(self):
         """_con getter"""
         return self._con
-    
+
     @property
     def api_key(self):
         """_api_key getter"""
@@ -64,7 +63,7 @@ class Session:
     @click.option("--books", default=False, help="Set True to run ETL on books")
     @click.option("--movies", default=False, help="Set True to run ETL on movies")
     @staticmethod
-    def get_session_confifurations(
+    def get_session_configurations(
                                     news: bool,
                                     books: bool,
                                     movies: bool,
@@ -98,10 +97,10 @@ class Session:
         logger.info(f'----- Selected configurations: \n {configurations.keys()} \n')
 
         return selected_configurations
-    
+
     def run(self, selected_configurations: Dict[str, Any]) -> None:
         """Run ETL session on selected configurations
-        
+
             Args:
                 selected_configurations (dict): dictionary of configurations to use
                     for running an ETL session
@@ -118,14 +117,14 @@ class Session:
                 delete_index(name=configuration_name, con=self.con)
 
             if not self.con.indices.exists(index=configuration_name): # Check if index exists on Elasticsearch
-                
+
                 name = configuration_name
                 mapping = configuration_params['mapping']
                 settings = configuration_params['settings']
 
                 create_index(con=self.con, name=name, mapping=mapping,
                              settings=settings)
-            
+
             if is_remaining_api_calls(session=self, max_api_call=MAX_API_CALLS):
 
                 if configuration_name == 'news':
@@ -140,4 +139,3 @@ class Session:
             logger.info(f'----- ETL finished to run on {configuration_name}  -----')
 
         logger.info('----- ETL run final end -----')
-

@@ -100,7 +100,7 @@ def get_news_data(session: Session, sections: List[str]) -> None:
         session.api_calls += 1
         
         ######################################################
-        time.sleep(13) ##### TO MODIFY ACCORDING API ALLOWANCE
+        time.sleep(13)  ##### TO MODIFY ACCORDING API ALLOWANCE
         #################### 5 requests max per minute ######
         ######################################################
 
@@ -124,24 +124,30 @@ def get_books_or_movies(index_name: str,
     logger.info(f'----- Start getting {index_name} from NYT API -----')
 
     internal_api_calls = 0
+    
+    logger.info(f'----- Number of NYT API calls {internal_api_calls} -----')
 
     endpoint_hits = get_endpoint_hits(session=session, index_name=index_name)
     
     internal_api_calls += 1  # A first API call is used to get endpoint_hits
 
-    start_offset = get_start_offset(con=session.con, endpoints_hits=endpoint_hits,
+    start_offset = get_start_offset(con=session.con,
+                                    endpoints_hits=endpoint_hits,
                                     index_name=index_name)
     
-    logger.info(f"----- Json response page regarding start_offset: {start_offset} \n {res} -----")
-
     while (is_remaining_api_calls(session=session, max_api_calls=max_api_calls)):
 
         logger.info(f'----- Number of NYT API calls {internal_api_calls} -----')
-        logger.info(f'----- query starts at offset:{internal_api_calls} -----')
+        logger.info(f'----- query starts at offset:{start_offset} -----')
 
-        
+        query = build_query(index_name=index_name, start_offset=start_offset)
+        content = requests.get(query)
 
+        res = content.json()
         docs = res['results']
+
+        logger.info(f"----- Json response page regarding start_offset: {start_offset} \n {docs} \n-----")
+
         actions = results_to_list(index_name=index_name, results=docs)
 
         # Perform the bulk indexing

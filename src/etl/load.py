@@ -14,30 +14,30 @@ logger.conifig(level=logging.INFO,
 
 
 def create_index(con: Elasticsearch, name: str,
-        mapping: Dict[str, Dict[str, str]],
-        settings: Dict[str, int]) -> None:
+                 mapping: Dict[str, Dict[str, str]],
+                 settings: Dict[str, int]) -> None:
 
-        """Create an index in Elasticsearch database
+    """Create an index in Elasticsearch database
 
-        Args:
-            con (Elasticsearch): Connector object used to connect to database
-            name (str): Index name
-            mapping (dict): Index mapping
-            settings (dict): Index settings
+    Args:
+        con (Elasticsearch): Connector object used to connect to database
+        name (str): Index name
+        mapping (dict): Index mapping
+        settings (dict): Index settings
 
-        Returns:
-            None
-        """
+    Returns:
+        None
+    """
 
-        logger.info(f'----- Start index {name} creation -----')
+    logger.info(f'----- Start index {name} creation -----')
 
-        response = con.indices.create(index=name, mappings=mapping,
-                                      settings=settings)
-    
-        if response['acknowledged']:
-            logger.info(f'----- Index {name} created successfully. -----')
-        else:
-            logger.warning(f'----- Failed to create {name} index. -----')
+    response = con.indices.create(index=name, mappings=mapping,
+                                  settings=settings)
+
+    if response['acknowledged']:
+        logger.info(f'----- Index {name} created successfully. -----')
+    else:
+        logger.warning(f'----- Failed to create {name} index. -----')
 
 
 def delete_index(name: str, con: Elasticsearch) -> None:
@@ -59,10 +59,10 @@ def delete_index(name: str, con: Elasticsearch) -> None:
 def bulk_to_elasticsearch(
         con: Elasticsearch, bulk_list: Dict[str, Dict[Any]]
         ) -> ObjectApiResponse[Any][Any]:
-    """ Run Elasticsearch Bulk API with results from NYT API 
-    
+    """ Run Elasticsearch Bulk API with results from NYT API
+
     Args:
-        con (Elasticsearch): 
+        con (Elasticsearch):
         bult_list (list): A list of documents with index_names from NYT API results
 
     Returns:
