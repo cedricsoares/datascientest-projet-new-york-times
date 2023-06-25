@@ -10,6 +10,7 @@ from session import Session
 from constants import MAX_API_CALLS, RESULTS_BY_PAGE, CONFIGURATIONS
 from extract import get_books_or_movies, get_news
 from load import create_index, delete_index
+from utils import delete_duplicates
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO,
@@ -86,6 +87,9 @@ def run(session: Session, selected_configurations: Dict[str, Any]) -> None:
                                     results_by_page=RESULTS_BY_PAGE,
                                     session=session,
                                     max_api_calls=MAX_API_CALLS)
+                
+                delete_duplicates(con=session.con,
+                                  index_name=configuration_name)
 
         logger.info(f'----- ETL finished to run on {configuration_name}  -----')
 
