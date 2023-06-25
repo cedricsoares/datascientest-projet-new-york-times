@@ -83,23 +83,10 @@ def run(session: Session, selected_configurations: Dict[str, Any]) -> None:
                 get_news(session=session, max_api_calls=MAX_API_CALLS)
 
             else:
-                start_offset = get_start_offset(con=session.con,
-                                                index_name=configuration_name)
-
-                if is_start_offset_valid(start_offset=start_offset,
-                                         results_by_page=RESULTS_BY_PAGE):
-
-                    logger.info(f'----- start_offset for {configuration_name} is valid -----')
-
-                    get_books_or_movies(index_name=configuration_name,
-                                        results_by_page=RESULTS_BY_PAGE,
-                                        session=session,
-                                        max_api_calls=MAX_API_CALLS)
-
-                else:
-                    logger.warning(f'----- start_offset for {configuration_name} is not valid -----')
-                    logger.warning(f'----- index {configuration_name} is about to be deleted -----')
-                    delete_index(name=configuration_name, con=session.con)
+                get_books_or_movies(index_name=configuration_name,
+                                    results_by_page=RESULTS_BY_PAGE,
+                                    session=session,
+                                    max_api_calls=MAX_API_CALLS)
 
         logger.info(f'----- ETL finished to run on {configuration_name}  -----')
 
