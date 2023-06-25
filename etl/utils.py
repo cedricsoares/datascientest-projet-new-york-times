@@ -69,25 +69,6 @@ def get_start_offset(con: Elasticsearch, index_name: str,
         return res // RESULTS_BY_PAGE
 
 
-def is_start_offset_valid(start_offset: int, results_by_page: int) -> bool:
-    """Check if start offset is valid
-
-        On NYT Api offset increments by same number that RESULTS_BY_PAGE constant.
-        It means that start_offset % RESULTS_BY_PAGE == 0.
-
-        Args:
-            strat_offset (int): start_offset used to build queries for books or movies
-                and movies
-            results_by_page (int): Number of returned by NY Times Api documents
-                per results page
-
-        Returns:
-            bool : True if start_offset % RESULTS_BY_PAGE == 0 else False
-    """
-
-    return True if start_offset % RESULTS_BY_PAGE == 0 else False
-
-
 def build_query(index_name: str, api_key: Optional[str], start_offset: int = 0,
                 news_section: str = '') -> str:
     """ Build query to pass to the NYT API

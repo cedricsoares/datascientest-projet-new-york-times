@@ -10,7 +10,6 @@ from session import Session
 from constants import MAX_API_CALLS, RESULTS_BY_PAGE, CONFIGURATIONS
 from extract import get_books_or_movies, get_news
 from load import create_index, delete_index
-from utils import get_start_offset, is_start_offset_valid
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO,
