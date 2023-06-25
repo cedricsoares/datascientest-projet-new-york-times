@@ -1,12 +1,12 @@
 """Helpers functions"""
 import logging
-from typing import Optional
+from typing import List, Dict, Any, Optional
 import requests
 
-from elasticsearch import Elasticsearch
-from constants import RESULTS_BY_PAGE
+import hashlib
+from elasticsearch import Elasticsearch, helpers
 
-#from session import Session
+from constants import RESULTS_BY_PAGE
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO,
@@ -110,3 +110,111 @@ def build_query(index_name: str, api_key: Optional[str], start_offset: int = 0,
 
     else:
         return " "
+
+
+# Method updated from provided one from Elasticsearch : https://www.elastic.co/fr/blog/how-to-find-and-remove-duplicate-documents-in-elasticsearch
+# by Alexander Marquardt: https://github.com/alexander-marquardt/deduplicate-elasticsearch/blob/master/deduplicate-elaticsearch.py
+def delete_duplicates(con: Elasticsearch, index_name: str) -> None:
+    """Delete duplicates documents from a specific Elasticsearch index
+
+    Args:
+        con (Elasticsearch): Connector object used to connect to database
+        index_name (str): Name of the index where to check if duplicated exist
+            and delete then if so
+
+    Return:
+        None
+    """
+    logger.info(f'----- Start of drop duplicates process for {index_name}  index -----')
+    keys_to_include_in_hash = get_index_keys(index_name=index_name)
+    dict_of_duplicate_docs = scroll_over_all_docs(
+                                                  con=con,
+                                                  index_name=index_name,
+                                                  keys_to_include_in_hash=keys_to_include_in_hash
+                                                  )
+
+    loop_over_hashes_and_remove_duplicates(con=con, index_name=index_name,
+                                           dict_of_duplicate_docs=dict_of_duplicate_docs)
+
+    logger.info(f'End of drop duplicates process from {index_name} -----')
+
+
+def get_index_keys(index_name: str) -> List[str]:
+    """Retrieve used index keys to detect duplicates
+
+    Args:
+        index_name (str): Name of the index where to check if duplicated exist
+            and delete then if so
+
+    Return:
+        list: List of key to use to detect duplicates in the index_name
+    """
+    if index_name == 'books':
+        return ["title", "description", "contributor", 'contributor_note',
+                'author']
+
+    else:
+        return ['byline', 'display_title', 'mpaa_rating', 'headline']
+
+
+# Loop over all documents in the index, and populate the
+# dict_of_duplicate_docs data structure.
+def scroll_over_all_docs(con: Elasticsearch, index_name: str,
+                         keys_to_include_in_hash: List[str]) -> Dict[Any, Any]:
+    """Scroll over documents from specified index and retrieve duplicated
+        documents
+
+    Args:
+        con (Elasticsearch): Connector object used to connect to database
+        index_name (str): Name of the index where to check if duplicated exist
+            and delete then if so
+        keys_to_include_in_hash (list): List of key to use to detect
+            duplicates in the index_name
+
+    Returns:
+        dict_of_duplicate_docs (dict): Dictionary of duplicated docuemnts
+    """
+    for hit in helpers.scan(con, index=index_name):
+        dict_of_duplicate_docs = {}
+        combined_key = ""
+        for mykey in keys_to_include_in_hash:
+            combined_key += str(hit['_source'][mykey])
+
+        _id = hit["_id"]
+
+        hashval = hashlib.md5(combined_key.encode('utf-8')).digest()
+
+        # If the hashval is new, then we will create a new key
+        # in the dict_of_duplicate_docs, which will be
+        # assigned a value of an empty array.
+        # We then immediately push the _id onto the array.
+        # If hashval already exists, then
+        # we will just push the new _id onto the existing array
+        dict_of_duplicate_docs.setdefault(hashval, []).append(_id)
+
+        return dict_of_duplicate_docs
+
+
+def loop_over_hashes_and_remove_duplicates(con, index_name,
+                                           dict_of_duplicate_docs) -> None:
+    """Loop over duplicated documents provided and delete theme via their id
+
+    Args:
+        con (Elasticsearch): Connector object used to connect to database
+        index_name (str): Name of the index where to check if duplicated exist
+            and delete then if so
+        dict_of_duplicate_docs (dict): Dictionary of duplicated docuemnts
+
+    Return:
+        None
+    """
+
+    # Search through the hash of doc values to see if any
+    # duplicate hashes have been found
+    for hashval, array_of_ids in dict_of_duplicate_docs.items():
+        if len(array_of_ids) > 1:
+            # Get the documents that have mapped to the current hasval
+            for id in array_of_ids[1:]:
+                con.delete(index=index_name, id=id)
+            num_deleted_docs = len(array_of_ids[1:])
+            logger.info(f'----- {num_deleted_docs} from {index_name} index -----')
