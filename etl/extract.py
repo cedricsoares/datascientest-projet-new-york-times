@@ -149,7 +149,7 @@ def get_books_or_movies(index_name: str,
 
         actions = results_to_list(index_name=index_name, results=docs)
 
-        saved_documents = internal_api_calls * results_by_page
+        saved_documents = start_offset + results_by_page
         bulk_to_elasticsearch(con=session.con, bulk_list=actions)
         logger.info(f'----- Remaining documents to save regarding endpoints hits: {endpoint_hits - saved_documents} -----')
 
