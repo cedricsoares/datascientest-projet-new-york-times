@@ -1,6 +1,7 @@
 """Helpers functions"""
 import logging
 from typing import Optional
+import requests
 
 from elasticsearch import Elasticsearch
 from constants import RESULTS_BY_PAGE
@@ -18,7 +19,30 @@ def get_elasctic_connection():
     return Elasticsearch(hosts="http://@localhost:9200")  # To be changed if Elasticsearch will not remain locally
 
 
-def get_start_offset(con: Elasticsearch, index_name: str) -> Optional[int]:
+def get_endpoint_hits(con: Elasticsearch, api_key: str, index_name: str) -> int:
+    """get amount of endpoint hits from NYT Api for books or movies
+            it executes a querry with offset = 0 to get amount of hits.
+            it consumes one NYT api call
+    Args:
+        con (Elasticsearch): Connector object used to connect to database
+        api_key (str): Used Api key to connect to NYT Api
+
+        index_name (str): Name of the Elasticsearch index where documents
+            are added
+    Returns:
+        endpoint_hits (int): Amount of endpoint hits returned by NTY Api
+    """
+    query = build_query(index_name=index_name, api_key=api_key, start_offset=0)
+    content = requests.get(query)
+
+    res = content.json()
+    endpoint_hits = res['num_results']
+
+    return endpoint_hits
+
+
+def get_start_offset(con: Elasticsearch, index_name: str,
+                     endpoint_hits: int) -> int:
     """ Get the start_start offset parameter to build queries for books and movies
 
             If checks on a specific index_name how many docuemnts are stored
@@ -28,6 +52,7 @@ def get_start_offset(con: Elasticsearch, index_name: str) -> Optional[int]:
         con (Elasticsearch): Connector object used to connect to database
         index_name (str): Name of the Elasticsearch index where documents
             are added
+        endpoint_hits (int): Amount of endpoints hits retrieved by NYT Api
     """
     if not con.indices.exists(index=index_name):
         return 0
@@ -41,7 +66,7 @@ def get_start_offset(con: Elasticsearch, index_name: str) -> Optional[int]:
         return res + RESULTS_BY_PAGE
 
     else:
-        logger.warning('-----There is a strat_offset issue. Consider deleting index -----')
+        return res // RESULTS_BY_PAGE
 
 
 def is_start_offset_valid(start_offset: int, results_by_page: int) -> bool:

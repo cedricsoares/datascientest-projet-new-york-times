@@ -9,7 +9,7 @@ import requests
 
 
 from session import Session
-from utils import build_query, get_start_offset
+from utils import build_query, get_endpoint_hits, get_start_offset
 from load import bulk_to_elasticsearch
 from transform import results_to_list
 
@@ -66,7 +66,6 @@ def get_news_data(session: Session, sections: List[str], max_api_calls: int) -> 
         session (Session): Used ETL session
         sections (list): List of news sections
         max_api_calls (int): Maximum of dailly calls allowed by the NYT API
-
 
     Returns:
         None
@@ -125,8 +124,14 @@ def get_books_or_movies(index_name: str,
 
     logger.info(f'----- Number of NYT API calls {session.api_calls} -----')
 
+    endpoint_hits = get_endpoint_hits(con=session.con, api_key=session.api_key,
+                                      index_name=index_name)
+
+    internal_api_calls += 1  # A first API call is used to get endpoint_hits
+
     start_offset = get_start_offset(con=session.con,
-                                    index_name=index_name)
+                                    index_name=index_name,
+                                    endpoint_hits=endpoint_hits)
 
     while (session.is_remaining_api_calls(max_api_calls=max_api_calls)):
 
