@@ -19,10 +19,10 @@ logging.basicConfig(level=logging.INFO,
 
 def get_session_configurations(news: bool, books: bool,
                                movies: bool) -> Dict[str, Any]:
-    """Build a list of configurarations to run a ETL session
+    """Build a list of configurations to run a ETL session
 
         If an argument is True, its configuration will be appended
-        to qreturned result.
+        to returned result.
 
         A configuration is a dictionary containing:
         index name, index mapping, settings
@@ -33,7 +33,7 @@ def get_session_configurations(news: bool, books: bool,
             movies (bool): If True, movies configuration will be appended
 
         Returns:
-            selected_configuurations (dict): dictionary of configurations to use
+            selected_configurations (dict): dictionary of configurations to use
                 for running an ETL session
     """
     selected_configurations = {}
