@@ -1,5 +1,6 @@
 RESULTS_BY_PAGE = 20
 MAX_API_CALLS = 500
+MAX_BOOKS_MOVIES_CALLS = 220
 
 INDEX_SETTINGS = {
     "number_of_shards": 2,

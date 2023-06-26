@@ -87,7 +87,6 @@ def get_news_data(session: Session, sections: List[str], max_api_calls: int) -> 
             res = content.json()
 
             docs = res['results']
-            saved_documents_request = len(docs)
 
             # Prepare the documents for bulk indexing
             actions = results_to_list(index_name='news', results=docs)
@@ -98,14 +97,15 @@ def get_news_data(session: Session, sections: List[str], max_api_calls: int) -> 
             print(f'{section} : {session.api_calls}')
 
             ######################################################
-            time.sleep(13)  ##### TO MODIFY ACCORDING API ALLOWANCE
+            time.sleep(12)  ##### TO MODIFY ACCORDING API ALLOWANCE
             #################### 5 requests max per minute ######
             ######################################################
 
 
 def get_books_or_movies(index_name: str,
                         results_by_page: int, session: Session,
-                        max_api_calls: int) -> None:
+                        max_api_calls: int,
+                        max_books_movies_calls: int) -> None:
     """Get books or movies documents from books API
         For both logic is the same due to API calls limites
 
@@ -115,6 +115,7 @@ def get_books_or_movies(index_name: str,
         results_by_page (int): Number of results of each reponse from NYT API calls
         session (Session): Used ETL session
         max_api_calls (int): Maximum of dailly calls allowed by the NYT API
+        max_books_movies_calls (int) : Number of allowed calls for books or movies
 
     Returns:
         None
@@ -134,10 +135,12 @@ def get_books_or_movies(index_name: str,
                                     index_name=index_name,
                                     endpoint_hits=endpoint_hits)
 
-    while (session.is_remaining_api_calls(max_api_calls=max_api_calls)):
+    while ((session.is_remaining_api_calls(max_api_calls=max_api_calls))
+           and (internal_api_calls < max_books_movies_calls)):
 
-        logger.info(f'----- Number of NYT API calls {session.api_calls} -----')
-        logger.info(f'----- query starts at offset:{start_offset} -----')
+        logger.info(f'----- Total number of NYT API calls: {session.api_calls} -----')
+        logger.info(f'----- Number of NYT Api calls for {index_name}: {internal_api_calls} -----')
+        logger.info(f'----- query starts at offset: {start_offset} -----')
 
         query = build_query(index_name=index_name, api_key=session._api_key,
                             start_offset=start_offset)

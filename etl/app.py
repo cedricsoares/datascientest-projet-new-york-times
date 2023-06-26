@@ -7,9 +7,10 @@ import fire
 import time
 
 from session import Session
-from constants import MAX_API_CALLS, RESULTS_BY_PAGE, CONFIGURATIONS
+from constants import (MAX_API_CALLS, MAX_BOOKS_MOVIES_CALLS,
+                       RESULTS_BY_PAGE, CONFIGURATIONS)
 from extract import get_books_or_movies, get_news
-from load import create_index, delete_index
+from load import create_index
 from utils import delete_duplicates
 
 logger = logging.getLogger(__name__)
@@ -86,8 +87,9 @@ def run(session: Session, selected_configurations: Dict[str, Any]) -> None:
                 get_books_or_movies(index_name=configuration_name,
                                     results_by_page=RESULTS_BY_PAGE,
                                     session=session,
-                                    max_api_calls=MAX_API_CALLS)
-                
+                                    max_api_calls=MAX_API_CALLS,
+                                    max_books_movies_calls=MAX_BOOKS_MOVIES_CALLS)
+
                 delete_duplicates(con=session.con,
                                   index_name=configuration_name)
 
