@@ -80,9 +80,6 @@ def run(session: Session, selected_configurations: Dict[str, Any]) -> None:
             if configuration_name == 'news':
                 get_news(session=session, max_api_calls=MAX_API_CALLS)
 
-                delete_duplicates(con=session.con,
-                                  index_name=configuration_name)
-
             else:
                 get_books_or_movies(index_name=configuration_name,
                                     results_by_page=RESULTS_BY_PAGE,
@@ -90,8 +87,7 @@ def run(session: Session, selected_configurations: Dict[str, Any]) -> None:
                                     max_api_calls=MAX_API_CALLS,
                                     max_books_movies_calls=MAX_BOOKS_MOVIES_CALLS)
 
-                delete_duplicates(con=session.con,
-                                  index_name=configuration_name)
+            delete_duplicates(con=session.con, index_name=configuration_name)
 
         logger.info(f'----- ETL finished to run on {configuration_name}  -----')
 
