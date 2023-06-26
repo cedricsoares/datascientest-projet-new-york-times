@@ -149,11 +149,14 @@ def get_index_keys(index_name: str) -> List[str]:
     Return:
         list: List of key to use to detect duplicates in the index_name
     """
+    if index_name == 'news':
+        return ['section', 'title', 'abstract', 'byline', 'source']
+
     if index_name == 'books':
-        return ["title", "description", "contributor", 'contributor_note',
+        return ['title', 'description', 'contributor', 'contributor_note',
                 'author']
 
-    else:
+    if index_name == 'movies':
         return ['byline', 'display_title', 'mpaa_rating', 'headline']
 
 
