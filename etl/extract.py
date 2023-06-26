@@ -87,6 +87,7 @@ def get_news_data(session: Session, sections: List[str], max_api_calls: int) -> 
             res = content.json()
 
             docs = res['results']
+            saved_documents_request = len(docs)
 
             # Prepare the documents for bulk indexing
             actions = results_to_list(index_name='news', results=docs)
@@ -146,10 +147,11 @@ def get_books_or_movies(index_name: str,
         res = content.json()
         endpoint_hits = endpoint_hits = res['num_results']
         docs = res['results']
+        saved_documents_request = len(docs)
 
         actions = results_to_list(index_name=index_name, results=docs)
 
-        saved_documents = start_offset + results_by_page
+        saved_documents = start_offset + saved_documents_request
         bulk_to_elasticsearch(con=session.con, bulk_list=actions)
         logger.info(f'----- Remaining documents to save regarding endpoints hits: {endpoint_hits - saved_documents} -----')
 
