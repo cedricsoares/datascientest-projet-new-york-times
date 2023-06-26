@@ -65,9 +65,6 @@ def run(session: Session, selected_configurations: Dict[str, Any]) -> None:
 
         logger.info(f'----- Starts runing ETL on {configuration_name} -----')
 
-        if (configuration_name == 'news') and (session.con.indices.exists(index='news')):
-            delete_index(name=configuration_name, con=session.con)
-
         if not session.con.indices.exists(index=configuration_name):  # Check if index exists on Elasticsearch
 
             name = configuration_name
