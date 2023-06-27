@@ -221,3 +221,5 @@ def loop_over_hashes_and_remove_duplicates(con, index_name,
                 con.delete(index=index_name, id=id)
             num_deleted_docs = len(array_of_ids[1:])
             logger.info(f'----- {num_deleted_docs} from {index_name} index -----')
+        else:
+            logger.info(f'----- No duplicated documents in {index_name} index -----')
