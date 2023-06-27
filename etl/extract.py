@@ -156,7 +156,9 @@ def get_books_or_movies(index_name: str,
 
         saved_documents = start_offset + saved_documents_request
         bulk_to_elasticsearch(con=session.con, bulk_list=actions)
-        logger.info(f'----- Remaining documents to save regarding endpoints hits: {endpoint_hits - saved_documents} -----')
+
+        if index_name == 'books':
+            logger.info(f'----- Remaining documents to save regarding endpoints hits: {endpoint_hits - saved_documents} -----')  # NY Times movies API does not return endpoints_hits
 
         start_offset += results_by_page
 
