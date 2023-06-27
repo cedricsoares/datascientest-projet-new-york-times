@@ -94,7 +94,7 @@ def get_news_data(session: Session, sections: List[str], max_api_calls: int) -> 
             bulk_to_elasticsearch(con=session.con, bulk_list=actions)
 
             session.api_calls += 1
-            print(f'{section} : {session.api_calls}')
+            logger.info(f'----- Total number of NYT API calls: {session.api_calls} -----')
 
             ######################################################
             time.sleep(12)  ##### TO MODIFY ACCORDING API ALLOWANCE
