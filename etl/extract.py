@@ -136,7 +136,7 @@ def get_books_or_movies(index_name: str,
                                     endpoint_hits=endpoint_hits)
 
     while ((session.is_remaining_api_calls(max_api_calls=max_api_calls))
-           and (internal_api_calls < max_books_movies_calls)):
+           and (internal_api_calls <= max_books_movies_calls)):
 
         logger.info(f'----- Total number of NYT API calls: {session.api_calls} -----')
         logger.info(f'----- Number of NYT Api calls for {index_name}: {internal_api_calls} -----')
