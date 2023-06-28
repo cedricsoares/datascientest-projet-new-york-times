@@ -131,9 +131,7 @@ def get_books_or_movies(index_name: str,
 
     internal_api_calls += 1  # A first API call is used to get endpoint_hits
 
-    start_offset = get_start_offset(con=session.con,
-                                    index_name=index_name,
-                                    endpoint_hits=endpoint_hits)
+    start_offset = get_start_offset(con=session.con, index_name=index_name)
 
     while ((session.is_remaining_api_calls(max_api_calls=max_api_calls))
            and (internal_api_calls <= max_books_movies_calls)):

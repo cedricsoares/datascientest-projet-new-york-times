@@ -41,8 +41,7 @@ def get_endpoint_hits(con: Elasticsearch, api_key: str, index_name: str) -> int:
     return endpoint_hits
 
 
-def get_start_offset(con: Elasticsearch, index_name: str,
-                     endpoint_hits: int) -> int:
+def get_start_offset(con: Elasticsearch, index_name: str) -> int:
     """ Get the start_start offset parameter to build queries for books and movies
 
             If checks on a specific index_name how many docuemnts are stored
@@ -66,7 +65,7 @@ def get_start_offset(con: Elasticsearch, index_name: str,
         return res
 
     else:
-        return (res // RESULTS_BY_PAGE) * RESULTS_BY_PAGE # It returns the previous mulitple of RESULTS_BY_PAGE
+        return (res // RESULTS_BY_PAGE) * RESULTS_BY_PAGE  # It returns the previous mulitple of RESULTS_BY_PAGE
 
 
 def build_query(index_name: str, api_key: Optional[str], start_offset: int = 0,
