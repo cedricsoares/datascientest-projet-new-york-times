@@ -65,7 +65,6 @@ def get_start_offset(con: Elasticsearch, index_name: str) -> int:
     except Exception as e:
         logger.warning(f"-----Error:{e}-----")
 
-
     try:
         res = con.count(index=index_name).get('count')
         if res == 0:
@@ -78,8 +77,7 @@ def get_start_offset(con: Elasticsearch, index_name: str) -> int:
             return (res // RESULTS_BY_PAGE) * RESULTS_BY_PAGE  # It returns the previous mulitple of RESULTS_BY_PAGE
 
     except Exception as e:
-            logger.warning(f"-----Error:{e}-----")
-
+        logger.warning(f"-----Error:{e}-----")
 
 
 def build_query(index_name: str, api_key: Optional[str], start_offset: int = 0,
