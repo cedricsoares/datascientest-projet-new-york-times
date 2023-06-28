@@ -29,9 +29,12 @@ def create_index(con: Elasticsearch, name: str,
     """
 
     logger.info(f'----- Start index {name} creation -----')
-
-    response = con.indices.create(index=name, mappings=mapping,
+    
+    try:
+        response = con.indices.create(index=name, mappings=mapping,
                                   settings=settings)
+    except Exception as e:
+        logger.warning(f"-----Error:{e}-----")
 
     if response['acknowledged']:
         logger.info(f'----- Index {name} created successfully. -----')
@@ -51,7 +54,12 @@ def delete_index(name: str, con: Elasticsearch) -> None:
     """
 
     logger.info(f'----- deleting {name} index -----')
-    con.indices.delete(index=name)
+    
+    try:
+        con.indices.delete(index=name)
+    except Exception as e:
+        logger.warning(f"-----Error:{e}-----")
+    
     logger.info(f'----- {name} index deleted -----')
 
 
@@ -69,8 +77,12 @@ def bulk_to_elasticsearch(
         ObjectApiREsponse : Response from Elasticsearh Bulk API call
     """
     logger.info('----- Start saving documents ----')
-    response = bulk(con, bulk_list)
-
+    
+    try:
+        response = bulk(con, bulk_list)
+    except Exception as e:
+        logger.warning(f"-----Error:{e}-----")
+        
     if not response[1]:
         saved_documents = len(bulk_list)
         logger.info(f'----- {saved_documents} documents saved successfully  -----')

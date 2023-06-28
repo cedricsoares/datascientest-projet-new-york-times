@@ -57,10 +57,16 @@ def get_start_offset(con: Elasticsearch, index_name: str) -> int:
             are added
         endpoint_hits (int): Amount of endpoints hits retrieved by NYT Api
     """
-    if not con.indices.exists(index=index_name):
-        return 0
+    try:
+        if not con.indices.exists(index=index_name):
+    except Exception as e:
+        logger.warning(f"-----Error:{e}-----")
+            return 0
 
-    res = con.count(index=index_name).get('count')
+    try:
+        res = con.count(index=index_name).get('count')
+    except Exception as e:
+        logger.warning(f"-----Error:{e}-----")
 
     if res == 0:
         return 0
@@ -221,8 +227,12 @@ def loop_over_hashes_and_remove_duplicates(con, index_name,
         if len(array_of_ids) > 1:
             # Get the documents that have mapped to the current hasval
             for id in array_of_ids[1:]:
-                con.delete(index=index_name, id=id)
+                try:
+                    con.delete(index=index_name, id=id)
+                except Exception as e:
+                    logger.warning(f"-----Error:{e}-----")
             num_deleted_docs = len(array_of_ids[1:])
             logger.info(f'----- {num_deleted_docs} from {index_name} index -----')
         else:
             logger.info(f'----- No duplicated documents in {index_name} index -----')
+            
