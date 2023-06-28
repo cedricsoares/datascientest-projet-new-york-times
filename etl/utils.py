@@ -45,8 +45,6 @@ def get_endpoint_hits(con: Elasticsearch, api_key: str, index_name: str) -> int:
         logger.warning(f"-----Error:{e}-----")
 
 
-
-
 def get_start_offset(con: Elasticsearch, index_name: str) -> int:
     """ Get the start_start offset parameter to build queries for books and movies
 
