@@ -21,7 +21,7 @@ def get_elasctic_connection():
 
 def get_endpoint_hits(con: Elasticsearch, api_key: str, index_name: str) -> int:
     """get amount of endpoint hits from NYT Api for books
-            it executes a querry with offset = 0 to get amount of hits.
+            it executes a query with offset = 0 to get amount of hits.
             it consumes one NYT api call
     Args:
         con (Elasticsearch): Connector object used to connect to database
@@ -48,7 +48,7 @@ def get_endpoint_hits(con: Elasticsearch, api_key: str, index_name: str) -> int:
 def get_start_offset(con: Elasticsearch, index_name: str) -> int:
     """ Get the start_start offset parameter to build queries for books and movies
 
-            If checks on a specific index_name how many docuemnts are stored
+            If checks on a specific index_name how many documents are stored
             in Elastisearch
 
     Args:
@@ -87,28 +87,28 @@ def build_query(index_name: str, api_key: Optional[str], start_offset: int = 0,
             Only used for news.
 
     Return:
-        str: Builded querry regarding passed parameters
+        str: built query regarding passed parameters
     """
-    logger.info('----- Strat building querry for NYT API -----')
+    logger.info('----- Start building query for NYT API -----')
 
     if index_name == 'news':
         query = f'https://api.nytimes.com/svc/news/v3/content/all/{news_section}.json?&api-key={api_key}'
-        logger.info(f'----- Builded querry for {index_name}-----')
+        logger.info(f'----- built query for {index_name}-----')
         return query
 
     if index_name == 'news_sections':
         query = f'https://api.nytimes.com/svc/news/v3/content/section-list.json?&api-key={api_key}'
-        logger.info(f'----- Builded querry for {index_name} -----')
+        logger.info(f'----- built query for {index_name} -----')
         return query
 
     if index_name == 'books':
         query = f'https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?offset={start_offset}&api-key={api_key}'
-        logger.info(f'----- Builded querry {index_name} -----')
+        logger.info(f'----- built query {index_name} -----')
         return query
 
     if index_name == 'movies':
         query = f'https://api.nytimes.com/svc/movies/v2/reviews/all.json?offset={start_offset}&api-key={api_key}'
-        logger.info(f'----- Builded querry {index_name} -----')
+        logger.info(f'----- built query {index_name} -----')
         return query
 
     else:
@@ -178,7 +178,7 @@ def scroll_over_all_docs(con: Elasticsearch, index_name: str,
             duplicates in the index_name
 
     Returns:
-        dict_of_duplicate_docs (dict): Dictionary of duplicated docuemnts
+        dict_of_duplicate_docs (dict): Dictionary of duplicated documents
     """
     for hit in helpers.scan(con, index=index_name):
         dict_of_duplicate_docs = {}
@@ -209,7 +209,7 @@ def loop_over_hashes_and_remove_duplicates(con, index_name,
         con (Elasticsearch): Connector object used to connect to database
         index_name (str): Name of the index where to check if duplicated exist
             and delete then if so
-        dict_of_duplicate_docs (dict): Dictionary of duplicated docuemnts
+        dict_of_duplicate_docs (dict): Dictionary of duplicated documents
 
     Return:
         None
