@@ -186,26 +186,27 @@ def scroll_over_all_docs(con: Elasticsearch, index_name: str,
     Returns:
         dict_of_duplicate_docs (dict): Dictionary of duplicated documents
     """
-    for hit in helpers.scan(con, index=index_name):
-        dict_of_duplicate_docs = {}
-        combined_key = ""
-        for mykey in keys_to_include_in_hash:
-            combined_key += str(hit['_source'][mykey])
+    try:
+        for hit in helpers.scan(con, index=index_name):
+            dict_of_duplicate_docs = {}
+            combined_key = ""
+            for mykey in keys_to_include_in_hash:
+                combined_key += str(hit['_source'][mykey])
 
-        _id = hit["_id"]
+            _id = hit["_id"]
 
-        hashval = hashlib.md5(combined_key.encode('utf-8')).digest()
+            hashval = hashlib.md5(combined_key.encode('utf-8')).digest()
 
-        # If the hashval is new, then we will create a new key
-        # in the dict_of_duplicate_docs, which will be
-        # assigned a value of an empty array.
-        # We then immediately push the _id onto the array.
-        # If hashval already exists, then
-        # we will just push the new _id onto the existing array
-        dict_of_duplicate_docs.setdefault(hashval, []).append(_id)
-
-        return dict_of_duplicate_docs
-
+            # If the hashval is new, then we will create a new key
+            # in the dict_of_duplicate_docs, which will be
+            # assigned a value of an empty array.
+            # We then immediately push the _id onto the array.
+            # If hashval already exists, then
+            # we will just push the new _id onto the existing array
+            dict_of_duplicate_docs.setdefault(hashval, []).append(_id)
+    except Exception as e:
+        logger.warning(f"-----Error:{e}-----")
+            return dict_of_duplicate_docs
 
 def loop_over_hashes_and_remove_duplicates(con, index_name,
                                            dict_of_duplicate_docs) -> None:
