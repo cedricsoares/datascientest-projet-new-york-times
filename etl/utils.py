@@ -59,9 +59,9 @@ def get_start_offset(con: Elasticsearch, index_name: str) -> int:
     """
     try:
         if not con.indices.exists(index=index_name):
+            return 0
     except Exception as e:
         logger.warning(f"-----Error:{e}-----")
-            return 0
 
     try:
         res = con.count(index=index_name).get('count')
@@ -206,7 +206,7 @@ def scroll_over_all_docs(con: Elasticsearch, index_name: str,
             dict_of_duplicate_docs.setdefault(hashval, []).append(_id)
     except Exception as e:
         logger.warning(f"-----Error:{e}-----")
-            return dict_of_duplicate_docs
+    return dict_of_duplicate_docs
 
 def loop_over_hashes_and_remove_duplicates(con, index_name,
                                            dict_of_duplicate_docs) -> None:
