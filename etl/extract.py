@@ -100,6 +100,7 @@ def get_news_data(session: Session, sections: List[str], max_api_calls: int) -> 
 
             except Exception as e:
                 logger.warning(f"-----Error:{e}-----")
+                
             session.api_calls += 1
             logger.info(f'----- Total number of NYT API calls: {session.api_calls} -----')
 

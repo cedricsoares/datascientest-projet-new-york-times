@@ -33,18 +33,18 @@ def get_endpoint_hits(con: Elasticsearch, api_key: str, index_name: str) -> int:
         endpoint_hits (int): Amount of endpoint hits returned by NTY Api
     """
     query = build_query(index_name=index_name, api_key=api_key, start_offset=0)
-    
+
     try:
         content = requests.get(query)
         res = content.json()
         endpoint_hits = res['num_results']
 
         return endpoint_hits
-    
+
     except Exception as e:
         logger.warning(f"-----Error:{e}-----")
 
-    
+
 
 
 def get_start_offset(con: Elasticsearch, index_name: str) -> int:
@@ -76,11 +76,10 @@ def get_start_offset(con: Elasticsearch, index_name: str) -> int:
 
         else:
             return (res // RESULTS_BY_PAGE) * RESULTS_BY_PAGE  # It returns the previous mulitple of RESULTS_BY_PAGE
-        
+
     except Exception as e:
             logger.warning(f"-----Error:{e}-----")
 
-    
 
 
 def build_query(index_name: str, api_key: Optional[str], start_offset: int = 0,
@@ -140,6 +139,7 @@ def delete_duplicates(con: Elasticsearch, index_name: str) -> None:
         None
     """
     logger.info(f'----- Start of drop duplicates process for {index_name}  index -----')
+
     keys_to_include_in_hash = get_index_keys(index_name=index_name)
     dict_of_duplicate_docs = scroll_over_all_docs(
                                                   con=con,
@@ -191,9 +191,11 @@ def scroll_over_all_docs(con: Elasticsearch, index_name: str,
     Returns:
         dict_of_duplicate_docs (dict): Dictionary of duplicated documents
     """
+    dict_of_duplicate_docs = {}
+
     try:
         for hit in helpers.scan(con, index=index_name):
-            dict_of_duplicate_docs = {}
+
             combined_key = ""
             for mykey in keys_to_include_in_hash:
                 combined_key += str(hit['_source'][mykey])
@@ -211,9 +213,10 @@ def scroll_over_all_docs(con: Elasticsearch, index_name: str,
             dict_of_duplicate_docs.setdefault(hashval, []).append(_id)
 
         return dict_of_duplicate_docs
+
     except Exception as e:
         logger.warning(f"-----Error:{e}-----")
-            
+
 
 def loop_over_hashes_and_remove_duplicates(con, index_name,
                                            dict_of_duplicate_docs) -> None:
@@ -234,13 +237,14 @@ def loop_over_hashes_and_remove_duplicates(con, index_name,
     for hashval, array_of_ids in dict_of_duplicate_docs.items():
         if len(array_of_ids) > 1:
             # Get the documents that have mapped to the current hasval
+
             for id in array_of_ids[1:]:
                 try:
                     con.delete(index=index_name, id=id)
                 except Exception as e:
+
                     logger.warning(f"-----Error:{e}-----")
             num_deleted_docs = len(array_of_ids[1:])
             logger.info(f'----- {num_deleted_docs} from {index_name} index -----')
         else:
             logger.info(f'----- No duplicated documents in {index_name} index -----')
-            
