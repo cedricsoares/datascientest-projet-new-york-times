@@ -207,4 +207,7 @@ pyrightconfig.json
 .history
 .ionide
 
+# MacOS
+.DS_Store
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,jupyternotebooks
