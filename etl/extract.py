@@ -50,7 +50,12 @@ def get_news_sections(session: Session) -> List[str]:
 
     logger.info('----- Retrieving news sections -----')
     query = build_query(index_name='news_sections', api_key=session.api_key)
-    results = requests.get(query)
+    
+    try:
+        results = requests.get(query)
+    except Exception as e:
+        logger.warning(f"-----Error:{e}-----")
+
     sections = [item['section'] for item in results.json()['results']]
     logger.info(f'----- News sections: \n {sections} \n')
 
@@ -81,7 +86,11 @@ def get_news_data(session: Session, sections: List[str], max_api_calls: int) -> 
 
             query = build_query(index_name='news', news_section=section,
                                 api_key=session.api_key)
-            content = requests.get(query)
+            
+            try:
+                content = requests.get(query)
+            except Exception as e:
+                logger.warning(f"-----Error:{e}-----")
 
             # save into the ES DB
             res = content.json()
@@ -143,7 +152,10 @@ def get_books_or_movies(index_name: str,
         query = build_query(index_name=index_name, api_key=session._api_key,
                             start_offset=start_offset)
 
-        content = requests.get(query)
+        try:
+            content = requests.get(query)
+        except Exception as e:
+            logger.warning(f"-----Error:{e}-----")
 
         res = content.json()
         endpoint_hits = endpoint_hits = res['num_results']

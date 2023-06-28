@@ -20,7 +20,7 @@ def get_elasctic_connection():
 
 
 def get_endpoint_hits(con: Elasticsearch, api_key: str, index_name: str) -> int:
-    """get amount of endpoint hits from NYT Api for books or movies
+    """get amount of endpoint hits from NYT Api for books
             it executes a querry with offset = 0 to get amount of hits.
             it consumes one NYT api call
     Args:
@@ -33,7 +33,11 @@ def get_endpoint_hits(con: Elasticsearch, api_key: str, index_name: str) -> int:
         endpoint_hits (int): Amount of endpoint hits returned by NTY Api
     """
     query = build_query(index_name=index_name, api_key=api_key, start_offset=0)
-    content = requests.get(query)
+    
+    try:
+        content = requests.get(query)
+    except Exception as e:
+        logger.warning(f"-----Error:{e}-----")
 
     res = content.json()
     endpoint_hits = res['num_results']
