@@ -36,13 +36,15 @@ def get_endpoint_hits(con: Elasticsearch, api_key: str, index_name: str) -> int:
     
     try:
         content = requests.get(query)
+        res = content.json()
+        endpoint_hits = res['num_results']
+
+        return endpoint_hits
+    
     except Exception as e:
         logger.warning(f"-----Error:{e}-----")
 
-    res = content.json()
-    endpoint_hits = res['num_results']
-
-    return endpoint_hits
+    
 
 
 def get_start_offset(con: Elasticsearch, index_name: str) -> int:
@@ -63,19 +65,22 @@ def get_start_offset(con: Elasticsearch, index_name: str) -> int:
     except Exception as e:
         logger.warning(f"-----Error:{e}-----")
 
+
     try:
         res = con.count(index=index_name).get('count')
+        if res == 0:
+            return 0
+
+        if res % RESULTS_BY_PAGE == 0:
+            return res
+
+        else:
+            return (res // RESULTS_BY_PAGE) * RESULTS_BY_PAGE  # It returns the previous mulitple of RESULTS_BY_PAGE
+        
     except Exception as e:
-        logger.warning(f"-----Error:{e}-----")
+            logger.warning(f"-----Error:{e}-----")
 
-    if res == 0:
-        return 0
-
-    if res % RESULTS_BY_PAGE == 0:
-        return res
-
-    else:
-        return (res // RESULTS_BY_PAGE) * RESULTS_BY_PAGE  # It returns the previous mulitple of RESULTS_BY_PAGE
+    
 
 
 def build_query(index_name: str, api_key: Optional[str], start_offset: int = 0,
@@ -204,9 +209,11 @@ def scroll_over_all_docs(con: Elasticsearch, index_name: str,
             # If hashval already exists, then
             # we will just push the new _id onto the existing array
             dict_of_duplicate_docs.setdefault(hashval, []).append(_id)
+
+        return dict_of_duplicate_docs
     except Exception as e:
         logger.warning(f"-----Error:{e}-----")
-    return dict_of_duplicate_docs
+            
 
 def loop_over_hashes_and_remove_duplicates(con, index_name,
                                            dict_of_duplicate_docs) -> None:
