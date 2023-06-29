@@ -54,8 +54,8 @@ def get_news_sections(session: Session) -> List[str]:
     try:
         results = requests.get(query)
         sections = [item['section'] for item in results.json()['results']]
-        logger.info(f'----- News sections: \n {sections} \n')
         session.api_calls += 1
+        logger.info(f'----- Total number of NYT API calls: {session.api_calls} -----')
 
         return sections
 
@@ -100,7 +100,7 @@ def get_news_data(session: Session, sections: List[str], max_api_calls: int) -> 
 
             except Exception as e:
                 logger.warning(f"-----Error:{e}-----")
-                
+
             session.api_calls += 1
             logger.info(f'----- Total number of NYT API calls: {session.api_calls} -----')
 
@@ -163,6 +163,7 @@ def get_books_or_movies(index_name: str,
 
             if index_name == 'books':
                 logger.info(f'----- Remaining documents to save regarding endpoints hits: {endpoint_hits - saved_documents} -----')  # NY Times movies API does not return endpoints_hits
+
         except Exception as e:
             logger.warning(f"-----Error:{e}-----")
 

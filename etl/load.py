@@ -29,17 +29,19 @@ def create_index(con: Elasticsearch, name: str,
     """
 
     logger.info(f'----- Start index {name} creation -----')
-    
+
     try:
         response = con.indices.create(index=name, mappings=mapping,
-                                  settings=settings)
+                                      settings=settings)
+
+        if response['acknowledged']:
+            logger.info(f'----- Index {name} created successfully. -----')
+
+        else:
+            logger.warning(f'----- Failed to create {name} index. -----')
+
     except Exception as e:
         logger.warning(f"-----Error:{e}-----")
-
-    if response['acknowledged']:
-        logger.info(f'----- Index {name} created successfully. -----')
-    else:
-        logger.warning(f'----- Failed to create {name} index. -----')
 
 
 def delete_index(name: str, con: Elasticsearch) -> None:
@@ -54,12 +56,12 @@ def delete_index(name: str, con: Elasticsearch) -> None:
     """
 
     logger.info(f'----- deleting {name} index -----')
-    
+
     try:
         con.indices.delete(index=name)
     except Exception as e:
         logger.warning(f"-----Error:{e}-----")
-    
+
     logger.info(f'----- {name} index deleted -----')
 
 
@@ -77,16 +79,18 @@ def bulk_to_elasticsearch(
         ObjectApiREsponse : Response from Elasticsearh Bulk API call
     """
     logger.info('----- Start saving documents ----')
-    
+
     try:
         response = bulk(con, bulk_list)
+
+        if not response[1]:
+            saved_documents = len(bulk_list)
+            logger.info(f'----- {saved_documents} documents saved successfully  -----')
+
+        else:
+            logger.warning('----- Failed to save documents. -----')
+
     except Exception as e:
         logger.warning(f"-----Error:{e}-----")
-        
-    if not response[1]:
-        saved_documents = len(bulk_list)
-        logger.info(f'----- {saved_documents} documents saved successfully  -----')
 
-    else:
-        logger.warning('----- Failed to save documents. -----')
     logger.info('----- Finish saving documents from bulk -----')
