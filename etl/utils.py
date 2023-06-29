@@ -230,6 +230,8 @@ def loop_over_hashes_and_remove_duplicates(con, index_name,
 
     # Search through the hash of doc values to see if any
     # duplicate hashes have been found
+
+    deleted_documents = 0
     for hashval, array_of_ids in dict_of_duplicate_docs.items():
         if len(array_of_ids) > 1:
             # Get the documents that have mapped to the current hasval
@@ -240,7 +242,9 @@ def loop_over_hashes_and_remove_duplicates(con, index_name,
                 except Exception as e:
 
                     logger.warning(f"-----Error:{e}-----")
-            num_deleted_docs = len(array_of_ids[1:])
-            logger.info(f'----- {num_deleted_docs} from {index_name} index -----')
-        else:
-            logger.info(f'----- No duplicated documents in {index_name} index -----')
+                deleted_documents += 1
+
+    if deleted_documents > 0:
+        logger.info(f'----- {deleted_documents} from {index_name} index -----')
+    else:
+        logger.info('----- There is no duplicated documents -----')
