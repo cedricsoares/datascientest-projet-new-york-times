@@ -245,6 +245,6 @@ def loop_over_hashes_and_remove_duplicates(con, index_name,
                 deleted_documents += 1
 
     if deleted_documents > 0:
-        logger.info(f'----- {deleted_documents} from {index_name} index -----')
+        logger.info(f'----- {deleted_documents} deleted duplicated documents from {index_name} index -----')
     else:
         logger.info('----- There is no duplicated documents -----')
