@@ -105,7 +105,7 @@ def get_news_data(session: Session, sections: List[str], max_api_calls: int) -> 
             logger.info(f'----- Total number of NYT API calls: {session.api_calls} -----')
 
             ######################################################
-            time.sleep(12)  ##### TO MODIFY ACCORDING API ALLOWANCE
+            time.sleep(0)  ##### TO MODIFY ACCORDING API ALLOWANCE
             #################### 5 requests max per minute ######
             ######################################################
 
@@ -173,7 +173,9 @@ def get_books_or_movies(index_name: str,
         internal_api_calls += 1
 
         ######################################################
-        time.sleep(12)  ##### TO MODIFY ACCORDING API ALLOWANCE
+        time.sleep(0)  ##### TO MODIFY ACCORDING API ALLOWANCE
         ######################################################
 
     logger.info(f'----- Next offset to use on API call: {start_offset} -----')
+
+
