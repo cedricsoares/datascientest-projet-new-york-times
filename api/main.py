@@ -251,3 +251,60 @@ async def get_sections_proportions(time_scale: str) -> elasticResponse:
     result = json.dumps(result["aggregations"]["articles_per_section"]["buckets"])   
 
     return elasticResponse(data=result)
+
+
+@api.get('/news/top-topics')
+async def get_top_topics(section: str, time_scale: str)  -> elasticResponse:
+    """Returns top 5 topics for a section / period filter
+        It returns 5 most represented  on des_facet facet
+
+    Args:
+        section (str): Name of the section used in filter clause
+        time_scale (str): Time scale used in the filter clause
+            values can be : "yesterday", "week_ago" or "month_ago"
+    Returns:
+        Item : Object that embebeds elasticsearch response
+    """
+    
+    start_date, end_date = get_time_scale(time_scale=time_scale)
+
+    query_body = {
+        "query": {
+            "bool": {
+                "filter": [
+                    {
+                        "term":
+                        {
+                            "section": f"{section}"
+                        }
+                    },
+                    {
+                        "range":
+                            {
+                                "first_published_date":
+                                    {
+                                        "gte": f"{start_date}",
+                                        "lte": f"{end_date}"
+                                    }
+                            }
+                    }
+                ]
+            }
+        },
+        "size": 0,
+        "aggs": {
+            "description_facet":
+                {
+                    "terms":
+                        {
+                            "field": "des_facet",
+                            "size": 5
+                        }
+                }
+            }
+    }
+
+    result = await es.search(index="news", body=query_body)
+    result = json.dumps(result["aggregations"]["description_facet"]["buckets"])   
+
+    return elasticResponse(data=result)
