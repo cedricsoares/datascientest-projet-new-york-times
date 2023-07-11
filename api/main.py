@@ -97,6 +97,8 @@ async def get_top_journalists(section: str, time_scale: str) -> elasticResponse:
             }
     }
 
+    start_date, end_date = get_time_scale(time_scale=time_scale)
+
     result = await es.search(index="news", body=query_body)
     result = json.dumps(result["aggregations"]["articles_per_author"]["buckets"])   
 
@@ -265,7 +267,7 @@ async def get_top_topics(section: str, time_scale: str)  -> elasticResponse:
     Returns:
         Item : Object that embebeds elasticsearch response
     """
-    
+
     start_date, end_date = get_time_scale(time_scale=time_scale)
 
     query_body = {
@@ -306,5 +308,76 @@ async def get_top_topics(section: str, time_scale: str)  -> elasticResponse:
 
     result = await es.search(index="news", body=query_body)
     result = json.dumps(result["aggregations"]["description_facet"]["buckets"])   
+
+    return elasticResponse(data=result)
+
+
+@api.get('/books/top-writers')
+async def get_top_writers(size: int) -> elasticResponse:
+    """Returns top writers in terms of books that are in best sellers lists
+    
+    Args:
+        size (int): Number of top writers to retrieve
+    Returns:
+        Item : Object that embebeds elasticsearch response
+    """
+    query_body = {
+        "size": 0,
+        "aggs":
+            {
+                "per_author":
+                {
+                    "terms":
+                    {
+                        "field": "author.keyword",
+                        "size": f"{size}"
+                    }
+                }
+            }
+        }
+
+    result = await es.search(index="books", body=query_body)
+    result = json.dumps(result["aggregations"]["per_author"]["buckets"])
+
+    return elasticResponse(data=result)
+
+
+@api.get('/books/count-by-lists')
+async def get_count_by_lists(size: int=59) -> elasticResponse:
+    """Returns number of books by lists
+
+    Args:
+        size (int): Number of lists with mowt books to return
+            default value il 59 (number of lists provided by New York Times)
+    Returns:
+        Item : Object that embebeds elasticsearch response
+    """
+    query_body = {
+        "size": 0,
+        "aggs":
+            {
+                "ranks_history":
+                    {
+                        "nested":
+                            {
+                                "path": "ranks_history"
+                            },
+                        "aggs":
+                            {
+                                "per_list":
+                                {
+                                    "terms":
+                                    {
+                                        "field": "ranks_history.list_name.keyword",
+                                        "size": f"{size}"
+                                    }
+                                }
+                            }
+                    }
+            }
+        }
+
+    result = await es.search(index="books", body=query_body)
+    result = json.dumps(result["aggregations"]["ranks_history"]["per_list"]["buckets"])
 
     return elasticResponse(data=result)
