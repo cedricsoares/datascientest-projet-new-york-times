@@ -7,11 +7,38 @@ import json
 import asyncio
 
 
-api = FastAPI()
+api = FastAPI(
+    title='Elasticsearch database API',
+    description='Expose Elastic search indices',
+    version='0.0.1',
+    openapi_tags=[
+        {
+            'name': 'news',
+            'description': 'Related to news functions'
+        },
+        {
+            'name': 'books',
+            'description': 'Related to books functions'
+        },
+        {
+            'name': 'movies',
+            'description': 'Related to movies functions'
+        }
+    ]
+)
+
 es = AsyncElasticsearch(hosts="http://@localhost:9200")
 
 
 class elasticResponse(BaseModel):
+    """Retieved response from Elastiucsearch database
+
+    Attributes:
+        data (str): Json string of useful retieved response from Elastiscsearch 
+            database
+
+    """
+    
     data: str
 
 
@@ -46,7 +73,7 @@ def get_time_scale(time_scale: str) -> tuple[Optional[date], Optional[date]]:
         return None, None
 
 
-@api.get('/news/top-journalists')
+@api.get('/news/top-journalists', tags=['news'])
 async def get_top_journalists(section: str, time_scale: str) -> elasticResponse:
     """Returns top 10 journalist for a section / period filter
         It returns 10 journalists who have published most articles
@@ -62,39 +89,42 @@ async def get_top_journalists(section: str, time_scale: str) -> elasticResponse:
     start_date, end_date = get_time_scale(time_scale=time_scale)
 
     query_body = {
-        "query": {
-            "bool": {
-                "filter": [
+        "query":
+            {
+                "bool":
                     {
-                        "term":
-                        {
-                            "section": f"{section}"
-                        }
-                    },
-                    {
-                        "range":
-                            {
-                                "first_published_date":
+                        "filter":
+                            [
+                                {
+                                    "term":
                                     {
-                                        "gte": f"{start_date}",
-                                        "lte": f"{end_date}"
+                                        "section": f"{section}"
                                     }
+                                },
+                                {
+                                    "range":
+                                        {
+                                            "first_published_date":
+                                                {
+                                                    "gte": f"{start_date}",
+                                                    "lte": f"{end_date}"
+                                                }
+                                        }
+                                }
+                            ]
+                        }
+            },
+            "size": 0,
+            "aggs": {
+                "articles_per_author":
+                    {
+                        "terms":
+                            {
+                                "field": "byline.keyword",
+                                "size": 10
                             }
                     }
-                ]
-            }
-        },
-        "size": 0,
-        "aggs": {
-            "articles_per_author":
-                {
-                    "terms":
-                        {
-                            "field": "byline.keyword",
-                            "size": 10
-                        }
                 }
-            }
     }
 
     start_date, end_date = get_time_scale(time_scale=time_scale)
@@ -105,7 +135,7 @@ async def get_top_journalists(section: str, time_scale: str) -> elasticResponse:
     return elasticResponse(data=result)
 
 
-@api.get('/news/top-persons')
+@api.get('/news/top-persons', tags=['news'])
 async def get_top_persons(section: str, time_scale: str) -> elasticResponse:
     """Returns top 5 persons for a section / period filter
         It returns 5 most represented persons on per_facet facet
@@ -121,37 +151,40 @@ async def get_top_persons(section: str, time_scale: str) -> elasticResponse:
 
     query_body = {
         "query": {
-            "bool": {
-                "filter": [
-                    {
-                        "term":
-                        {
-                            "section": f"{section}"
-                        }
-                    },
-                    {
-                        "range":
+            "bool": 
+                {
+                    "filter": 
+                        [
                             {
-                                "first_published_date":
+                                "term":
+                                {
+                                    "section": f"{section}"
+                                }
+                            },
+                            {
+                                "range":
                                     {
-                                        "gte": f"{start_date}",
-                                        "lte": f"{end_date}"
+                                        "first_published_date":
+                                            {
+                                                "gte": f"{start_date}",
+                                                "lte": f"{end_date}"
+                                            }
                                     }
                             }
-                    }
-                ]
-            }
-        },
-        "size": 0,
-        "aggs": {
-            "persons":
-                {
-                    "terms":
-                        {
-                            "field": "per_facet",
-                            "size": 5
-                        }
+                    ]
                 }
+            },
+        "size": 0,
+        "aggs":
+            {
+                "persons":
+                    {
+                        "terms":
+                            {
+                                "field": "per_facet",
+                                "size": 5
+                            }
+                    }
             }
     }
 
@@ -161,7 +194,7 @@ async def get_top_persons(section: str, time_scale: str) -> elasticResponse:
     return elasticResponse(data=result)
 
 
-@api.get('/news/articles-count')
+@api.get('/news/articles-count', tags=['news'])
 async def get_articles_count(section: str, step: str) -> elasticResponse:
     """Returns artciles count for a section / time scale step parameter
         step parameter can be "day", "month", "quarter", "year"
@@ -175,28 +208,32 @@ async def get_articles_count(section: str, step: str) -> elasticResponse:
     """
 
     query_body = {
-        "query": {
-            "bool": {
-                "filter": [
+        "query":
+            {
+                "bool":
                     {
-                        "term":
-                        {
-                            "section": f"{section}"
-                        }
+                        "filter":
+                            [
+                                {
+                                    "term":
+                                    {
+                                        "section": f"{section}"
+                                    }
+                                }
+                            ]
                     }
-                ]
-            }
-        },
+            },
         "size": 0,
-        "aggs": {
-            "articles_over_time":
-                {
-                    "date_histogram":
-                        {
-                            "field": "first_published_date",
-                            "calendar_interval": f"{step}"
-                        }
-                }
+        "aggs":
+            {
+                "articles_over_time":
+                    {
+                        "date_histogram":
+                            {
+                                "field": "first_published_date",
+                                "calendar_interval": f"{step}"
+                            }
+                    }
             }
     }
 
@@ -206,7 +243,7 @@ async def get_articles_count(section: str, step: str) -> elasticResponse:
     return elasticResponse(data=result)
 
 
-@api.get('/news/sections-proportions')
+@api.get('/news/sections-proportions', tags=['news'])
 async def get_sections_proportions(time_scale: str) -> elasticResponse:
     """Returns Published articles proportions by sections for a given time scale
 
@@ -221,31 +258,34 @@ async def get_sections_proportions(time_scale: str) -> elasticResponse:
 
     query_body = {
         "query": {
-            "bool": {
-                "filter": [
-                    {
-                        "range":
+            "bool":
+                {
+                    "filter":
+                        [
                             {
-                                "first_published_date":
+                                "range":
                                     {
-                                        "gte": f"{start_date}",
-                                        "lte": f"{end_date}"
+                                        "first_published_date":
+                                            {
+                                                "gte": f"{start_date}",
+                                                "lte": f"{end_date}"
+                                            }
                                     }
                             }
-                    }
-                ]
-            }
+                        ]
+                }
         },
         "size": 0,
-        "aggs": {
-            "articles_per_section":
-                {
-                    "terms":
-                        {
-                            "field": "section",
-                            "size": 10
-                        }
-                }
+        "aggs": 
+            {
+                "articles_per_section":
+                    {
+                        "terms":
+                            {
+                                "field": "section",
+                                "size": 10
+                            }
+                    }
             }
     }
 
@@ -255,7 +295,7 @@ async def get_sections_proportions(time_scale: str) -> elasticResponse:
     return elasticResponse(data=result)
 
 
-@api.get('/news/top-topics')
+@api.get('/news/top-topics', tags=['news'])
 async def get_top_topics(section: str, time_scale: str)  -> elasticResponse:
     """Returns top 5 topics for a section / period filter
         It returns 5 most represented  on des_facet facet
@@ -271,38 +311,42 @@ async def get_top_topics(section: str, time_scale: str)  -> elasticResponse:
     start_date, end_date = get_time_scale(time_scale=time_scale)
 
     query_body = {
-        "query": {
-            "bool": {
-                "filter": [
+        "query": 
+            {
+                "bool": 
                     {
-                        "term":
-                        {
-                            "section": f"{section}"
-                        }
-                    },
-                    {
-                        "range":
-                            {
-                                "first_published_date":
+                        "filter": 
+                            [
+                                {
+                                    "term":
                                     {
-                                        "gte": f"{start_date}",
-                                        "lte": f"{end_date}"
+                                        "section": f"{section}"
                                     }
+                                },
+                                {
+                                    "range":
+                                        {
+                                            "first_published_date":
+                                                {
+                                                    "gte": f"{start_date}",
+                                                    "lte": f"{end_date}"
+                                                }
+                                        }
+                                }
+                            ]
+                    }
+            },
+        "size": 0,
+        "aggs":
+            {
+                "description_facet":
+                    {
+                        "terms":
+                            {
+                                "field": "des_facet",
+                                "size": 5
                             }
                     }
-                ]
-            }
-        },
-        "size": 0,
-        "aggs": {
-            "description_facet":
-                {
-                    "terms":
-                        {
-                            "field": "des_facet",
-                            "size": 5
-                        }
-                }
             }
     }
 
@@ -312,7 +356,7 @@ async def get_top_topics(section: str, time_scale: str)  -> elasticResponse:
     return elasticResponse(data=result)
 
 
-@api.get('/books/top-writers')
+@api.get('/books/top-writers', tags=['books'])
 async def get_top_writers(size: int) -> elasticResponse:
     """Returns top writers in terms of books that are in best sellers lists
     
@@ -342,7 +386,7 @@ async def get_top_writers(size: int) -> elasticResponse:
     return elasticResponse(data=result)
 
 
-@api.get('/books/count-by-lists')
+@api.get('/books/count-by-lists', tags=['books'])
 async def get_count_by_lists(size: int=59) -> elasticResponse:
     """Returns number of books by lists
 
@@ -383,7 +427,7 @@ async def get_count_by_lists(size: int=59) -> elasticResponse:
     return elasticResponse(data=result)
 
 
-@api.get('/books/top-writers-by-lists')
+@api.get('/books/top-writers-by-lists', tags=['books'])
 async def get_top_writers_by_list(list: str, size: int) -> elasticResponse:
     """Returns top writers for a selected lists 
     
@@ -399,7 +443,7 @@ async def get_top_writers_by_list(list: str, size: int) -> elasticResponse:
             {
                 "bool":
                 {
-                    "filter": 
+                    "filter":
                         [
                             {
                                 "nested":
