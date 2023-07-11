@@ -202,3 +202,52 @@ async def get_articles_count(section: str, step: str) -> elasticResponse:
     result = json.dumps(result["aggregations"]["articles_over_time"]["buckets"])   
 
     return elasticResponse(data=result)
+
+
+@api.get('/news/sections-proportions')
+async def get_sections_proportions(time_scale: str) -> elasticResponse:
+    """Returns Published articles proportions by sections for a given time scale
+
+    Args:
+        time_scale (str): Time scale used in the filter clause
+            values can be : "yesterday", "week_ago" or "month_ago"
+    Returns:
+        Item : Object that embebeds elasticsearch response
+    """
+
+    start_date, end_date = get_time_scale(time_scale=time_scale)
+
+    query_body = {
+        "query": {
+            "bool": {
+                "filter": [
+                    {
+                        "range":
+                            {
+                                "first_published_date":
+                                    {
+                                        "gte": f"{start_date}",
+                                        "lte": f"{end_date}"
+                                    }
+                            }
+                    }
+                ]
+            }
+        },
+        "size": 0,
+        "aggs": {
+            "articles_per_section":
+                {
+                    "terms":
+                        {
+                            "field": "section",
+                            "size": 10
+                        }
+                }
+            }
+    }
+
+    result = await es.search(index="news", body=query_body)
+    result = json.dumps(result["aggregations"]["articles_per_section"]["buckets"])   
+
+    return elasticResponse(data=result)
