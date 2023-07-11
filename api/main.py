@@ -49,12 +49,14 @@ def get_time_scale(time_scale: str) -> tuple[Optional[date], Optional[date]]:
 @api.get('/news/top-journalists')
 async def get_top_journalists(section: str, time_scale: str) -> elasticResponse:
     """Display top 10 journalist for a section / period filter
-        It returns 10 journalists who have publish most articles
+        It returns 10 journalists who have published most articles
 
     Args:
         section (str): Name of the section used in filter clause
         time_scale (str): Time scale used in the filter clause
             values can be : "yesterday", "week_ago" or "month_ago"
+    Returns:
+        Item : Object that embebeds elasticsearch response 
     """
 
     start_date, end_date = get_time_scale(time_scale=time_scale)
@@ -97,5 +99,61 @@ async def get_top_journalists(section: str, time_scale: str) -> elasticResponse:
 
     result = await es.search(index="news", body=query_body)
     result = json.dumps(result["aggregations"]["articles_per_author"]["buckets"])   
+
+    return elasticResponse(data=result)
+
+
+@api.get('/news/top-persons')
+async def get_top_persons(section: str, time_scale: str) -> elasticResponse:
+    """Display top 5 persons for a section / period filter
+        It returns 5 most represented persons on per_facet facet
+    
+    Args:
+        section (str): Name of the section used in filter clause
+        time_scale (str): Time scale used in the filter clause
+            values can be : "yesterday", "week_ago" or "month_ago"
+    Returns:
+        Item : Object that embebeds elasticsearch response 
+    """
+    start_date, end_date = get_time_scale(time_scale=time_scale)
+
+    query_body = {
+        "query": {
+            "bool": {
+                "filter": [
+                    {
+                        "term":
+                        {
+                            "section": f"{section}"
+                        }
+                    },
+                    {
+                        "range":
+                            {
+                                "first_published_date":
+                                    {
+                                        "gte": f"{start_date}",
+                                        "lte": f"{end_date}"
+                                    }
+                            }
+                    }
+                ]
+            }
+        },
+        "size": 0,
+        "aggs": {
+            "persons":
+                {
+                    "terms":
+                        {
+                            "field": "per_facet",
+                            "size": 5
+                        }
+                }
+            }
+    }
+
+    result = await es.search(index="news", body=query_body)
+    result = json.dumps(result["aggregations"]["persons"]["buckets"])   
 
     return elasticResponse(data=result)
