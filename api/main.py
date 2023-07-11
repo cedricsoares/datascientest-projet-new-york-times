@@ -381,3 +381,59 @@ async def get_count_by_lists(size: int=59) -> elasticResponse:
     result = json.dumps(result["aggregations"]["ranks_history"]["per_list"]["buckets"])
 
     return elasticResponse(data=result)
+
+
+@api.get('/books/top-writers-by-lists')
+async def get_top_writers_by_list(list: str, size: int) -> elasticResponse:
+    """Returns top writers for a selected lists 
+    
+    Args:
+        list (str): Name of the list to retrieve top writers
+        size (int): NUmber of top writers to retrieve
+    Returns:
+        Item : Object that embebeds elasticsearch response
+    """
+    
+    query_body = {
+        "query":
+            {
+                "bool":
+                {
+                    "filter": 
+                        [
+                            {
+                                "nested":
+                                    {
+                                        "path": "ranks_history",
+                                        "query":
+                                            [
+                                                {
+                                                    "match":
+                                                        {
+                                                            "ranks_history.list_name": f"{list}"
+                                                        }
+                                                }
+                                            ]
+                                    }
+                            }
+                        ]
+                }
+            },
+        "size": 0,
+        "aggs":
+            {
+                "authors_per_list":
+                {
+                    "terms":
+                    {
+                        "field": "author.keyword",
+                        "size": f"{size}"
+                    }
+                }
+            }
+        }
+
+    result = await es.search(index="books", body=query_body)
+    result = json.dumps(result["aggregations"]["authors_per_list"]["buckets"])
+
+    return elasticResponse(data=result)
