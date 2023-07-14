@@ -1,8 +1,8 @@
 from pydantic import BaseModel
-from fastapi import FastAPI
+from fastapi import FastAPI, Query
 from elasticsearch import AsyncElasticsearch
 from datetime import date, timedelta
-from typing import Optional
+from typing import Optional, Annotated
 import json
 import asyncio
 
@@ -34,11 +34,11 @@ class elasticResponse(BaseModel):
     """Retieved response from Elastiucsearch database
 
     Attributes:
-        data (str): Json string of useful retieved response from Elastiscsearch 
+        data (str): Json string of useful retieved response from Elastiscsearch
             database
 
     """
-    
+
     data: str
 
 
@@ -47,6 +47,7 @@ def get_time_scale(time_scale: str) -> tuple[Optional[date], Optional[date]]:
 
     Args:
         time_scale (str): Time scale used to define datetimes
+
     Returns:
         tuple(date, date): Dates corresponding of start and end of a time scale
     """
@@ -74,16 +75,20 @@ def get_time_scale(time_scale: str) -> tuple[Optional[date], Optional[date]]:
 
 
 @api.get('/news/top-journalists', tags=['news'])
-async def get_top_journalists(section: str, time_scale: str) -> elasticResponse:
+async def get_top_journalists(
+                              section: Annotated[str, Query()],
+                              time_scale: Annotated[str, Query()]
+                             ) -> elasticResponse:
     """Returns top 10 journalist for a section / period filter
         It returns 10 journalists who have published most articles
-
+    \f
     Args:
         section (str): Name of the section used in filter clause
         time_scale (str): Time scale used in the filter clause
             values can be : "yesterday", "week_ago" or "month_ago"
+
     Returns:
-        Item : Object that embebeds elasticsearch response 
+        elasticResponse : Object that embebeds elasticsearch response
     """
 
     start_date, end_date = get_time_scale(time_scale=time_scale)
@@ -98,7 +103,7 @@ async def get_top_journalists(section: str, time_scale: str) -> elasticResponse:
                                 {
                                     "term":
                                     {
-                                        "section": f"{section}"
+                                        "section": section
                                     }
                                 },
                                 {
@@ -106,8 +111,8 @@ async def get_top_journalists(section: str, time_scale: str) -> elasticResponse:
                                         {
                                             "first_published_date":
                                                 {
-                                                    "gte": f"{start_date}",
-                                                    "lte": f"{end_date}"
+                                                    "gte": start_date,
+                                                    "lte": end_date
                                                 }
                                         }
                                 }
@@ -130,35 +135,39 @@ async def get_top_journalists(section: str, time_scale: str) -> elasticResponse:
     start_date, end_date = get_time_scale(time_scale=time_scale)
 
     result = await es.search(index="news", body=query_body)
-    result = json.dumps(result["aggregations"]["articles_per_author"]["buckets"])   
+    result = json.dumps(result["aggregations"]["articles_per_author"]["buckets"])
 
     return elasticResponse(data=result)
 
 
 @api.get('/news/top-persons', tags=['news'])
-async def get_top_persons(section: str, time_scale: str) -> elasticResponse:
+async def get_top_persons(
+                          section: Annotated[str, Query()],
+                          time_scale: Annotated[str, Query()]
+                          ) -> elasticResponse:
     """Returns top 5 persons for a section / period filter
         It returns 5 most represented persons on per_facet facet
-    
+    \f
     Args:
         section (str): Name of the section used in filter clause
         time_scale (str): Time scale used in the filter clause
             values can be : "yesterday", "week_ago" or "month_ago"
+
     Returns:
-        Item : Object that embebeds elasticsearch response
+        elasticResponse : Object that embebeds elasticsearch response
     """
     start_date, end_date = get_time_scale(time_scale=time_scale)
 
     query_body = {
         "query": {
-            "bool": 
+            "bool":
                 {
-                    "filter": 
+                    "filter":
                         [
                             {
                                 "term":
                                 {
-                                    "section": f"{section}"
+                                    "section": section
                                 }
                             },
                             {
@@ -166,12 +175,12 @@ async def get_top_persons(section: str, time_scale: str) -> elasticResponse:
                                     {
                                         "first_published_date":
                                             {
-                                                "gte": f"{start_date}",
-                                                "lte": f"{end_date}"
+                                                "gte": start_date,
+                                                "lte": end_date
                                             }
                                     }
                             }
-                    ]
+                        ]
                 }
             },
         "size": 0,
@@ -189,22 +198,25 @@ async def get_top_persons(section: str, time_scale: str) -> elasticResponse:
     }
 
     result = await es.search(index="news", body=query_body)
-    result = json.dumps(result["aggregations"]["persons"]["buckets"])   
+    result = json.dumps(result["aggregations"]["persons"]["buckets"])
 
     return elasticResponse(data=result)
 
 
 @api.get('/news/articles-count', tags=['news'])
-async def get_articles_count(section: str, step: str) -> elasticResponse:
+async def get_articles_count(section: Annotated[str, Query()],
+                             step: Annotated[str, Query()]) -> elasticResponse:
     """Returns artciles count for a section / time scale step parameter
         step parameter can be "day", "month", "quarter", "year"
+        \f
 
     Args:
         section (str): Name of the section used in filter clause
         step (str): Step used in calendar_interval aggregation clause
             values can be "day", "month", "quarter", "year"
+
     Returns:
-        Item : Object that embebeds elasticsearch response
+       elasticResponse : Object that embebeds elasticsearch response
     """
 
     query_body = {
@@ -217,7 +229,7 @@ async def get_articles_count(section: str, step: str) -> elasticResponse:
                                 {
                                     "term":
                                     {
-                                        "section": f"{section}"
+                                        "section": section
                                     }
                                 }
                             ]
@@ -231,27 +243,31 @@ async def get_articles_count(section: str, step: str) -> elasticResponse:
                         "date_histogram":
                             {
                                 "field": "first_published_date",
-                                "calendar_interval": f"{step}"
+                                "calendar_interval": step
                             }
                     }
             }
     }
 
     result = await es.search(index="news", body=query_body)
-    result = json.dumps(result["aggregations"]["articles_over_time"]["buckets"])   
+    result = json.dumps(result["aggregations"]["articles_over_time"]["buckets"])
 
     return elasticResponse(data=result)
 
 
 @api.get('/news/sections-proportions', tags=['news'])
-async def get_sections_proportions(time_scale: str) -> elasticResponse:
+async def get_sections_proportions(
+                                    time_scale: Annotated[str, Query()]
+                                  ) -> elasticResponse:
     """Returns Published articles proportions by sections for a given time scale
+    \f
 
     Args:
         time_scale (str): Time scale used in the filter clause
             values can be : "yesterday", "week_ago" or "month_ago"
+
     Returns:
-        Item : Object that embebeds elasticsearch response
+        elasticResponse : Object that embebeds elasticsearch response
     """
 
     start_date, end_date = get_time_scale(time_scale=time_scale)
@@ -267,8 +283,8 @@ async def get_sections_proportions(time_scale: str) -> elasticResponse:
                                     {
                                         "first_published_date":
                                             {
-                                                "gte": f"{start_date}",
-                                                "lte": f"{end_date}"
+                                                "gte": start_date,
+                                                "lte": end_date
                                             }
                                     }
                             }
@@ -276,7 +292,7 @@ async def get_sections_proportions(time_scale: str) -> elasticResponse:
                 }
         },
         "size": 0,
-        "aggs": 
+        "aggs":
             {
                 "articles_per_section":
                     {
@@ -290,37 +306,42 @@ async def get_sections_proportions(time_scale: str) -> elasticResponse:
     }
 
     result = await es.search(index="news", body=query_body)
-    result = json.dumps(result["aggregations"]["articles_per_section"]["buckets"])   
+    result = json.dumps(result["aggregations"]["articles_per_section"]["buckets"])
 
     return elasticResponse(data=result)
 
 
 @api.get('/news/top-topics', tags=['news'])
-async def get_top_topics(section: str, time_scale: str)  -> elasticResponse:
+async def get_top_topics(
+                         section: Annotated[str, Query()],
+                         time_scale: Annotated[str, Query()]
+                        ) -> elasticResponse:
     """Returns top 5 topics for a section / period filter
         It returns 5 most represented  on des_facet facet
+    \f
 
     Args:
         section (str): Name of the section used in filter clause
         time_scale (str): Time scale used in the filter clause
             values can be : "yesterday", "week_ago" or "month_ago"
+
     Returns:
-        Item : Object that embebeds elasticsearch response
+        elasticResponse : Object that embebeds elasticsearch response
     """
 
     start_date, end_date = get_time_scale(time_scale=time_scale)
 
     query_body = {
-        "query": 
+        "query":
             {
-                "bool": 
+                "bool":
                     {
-                        "filter": 
+                        "filter":
                             [
                                 {
                                     "term":
                                     {
-                                        "section": f"{section}"
+                                        "section": section
                                     }
                                 },
                                 {
@@ -328,8 +349,8 @@ async def get_top_topics(section: str, time_scale: str)  -> elasticResponse:
                                         {
                                             "first_published_date":
                                                 {
-                                                    "gte": f"{start_date}",
-                                                    "lte": f"{end_date}"
+                                                    "gte": start_date,
+                                                    "lte": end_date
                                                 }
                                         }
                                 }
@@ -351,19 +372,23 @@ async def get_top_topics(section: str, time_scale: str)  -> elasticResponse:
     }
 
     result = await es.search(index="news", body=query_body)
-    result = json.dumps(result["aggregations"]["description_facet"]["buckets"])   
+    result = json.dumps(result["aggregations"]["description_facet"]["buckets"])
 
     return elasticResponse(data=result)
 
 
 @api.get('/books/top-writers', tags=['books'])
-async def get_top_writers(size: int) -> elasticResponse:
+async def get_top_writers(
+                          size: Annotated[int, Query()] = 15
+                         ) -> elasticResponse:
     """Returns top writers in terms of books that are in best sellers lists
-    
+    \f
+
     Args:
         size (int): Number of top writers to retrieve
+
     Returns:
-        Item : Object that embebeds elasticsearch response
+        elasticResponse : Object that embebeds elasticsearch response
     """
     query_body = {
         "size": 0,
@@ -374,7 +399,7 @@ async def get_top_writers(size: int) -> elasticResponse:
                     "terms":
                     {
                         "field": "author.keyword",
-                        "size": f"{size}"
+                        "size": size
                     }
                 }
             }
@@ -387,14 +412,17 @@ async def get_top_writers(size: int) -> elasticResponse:
 
 
 @api.get('/books/count-by-lists', tags=['books'])
-async def get_count_by_lists(size: int=59) -> elasticResponse:
+async def get_count_by_lists(
+                             size: Annotated[int, Query()] = 59
+                             ) -> elasticResponse:
     """Returns number of books by lists
+    \f
 
     Args:
         size (int): Number of lists with mowt books to return
             default value il 59 (number of lists provided by New York Times)
     Returns:
-        Item : Object that embebeds elasticsearch response
+        elasticResponse : Object that embebeds elasticsearch response
     """
     query_body = {
         "size": 0,
@@ -413,7 +441,7 @@ async def get_count_by_lists(size: int=59) -> elasticResponse:
                                     "terms":
                                     {
                                         "field": "ranks_history.list_name.keyword",
-                                        "size": f"{size}"
+                                        "size": size
                                     }
                                 }
                             }
@@ -428,16 +456,21 @@ async def get_count_by_lists(size: int=59) -> elasticResponse:
 
 
 @api.get('/books/top-writers-by-lists', tags=['books'])
-async def get_top_writers_by_list(list: str, size: int) -> elasticResponse:
-    """Returns top writers for a selected lists 
-    
+async def get_top_writers_by_list(
+                                  list: Annotated[str, Query()],
+                                  size: Annotated[int, Query()] = 10
+                                 ) -> elasticResponse:
+    """Returns top writers for a selected lists
+    \f
+
     Args:
         list (str): Name of the list to retrieve top writers
-        size (int): NUmber of top writers to retrieve
+        size (int): Number of top writers to retrieve
+
     Returns:
-        Item : Object that embebeds elasticsearch response
+        elasticResponse : Object that embebeds elasticsearch response
     """
-    
+
     query_body = {
         "query":
             {
@@ -454,7 +487,7 @@ async def get_top_writers_by_list(list: str, size: int) -> elasticResponse:
                                                 {
                                                     "match":
                                                         {
-                                                            "ranks_history.list_name": f"{list}"
+                                                            "ranks_history.list_name": list
                                                         }
                                                 }
                                             ]
@@ -479,5 +512,173 @@ async def get_top_writers_by_list(list: str, size: int) -> elasticResponse:
 
     result = await es.search(index="books", body=query_body)
     result = json.dumps(result["aggregations"]["authors_per_list"]["buckets"])
+
+    return elasticResponse(data=result)
+
+
+@api.get('/books/top-publishers', tags=['books'])
+async def get_top_publishers(
+                              size: Annotated[int, Query()] = 15
+                            ) -> elasticResponse:
+
+    """Returns top publisher
+        regarding how many of there books are in Best sellers lists
+        \f
+
+    Args:
+        size (int): Number of top writers to retrieve
+
+    Returns:
+        elasticResponse : Object that embebeds elasticsearch response
+    """
+
+    query_body = {
+                    "size": 0,
+                    "aggs":
+                    {
+                        "per_publisher":
+                        {
+                            "terms":
+                                {
+                                    "field": "publisher.keyword",
+                                    "size": size
+                                }
+                        }
+                    }
+                }
+
+    result = await es.search(index="books", body=query_body)
+    result = json.dumps(result["aggregations"]["per_publisher"]["buckets"])
+
+    return elasticResponse(data=result)
+
+
+@api.get('/movies/count-per-year', tags=['movies'])
+async def get_count_per_year() -> elasticResponse:
+    """Returns number of movies reviens per year
+    \f
+
+    Returns:
+        elasticResponse : Object that embebeds elasticsearch response
+    """
+
+    query_body = {
+        "size": 0,
+        "aggs":
+            {
+                "reviews_by_year":
+                    {
+                        "date_histogram":
+                            {
+                                "field": "publication_date",
+                                "calendar_interval": "year",
+                                "format": "yyyy"
+                            }
+                        }
+            }
+        }
+    result = await es.search(index="movies", body=query_body)
+    result = json.dumps(result["aggregations"]["reviews_by_year"]["buckets"])
+
+    return elasticResponse(data=result)
+
+
+@api.get('/movies/top-reviwers', tags=["movies"])
+async def get_top_reviewers(year: Annotated[int, Query()]) -> elasticResponse:
+    """Returns top reviewers per year
+        Means reviewers with most reviewes in database
+    \f
+
+    Args:
+        year: Selected year to filter data
+
+    Returns:
+        elasticResponse : Object that embebeds elasticsearch response
+    """
+
+    query_body = {
+        "size": 0,
+        "query":
+            {
+                "bool":
+                    {
+                        "filter":
+                            [
+                                {
+                                    "range":
+                                        {
+                                            "publication_date":
+                                                {
+                                                    "gte": f"{year}-01-01",
+                                                    "lte": f"{year}-12-31"
+                                                }
+                                        }
+                                }
+                            ]
+                    }
+            },
+        "aggs":
+            {
+                "top_journalists":
+                    {
+                        "terms":
+                            {
+                                "field": "byline.keyword", "size": 5
+                            }
+                    }
+            }
+    }
+
+    result = await es.search(index="movies", body=query_body)
+    result = json.dumps(result["aggregations"]["top_journalists"]["buckets"])
+
+    return elasticResponse(data=result)
+
+
+@api.get('/movies/top-mpaa-rating', tags=["movies"])
+async def get_top_mpaa_ratings() -> elasticResponse:
+    """Returns top 5 MPAA rating categories all time
+    \f
+
+    Returns:
+        elasticResponse : Object that embebeds elasticsearch response
+    """
+
+    query_body = {
+        "size": 0,
+        "query":
+            {
+                "bool":
+                    {
+                        "must_not":
+                            [
+                                {
+                                    "terms":
+                                        {
+                                            "mpaa_rating":
+                                                [
+                                                    "",
+                                                    "Unrated",
+                                                    "Not Rated"
+                                                ]
+                                        }
+                                }
+                            ]
+                    }
+            },
+        "aggs":
+            {
+                "films_by_mpaa_rating":
+                    {
+                        "terms":
+                            {
+                                "field": "mpaa_rating",
+                                "size": 5
+                            }
+                    }
+            }
+    }
+    result = await es.search(index="movies", body=query_body)
+    result = json.dumps(result["aggregations"]["films_by_mpaa_rating"]["buckets"])
 
     return elasticResponse(data=result)
