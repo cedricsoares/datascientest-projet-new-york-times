@@ -47,13 +47,19 @@ def navigate_to_page(news_clicks, books_clicks, movies_clicks):
     else:
         return '/'
 
-
-
-
-
 ###########################################
 # News ####################################
 ###########################################
+
+layout_news = html.Div([
+
+  html.Div(html.Button(dcc.Link('Revenir à la page de garde', href='/')), style={'textAlign': 'center'}),
+], style = {'background-color' : 'beige','minHeight': '100vh'})
+
+
+# News callback functions #################
+###########################################
+
 
 ###########################################
 # Books ###################################
