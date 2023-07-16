@@ -1,0 +1,23 @@
+body {
+    background-color: darkgrey;
+    height: 100vh;
+    color: lightblue;
+}
+
+
+.landing_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.button_container {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
