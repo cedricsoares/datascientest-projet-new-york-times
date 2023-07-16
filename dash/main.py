@@ -3,7 +3,6 @@ from dash import dcc,html,dash_table
 import pandas as pd
 import plotly.express as px 
 from dash.dependencies import Output,Input
-import dash_bootstrap_components as dbc
 import transform
 
 
@@ -23,11 +22,13 @@ import transform
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets,suppress_callback_exceptions=True)
 
-app.layout = html.Div(style={'background-color': 'darkgrey', 'color': 'lightblue'}, children=[
-    html.H1("Welcome to the App"),
-    html.H2("Creators: Cedric Soares, Anna Temerko, Matthieu Lefebrve, and Edouard Philippe"),
-    html.Button("News", id='btn-news', n_clicks=0),
-    html.Button("Books", id='btn-books', n_clicks=0),
+app.layout = html.Div(style={'background-color': 'darkgrey', 'height':'100vh', 'color': 'lightblue',
+                            'display': 'flex', 'flex-direction':'column','align-items': 'center', 
+                            'justify-content': 'center'},children=[
+    html.H1("Welcome to NYT analysis App"),
+    html.H4("Creators: Cedric Soares, Anna Temerko, Matthieu Lefebrve, Edouard Philippe"),
+    html.Button("News", id='btn-news', n_clicks=0, style={'margin-bottom': '10px'}),
+    html.Button("Books", id='btn-books', n_clicks=0, style={'margin-bottom': '10px'}),
     html.Button("Movies", id='btn-movies', n_clicks=0)
 ])
 
