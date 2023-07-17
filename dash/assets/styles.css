@@ -18,6 +18,23 @@ button{
     margin-right: 20px;
 }
 
+.dropDown{
+    min-width: 50%;
+    color: #26CAE9 !important;
+}
+
+.Select-control{
+    background-color: #474747 !important;
+    color: #26CAE9 !important;
+}
+.Select-menu-outer {
+    background-color: #474747;
+    color: #26CAE9 !important;
+}
+.Select-value-label{
+    color: #26CAE9 !important;
+}
+
 .pages {
     background-color: #474747;
     color: #26CAE9;
@@ -28,12 +45,21 @@ button{
     max-height: 1100px;
     width: 100%;
 }
+
+.title_ctnr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 .plots_ctnr_2{
     width: 85%;
     height:auto;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin:3%;
 }
 
 .plots_ctnr{
@@ -55,12 +81,15 @@ button{
 }
 
 .dropDown{
-    min-width: 100%;
-    background-color: #474747;
+    min-width: 50%;
+    background-color: #474747 !important;
 }
 
+
+
+
 .slider{
-    min-width: 100%; 
+    min-width: 70%; 
 }
 
 /*Landing page ***********************/
