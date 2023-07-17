@@ -15,6 +15,12 @@ import transform
 # and movies and available on port 0.0.0.0 #
 ############################################
 
+colors = {
+    'background': '#474747',
+    'text': '#26CAE9'
+}
+
+
 
 ###########################################
 # Landing pages ###########################
@@ -120,14 +126,51 @@ news_page = html.Div(children=[
                 value=3,    
                 )        
         ], className="single_plot_ctnr"),
-
     ],className= "plots_ctnr"),
 
 
+  html.Div([
+ # Div chart 4
+       html.Div([
+        # dropdown
+            html.Div(dcc.Dropdown(id = 'news-page-dropdow-plot-3',
+                    options= ['world', 'us','sport'],#######FIX ME ############################# [{'label':i, 'value':i} for i in rookies],  
+                    value= 'news-section'), className='dropDown'),
+            #bar plot 
+            dcc.Graph(id='bar-plot-3', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 3")),           
+            # slider
+            dcc.Slider(className='slider',id='news-page-slider-plot-3',
+                min=0,
+                max=5,
+                ######FIX ME #############################
+                # code ex: marks={i: position for i, position in enumerate(positions_list)},
+                value=3,    
+                )        
+        ], className="single_plot_ctnr"),
+   
+
+     # Div chart 4
+       html.Div([
+        # dropdown
+            html.Div(dcc.Dropdown(id = 'news-page-dropdow-plot-4',
+                    options= ['world', 'us','sport'],#######FIX ME ############################# [{'label':i, 'value':i} for i in rookies],  
+                    value= 'news-section'), className='dropDown'),
+            #bar plot 
+            dcc.Graph(id='bar-plot-4', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 4")),           
+            # slider
+            dcc.Slider(className='slider',id='news-page-slider-plot-4',
+                min=0,
+                max=5,
+                ######FIX ME #############################
+                # code ex: marks={i: position for i, position in enumerate(positions_list)},
+                value=3,    
+                )        
+        ], className="single_plot_ctnr"),
+
+],className= "plots_ctnr_2"),
 
 
-
-  html.Div(html.Button(dcc.Link('Revenir à la page de garde', href='/')),className="button_container"),
+html.Div(html.Button(dcc.Link('Revenir à la page de garde', href='/')),className="button_container"),
 
 ], className= "pages")
 
@@ -141,7 +184,10 @@ news_page = html.Div(children=[
     [Input('news-page-dropdow-plot-1', 'newsSection'),
      Input('news-page-slider-plot-1', 'timeScale')])
 def update_news_bar_plot1(newsSection, timescale):
-        return px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+     
+        return fig
         ######FIX ME #############################
         #### FIX ME INCLUDE QUERY LOGIC ....
         
@@ -150,8 +196,10 @@ def update_news_bar_plot1(newsSection, timescale):
 @app.callback(
     Output('pie-chart', 'figure'),
     [Input('news-page-slider-pie-1', 'timeScale')])
-def update_news_pie_chart(timescale):
-        return px.pie(df, values="time_scale", title="pie chart 1")
+def update_news_pie_chart(timescale):  
+        fig= px.pie(df, values="time_scale", title="pie chart 1")
+        fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        return fig 
         ######FIX ME #############################
         #### FIX ME INCLUDE QUERY LOGIC ....
 
@@ -160,16 +208,40 @@ def update_news_pie_chart(timescale):
     Output('bar-plot-2', 'figure'),
     [Input('news-page-dropdow-plot-2', 'newsSection'),
      Input('news-page-slider-plot-2', 'timeScale')])
-def update_news_bar_plot1(newsSection, timescale):
-        return px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+def update_news_bar_plot1(newsSection, timescale): 
+        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+     
+        return fig
         ######FIX ME #############################
         #### FIX ME INCLUDE QUERY LOGIC ....
 
 
 # bar plot 3 ##############################
 
-# bar plot 4 ##############################
+@app.callback(
+    Output('bar-plot-3', 'figure'),
+    [Input('news-page-dropdow-plot-3', 'newsSection'),
+     Input('news-page-slider-plot-3', 'timeScale')])
+def update_news_bar_plot1(newsSection, timescale): 
+        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        return fig
+        ######FIX ME #############################
+        #### FIX ME INCLUDE QUERY LOGIC ....
 
+
+# bar plot 4 ##############################
+@app.callback(
+    Output('bar-plot-4', 'figure'),
+    [Input('news-page-dropdow-plot-4', 'newsSection'),
+     Input('news-page-slider-plot-4', 'timeScale')])
+def update_news_bar_plot1(newsSection, timescale): 
+        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        return fig
+        ######FIX ME #############################
+        #### FIX ME INCLUDE QUERY LOGIC ....
 
 
 ###########################################

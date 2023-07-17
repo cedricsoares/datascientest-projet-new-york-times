@@ -1,11 +1,11 @@
 body {
-    background-color: darkgrey;
+    background-color: #474747;
     height: 100vh;
-    color: lightblue;
+    color: #26CAE9;
 }
 
 h1{
-    margin:5%;
+    margin-top: 5%;
 }
 
 button{
@@ -18,25 +18,31 @@ button{
     margin-right: 20px;
 }
 
-
 .pages {
-    background-color: darkgrey;
-    color: lightblue;
+    background-color: #474747;
+    color: #26CAE9;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width:100%;
+    justify-content: flex-start;
+    max-height: 1100px;
+    width: 100%;
 }
-
+.plots_ctnr_2{
+    width: 85%;
+    height:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
 .plots_ctnr{
     width: 95%;
-    height:40vh;
+    height:auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin:3%;
 }
 
 .single_plot_ctnr{
@@ -50,7 +56,7 @@ button{
 
 .dropDown{
     min-width: 100%;
-    background-color: darkgrey;
+    background-color: #474747;
 }
 
 .slider{
@@ -64,11 +70,10 @@ button{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    
 }
 
 .button_container {
-    margin-top: 5%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -78,13 +83,12 @@ button{
 
 /*News page ***********************/
 
-.bar-plots-1row{
-    background-color: darkgrey;
+.bar-plots-1row{    
     width:90%
 }
 
 .pie-chart-style-1{
-    width:90%
+    width:90%;
 }
 
 /*Books page ***********************/
