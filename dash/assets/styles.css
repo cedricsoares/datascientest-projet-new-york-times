@@ -10,10 +10,31 @@ button{
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    width: 30%;
+    width: auto;
+
+    margin-top: 20px;
     margin-right: 20px;
 }
 
+.plots_ctnr{
+
+}
+
+.single_plot_ctnr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropDown{
+    min-width: 100%;
+    background-color: darkgrey;
+}
+
+.slider{
+    min-width: 100%; 
+}
 
 /*Landing page ***********************/
 
@@ -36,8 +57,25 @@ button{
 
 /*News page ***********************/
 
+.pages {
+    background-color: darkgrey;
+    height: 100vh;
+    color: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
 
+.bar-plot{
+    background-color: darkgrey;
 
+}
+
+.pie-chart-style-1{
+    
+}
 
 /*Books page ***********************/
 
