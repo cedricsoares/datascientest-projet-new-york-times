@@ -85,7 +85,7 @@ news_page = html.Div(children=[
                     options= ['world', 'us','sport'],#######FIX ME ############################# [{'label':i, 'value':i} for i in rookies],  
                     value= 'news-section'), className='dropDown'),
             #bar plot 
-            dcc.Graph(id='bar-plot-1', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 1")),           
+            dcc.Graph(id='bar-plot-1', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="articles / journalist")),           
             # slider
             dcc.Slider(className='slider',id='news-page-slider-plot-1',
                 min=0,
@@ -99,7 +99,7 @@ news_page = html.Div(children=[
        # Div pie chart
         html.Div([
             #bar plot 
-            dcc.Graph(id='pie-chart', className="pie-chart-style-1", figure=px.pie(df, values="time_scale", title="pie chart 1")),
+            dcc.Graph(id='pie-chart', className="pie-chart-style-1", figure=px.pie(df, values="time_scale", title="article /section")),
             # slider
             dcc.Slider(id='news-page-slider-pie-1', className='slider',
                 min=0,
@@ -119,7 +119,7 @@ news_page = html.Div(children=[
                     options= ['world', 'us','sport'],#######FIX ME ############################# [{'label':i, 'value':i} for i in rookies],  
                     value= 'news-section'), className='dropDown'),
             #bar plot 
-            dcc.Graph(id='bar-plot-2', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 2")),           
+            dcc.Graph(id='bar-plot-2', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="articles / person")),           
             # slider
             dcc.Slider(className='slider',id='news-page-slider-plot-2',
                 min=0,
@@ -140,7 +140,7 @@ news_page = html.Div(children=[
                     options= ['world', 'us','sport'],#######FIX ME ############################# [{'label':i, 'value':i} for i in rookies],  
                     value= 'news-section'), className='dropDown'),
             #bar plot 
-            dcc.Graph(id='bar-plot-3', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 3")),           
+            dcc.Graph(id='bar-plot-3', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="articles / day")),           
             # slider
             dcc.Slider(className='slider',id='news-page-slider-plot-3',
                 min=0,
@@ -159,7 +159,7 @@ news_page = html.Div(children=[
                     options= ['world', 'us','sport'],#######FIX ME ############################# [{'label':i, 'value':i} for i in rookies],  
                     value= 'news-section'), className='dropDown'),
             #bar plot 
-            dcc.Graph(id='bar-plot-4', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 4")),           
+            dcc.Graph(id='bar-plot-4', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="descriptions / article")),           
             # slider
             dcc.Slider(className='slider',id='news-page-slider-plot-4',
                 min=0,
@@ -183,7 +183,7 @@ news_page = html.Div(children=[
     [Input('news-page-dropdow-plot-1', 'newsSection'),
      Input('news-page-slider-plot-1', 'timeScale')])
 def update_news_bar_plot1(newsSection, timescale):
-        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        fig = px.bar(df, x="section", y="time_scale", title="articles / journalist")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
      
         return fig
@@ -196,7 +196,7 @@ def update_news_bar_plot1(newsSection, timescale):
     Output('pie-chart', 'figure'),
     [Input('news-page-slider-pie-1', 'timeScale')])
 def update_news_pie_chart(timescale):  
-        fig= px.pie(df, values="time_scale", title="pie chart 1")
+        fig= px.pie(df, values="time_scale", title="article /section")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         return fig 
         ######FIX ME #############################
@@ -208,7 +208,7 @@ def update_news_pie_chart(timescale):
     [Input('news-page-dropdow-plot-2', 'newsSection'),
      Input('news-page-slider-plot-2', 'timeScale')])
 def update_news_bar_plot1(newsSection, timescale): 
-        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        fig = px.bar(df, x="section", y="time_scale", title="articles / person")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
      
         return fig
@@ -222,7 +222,7 @@ def update_news_bar_plot1(newsSection, timescale):
     [Input('news-page-dropdow-plot-3', 'newsSection'),
      Input('news-page-slider-plot-3', 'timeScale')])
 def update_news_bar_plot1(newsSection, timescale): 
-        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        fig = px.bar(df, x="section", y="time_scale", title="articles / day")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         return fig
         ######FIX ME #############################
@@ -235,7 +235,7 @@ def update_news_bar_plot1(newsSection, timescale):
     [Input('news-page-dropdow-plot-4', 'newsSection'),
      Input('news-page-slider-plot-4', 'timeScale')])
 def update_news_bar_plot1(newsSection, timescale): 
-        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        fig = px.bar(df, x="section", y="time_scale", title="descriptions / article")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         return fig
         ######FIX ME #############################
@@ -256,7 +256,7 @@ books_page = html.Div([
        html.Div([
 
             #bar plot 
-            dcc.Graph(id='books-bar-plot-1', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 3")),           
+            dcc.Graph(id='books-bar-plot-1', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Top NYT Bestsellers")),           
             # slider
             dcc.Slider(className='slider',id='books-page-slider-plot-1',
                 min=0,
@@ -272,7 +272,7 @@ books_page = html.Div([
        html.Div([
 
             #bar plot 
-            dcc.Graph(id='books-bar-plot-2', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 4")),           
+            dcc.Graph(id='books-bar-plot-2', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Books / Bestsellers list")),           
             # slider
             dcc.Slider(className='slider',id='books-page-slider-plot-2',
                 min=0,
@@ -294,7 +294,7 @@ books_page = html.Div([
                     options= ['world', 'us','sport'],#######FIX ME ############################# [{'label':i, 'value':i} for i in rookies],  
                     value= 'books-section'), className='dropDown'),
             #bar plot 
-            dcc.Graph(id='books-bar-plot-3', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 3")),           
+            dcc.Graph(id='books-bar-plot-3', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Top writers / list")),           
             # slider
             dcc.Slider(className='slider',id='books-page-slider-plot-3',
                 min=0,
@@ -308,7 +308,7 @@ books_page = html.Div([
      # Div chart 4
        html.Div([
             #bar plot 
-            dcc.Graph(id='books-bar-plot-4', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 4")),           
+            dcc.Graph(id='books-bar-plot-4', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title=" Publishers / bestsellers")),           
             # slider
             dcc.Slider(className='slider',id='books-page-slider-plot-4',
                 min=0,
@@ -331,7 +331,7 @@ books_page = html.Div([
     Output('books-bar-plot-1', 'figure'),
     [Input('books-page-slider-plot-1', 'size')])
 def update_books_bar_plot1(size): 
-        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        fig = px.bar(df, x="section", y="time_scale", title="Top NYT Bestsellers")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         return fig
         ######FIX ME #############################
@@ -342,7 +342,7 @@ def update_books_bar_plot1(size):
     Output('books-bar-plot-2', 'figure'),
     [Input('books-page-slider-plot-2', 'size')])
 def update_books_bar_plot2(size): 
-        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 3")
+        fig = px.bar(df, x="section", y="time_scale", title="Books / Bestsellers list")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         return fig
         ######FIX ME #############################
@@ -355,7 +355,7 @@ def update_books_bar_plot2(size):
     [Input('books-page-dropdow-plot-3', 'list'),
      Input('books-page-slider-plot-3', 'size')])
 def update_books_bar_plot3(list, size): 
-        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 3")
+        fig = px.bar(df, x="section", y="time_scale", title="Top writers / list")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         return fig
         ######FIX ME #############################
@@ -366,7 +366,7 @@ def update_books_bar_plot3(list, size):
     Output('books-bar-plot-4', 'figure'),
      [Input('books-page-slider-plot-4', 'size')])
 def update_books_bar_plot4(size): 
-        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 4")
+        fig = px.bar(df, x="section", y="time_scale", title="Publisher / list")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         return fig
 
@@ -386,13 +386,13 @@ html.Div([
         html.Div([
         
             #bar plot 
-            dcc.Graph(id='movies-bar-plot-1', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 1")),                    
+            dcc.Graph(id='movies-bar-plot-1', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="reviews / year")),                    
         ], className="single_plot_ctnr"),
             
        # Div Bar chart
         html.Div([          
             #bar plot 
-            dcc.Graph(id='movies-bar-plot-2', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 1")),           
+            dcc.Graph(id='movies-bar-plot-2', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Top 5 most prolific journalists")),           
             # slider
             dcc.Slider(className='slider',id='movies-page-slider-plot-2',
                 min=0,
@@ -422,7 +422,7 @@ html.Div([
     Output('movies-bar-plot-1', 'figure'),
     Input('url', 'pathname'))
 def update_movies_bar_plot1(path): 
-        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        fig = px.bar(df, x="section", y="time_scale", title="reviews / year")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         return fig
         ######FIX ME #############################
@@ -433,7 +433,7 @@ def update_movies_bar_plot1(path):
     Output('movies-bar-plot-2', 'figure'),
     [Input('movies-page-slider-plot-2', 'size')])
 def update_movies_bar_plot2(size): 
-        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        fig = px.bar(df, x="section", y="time_scale", title="Top 5 most prolific journalists")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         return fig
         ######FIX ME #############################
@@ -444,7 +444,7 @@ def update_movies_bar_plot2(size):
     Output('movies-bar-plot-3', 'figure'),
     Input('url', 'pathname'))
 def update_movies_bar_plot3(size): 
-        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        fig = px.bar(df, x="section", y="time_scale", title="Top 5 MPAA ratings of all time")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         return fig
         ######FIX ME #############################
