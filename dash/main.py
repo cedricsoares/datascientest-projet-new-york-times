@@ -44,14 +44,85 @@ landing_page = html.Div(className="landing_page", children=[
 # News ####################################
 ###########################################
 
-news_page = html.Div([
+
+######FIX ME #############################
+######FAKE DATA ##########################
+# Data for the charts
+data = [
+    {"section": "A", "time_scale": "2020", "step": 1},
+    {"section": "B", "time_scale": "2020", "step": 2},
+    {"section": "C", "time_scale": "2020", "step": 3},
+    {"section": "D", "time_scale": "2020", "step": 4},
+    {"section": "E", "time_scale": "2020", "step": 5}
+]
+
+data2 = {
+    "section": ["A", "B", "C", "D", "E"],
+    "time_scale": [10, 15, 8, 12, 6]
+}
+
+df = pd.DataFrame(data2)
+######FAKE DATA ##########################
+
+
+news_page = html.Div(children=[
+    html.H1("NEWS SECTION"),
+    html.Div([
+
+        html.Div([
+            # dropdown
+            html.Div(dcc.Dropdown(id = 'news-page-dropdow-plot-1',
+                    options= ['world', 'us','sport'],#######FIX ME ############################# [{'label':i, 'value':i} for i in rookies],  
+                    value= 'news-section'), className='dropDown'),
+
+            #bar plot 
+            dcc.Graph(id='bar-plot', className="bplot-style-1", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 1")),
+            
+            # slider
+            dcc.Slider(className='slider',id='news-page-slider-plot-1',
+                min=0,
+                max=5,
+                ######FIX ME #############################
+                # code ex: marks={i: position for i, position in enumerate(positions_list)},
+                value=3,    
+                )
+        
+        ], className="single_plot_ctnr"),
+            
+       # Div pie chart
+
+       # Div
+    ],className= "plots_ctnr"),
 
   html.Div(html.Button(dcc.Link('Revenir à la page de garde', href='/')), style={'textAlign': 'center'}),
-], style = {'background-color' : 'beige','minHeight': '100vh'})
+
+], className= "pages")
 
 
 # News callback functions #################
 ###########################################
+
+# bar plot 1 ##############################
+@app.callback(
+    Output('bar-plot', 'figure'),
+    [Input('news-page-dropdow-plot-1', 'newsSection'),
+     Input('news-page-slider-plot-1', 'timeScale')]
+
+)
+def update_bar_plot(newsSection, timescale):
+        return px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        ######FIX ME #############################
+        #### FIX ME INCLUDE QUERY LOGIC ....
+        
+
+# Pie Chart ##############################
+
+# bar plot 2 ##############################
+
+# bar plot 3 ##############################
+
+# bar plot 4 ##############################
+
 
 
 ###########################################
@@ -84,8 +155,6 @@ movies_page = html.Div([
 ###########################################
 # app methods #############################
 ###########################################
-
-
 
 
 @app.callback(
