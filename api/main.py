@@ -1,10 +1,11 @@
 from pydantic import BaseModel
-from fastapi import FastAPI, Query
+from fastapi import FastAPI, Query, Depends, HTTPException, status
+from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from elasticsearch import AsyncElasticsearch
 from datetime import date, timedelta
 from typing import Optional, Annotated
+from passlib.context import CryptContext
 import json
-import asyncio
 
 
 api = FastAPI(
@@ -27,6 +28,17 @@ api = FastAPI(
     ]
 )
 
+security = HTTPBasic()
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+users = {
+    "dashboard": {
+        "username": "dashboard",
+        "name": "NYT contents dashboard",
+        "hashed_password": pwd_context.hash("dst_NYT_dashboard")
+    }
+}
+
 es = AsyncElasticsearch(hosts="http://@localhost:9200")
 
 
@@ -36,10 +48,25 @@ class elasticResponse(BaseModel):
     Attributes:
         data (str): Json string of useful retieved response from Elastiscsearch
             database
-
     """
 
     data: str
+
+
+def get_current_user(
+                        credentials: HTTPBasicCredentials = Depends(security)
+                    ) -> str:
+    """"Check authentication
+    """
+    username = credentials.username
+    if not (users.get(username)) or not (pwd_context.verify(
+     credentials.password, users[username]['hashed_password'])):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect email or password",
+            headers={"WWW-Authenticate": "Basic"},
+        )
+    return credentials.username
 
 
 def get_time_scale(time_scale: str) -> tuple[Optional[date], Optional[date]]:
@@ -77,7 +104,8 @@ def get_time_scale(time_scale: str) -> tuple[Optional[date], Optional[date]]:
 @api.get('/news/top-journalists', tags=['news'])
 async def get_top_journalists(
                               section: Annotated[str, Query()],
-                              time_scale: Annotated[str, Query()]
+                              time_scale: Annotated[str, Query()],
+                              username: str = Depends(get_current_user)
                              ) -> elasticResponse:
     """Returns top 10 journalist for a section / period filter
         It returns 10 journalists who have published most articles
@@ -86,6 +114,7 @@ async def get_top_journalists(
         section (str): Name of the section used in filter clause
         time_scale (str): Time scale used in the filter clause
             values can be : "yesterday", "week_ago" or "month_ago"
+        username: Used username for authentication
 
     Returns:
         elasticResponse : Object that embebeds elasticsearch response
@@ -143,7 +172,8 @@ async def get_top_journalists(
 @api.get('/news/top-persons', tags=['news'])
 async def get_top_persons(
                           section: Annotated[str, Query()],
-                          time_scale: Annotated[str, Query()]
+                          time_scale: Annotated[str, Query()],
+                          username: str = Depends(get_current_user)
                           ) -> elasticResponse:
     """Returns top 5 persons for a section / period filter
         It returns 5 most represented persons on per_facet facet
@@ -152,6 +182,7 @@ async def get_top_persons(
         section (str): Name of the section used in filter clause
         time_scale (str): Time scale used in the filter clause
             values can be : "yesterday", "week_ago" or "month_ago"
+        username: Used username for authentication
 
     Returns:
         elasticResponse : Object that embebeds elasticsearch response
@@ -204,8 +235,11 @@ async def get_top_persons(
 
 
 @api.get('/news/articles-count', tags=['news'])
-async def get_articles_count(section: Annotated[str, Query()],
-                             step: Annotated[str, Query()]) -> elasticResponse:
+async def get_articles_count(
+                             section: Annotated[str, Query()],
+                             step: Annotated[str, Query()],
+                             username: str = Depends(get_current_user)
+                            ) -> elasticResponse:
     """Returns artciles count for a section / time scale step parameter
         step parameter can be "day", "month", "quarter", "year"
         \f
@@ -214,6 +248,7 @@ async def get_articles_count(section: Annotated[str, Query()],
         section (str): Name of the section used in filter clause
         step (str): Step used in calendar_interval aggregation clause
             values can be "day", "month", "quarter", "year"
+        username: Used username for authentication
 
     Returns:
        elasticResponse : Object that embebeds elasticsearch response
@@ -257,7 +292,8 @@ async def get_articles_count(section: Annotated[str, Query()],
 
 @api.get('/news/sections-proportions', tags=['news'])
 async def get_sections_proportions(
-                                    time_scale: Annotated[str, Query()]
+                                    time_scale: Annotated[str, Query()],
+                                    username: str = Depends(get_current_user)
                                   ) -> elasticResponse:
     """Returns Published articles proportions by sections for a given time scale
     \f
@@ -265,6 +301,7 @@ async def get_sections_proportions(
     Args:
         time_scale (str): Time scale used in the filter clause
             values can be : "yesterday", "week_ago" or "month_ago"
+        username: Used username for authentication
 
     Returns:
         elasticResponse : Object that embebeds elasticsearch response
@@ -314,7 +351,8 @@ async def get_sections_proportions(
 @api.get('/news/top-topics', tags=['news'])
 async def get_top_topics(
                          section: Annotated[str, Query()],
-                         time_scale: Annotated[str, Query()]
+                         time_scale: Annotated[str, Query()],
+                         username: str = Depends(get_current_user)
                         ) -> elasticResponse:
     """Returns top 5 topics for a section / period filter
         It returns 5 most represented  on des_facet facet
@@ -324,6 +362,7 @@ async def get_top_topics(
         section (str): Name of the section used in filter clause
         time_scale (str): Time scale used in the filter clause
             values can be : "yesterday", "week_ago" or "month_ago"
+        username: Used username for authentication
 
     Returns:
         elasticResponse : Object that embebeds elasticsearch response
@@ -379,13 +418,15 @@ async def get_top_topics(
 
 @api.get('/books/top-writers', tags=['books'])
 async def get_top_writers(
-                          size: Annotated[int, Query()] = 15
+                          size: Annotated[int, Query()] = 15,
+                          username: str = Depends(get_current_user)
                          ) -> elasticResponse:
     """Returns top writers in terms of books that are in best sellers lists
     \f
 
     Args:
         size (int): Number of top writers to retrieve
+        username: Used username for authentication
 
     Returns:
         elasticResponse : Object that embebeds elasticsearch response
@@ -413,7 +454,8 @@ async def get_top_writers(
 
 @api.get('/books/count-by-lists', tags=['books'])
 async def get_count_by_lists(
-                             size: Annotated[int, Query()] = 59
+                             size: Annotated[int, Query()] = 59,
+                             username: str = Depends(get_current_user)
                              ) -> elasticResponse:
     """Returns number of books by lists
     \f
@@ -421,6 +463,7 @@ async def get_count_by_lists(
     Args:
         size (int): Number of lists with mowt books to return
             default value il 59 (number of lists provided by New York Times)
+        username: Used username for authentication
     Returns:
         elasticResponse : Object that embebeds elasticsearch response
     """
@@ -458,7 +501,8 @@ async def get_count_by_lists(
 @api.get('/books/top-writers-by-lists', tags=['books'])
 async def get_top_writers_by_list(
                                   list: Annotated[str, Query()],
-                                  size: Annotated[int, Query()] = 10
+                                  size: Annotated[int, Query()] = 10,
+                                  username: str = Depends(get_current_user)
                                  ) -> elasticResponse:
     """Returns top writers for a selected lists
     \f
@@ -466,6 +510,7 @@ async def get_top_writers_by_list(
     Args:
         list (str): Name of the list to retrieve top writers
         size (int): Number of top writers to retrieve
+        username: Used username for authentication
 
     Returns:
         elasticResponse : Object that embebeds elasticsearch response
@@ -518,7 +563,8 @@ async def get_top_writers_by_list(
 
 @api.get('/books/top-publishers', tags=['books'])
 async def get_top_publishers(
-                              size: Annotated[int, Query()] = 15
+                              size: Annotated[int, Query()] = 15,
+                              username: str = Depends(get_current_user)
                             ) -> elasticResponse:
 
     """Returns top publisher
@@ -527,6 +573,8 @@ async def get_top_publishers(
 
     Args:
         size (int): Number of top writers to retrieve
+        username: Used username for authentication
+
 
     Returns:
         elasticResponse : Object that embebeds elasticsearch response
@@ -554,12 +602,15 @@ async def get_top_publishers(
 
 
 @api.get('/movies/count-per-year', tags=['movies'])
-async def get_count_per_year() -> elasticResponse:
+async def get_count_per_year(
+                             username: str = Depends(get_current_user)
+                            ) -> elasticResponse:
     """Returns number of movies reviens per year
     \f
 
     Returns:
         elasticResponse : Object that embebeds elasticsearch response
+        username: Used username for authentication
     """
 
     query_body = {
@@ -584,13 +635,17 @@ async def get_count_per_year() -> elasticResponse:
 
 
 @api.get('/movies/top-reviwers', tags=["movies"])
-async def get_top_reviewers(year: Annotated[int, Query()]) -> elasticResponse:
+async def get_top_reviewers(
+                             year: Annotated[int, Query()],
+                             username: str = Depends(get_current_user)
+                            ) -> elasticResponse:
     """Returns top reviewers per year
         Means reviewers with most reviewes in database
     \f
 
     Args:
         year: Selected year to filter data
+        username: Used username for authentication
 
     Returns:
         elasticResponse : Object that embebeds elasticsearch response
@@ -636,9 +691,14 @@ async def get_top_reviewers(year: Annotated[int, Query()]) -> elasticResponse:
 
 
 @api.get('/movies/top-mpaa-rating', tags=["movies"])
-async def get_top_mpaa_ratings() -> elasticResponse:
+async def get_top_mpaa_ratings(
+                                username: str = Depends(get_current_user)
+                              ) -> elasticResponse:
     """Returns top 5 MPAA rating categories all time
     \f
+
+    Args:
+        username: Used username for authentication
 
     Returns:
         elasticResponse : Object that embebeds elasticsearch response
