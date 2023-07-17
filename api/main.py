@@ -1,12 +1,12 @@
-from pydantic import BaseModel
-from fastapi import FastAPI, Query, Depends, HTTPException, status
-from fastapi.security import HTTPBasic, HTTPBasicCredentials
-from elasticsearch import AsyncElasticsearch
-from datetime import date, timedelta
-from typing import Optional, Annotated
-from passlib.context import CryptContext
 import json
+from datetime import date, timedelta
+from typing import Annotated, Optional
 
+from elasticsearch import AsyncElasticsearch
+from fastapi import Depends, FastAPI, HTTPException, Query, status
+from fastapi.security import HTTPBasic, HTTPBasicCredentials
+from passlib.context import CryptContext
+from pydantic import BaseModel
 
 api = FastAPI(
     title='Elasticsearch database API',
