@@ -72,9 +72,12 @@ df = pd.DataFrame(data2)
 
 
 news_page = html.Div(children=[
-    html.H1("NEWS SECTION"),
-    html.Div([
+    
+    html.Div([html.H1("NEWS SECTION"),
+              html.Div(html.Button(dcc.Link('Revenir à la page de garde', href='/')),className="button_container")]
+              , className='title_ctnr'),
 
+    html.Div([
         html.Div([
              
             # dropdown
@@ -95,7 +98,9 @@ news_page = html.Div(children=[
             
        # Div pie chart
         html.Div([
-            # dropdown
+            #bar plot 
+            dcc.Graph(id='pie-chart', className="pie-chart-style-1", figure=px.pie(df, values="time_scale", title="pie chart 1")),
+            # slider
             dcc.Slider(id='news-page-slider-pie-1', className='slider',
                 min=0,
                 max=5,
@@ -103,8 +108,6 @@ news_page = html.Div(children=[
                 # code ex: marks={i: position for i, position in enumerate(positions_list)},
                 value=3,    
                 ),
-            #bar plot 
-            dcc.Graph(id='pie-chart', className="pie-chart-style-1", figure=px.pie(df, values="time_scale", title="pie chart 1")),
             
         ], className="single_plot_ctnr"),
             
@@ -168,10 +171,6 @@ news_page = html.Div(children=[
         ], className="single_plot_ctnr"),
 
 ],className= "plots_ctnr_2"),
-
-
-html.Div(html.Button(dcc.Link('Revenir à la page de garde', href='/')),className="button_container"),
-
 ], className= "pages")
 
 
@@ -216,7 +215,6 @@ def update_news_bar_plot1(newsSection, timescale):
         ######FIX ME #############################
         #### FIX ME INCLUDE QUERY LOGIC ....
 
-
 # bar plot 3 ##############################
 
 @app.callback(
@@ -249,12 +247,130 @@ def update_news_bar_plot1(newsSection, timescale):
 ###########################################
 
 books_page = html.Div([
+    html.Div([html.H1("BOOKS SECTION"),
+              html.Div(html.Button(dcc.Link('Revenir à la page de garde', href='/')),className="button_container")]
+              , className='title_ctnr'),
 
-  html.Div(html.Button(dcc.Link('Revenir à la page de garde', href='/')), style={'textAlign': 'center'}),
-], style = {'background-color' : 'beige','minHeight': '100vh'})
+  html.Div([
+     # Div chart 1
+       html.Div([
+
+            #bar plot 
+            dcc.Graph(id='books-bar-plot-1', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 3")),           
+            # slider
+            dcc.Slider(className='slider',id='books-page-slider-plot-1',
+                min=0,
+                max=5,
+                ######FIX ME #############################
+                # code ex: marks={i: position for i, position in enumerate(positions_list)},
+                value=3,    
+                )        
+        ], className="single_plot_ctnr"),
+   
+
+     # Div chart 2
+       html.Div([
+
+            #bar plot 
+            dcc.Graph(id='books-bar-plot-2', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 4")),           
+            # slider
+            dcc.Slider(className='slider',id='books-page-slider-plot-2',
+                min=0,
+                max=5,
+                ######FIX ME #############################
+                # code ex: marks={i: position for i, position in enumerate(positions_list)},
+                value=3,    
+                )        
+        ], className="single_plot_ctnr"),
+
+    ],className= "plots_ctnr_2"),
+
+            
+    html.Div([
+        # Div chart 3
+        html.Div([
+        # dropdown
+            html.Div(dcc.Dropdown(id = 'books-page-dropdow-plot-3',
+                    options= ['world', 'us','sport'],#######FIX ME ############################# [{'label':i, 'value':i} for i in rookies],  
+                    value= 'books-section'), className='dropDown'),
+            #bar plot 
+            dcc.Graph(id='books-bar-plot-3', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 3")),           
+            # slider
+            dcc.Slider(className='slider',id='books-page-slider-plot-3',
+                min=0,
+                max=5,
+                ######FIX ME #############################
+                # code ex: marks={i: position for i, position in enumerate(positions_list)},
+                value=3,    
+                )        
+        ], className="single_plot_ctnr"),
+
+     # Div chart 4
+       html.Div([
+            #bar plot 
+            dcc.Graph(id='books-bar-plot-4', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 4")),           
+            # slider
+            dcc.Slider(className='slider',id='books-page-slider-plot-4',
+                min=0,
+                max=5,
+                ######FIX ME #############################
+                # code ex: marks={i: position for i, position in enumerate(positions_list)},
+                value=3,    
+                )        
+        ], className="single_plot_ctnr"),
+
+    ],className= "plots_ctnr_2"),
+], className= "pages")
+
 
 #Books callback functions #################
 ###########################################
+
+# bar plot 1 ##############################
+@app.callback(
+    Output('books-bar-plot-1', 'figure'),
+    [Input('books-page-slider-plot-1', 'size')])
+def update_books_bar_plot1(size): 
+        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        return fig
+        ######FIX ME #############################
+        #### FIX ME INCLUDE QUERY LOGIC ....
+
+# bar plot 2 ##############################
+@app.callback(
+    Output('books-bar-plot-2', 'figure'),
+    [Input('books-page-slider-plot-2', 'size')])
+def update_books_bar_plot2(size): 
+        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 3")
+        fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        return fig
+        ######FIX ME #############################
+        #### FIX ME INCLUDE QUERY LOGIC ....
+
+
+# bar plot 3 ##############################
+@app.callback(
+    Output('books-bar-plot-3', 'figure'),
+    [Input('books-page-dropdow-plot-3', 'list'),
+     Input('books-page-slider-plot-3', 'size')])
+def update_books_bar_plot3(list, size): 
+        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 3")
+        fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        return fig
+        ######FIX ME #############################
+        #### FIX ME INCLUDE QUERY LOGIC ....
+
+# bar plot 4 ##############################
+@app.callback(
+    Output('books-bar-plot-4', 'figure'),
+     [Input('books-page-slider-plot-4', 'size')])
+def update_books_bar_plot4(size): 
+        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 4")
+        fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        return fig
+
+
 
 ###########################################
 # Movies ##################################
@@ -262,12 +378,77 @@ books_page = html.Div([
 
 movies_page = html.Div([
 
-  html.Div(html.Button(dcc.Link('Revenir à la page de garde', href='/')), style={'textAlign': 'center'}),
-], style = {'background-color' : 'beige','minHeight': '100vh'})
+    html.Div([html.H1("MOVIES SECTION"),
+              html.Div(html.Button(dcc.Link('Revenir à la page de garde', href='/')),className="button_container")]
+              , className='title_ctnr'),
 
+html.Div([
+        html.Div([
+        
+            #bar plot 
+            dcc.Graph(id='movies-bar-plot-1', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 1")),                    
+        ], className="single_plot_ctnr"),
+            
+       # Div Bar chart
+        html.Div([          
+            #bar plot 
+            dcc.Graph(id='movies-bar-plot-2', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 1")),           
+            # slider
+            dcc.Slider(className='slider',id='movies-page-slider-plot-2',
+                min=0,
+                max=5,
+                ######FIX ME #############################
+                # code ex: marks={i: position for i, position in enumerate(positions_list)},
+                value=3,    
+                )        
+        ], className="single_plot_ctnr"),            
+
+        # Div chart 3
+        html.Div([
+        
+            #bar plot 
+            dcc.Graph(id='movies-bar-plot-3', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Top 5 MPAA ratings catregories all time")),           
+        ], className="single_plot_ctnr"),
+    ],className= "plots_ctnr"),
+
+
+], className= "pages")
 
 # Movies callback functions ###############
 ###########################################
+
+# bar plot 1 ##############################
+@app.callback(
+    Output('movies-bar-plot-1', 'figure'),
+    Input('url', 'pathname'))
+def update_movies_bar_plot1(path): 
+        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        return fig
+        ######FIX ME #############################
+        #### FIX ME INCLUDE QUERY LOGIC ....
+
+# bar plot 2 ##############################
+@app.callback(
+    Output('movies-bar-plot-2', 'figure'),
+    [Input('movies-page-slider-plot-2', 'size')])
+def update_movies_bar_plot2(size): 
+        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        return fig
+        ######FIX ME #############################
+        #### FIX ME INCLUDE QUERY LOGIC ....
+
+# bar plot 3 ##############################
+@app.callback(
+    Output('movies-bar-plot-3', 'figure'),
+    Input('url', 'pathname'))
+def update_movies_bar_plot3(size): 
+        fig = px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        return fig
+        ######FIX ME #############################
+        #### FIX ME INCLUDE QUERY LOGIC ....
 
 
 
