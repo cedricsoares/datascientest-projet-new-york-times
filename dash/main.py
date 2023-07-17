@@ -70,14 +70,13 @@ news_page = html.Div(children=[
     html.Div([
 
         html.Div([
+             
             # dropdown
             html.Div(dcc.Dropdown(id = 'news-page-dropdow-plot-1',
                     options= ['world', 'us','sport'],#######FIX ME ############################# [{'label':i, 'value':i} for i in rookies],  
                     value= 'news-section'), className='dropDown'),
-
             #bar plot 
-            dcc.Graph(id='bar-plot', className="bplot-style-1", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 1")),
-            
+            dcc.Graph(id='bar-plot-1', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 1")),           
             # slider
             dcc.Slider(className='slider',id='news-page-slider-plot-1',
                 min=0,
@@ -85,16 +84,50 @@ news_page = html.Div(children=[
                 ######FIX ME #############################
                 # code ex: marks={i: position for i, position in enumerate(positions_list)},
                 value=3,    
-                )
-        
+                )        
         ], className="single_plot_ctnr"),
             
        # Div pie chart
+        html.Div([
+            # dropdown
+            dcc.Slider(id='news-page-slider-pie-1', className='slider',
+                min=0,
+                max=5,
+                ######FIX ME #############################
+                # code ex: marks={i: position for i, position in enumerate(positions_list)},
+                value=3,    
+                ),
+            #bar plot 
+            dcc.Graph(id='pie-chart', className="pie-chart-style-1", figure=px.pie(df, values="time_scale", title="pie chart 1")),
+            
+        ], className="single_plot_ctnr"),
+            
 
-       # Div
+       # Div chart 3
+       html.Div([
+        # dropdown
+            html.Div(dcc.Dropdown(id = 'news-page-dropdow-plot-2',
+                    options= ['world', 'us','sport'],#######FIX ME ############################# [{'label':i, 'value':i} for i in rookies],  
+                    value= 'news-section'), className='dropDown'),
+            #bar plot 
+            dcc.Graph(id='bar-plot-2', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Bar Plot 2")),           
+            # slider
+            dcc.Slider(className='slider',id='news-page-slider-plot-2',
+                min=0,
+                max=5,
+                ######FIX ME #############################
+                # code ex: marks={i: position for i, position in enumerate(positions_list)},
+                value=3,    
+                )        
+        ], className="single_plot_ctnr"),
+
     ],className= "plots_ctnr"),
 
-  html.Div(html.Button(dcc.Link('Revenir à la page de garde', href='/')), style={'textAlign': 'center'}),
+
+
+
+
+  html.Div(html.Button(dcc.Link('Revenir à la page de garde', href='/')),className="button_container"),
 
 ], className= "pages")
 
@@ -104,20 +137,34 @@ news_page = html.Div(children=[
 
 # bar plot 1 ##############################
 @app.callback(
-    Output('bar-plot', 'figure'),
+    Output('bar-plot-1', 'figure'),
     [Input('news-page-dropdow-plot-1', 'newsSection'),
-     Input('news-page-slider-plot-1', 'timeScale')]
-
-)
-def update_bar_plot(newsSection, timescale):
+     Input('news-page-slider-plot-1', 'timeScale')])
+def update_news_bar_plot1(newsSection, timescale):
         return px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
         ######FIX ME #############################
         #### FIX ME INCLUDE QUERY LOGIC ....
         
 
 # Pie Chart ##############################
+@app.callback(
+    Output('pie-chart', 'figure'),
+    [Input('news-page-slider-pie-1', 'timeScale')])
+def update_news_pie_chart(timescale):
+        return px.pie(df, values="time_scale", title="pie chart 1")
+        ######FIX ME #############################
+        #### FIX ME INCLUDE QUERY LOGIC ....
 
 # bar plot 2 ##############################
+@app.callback(
+    Output('bar-plot-2', 'figure'),
+    [Input('news-page-dropdow-plot-2', 'newsSection'),
+     Input('news-page-slider-plot-2', 'timeScale')])
+def update_news_bar_plot1(newsSection, timescale):
+        return px.bar(df, x="section", y="time_scale", title="Bar Plot 1")
+        ######FIX ME #############################
+        #### FIX ME INCLUDE QUERY LOGIC ....
+
 
 # bar plot 3 ##############################
 
