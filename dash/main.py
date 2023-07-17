@@ -22,39 +22,29 @@ import transform
 external_stylesheets = ['styles.css','https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets,suppress_callback_exceptions=True)
 
+app.layout = html.Div([
+    dcc.Location(id='url', refresh=False),
+    html.Div(id = 'page-content')
+])
 
-
-app.layout = html.Div(className="landing_page",children=[
-    html.Div( children=[
+landing_page = html.Div(className="landing_page", children=[
+    html.Div(children=[
         html.H1("Welcome to NYT analysis App"),
         html.H4("Creators: Cedric Soares, Anna Temerko, Matthieu Lefebrve, Edouard Philippe"),
-        html.Div(className="button_container", children =[
-            html.Button("News", id='btn-news', n_clicks=0, style={'margin-right': '20px'}),
-            html.Button("Books", id='btn-books', n_clicks=0, style={'margin-right': '20px'}),
-            html.Button("Movies", id='btn-movies', n_clicks=0)])
+        html.Div(className="button_container", children=[
+            html.Button(children=dcc.Link("News", href='/news')),
+            html.Button(children=dcc.Link("Books", href='/books')),
+            html.Button(children=dcc.Link("Movies", href='/movies'))
+        ])
     ])
 ])
 
-@app.callback(
-    dash.dependencies.Output('url', 'pathname'),
-    [dash.dependencies.Input('btn-news', 'n_clicks'),
-     dash.dependencies.Input('btn-books', 'n_clicks'),
-     dash.dependencies.Input('btn-movies', 'n_clicks')])
-def navigate_to_page(news_clicks, books_clicks, movies_clicks):
-    if news_clicks > 0:
-        return '/news'
-    elif books_clicks > 0:
-        return '/books'
-    elif movies_clicks > 0:
-        return '/movies'
-    else:
-        return '/'
 
 ###########################################
 # News ####################################
 ###########################################
 
-layout_news = html.Div([
+news_page = html.Div([
 
   html.Div(html.Button(dcc.Link('Revenir à la page de garde', href='/')), style={'textAlign': 'center'}),
 ], style = {'background-color' : 'beige','minHeight': '100vh'})
@@ -68,9 +58,27 @@ layout_news = html.Div([
 # Books ###################################
 ###########################################
 
+books_page = html.Div([
+
+  html.Div(html.Button(dcc.Link('Revenir à la page de garde', href='/')), style={'textAlign': 'center'}),
+], style = {'background-color' : 'beige','minHeight': '100vh'})
+
+#Books callback functions #################
+###########################################
+
 ###########################################
 # Movies ##################################
 ###########################################
+
+movies_page = html.Div([
+
+  html.Div(html.Button(dcc.Link('Revenir à la page de garde', href='/')), style={'textAlign': 'center'}),
+], style = {'background-color' : 'beige','minHeight': '100vh'})
+
+
+# Movies callback functions ###############
+###########################################
+
 
 
 ###########################################
@@ -78,27 +86,26 @@ layout_news = html.Div([
 ###########################################
 
 
-app.validation_layout = html.Div([
-    html.Div([dcc.Location(id='url', refresh=False)]),
-    html.Div(id='page-content')
-])
+
 
 @app.callback(
-    dash.dependencies.Output('page-content', 'children'),
-    [dash.dependencies.Input('url', 'pathname')]
+    Output('page-content', 'children'),
+    [Input('url', 'pathname')]
 )
 def display_page(pathname):
-    if pathname == '/news':
+    if pathname == '/':
+        return landing_page;   
+    elif pathname == '/news':
         return news_page
     elif pathname == '/books':
         return books_page
     elif pathname == '/movies':
         return movies_page
     else:
-        return app.layout
+        return '404 Page not found'
 
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True,host="0.0.0.0")
+     app.run_server(debug=True, host="0.0.0.0", dev_tools_hot_reload=True)
 
