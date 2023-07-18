@@ -34,6 +34,19 @@ services:
       - logs:/app/logs
     networks:
       - backend
+    ports:
+      - 80:80
+    depends_on:
+      - elasticsearch
+
+  api:
+    container_name: api-container
+    build: ./api
+    volumes:
+      - logs:/app/logs
+    networks:
+      - backend
+      - frontend
     depends_on:
       - elasticsearch
 
@@ -53,4 +66,6 @@ volumes:
 
 networks:
   backend:
+    driver: bridge
+  frontend:
     driver: bridge
