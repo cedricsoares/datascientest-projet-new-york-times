@@ -39,7 +39,7 @@ users = {
     }
 }
 
-es = AsyncElasticsearch(hosts="http://@localhost:9200")
+es = AsyncElasticsearch(hosts="http://es-container:9200")
 
 
 class elasticResponse(BaseModel):
