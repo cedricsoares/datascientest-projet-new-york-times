@@ -9,25 +9,73 @@ INDEX_SETTINGS = {
 
 NEWS_MAPPING = {
         'properties': {
-            'abstract': {'type': 'text', 'analyzer': 'english'},
-            'byline': {'type': 'text', 'analyzer': 'english'},
+            'abstract': {
+                            'type': 'text',
+                            'analyzer': 'english',
+                            'fields': {
+                                'keyword': {
+                                                "type": "keyword"
+                                            }
+                                }
+                        },
+            'byline':  {
+                            'type': 'text',
+                            'analyzer': 'english',
+                            'fields': {
+                                'keyword': {
+                                                "type": "keyword"
+                                            }
+                                }
+                        },
             'created_date': {'type': 'date'},
             'des_facet': {'type': 'keyword'},
             'first_published_date': {'type': 'date'},
             'geo_facet': {'type': 'keyword'},
             'item_type': {'type': 'keyword'},
-            'kicker': {'type': 'text'},
+            'kicker':  {
+                            'type': 'text',
+                            'analyzer': 'english',
+                            'fields': {
+                                'keyword': {
+                                                "type": "keyword"
+                                            }
+                                }
+                        },
             'material_type_facet': {'type': 'keyword'},
             'multimedia': {
                 'type': 'nested',
                 'properties': {
-                    'caption': {'type': 'text', 'analyzer': 'english'},
-                    'copyright': {'type': 'text', 'analyzer': 'english'},
+                    'caption':  {
+                                    'type': 'text',
+                                    'analyzer': 'english',
+                                    'fields': {
+                                        'keyword': {
+                                                        "type": "keyword"
+                                                    }
+                                        }
+                                },
+                    'copyright':  {
+                                    'type': 'text',
+                                    'analyzer': 'english',
+                                    'fields': {
+                                        'keyword': {
+                                                        "type": "keyword"
+                                                    }
+                                        }
+                                },
                     'format': {'type': 'keyword'},
                     'height': {'type': 'integer'},
                     'subtype': {'type': 'keyword'},
                     'type': {'type': 'keyword'},
-                    'url': {'type': 'text', 'analyzer': 'english'},
+                    'url':  {
+                                'type': 'text',
+                                'analyzer': 'english',
+                                'fields': {
+                                    'keyword': {
+                                                    "type": "keyword"
+                                                }
+                                    }
+                            },
                     'width': {'type': 'integer'}
                 }
             },
@@ -36,27 +84,115 @@ NEWS_MAPPING = {
             'published_date': {'type': 'date'},
             'section': {'type': 'keyword'},
             'slug_name': {'type': 'keyword'},
-            'source': {'type': 'text', 'analyzer': 'english'},
-            'subheadline': {'type': 'text', 'analyzer': 'english'},
+            'source': {
+                        'type': 'text',
+                        'analyzer': 'english',
+                        'fields': {
+                            'keyword': {
+                                            "type": "keyword"
+                                        }
+                            }
+                        },
+            'subheadline': {
+                            'type': 'text',
+                            'analyzer': 'english',
+                            'fields': {
+                                'keyword': {
+                                                "type": "keyword"
+                                            }
+                                }
+                        },
             'subsection': {'type': 'keyword'},
-            'thumbnail_standard': {'type': 'text', 'analyzer': 'english'},
-            'title': {'type': 'text'},
+            'thumbnail_standard': {
+                            'type': 'text',
+                            'analyzer': 'english',
+                            'fields': {
+                                'keyword': {
+                                                "type": "keyword"
+                                            }
+                                }
+                        },
+            'title': {
+                        'type': 'text',
+                        'analyzer': 'english',
+                        'fields': {
+                            'keyword': {
+                                            "type": "keyword"
+                                        }
+                            }
+                    },
             'updated_date': {'type': 'date'},
             'uri': {'type': 'keyword'},
-            'url': {'type': 'text', 'analyzer': 'english'}
+            'url': {
+                    'type': 'text',
+                    'analyzer': 'english',
+                    'fields': {
+                        'keyword': {
+                                        "type": "keyword"
+                                    }
+                        }
+                    },
         }
     }
 
 BOOKS_MAPPING = {
     'properties': {
-        'title': {'type': 'text', 'analyzer': 'english'},
-        'description': {'type': 'text', 'analyzer': 'english'},
-        'contributor': {'type': 'text', 'analyzer': 'english'},
-        'author': {'type': 'text', 'analyzer': 'english'},
-        'contributor_note': {'type': 'text', 'analyzer': 'english'},
+        'title': {
+                    'type': 'text',
+                    'analyzer': 'english',
+                    'fields': {
+                        'keyword': {
+                                        "type": "keyword"
+                                    }
+                        }
+                },
+        'description': {
+                            'type': 'text',
+                            'analyzer': 'english',
+                            'fields': {
+                                'keyword': {
+                                                "type": "keyword"
+                                            }
+                                }
+                        },
+        'contributor': {
+                            'type': 'text',
+                            'analyzer': 'english',
+                            'fields': {
+                                'keyword': {
+                                                "type": "keyword"
+                                            }
+                                }
+                        },
+        'author': {
+                    'type': 'text',
+                    'analyzer': 'english',
+                    'fields': {
+                        'keyword': {
+                                        "type": "keyword"
+                                    }
+                        }
+                    },
+        'contributor_note': {
+                            'type': 'text',
+                            'analyzer': 'english',
+                            'fields': {
+                                'keyword': {
+                                                "type": "keyword"
+                                            }
+                                }
+                        },
         'price': {'type': 'float'},
         'age_group': {'type': 'keyword'},
-        'publisher': {'type': 'text', 'analyzer': 'english'},
+        'publisher': {
+                        'type': 'text',
+                        'analyzer': 'english',
+                        'fields': {
+                            'keyword': {
+                                            "type": "keyword"
+                                        }
+                            }
+                        },
         'isbns': {
             'type': 'nested',
             'properties': {
@@ -70,8 +206,24 @@ BOOKS_MAPPING = {
                 'primary_isbn10': {'type': 'keyword'},
                 'primary_isbn13': {'type': 'keyword'},
                 'rank': {'type': 'integer'},
-                'list_name': {'type': 'text', 'analyzer': 'english'},
-                'display_name': {'type': 'text', 'analyzer': 'english'},
+                'list_name': {
+                                'type': 'text',
+                                'analyzer': 'english',
+                                'fields': {
+                                    'keyword': {
+                                                    "type": "keyword"
+                                                }
+                                    }
+                            },
+                'display_name': {
+                                    'type': 'text',
+                                    'analyzer': 'english',
+                                    'fields': {
+                                        'keyword': {
+                                                        "type": "keyword"
+                                                    }
+                                        }
+                                },
                 'published_date': {'type': 'date'},
                 'bestsellers_date': {'type': 'date'},
                 'weeks_on_list': {'type': 'integer'},
@@ -94,14 +246,46 @@ BOOKS_MAPPING = {
 
 MOVIES_MAPPING = {
     "properties": {
-        "byline":  {'type': 'text', 'analyzer': 'english'},
+        "byline":  {
+                        'type': 'text',
+                        'analyzer': 'english',
+                        'fields': {
+                            'keyword': {
+                                            "type": "keyword"
+                                        }
+                            }
+                    },
         "critics_pick": {"type": "integer"},
         "date_updated": {"type": "date", "format": "yyyy-MM-dd HH:mm:ss"},
-        "display_title": {'type': 'text', 'analyzer': 'english'},
-        "headline":  {'type': 'text', 'analyzer': 'english'},
+        "display_title": {
+                            'type': 'text',
+                            'analyzer': 'english',
+                            'fields': {
+                                'keyword': {
+                                                "type": "keyword"
+                                            }
+                                }
+                        },
+        "headline":  {
+                        'type': 'text',
+                        'analyzer': 'english',
+                        'fields': {
+                            'keyword': {
+                                            "type": "keyword"
+                                        }
+                            }
+                    },
         "link": {
             "properties": {
-                "suggested_link_text":  {'type': 'text', 'analyzer': 'english'},
+                "suggested_link_text": {
+                                            'type': 'text',
+                                            'analyzer': 'english',
+                                            'fields': {
+                                                'keyword': {
+                                                                "type": "keyword"
+                                                            }
+                                                }
+                                        },
                 "type": {"type": "keyword"},
                 "url": {"type": "text"}
             }
@@ -110,7 +294,15 @@ MOVIES_MAPPING = {
         "multimedia": {
             "properties": {
                 "height": {"type": "integer"},
-                "src":  {'type': 'text', 'analyzer': 'english'},
+                "src":  {
+                            'type': 'text',
+                            'analyzer': 'english',
+                            'fields': {
+                                'keyword': {
+                                                "type": "keyword"
+                                            }
+                                }
+                        },
                 "type": {"type": "keyword"},
                 "width": {"type": "integer"}
             }

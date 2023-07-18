@@ -16,7 +16,7 @@ logging.basicConfig(level=logging.INFO,
 def get_elasctic_connection():
     """Generate elactic connector"""
 
-    return Elasticsearch(hosts="http://@localhost:9200")  # To be changed if Elasticsearch will not remain locally
+    return Elasticsearch(hosts="http://es-container:9200")  # To be changed if Elasticsearch will not remain locally
 
 
 def get_endpoint_hits(con: Elasticsearch, api_key: str, index_name: str) -> int:
@@ -245,6 +245,6 @@ def loop_over_hashes_and_remove_duplicates(con, index_name,
                 deleted_documents += 1
 
     if deleted_documents > 0:
-        logger.info(f'----- {deleted_documents} from {index_name} index -----')
+        logger.info(f'----- {deleted_documents} deleted duplicated documents from {index_name} index -----')
     else:
         logger.info('----- There is no duplicated documents -----')
