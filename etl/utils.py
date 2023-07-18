@@ -16,7 +16,7 @@ logging.basicConfig(level=logging.INFO,
 def get_elasctic_connection():
     """Generate elactic connector"""
 
-    return Elasticsearch(hosts="http://@localhost:9200")  # To be changed if Elasticsearch will not remain locally
+    return Elasticsearch(hosts="http://es-container:9200")  # To be changed if Elasticsearch will not remain locally
 
 
 def get_endpoint_hits(con: Elasticsearch, api_key: str, index_name: str) -> int:
