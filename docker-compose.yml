@@ -49,6 +49,20 @@ services:
       - frontend
     depends_on:
       - elasticsearch
+    ports:
+      - 8000:8000
+
+  dash:
+    container_name: dash-container
+    build: ./dash
+    volumes:
+      - logs:/app/logs
+    networks:
+      - frontend
+    depends_on:
+      - api
+    ports:
+      - 5000:5000
 
 volumes:
   data:
