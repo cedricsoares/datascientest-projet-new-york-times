@@ -50,13 +50,17 @@ def get_news_sections(session: Session) -> List[str]:
 
     logger.info('----- Retrieving news sections -----')
     query = build_query(index_name='news_sections', api_key=session.api_key)
-    results = requests.get(query)
-    sections = [item['section'] for item in results.json()['results']]
-    logger.info(f'----- News sections: \n {sections} \n')
 
-    session.api_calls += 1
+    try:
+        results = requests.get(query)
+        sections = [item['section'] for item in results.json()['results']]
+        session.api_calls += 1
+        logger.info(f'----- Total number of NYT API calls: {session.api_calls} -----')
 
-    return sections
+        return sections
+
+    except Exception as e:
+        logger.warning(f"-----Error:{e}-----")
 
 
 def get_news_data(session: Session, sections: List[str], max_api_calls: int) -> None:
@@ -81,17 +85,21 @@ def get_news_data(session: Session, sections: List[str], max_api_calls: int) -> 
 
             query = build_query(index_name='news', news_section=section,
                                 api_key=session.api_key)
-            content = requests.get(query)
 
-            # save into the ES DB
-            res = content.json()
+            try:
+                content = requests.get(query)
+                # save into the ES DB
+                res = content.json()
 
-            docs = res['results']
+                docs = res['results']
 
-            # Prepare the documents for bulk indexing
-            actions = results_to_list(index_name='news', results=docs)
+                # Prepare the documents for bulk indexing
+                actions = results_to_list(index_name='news', results=docs)
 
-            bulk_to_elasticsearch(con=session.con, bulk_list=actions)
+                bulk_to_elasticsearch(con=session.con, bulk_list=actions)
+
+            except Exception as e:
+                logger.warning(f"-----Error:{e}-----")
 
             session.api_calls += 1
             logger.info(f'----- Total number of NYT API calls: {session.api_calls} -----')
@@ -131,9 +139,7 @@ def get_books_or_movies(index_name: str,
 
     internal_api_calls += 1  # A first API call is used to get endpoint_hits
 
-    start_offset = get_start_offset(con=session.con,
-                                    index_name=index_name,
-                                    endpoint_hits=endpoint_hits)
+    start_offset = get_start_offset(con=session.con, index_name=index_name)
 
     while ((session.is_remaining_api_calls(max_api_calls=max_api_calls))
            and (internal_api_calls <= max_books_movies_calls)):
@@ -145,20 +151,21 @@ def get_books_or_movies(index_name: str,
         query = build_query(index_name=index_name, api_key=session._api_key,
                             start_offset=start_offset)
 
-        content = requests.get(query)
+        try:
+            content = requests.get(query)
+            res = content.json()
+            endpoint_hits = res['num_results']
+            docs = res['results']
+            saved_documents_request = len(docs)
+            actions = results_to_list(index_name=index_name, results=docs)
+            saved_documents = start_offset + saved_documents_request
+            bulk_to_elasticsearch(con=session.con, bulk_list=actions)
 
-        res = content.json()
-        endpoint_hits = endpoint_hits = res['num_results']
-        docs = res['results']
-        saved_documents_request = len(docs)
+            if index_name == 'books':
+                logger.info(f'----- Remaining documents to save regarding endpoints hits: {endpoint_hits - saved_documents} -----')  # NY Times movies API does not return endpoints_hits
 
-        actions = results_to_list(index_name=index_name, results=docs)
-
-        saved_documents = start_offset + saved_documents_request
-        bulk_to_elasticsearch(con=session.con, bulk_list=actions)
-
-        if index_name == 'books':
-            logger.info(f'----- Remaining documents to save regarding endpoints hits: {endpoint_hits - saved_documents} -----')  # NY Times movies API does not return endpoints_hits
+        except Exception as e:
+            logger.warning(f"-----Error:{e}-----")
 
         start_offset += results_by_page
 

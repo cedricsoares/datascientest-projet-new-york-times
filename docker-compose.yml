@@ -10,7 +10,7 @@ services:
       - xpack.security.enabled=false
       - "discovery.type=single-node"
     networks:
-      - es-net
+      - backend
     ports:
       - 9200:9200
 
@@ -20,11 +20,35 @@ services:
     environment:
       - ELASTICSEARCH_HOSTS=http://es-container:9200
     networks:
-      - es-net
+      - backend
     depends_on:
       - elasticsearch
     ports:
       - 5601:5601
+
+  etl:
+    container_name: etl-container
+    build: ./etl
+    env_file: .env
+    volumes:
+      - logs:/app/logs
+    networks:
+      - backend
+    ports:
+      - 80:80
+    depends_on:
+      - elasticsearch
+
+  api:
+    container_name: api-container
+    build: ./api
+    volumes:
+      - logs:/app/logs
+    networks:
+      - backend
+      - frontend
+    depends_on:
+      - elasticsearch
 
 volumes:
   data:
@@ -33,7 +57,15 @@ volumes:
       o: bind
       type: none
       device: ./data
+  logs:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ./logs
 
 networks:
-  es-net:
+  backend:
+    driver: bridge
+  frontend:
     driver: bridge

@@ -16,12 +16,12 @@ logging.basicConfig(level=logging.INFO,
 def get_elasctic_connection():
     """Generate elactic connector"""
 
-    return Elasticsearch(hosts="http://@localhost:9200")  # To be changed if Elasticsearch will not remain locally
+    return Elasticsearch(hosts="http://es-container:9200")  # To be changed if Elasticsearch will not remain locally
 
 
 def get_endpoint_hits(con: Elasticsearch, api_key: str, index_name: str) -> int:
-    """get amount of endpoint hits from NYT Api for books or movies
-            it executes a querry with offset = 0 to get amount of hits.
+    """get amount of endpoint hits from NYT Api for books
+            it executes a query with offset = 0 to get amount of hits.
             it consumes one NYT api call
     Args:
         con (Elasticsearch): Connector object used to connect to database
@@ -33,19 +33,22 @@ def get_endpoint_hits(con: Elasticsearch, api_key: str, index_name: str) -> int:
         endpoint_hits (int): Amount of endpoint hits returned by NTY Api
     """
     query = build_query(index_name=index_name, api_key=api_key, start_offset=0)
-    content = requests.get(query)
 
-    res = content.json()
-    endpoint_hits = res['num_results']
+    try:
+        content = requests.get(query)
+        res = content.json()
+        endpoint_hits = res['num_results']
 
-    return endpoint_hits
+        return endpoint_hits
+
+    except Exception as e:
+        logger.warning(f"-----Error:{e}-----")
 
 
-def get_start_offset(con: Elasticsearch, index_name: str,
-                     endpoint_hits: int) -> int:
+def get_start_offset(con: Elasticsearch, index_name: str) -> int:
     """ Get the start_start offset parameter to build queries for books and movies
 
-            If checks on a specific index_name how many docuemnts are stored
+            If checks on a specific index_name how many documents are stored
             in Elastisearch
 
     Args:
@@ -54,19 +57,25 @@ def get_start_offset(con: Elasticsearch, index_name: str,
             are added
         endpoint_hits (int): Amount of endpoints hits retrieved by NYT Api
     """
-    if not con.indices.exists(index=index_name):
-        return 0
+    try:
+        if not con.indices.exists(index=index_name):
+            return 0
+    except Exception as e:
+        logger.warning(f"-----Error:{e}-----")
 
-    res = con.count(index=index_name).get('count')
+    try:
+        res = con.count(index=index_name).get('count')
+        if res == 0:
+            return 0
 
-    if res == 0:
-        return 0
+        if res % RESULTS_BY_PAGE == 0:
+            return res
 
-    if res % RESULTS_BY_PAGE == 0:
-        return res
+        else:
+            return (res // RESULTS_BY_PAGE) * RESULTS_BY_PAGE  # It returns the previous mulitple of RESULTS_BY_PAGE
 
-    else:
-        return (res // RESULTS_BY_PAGE) * RESULTS_BY_PAGE # It returns the previous mulitple of RESULTS_BY_PAGE
+    except Exception as e:
+        logger.warning(f"-----Error:{e}-----")
 
 
 def build_query(index_name: str, api_key: Optional[str], start_offset: int = 0,
@@ -84,28 +93,28 @@ def build_query(index_name: str, api_key: Optional[str], start_offset: int = 0,
             Only used for news.
 
     Return:
-        str: Builded querry regarding passed parameters
+        str: built query regarding passed parameters
     """
-    logger.info('----- Strat building querry for NYT API -----')
+    logger.info('----- Start building query for NYT API -----')
 
     if index_name == 'news':
         query = f'https://api.nytimes.com/svc/news/v3/content/all/{news_section}.json?&api-key={api_key}'
-        logger.info(f'----- Builded querry for {index_name}-----')
+        logger.info(f'----- built query for {index_name}-----')
         return query
 
     if index_name == 'news_sections':
         query = f'https://api.nytimes.com/svc/news/v3/content/section-list.json?&api-key={api_key}'
-        logger.info(f'----- Builded querry for {index_name} -----')
+        logger.info(f'----- built query for {index_name} -----')
         return query
 
     if index_name == 'books':
         query = f'https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?offset={start_offset}&api-key={api_key}'
-        logger.info(f'----- Builded querry {index_name} -----')
+        logger.info(f'----- built query {index_name} -----')
         return query
 
     if index_name == 'movies':
         query = f'https://api.nytimes.com/svc/movies/v2/reviews/all.json?offset={start_offset}&api-key={api_key}'
-        logger.info(f'----- Builded querry {index_name} -----')
+        logger.info(f'----- built query {index_name} -----')
         return query
 
     else:
@@ -126,6 +135,7 @@ def delete_duplicates(con: Elasticsearch, index_name: str) -> None:
         None
     """
     logger.info(f'----- Start of drop duplicates process for {index_name}  index -----')
+
     keys_to_include_in_hash = get_index_keys(index_name=index_name)
     dict_of_duplicate_docs = scroll_over_all_docs(
                                                   con=con,
@@ -175,27 +185,33 @@ def scroll_over_all_docs(con: Elasticsearch, index_name: str,
             duplicates in the index_name
 
     Returns:
-        dict_of_duplicate_docs (dict): Dictionary of duplicated docuemnts
+        dict_of_duplicate_docs (dict): Dictionary of duplicated documents
     """
-    for hit in helpers.scan(con, index=index_name):
-        dict_of_duplicate_docs = {}
-        combined_key = ""
-        for mykey in keys_to_include_in_hash:
-            combined_key += str(hit['_source'][mykey])
+    dict_of_duplicate_docs = {}
 
-        _id = hit["_id"]
+    try:
+        for hit in helpers.scan(con, index=index_name):
 
-        hashval = hashlib.md5(combined_key.encode('utf-8')).digest()
+            combined_key = ""
+            for mykey in keys_to_include_in_hash:
+                combined_key += str(hit['_source'][mykey])
 
-        # If the hashval is new, then we will create a new key
-        # in the dict_of_duplicate_docs, which will be
-        # assigned a value of an empty array.
-        # We then immediately push the _id onto the array.
-        # If hashval already exists, then
-        # we will just push the new _id onto the existing array
-        dict_of_duplicate_docs.setdefault(hashval, []).append(_id)
+            _id = hit["_id"]
+
+            hashval = hashlib.md5(combined_key.encode('utf-8')).digest()
+
+            # If the hashval is new, then we will create a new key
+            # in the dict_of_duplicate_docs, which will be
+            # assigned a value of an empty array.
+            # We then immediately push the _id onto the array.
+            # If hashval already exists, then
+            # we will just push the new _id onto the existing array
+            dict_of_duplicate_docs.setdefault(hashval, []).append(_id)
 
         return dict_of_duplicate_docs
+
+    except Exception as e:
+        logger.warning(f"-----Error:{e}-----")
 
 
 def loop_over_hashes_and_remove_duplicates(con, index_name,
@@ -206,7 +222,7 @@ def loop_over_hashes_and_remove_duplicates(con, index_name,
         con (Elasticsearch): Connector object used to connect to database
         index_name (str): Name of the index where to check if duplicated exist
             and delete then if so
-        dict_of_duplicate_docs (dict): Dictionary of duplicated docuemnts
+        dict_of_duplicate_docs (dict): Dictionary of duplicated documents
 
     Return:
         None
@@ -214,12 +230,21 @@ def loop_over_hashes_and_remove_duplicates(con, index_name,
 
     # Search through the hash of doc values to see if any
     # duplicate hashes have been found
+
+    deleted_documents = 0
     for hashval, array_of_ids in dict_of_duplicate_docs.items():
         if len(array_of_ids) > 1:
             # Get the documents that have mapped to the current hasval
+
             for id in array_of_ids[1:]:
-                con.delete(index=index_name, id=id)
-            num_deleted_docs = len(array_of_ids[1:])
-            logger.info(f'----- {num_deleted_docs} from {index_name} index -----')
-        else:
-            logger.info(f'----- No duplicated documents in {index_name} index -----')
+                try:
+                    con.delete(index=index_name, id=id)
+                except Exception as e:
+
+                    logger.warning(f"-----Error:{e}-----")
+                deleted_documents += 1
+
+    if deleted_documents > 0:
+        logger.info(f'----- {deleted_documents} deleted duplicated documents from {index_name} index -----')
+    else:
+        logger.info('----- There is no duplicated documents -----')

@@ -32,7 +32,12 @@ class Session:
 
         """
         logger.info('----- Initiate ETL Session -----')
-        self._con: Elasticsearch = get_elasctic_connection()
+        
+        try:
+            self._con: Elasticsearch = get_elasctic_connection()
+        except Exception as e:
+            logger.warning(f"-----Error:{e}-----")
+        
         self._api_key: Optional[str] = os.getenv("API_KEY")
         self._api_calls: int = 0
 
