@@ -62,7 +62,7 @@ services:
     depends_on:
       - api
     ports:
-      - 5001:5000
+      - 8050:8050
 
 volumes:
   data:

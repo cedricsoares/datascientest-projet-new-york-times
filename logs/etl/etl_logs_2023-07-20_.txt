@@ -1,0 +1,326 @@
+2023-07-20 08:45:57,341 - ----- Initiate ETL Session -----
+2023-07-20 08:45:57,354 - ----- Selected configurations: 
+ dict_keys(['news', 'books', 'movies']) 
+
+2023-07-20 08:45:57,356 - ----- Starts runing ETL on news -----
+2023-07-20 08:45:57,364 - HEAD http://es-container:9200/news [status:200 duration:0.008s]
+2023-07-20 08:45:57,368 - ----- Retrieving news sections -----
+2023-07-20 08:45:57,369 - ----- Start building query for NYT API -----
+2023-07-20 08:45:57,370 - ----- built query for news_sections -----
+2023-07-20 08:45:58,057 - ----- Total number of NYT API calls: 1 -----
+2023-07-20 08:45:58,059 - ----- Start geting news data from NYT API -----
+2023-07-20 08:45:58,060 - ----- Start retriving data from section: admin -----
+2023-07-20 08:45:58,061 - ----- Start building query for NYT API -----
+2023-07-20 08:45:58,063 - ----- built query for news-----
+2023-07-20 08:45:59,070 - ----- Start building bulk list for news index -----
+2023-07-20 08:45:59,070 - ----- Start saving documents ----
+2023-07-20 08:45:59,130 - PUT http://es-container:9200/_bulk [status:200 duration:0.057s]
+2023-07-20 08:45:59,131 - ----- 15 documents saved successfully  -----
+2023-07-20 08:45:59,132 - ----- Finish saving documents from bulk -----
+2023-07-20 08:45:59,133 - ----- Total number of NYT API calls: 2 -----
+2023-07-20 08:46:11,135 - ----- Start retriving data from section: arts -----
+2023-07-20 08:46:11,138 - ----- Start building query for NYT API -----
+2023-07-20 08:46:11,139 - ----- built query for news-----
+2023-07-20 08:46:11,996 - ----- Start building bulk list for news index -----
+2023-07-20 08:46:11,998 - ----- Start saving documents ----
+2023-07-20 08:46:12,040 - PUT http://es-container:9200/_bulk [status:200 duration:0.039s]
+2023-07-20 08:46:12,041 - ----- 20 documents saved successfully  -----
+2023-07-20 08:46:12,042 - ----- Finish saving documents from bulk -----
+2023-07-20 08:46:12,042 - ----- Total number of NYT API calls: 3 -----
+2023-07-20 08:46:24,045 - ----- Start retriving data from section: automobiles -----
+2023-07-20 08:46:24,046 - ----- Start building query for NYT API -----
+2023-07-20 08:46:24,048 - ----- built query for news-----
+2023-07-20 08:46:24,811 - ----- Start building bulk list for news index -----
+2023-07-20 08:46:24,814 - ----- Start saving documents ----
+2023-07-20 08:46:24,841 - PUT http://es-container:9200/_bulk [status:200 duration:0.026s]
+2023-07-20 08:46:24,844 - ----- 3 documents saved successfully  -----
+2023-07-20 08:46:24,845 - ----- Finish saving documents from bulk -----
+2023-07-20 08:46:24,845 - ----- Total number of NYT API calls: 4 -----
+2023-07-20 08:46:36,849 - ----- Start retriving data from section: books -----
+2023-07-20 08:46:36,851 - ----- Start building query for NYT API -----
+2023-07-20 08:46:36,852 - ----- built query for news-----
+2023-07-20 08:46:37,773 - ----- Start building bulk list for news index -----
+2023-07-20 08:46:37,774 - ----- Start saving documents ----
+2023-07-20 08:46:37,812 - PUT http://es-container:9200/_bulk [status:200 duration:0.034s]
+2023-07-20 08:46:37,813 - ----- 20 documents saved successfully  -----
+2023-07-20 08:46:37,813 - ----- Finish saving documents from bulk -----
+2023-07-20 08:46:37,814 - ----- Total number of NYT API calls: 5 -----
+2023-07-20 08:46:49,815 - ----- Start retriving data from section: briefing -----
+2023-07-20 08:46:49,817 - ----- Start building query for NYT API -----
+2023-07-20 08:46:49,819 - ----- built query for news-----
+2023-07-20 08:46:50,633 - ----- Start building bulk list for news index -----
+2023-07-20 08:46:50,635 - ----- Start saving documents ----
+2023-07-20 08:46:50,667 - PUT http://es-container:9200/_bulk [status:200 duration:0.028s]
+2023-07-20 08:46:50,668 - ----- 20 documents saved successfully  -----
+2023-07-20 08:46:50,669 - ----- Finish saving documents from bulk -----
+2023-07-20 08:46:50,670 - ----- Total number of NYT API calls: 6 -----
+2023-07-20 08:47:02,670 - ----- Start retriving data from section: business -----
+2023-07-20 08:47:02,673 - ----- Start building query for NYT API -----
+2023-07-20 08:47:02,674 - ----- built query for news-----
+2023-07-20 08:47:03,490 - ----- Start building bulk list for news index -----
+2023-07-20 08:47:03,490 - ----- Start saving documents ----
+2023-07-20 08:47:03,503 - PUT http://es-container:9200/_bulk [status:200 duration:0.010s]
+2023-07-20 08:47:03,503 - ----- 20 documents saved successfully  -----
+2023-07-20 08:47:03,503 - ----- Finish saving documents from bulk -----
+2023-07-20 08:47:03,504 - ----- Total number of NYT API calls: 7 -----
+2023-07-20 08:47:15,504 - ----- Start retriving data from section: climate -----
+2023-07-20 08:47:15,505 - ----- Start building query for NYT API -----
+2023-07-20 08:47:15,505 - ----- built query for news-----
+2023-07-20 08:47:16,431 - ----- Start building bulk list for news index -----
+2023-07-20 08:47:16,432 - ----- Start saving documents ----
+2023-07-20 08:47:16,446 - PUT http://es-container:9200/_bulk [status:200 duration:0.013s]
+2023-07-20 08:47:16,447 - ----- 20 documents saved successfully  -----
+2023-07-20 08:47:16,447 - ----- Finish saving documents from bulk -----
+2023-07-20 08:47:16,448 - ----- Total number of NYT API calls: 8 -----
+2023-07-20 08:47:28,449 - ----- Start retriving data from section: corrections -----
+2023-07-20 08:47:28,451 - ----- Start building query for NYT API -----
+2023-07-20 08:47:28,452 - ----- built query for news-----
+2023-07-20 08:47:29,274 - ----- Start building bulk list for news index -----
+2023-07-20 08:47:29,275 - ----- Start saving documents ----
+2023-07-20 08:47:29,295 - PUT http://es-container:9200/_bulk [status:200 duration:0.017s]
+2023-07-20 08:47:29,296 - ----- 20 documents saved successfully  -----
+2023-07-20 08:47:29,297 - ----- Finish saving documents from bulk -----
+2023-07-20 08:47:29,298 - ----- Total number of NYT API calls: 9 -----
+2023-07-20 08:47:41,301 - ----- Start retriving data from section: education -----
+2023-07-20 08:47:41,303 - ----- Start building query for NYT API -----
+2023-07-20 08:47:41,305 - ----- built query for news-----
+2023-07-20 08:47:42,150 - ----- Start building bulk list for news index -----
+2023-07-20 08:47:42,151 - ----- Start saving documents ----
+2023-07-20 08:47:42,168 - PUT http://es-container:9200/_bulk [status:200 duration:0.015s]
+2023-07-20 08:47:42,169 - ----- 6 documents saved successfully  -----
+2023-07-20 08:47:42,170 - ----- Finish saving documents from bulk -----
+2023-07-20 08:47:42,171 - ----- Total number of NYT API calls: 10 -----
+2023-07-20 08:47:54,177 - ----- Start retriving data from section: en español -----
+2023-07-20 08:47:54,178 - ----- Start building query for NYT API -----
+2023-07-20 08:47:54,179 - ----- built query for news-----
+2023-07-20 08:47:55,024 - ----- Start building bulk list for news index -----
+2023-07-20 08:47:55,025 - ----- Start saving documents ----
+2023-07-20 08:47:55,051 - PUT http://es-container:9200/_bulk [status:200 duration:0.023s]
+2023-07-20 08:47:55,052 - ----- 20 documents saved successfully  -----
+2023-07-20 08:47:55,053 - ----- Finish saving documents from bulk -----
+2023-07-20 08:47:55,054 - ----- Total number of NYT API calls: 11 -----
+2023-07-20 08:48:07,055 - ----- Start retriving data from section: fashion -----
+2023-07-20 08:48:07,057 - ----- Start building query for NYT API -----
+2023-07-20 08:48:07,058 - ----- built query for news-----
+2023-07-20 08:48:08,022 - ----- Start building bulk list for news index -----
+2023-07-20 08:48:08,024 - ----- Start saving documents ----
+2023-07-20 08:48:08,061 - PUT http://es-container:9200/_bulk [status:200 duration:0.034s]
+2023-07-20 08:48:08,062 - ----- 20 documents saved successfully  -----
+2023-07-20 08:48:08,062 - ----- Finish saving documents from bulk -----
+2023-07-20 08:48:08,063 - ----- Total number of NYT API calls: 12 -----
+2023-07-20 08:48:20,065 - ----- Start retriving data from section: food -----
+2023-07-20 08:48:20,067 - ----- Start building query for NYT API -----
+2023-07-20 08:48:20,069 - ----- built query for news-----
+2023-07-20 08:48:20,879 - ----- Start building bulk list for news index -----
+2023-07-20 08:48:20,881 - ----- Start saving documents ----
+2023-07-20 08:48:20,904 - PUT http://es-container:9200/_bulk [status:200 duration:0.021s]
+2023-07-20 08:48:20,906 - ----- 20 documents saved successfully  -----
+2023-07-20 08:48:20,907 - ----- Finish saving documents from bulk -----
+2023-07-20 08:48:20,907 - ----- Total number of NYT API calls: 13 -----
+2023-07-20 08:48:32,908 - ----- Start retriving data from section: gameplay -----
+2023-07-20 08:48:32,910 - ----- Start building query for NYT API -----
+2023-07-20 08:48:32,913 - ----- built query for news-----
+2023-07-20 08:48:33,798 - ----- Start building bulk list for news index -----
+2023-07-20 08:48:33,799 - ----- Start saving documents ----
+2023-07-20 08:48:33,817 - PUT http://es-container:9200/_bulk [status:200 duration:0.015s]
+2023-07-20 08:48:33,817 - ----- 20 documents saved successfully  -----
+2023-07-20 08:48:33,818 - ----- Finish saving documents from bulk -----
+2023-07-20 08:48:33,819 - ----- Total number of NYT API calls: 14 -----
+2023-07-20 08:48:45,822 - ----- Start retriving data from section: guide -----
+2023-07-20 08:48:45,824 - ----- Start building query for NYT API -----
+2023-07-20 08:48:45,825 - ----- built query for news-----
+2023-07-20 08:48:46,621 - ----- Start building bulk list for news index -----
+2023-07-20 08:48:46,623 - ----- Start saving documents ----
+2023-07-20 08:48:46,627 - PUT http://es-container:9200/_bulk [status:200 duration:0.003s]
+2023-07-20 08:48:46,627 - ----- 1 documents saved successfully  -----
+2023-07-20 08:48:46,627 - ----- Finish saving documents from bulk -----
+2023-07-20 08:48:46,628 - ----- Total number of NYT API calls: 15 -----
+2023-07-20 08:48:58,629 - ----- Start retriving data from section: health -----
+2023-07-20 08:48:58,631 - ----- Start building query for NYT API -----
+2023-07-20 08:48:58,633 - ----- built query for news-----
+2023-07-20 08:48:59,447 - ----- Start building bulk list for news index -----
+2023-07-20 08:48:59,449 - ----- Start saving documents ----
+2023-07-20 08:48:59,470 - PUT http://es-container:9200/_bulk [status:200 duration:0.017s]
+2023-07-20 08:48:59,471 - ----- 20 documents saved successfully  -----
+2023-07-20 08:48:59,472 - ----- Finish saving documents from bulk -----
+2023-07-20 08:48:59,472 - ----- Total number of NYT API calls: 16 -----
+2023-07-20 08:49:11,476 - ----- Start retriving data from section: home & garden -----
+2023-07-20 08:49:11,478 - ----- Start building query for NYT API -----
+2023-07-20 08:49:11,479 - ----- built query for news-----
+2023-07-20 08:49:12,432 - ----- Start building bulk list for news index -----
+2023-07-20 08:49:12,433 - -----Error:'NoneType' object is not iterable-----
+2023-07-20 08:49:12,433 - ----- Total number of NYT API calls: 17 -----
+2023-07-20 08:49:24,439 - ----- Start retriving data from section: home page -----
+2023-07-20 08:49:24,441 - ----- Start building query for NYT API -----
+2023-07-20 08:49:24,443 - ----- built query for news-----
+2023-07-20 08:49:25,239 - ----- Start building bulk list for news index -----
+2023-07-20 08:49:25,240 - ----- Start saving documents ----
+2023-07-20 08:49:25,266 - PUT http://es-container:9200/_bulk [status:200 duration:0.023s]
+2023-07-20 08:49:25,267 - ----- 20 documents saved successfully  -----
+2023-07-20 08:49:25,267 - ----- Finish saving documents from bulk -----
+2023-07-20 08:49:25,268 - ----- Total number of NYT API calls: 18 -----
+2023-07-20 08:49:37,269 - ----- Start retriving data from section: job market -----
+2023-07-20 08:49:37,272 - ----- Start building query for NYT API -----
+2023-07-20 08:49:37,274 - ----- built query for news-----
+2023-07-20 08:49:38,041 - ----- Start building bulk list for news index -----
+2023-07-20 08:49:38,042 - ----- Start saving documents ----
+2023-07-20 08:49:38,055 - PUT http://es-container:9200/_bulk [status:200 duration:0.010s]
+2023-07-20 08:49:38,056 - ----- 3 documents saved successfully  -----
+2023-07-20 08:49:38,056 - ----- Finish saving documents from bulk -----
+2023-07-20 08:49:38,057 - ----- Total number of NYT API calls: 19 -----
+2023-07-20 08:49:50,058 - ----- Start retriving data from section: the learning network -----
+2023-07-20 08:49:50,060 - ----- Start building query for NYT API -----
+2023-07-20 08:49:50,062 - ----- built query for news-----
+2023-07-20 08:49:50,940 - ----- Start building bulk list for news index -----
+2023-07-20 08:49:50,941 - ----- Start saving documents ----
+2023-07-20 08:49:50,962 - PUT http://es-container:9200/_bulk [status:200 duration:0.016s]
+2023-07-20 08:49:50,963 - ----- 20 documents saved successfully  -----
+2023-07-20 08:49:50,964 - ----- Finish saving documents from bulk -----
+2023-07-20 08:49:50,965 - ----- Total number of NYT API calls: 20 -----
+2023-07-20 08:50:02,966 - ----- Start retriving data from section: lens -----
+2023-07-20 08:50:02,969 - ----- Start building query for NYT API -----
+2023-07-20 08:50:02,970 - ----- built query for news-----
+2023-07-20 08:50:04,046 - ----- Start building bulk list for news index -----
+2023-07-20 08:50:04,048 - -----Error:'NoneType' object is not iterable-----
+2023-07-20 08:50:04,049 - ----- Total number of NYT API calls: 21 -----
+2023-07-20 08:50:16,052 - ----- Start retriving data from section: magazine -----
+2023-07-20 08:50:16,057 - ----- Start building query for NYT API -----
+2023-07-20 08:50:16,060 - ----- built query for news-----
+2023-07-20 08:50:16,957 - ----- Start building bulk list for news index -----
+2023-07-20 08:50:16,958 - ----- Start saving documents ----
+2023-07-20 08:50:16,975 - PUT http://es-container:9200/_bulk [status:200 duration:0.014s]
+2023-07-20 08:50:16,976 - ----- 20 documents saved successfully  -----
+2023-07-20 08:50:16,976 - ----- Finish saving documents from bulk -----
+2023-07-20 08:50:16,977 - ----- Total number of NYT API calls: 22 -----
+2023-07-20 08:50:28,978 - ----- Start retriving data from section: movies -----
+2023-07-20 08:50:28,980 - ----- Start building query for NYT API -----
+2023-07-20 08:50:28,981 - ----- built query for news-----
+2023-07-20 08:50:29,772 - ----- Start building bulk list for news index -----
+2023-07-20 08:50:29,774 - ----- Start saving documents ----
+2023-07-20 08:50:29,792 - PUT http://es-container:9200/_bulk [status:200 duration:0.014s]
+2023-07-20 08:50:29,794 - ----- 20 documents saved successfully  -----
+2023-07-20 08:50:29,795 - ----- Finish saving documents from bulk -----
+2023-07-20 08:50:29,795 - ----- Total number of NYT API calls: 23 -----
+2023-07-20 08:50:41,800 - ----- Start retriving data from section: new york -----
+2023-07-20 08:50:41,802 - ----- Start building query for NYT API -----
+2023-07-20 08:50:41,802 - ----- built query for news-----
+2023-07-20 08:50:42,581 - ----- Start building bulk list for news index -----
+2023-07-20 08:50:42,583 - ----- Start saving documents ----
+2023-07-20 08:50:42,607 - PUT http://es-container:9200/_bulk [status:200 duration:0.021s]
+2023-07-20 08:50:42,608 - ----- 20 documents saved successfully  -----
+2023-07-20 08:50:42,609 - ----- Finish saving documents from bulk -----
+2023-07-20 08:50:42,610 - ----- Total number of NYT API calls: 24 -----
+2023-07-20 08:50:54,612 - ----- Start retriving data from section: obituaries -----
+2023-07-20 08:50:54,615 - ----- Start building query for NYT API -----
+2023-07-20 08:50:54,616 - ----- built query for news-----
+2023-07-20 08:50:55,378 - ----- Start building bulk list for news index -----
+2023-07-20 08:50:55,380 - ----- Start saving documents ----
+2023-07-20 08:50:55,396 - PUT http://es-container:9200/_bulk [status:200 duration:0.014s]
+2023-07-20 08:50:55,398 - ----- 20 documents saved successfully  -----
+2023-07-20 08:50:55,398 - ----- Finish saving documents from bulk -----
+2023-07-20 08:50:55,399 - ----- Total number of NYT API calls: 25 -----
+2023-07-20 08:51:07,400 - ----- Start retriving data from section: opinion -----
+2023-07-20 08:51:07,401 - ----- Start building query for NYT API -----
+2023-07-20 08:51:07,403 - ----- built query for news-----
+2023-07-20 08:51:08,286 - ----- Start building bulk list for news index -----
+2023-07-20 08:51:08,288 - ----- Start saving documents ----
+2023-07-20 08:51:08,309 - PUT http://es-container:9200/_bulk [status:200 duration:0.019s]
+2023-07-20 08:51:08,310 - ----- 20 documents saved successfully  -----
+2023-07-20 08:51:08,311 - ----- Finish saving documents from bulk -----
+2023-07-20 08:51:08,312 - ----- Total number of NYT API calls: 26 -----
+2023-07-20 08:51:20,314 - ----- Start retriving data from section: parenting -----
+2023-07-20 08:51:20,316 - ----- Start building query for NYT API -----
+2023-07-20 08:51:20,318 - ----- built query for news-----
+2023-07-20 08:51:21,130 - ----- Start building bulk list for news index -----
+2023-07-20 08:51:21,132 - ----- Start saving documents ----
+2023-07-20 08:51:21,146 - PUT http://es-container:9200/_bulk [status:200 duration:0.012s]
+2023-07-20 08:51:21,146 - ----- 4 documents saved successfully  -----
+2023-07-20 08:51:21,147 - ----- Finish saving documents from bulk -----
+2023-07-20 08:51:21,148 - ----- Total number of NYT API calls: 27 -----
+2023-07-20 08:51:33,151 - ----- Start retriving data from section: podcasts -----
+2023-07-20 08:51:33,154 - ----- Start building query for NYT API -----
+2023-07-20 08:51:33,155 - ----- built query for news-----
+2023-07-20 08:51:33,962 - ----- Start building bulk list for news index -----
+2023-07-20 08:51:33,966 - ----- Start saving documents ----
+2023-07-20 08:51:33,990 - PUT http://es-container:9200/_bulk [status:200 duration:0.021s]
+2023-07-20 08:51:33,991 - ----- 20 documents saved successfully  -----
+2023-07-20 08:51:33,991 - ----- Finish saving documents from bulk -----
+2023-07-20 08:51:33,992 - ----- Total number of NYT API calls: 28 -----
+2023-07-20 08:51:45,993 - ----- Start retriving data from section: reader center -----
+2023-07-20 08:51:45,993 - ----- Start building query for NYT API -----
+2023-07-20 08:51:45,994 - ----- built query for news-----
+2023-07-20 08:51:46,806 - ----- Start building bulk list for news index -----
+2023-07-20 08:51:46,808 - ----- Start saving documents ----
+2023-07-20 08:51:46,818 - PUT http://es-container:9200/_bulk [status:200 duration:0.008s]
+2023-07-20 08:51:46,818 - ----- 4 documents saved successfully  -----
+2023-07-20 08:51:46,819 - ----- Finish saving documents from bulk -----
+2023-07-20 08:51:46,820 - ----- Total number of NYT API calls: 29 -----
+2023-07-20 08:51:58,822 - ----- Start retriving data from section: real estate -----
+2023-07-20 08:51:58,824 - ----- Start building query for NYT API -----
+2023-07-20 08:51:58,826 - ----- built query for news-----
+2023-07-20 08:51:59,682 - ----- Start building bulk list for news index -----
+2023-07-20 08:51:59,684 - ----- Start saving documents ----
+2023-07-20 08:51:59,703 - PUT http://es-container:9200/_bulk [status:200 duration:0.014s]
+2023-07-20 08:51:59,703 - ----- 20 documents saved successfully  -----
+2023-07-20 08:51:59,704 - ----- Finish saving documents from bulk -----
+2023-07-20 08:51:59,705 - ----- Total number of NYT API calls: 30 -----
+2023-07-20 08:52:11,705 - ----- Start retriving data from section: smarter living -----
+2023-07-20 08:52:11,706 - ----- Start building query for NYT API -----
+2023-07-20 08:52:11,707 - ----- built query for news-----
+2023-07-20 08:52:12,625 - ----- Start building bulk list for news index -----
+2023-07-20 08:52:12,627 - ----- Start saving documents ----
+2023-07-20 08:52:12,641 - PUT http://es-container:9200/_bulk [status:200 duration:0.011s]
+2023-07-20 08:52:12,642 - ----- 19 documents saved successfully  -----
+2023-07-20 08:52:12,643 - ----- Finish saving documents from bulk -----
+2023-07-20 08:52:12,644 - ----- Total number of NYT API calls: 31 -----
+2023-07-20 08:52:24,643 - ----- Start retriving data from section: science -----
+2023-07-20 08:52:24,647 - ----- Start building query for NYT API -----
+2023-07-20 08:52:24,648 - ----- built query for news-----
+2023-07-20 08:52:25,473 - ----- Start building bulk list for news index -----
+2023-07-20 08:52:25,475 - ----- Start saving documents ----
+2023-07-20 08:52:25,495 - PUT http://es-container:9200/_bulk [status:200 duration:0.017s]
+2023-07-20 08:52:25,496 - ----- 20 documents saved successfully  -----
+2023-07-20 08:52:25,497 - ----- Finish saving documents from bulk -----
+2023-07-20 08:52:25,497 - ----- Total number of NYT API calls: 32 -----
+2023-07-20 08:52:37,499 - ----- Start retriving data from section: sports -----
+2023-07-20 08:52:37,502 - ----- Start building query for NYT API -----
+2023-07-20 08:52:37,504 - ----- built query for news-----
+2023-07-20 08:52:38,307 - ----- Start building bulk list for news index -----
+2023-07-20 08:52:38,308 - ----- Start saving documents ----
+2023-07-20 08:52:38,326 - PUT http://es-container:9200/_bulk [status:200 duration:0.016s]
+2023-07-20 08:52:38,327 - ----- 20 documents saved successfully  -----
+2023-07-20 08:52:38,327 - ----- Finish saving documents from bulk -----
+2023-07-20 08:52:38,328 - ----- Total number of NYT API calls: 33 -----
+2023-07-20 08:52:50,330 - ----- Start retriving data from section: style -----
+2023-07-20 08:52:50,332 - ----- Start building query for NYT API -----
+2023-07-20 08:52:50,333 - ----- built query for news-----
+2023-07-20 08:52:51,177 - ----- Start building bulk list for news index -----
+2023-07-20 08:52:51,179 - ----- Start saving documents ----
+2023-07-20 08:52:51,199 - PUT http://es-container:9200/_bulk [status:200 duration:0.017s]
+2023-07-20 08:52:51,200 - ----- 20 documents saved successfully  -----
+2023-07-20 08:52:51,201 - ----- Finish saving documents from bulk -----
+2023-07-20 08:52:51,202 - ----- Total number of NYT API calls: 34 -----
+2023-07-20 08:53:03,173 - ----- Start retriving data from section: sunday review -----
+2023-07-20 08:53:03,174 - ----- Start building query for NYT API -----
+2023-07-20 08:53:03,175 - ----- built query for news-----
+2023-07-20 08:53:04,031 - ----- Start building bulk list for news index -----
+2023-07-20 08:53:04,032 - -----Error:'NoneType' object is not iterable-----
+2023-07-20 08:53:04,033 - ----- Total number of NYT API calls: 35 -----
+2023-07-20 08:53:16,034 - ----- Start retriving data from section: t brand -----
+2023-07-20 08:53:16,036 - ----- Start building query for NYT API -----
+2023-07-20 08:53:16,038 - ----- built query for news-----
+2023-07-20 08:53:19,168 - ----- Start building bulk list for news index -----
+2023-07-20 08:53:19,171 - ----- Start saving documents ----
+2023-07-20 08:53:19,182 - PUT http://es-container:9200/_bulk [status:200 duration:0.010s]
+2023-07-20 08:53:19,183 - ----- 11 documents saved successfully  -----
+2023-07-20 08:53:19,184 - ----- Finish saving documents from bulk -----
+2023-07-20 08:53:19,185 - ----- Total number of NYT API calls: 36 -----
+2023-07-20 08:53:31,183 - ----- Start retriving data from section: t magazine -----
+2023-07-20 08:53:31,185 - ----- Start building query for NYT API -----
+2023-07-20 08:53:31,187 - ----- built query for news-----
+2023-07-20 08:53:32,127 - ----- Start building bulk list for news index -----
+2023-07-20 08:53:32,128 - ----- Start saving documents ----
+2023-07-20 08:53:32,183 - PUT http://es-container:9200/_bulk [status:200 duration:0.052s]
+2023-07-20 08:53:32,185 - ----- 20 documents saved successfully  -----
+2023-07-20 08:53:32,187 - ----- Finish saving documents from bulk -----
+2023-07-20 08:53:32,188 - ----- Total number of NYT API calls: 37 -----
