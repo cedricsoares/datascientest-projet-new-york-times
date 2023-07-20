@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.express as px 
 from dash.dependencies import Output,Input
 import transform
-
+import queries
 
 
 ############################################
@@ -133,16 +133,16 @@ news_page = html.Div(children=[
 
 
   html.Div([
- # Div chart 4
+    # Div chart 4
        html.Div([
         # dropdown
-            html.Div(dcc.Dropdown(id = 'news-page-dropdow-plot-3',
+            html.Div(dcc.Dropdown(id = 'news-page-dropdow-plot-4',
                     options= ['world', 'us','sport'],#######FIX ME ############################# [{'label':i, 'value':i} for i in rookies],  
                     value= 'news-section'), className='dropDown'),
             #bar plot 
-            dcc.Graph(id='bar-plot-3', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="articles / day")),           
+            dcc.Graph(id='line-plot-4', className="bar-plots-1row", figure=px.line(df, x="section", y="time_scale", title="articles / day")),           
             # slider
-            dcc.Slider(className='slider',id='news-page-slider-plot-3',
+            dcc.Slider(className='slider',id='news-page-slider-plot-4',
                 min=0,
                 max=5,
                 ######FIX ME #############################
@@ -152,16 +152,18 @@ news_page = html.Div(children=[
         ], className="single_plot_ctnr"),
    
 
-     # Div chart 4
+     # Div chart 5
+
+
        html.Div([
         # dropdown
-            html.Div(dcc.Dropdown(id = 'news-page-dropdow-plot-4',
+            html.Div(dcc.Dropdown(id = 'news-page-dropdow-plot-5',
                     options= ['world', 'us','sport'],#######FIX ME ############################# [{'label':i, 'value':i} for i in rookies],  
                     value= 'news-section'), className='dropDown'),
             #bar plot 
-            dcc.Graph(id='bar-plot-4', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="descriptions / article")),           
+            dcc.Graph(id='bar-plot-5', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="descriptions / article")),           
             # slider
-            dcc.Slider(className='slider',id='news-page-slider-plot-4',
+            dcc.Slider(className='slider',id='news-page-slider-plot-5',
                 min=0,
                 max=5,
                 ######FIX ME #############################
@@ -177,7 +179,7 @@ news_page = html.Div(children=[
 # News callback functions #################
 ###########################################
 
-# bar plot 1 ##############################
+# 1 # bar plot 1 ##############################
 @app.callback(
     Output('bar-plot-1', 'figure'),
     [Input('news-page-dropdow-plot-1', 'newsSection'),
@@ -191,7 +193,7 @@ def update_news_bar_plot1(newsSection, timescale):
         #### FIX ME INCLUDE QUERY LOGIC ....
         
 
-# Pie Chart ##############################
+# 2 # Pie Chart ##############################
 @app.callback(
     Output('pie-chart', 'figure'),
     [Input('news-page-slider-pie-1', 'timeScale')])
@@ -202,7 +204,7 @@ def update_news_pie_chart(timescale):
         ######FIX ME #############################
         #### FIX ME INCLUDE QUERY LOGIC ....
 
-# bar plot 2 ##############################
+# 3 # bar plot 2 ##############################
 @app.callback(
     Output('bar-plot-2', 'figure'),
     [Input('news-page-dropdow-plot-2', 'newsSection'),
@@ -215,25 +217,25 @@ def update_news_bar_plot1(newsSection, timescale):
         ######FIX ME #############################
         #### FIX ME INCLUDE QUERY LOGIC ....
 
-# bar plot 3 ##############################
+# 4 # line plot 1 ##############################
 
 @app.callback(
-    Output('bar-plot-3', 'figure'),
-    [Input('news-page-dropdow-plot-3', 'newsSection'),
-     Input('news-page-slider-plot-3', 'timeScale')])
+    Output('line-plot-4', 'figure'),
+    [Input('news-page-dropdow-plot-4', 'newsSection'),
+     Input('news-page-slider-plot-4', 'timeScale')])
 def update_news_bar_plot1(newsSection, timescale): 
-        fig = px.bar(df, x="section", y="time_scale", title="articles / day")
+        fig = px.line(df, x="section", y="time_scale", title="articles / day")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         return fig
         ######FIX ME #############################
         #### FIX ME INCLUDE QUERY LOGIC ....
 
 
-# bar plot 4 ##############################
+# 5 # bar plot 3 ##############################
 @app.callback(
-    Output('bar-plot-4', 'figure'),
-    [Input('news-page-dropdow-plot-4', 'newsSection'),
-     Input('news-page-slider-plot-4', 'timeScale')])
+    Output('bar-plot-5', 'figure'),
+    [Input('news-page-dropdow-plot-5', 'newsSection'),
+     Input('news-page-slider-plot-5', 'timeScale')])
 def update_news_bar_plot1(newsSection, timescale): 
         fig = px.bar(df, x="section", y="time_scale", title="descriptions / article")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])

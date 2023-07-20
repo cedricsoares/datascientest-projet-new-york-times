@@ -1,4 +1,4 @@
-import queries 
+import queries
 
 ############################################
 #### DASH Data Transfromation ##############

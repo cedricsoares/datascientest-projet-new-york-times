@@ -1,6 +1,10 @@
 
 import requests
+import os 
 import pandas as pd
+import datetime
+#import logging
+from passlib.context import CryptContext
 
 ############################################
 #### DASH Data Queries #####################
@@ -10,10 +14,31 @@ import pandas as pd
 ############################################
 
 ###########################################
-# Global functions ########################
+# Global variables ########################
 ###########################################
 
-url = "https://localhost:"
+###########################################
+## FIX ME FOR PROD WITH CONTAINER PORT
+# url = "http://api:8000"
+url = "http://0.0.0.0:8000/"  #########
+###########################################
+
+"""
+###########################################
+# Set up the logger to log to a file
+# Define the directory
+# Define the directory
+log_directory = "/Users/edouardphilippe/Documents/repo/NYT/NYT 2.2/dash/logs/dash/"
+# Create the directory if it doesn't exist
+os.makedirs(log_directory, exist_ok=True)
+log_filename = "/app/logs/dash/dash_logs_{}.txt".format(datetime.date.today().isoformat())
+logging.basicConfig(filename=log_filename, level=logging.INFO)
+"""
+
+
+###########################################
+# Global functions ########################
+###########################################
 
 # apiCall # function #########################
 def apiCall(endpoint):
@@ -24,18 +49,24 @@ Args:
 Returns:
     - Dataframe
 """
+    pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
     username = 'dashboard'
     password = 'dst_NYT_dashboard'
+    path = url + endpoint  
+    try:
+        response = requests.get(path, params={'username': username, 'password': password})
+        # Convert the response to JSON
+        data = response.json()
+        # Convert JSON to pandas DataFrame
+        df = pd.DataFrame(data)
+        # return DF
+        return df
 
-    path = url + endpoint
-    print(path)
-    response = requests.get('http://your-api-url.com', params={'username': username, 'password': password})
-    # Convert the response to JSON
-    data = response.json()
-    # Convert JSON to pandas DataFrame
-    df = pd.DataFrame(data)
-    # return DF
-    return df
+    except requests.exceptions.RequestException as e:
+        print(e)
+    # Log the error
+       # logging.error("Request failed: " + str(e))
 
 
 ###########################################
