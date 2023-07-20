@@ -13,6 +13,11 @@ services:
       - backend
     ports:
       - 9200:9200
+    healthcheck:
+      test: curl -u elastic:elastic -s -f es-container:9200/_cat/health >/dev/null || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
   kibana:
     container_name: kb-container
@@ -37,7 +42,8 @@ services:
     ports:
       - 80:80
     depends_on:
-      - elasticsearch
+      elasticsearch:
+        condition: "service_healthy"
 
   api:
     container_name: api-container
@@ -48,7 +54,9 @@ services:
       - backend
       - frontend
     depends_on:
-      - elasticsearch
+      elasticsearch:
+        condition: "service_healthy"
+      
 
 volumes:
   data:
@@ -69,3 +77,4 @@ networks:
     driver: bridge
   frontend:
     driver: bridge
+
