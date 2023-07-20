@@ -54,6 +54,11 @@ MANIFEST
 *.manifest
 *.spec
 
+#logs
+api_logs_*.*
+etl_logs_*.*
+dash_logs_*.*
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
@@ -209,5 +214,8 @@ pyrightconfig.json
 
 # MacOS
 .DS_Store
+
+
+
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,jupyternotebooks
