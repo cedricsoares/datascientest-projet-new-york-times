@@ -3,7 +3,7 @@ from dash import dcc,html,dash_table
 import pandas as pd
 import plotly.express as px 
 from dash.dependencies import Output,Input
-import transform
+import dashboardLists
 import queries
 
 
@@ -51,9 +51,13 @@ landing_page = html.Div(className="landing_page", children=[
 ###########################################
 
 
+## acquire lists for dropdonw and sliders
+
+sectionsList=transform.getSectionList(); 
+
 ######FIX ME #############################
 ######FAKE DATA ##########################
-# Data for the charts
+
 data = [
     {"section": "A", "time_scale": "2020", "step": 1},
     {"section": "B", "time_scale": "2020", "step": 2},

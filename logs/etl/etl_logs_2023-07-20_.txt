@@ -1789,3 +1789,1623 @@
 2023-07-20 16:05:23,658 - ----- Start building query for NYT API -----
 2023-07-20 16:05:23,660 - ----- built query books -----
 2023-07-20 16:05:24,327 - -----Error:'num_results'-----
+2023-07-20 16:05:36,331 - ----- Total number of NYT API calls: 153 -----
+2023-07-20 16:05:36,333 - ----- Number of NYT Api calls for books: 104 -----
+2023-07-20 16:05:36,335 - ----- query starts at offset: 37420 -----
+2023-07-20 16:05:36,336 - ----- Start building query for NYT API -----
+2023-07-20 16:05:36,337 - ----- built query books -----
+2023-07-20 16:05:36,997 - -----Error:'num_results'-----
+2023-07-20 16:05:49,002 - ----- Total number of NYT API calls: 154 -----
+2023-07-20 16:05:49,005 - ----- Number of NYT Api calls for books: 105 -----
+2023-07-20 16:05:49,006 - ----- query starts at offset: 37440 -----
+2023-07-20 16:05:49,007 - ----- Start building query for NYT API -----
+2023-07-20 16:05:49,009 - ----- built query books -----
+2023-07-20 16:05:49,702 - -----Error:'num_results'-----
+2023-07-20 16:06:01,707 - ----- Total number of NYT API calls: 155 -----
+2023-07-20 16:06:01,710 - ----- Number of NYT Api calls for books: 106 -----
+2023-07-20 16:06:01,711 - ----- query starts at offset: 37460 -----
+2023-07-20 16:06:01,711 - ----- Start building query for NYT API -----
+2023-07-20 16:06:01,712 - ----- built query books -----
+2023-07-20 16:06:02,438 - -----Error:'num_results'-----
+2023-07-20 16:06:14,440 - ----- Total number of NYT API calls: 156 -----
+2023-07-20 16:06:14,444 - ----- Number of NYT Api calls for books: 107 -----
+2023-07-20 16:06:14,446 - ----- query starts at offset: 37480 -----
+2023-07-20 16:06:14,448 - ----- Start building query for NYT API -----
+2023-07-20 16:06:14,449 - ----- built query books -----
+2023-07-20 16:06:15,148 - -----Error:'num_results'-----
+2023-07-20 16:06:27,153 - ----- Total number of NYT API calls: 157 -----
+2023-07-20 16:06:27,155 - ----- Number of NYT Api calls for books: 108 -----
+2023-07-20 16:06:27,156 - ----- query starts at offset: 37500 -----
+2023-07-20 16:06:27,157 - ----- Start building query for NYT API -----
+2023-07-20 16:06:27,157 - ----- built query books -----
+2023-07-20 16:06:27,902 - -----Error:'num_results'-----
+2023-07-20 16:06:39,904 - ----- Total number of NYT API calls: 158 -----
+2023-07-20 16:06:39,905 - ----- Number of NYT Api calls for books: 109 -----
+2023-07-20 16:06:39,906 - ----- query starts at offset: 37520 -----
+2023-07-20 16:06:39,906 - ----- Start building query for NYT API -----
+2023-07-20 16:06:39,907 - ----- built query books -----
+2023-07-20 16:06:40,616 - -----Error:'num_results'-----
+2023-07-20 16:06:52,617 - ----- Total number of NYT API calls: 159 -----
+2023-07-20 16:06:52,618 - ----- Number of NYT Api calls for books: 110 -----
+2023-07-20 16:06:52,618 - ----- query starts at offset: 37540 -----
+2023-07-20 16:06:52,619 - ----- Start building query for NYT API -----
+2023-07-20 16:06:52,619 - ----- built query books -----
+2023-07-20 16:06:53,277 - -----Error:'num_results'-----
+2023-07-20 16:07:05,280 - ----- Total number of NYT API calls: 160 -----
+2023-07-20 16:07:05,281 - ----- Number of NYT Api calls for books: 111 -----
+2023-07-20 16:07:05,281 - ----- query starts at offset: 37560 -----
+2023-07-20 16:07:05,281 - ----- Start building query for NYT API -----
+2023-07-20 16:07:05,282 - ----- built query books -----
+2023-07-20 16:07:05,923 - -----Error:'num_results'-----
+2023-07-20 16:07:17,929 - ----- Total number of NYT API calls: 161 -----
+2023-07-20 16:07:17,931 - ----- Number of NYT Api calls for books: 112 -----
+2023-07-20 16:07:17,932 - ----- query starts at offset: 37580 -----
+2023-07-20 16:07:17,933 - ----- Start building query for NYT API -----
+2023-07-20 16:07:17,933 - ----- built query books -----
+2023-07-20 16:07:18,609 - -----Error:'num_results'-----
+2023-07-20 16:07:30,611 - ----- Total number of NYT API calls: 162 -----
+2023-07-20 16:07:30,612 - ----- Number of NYT Api calls for books: 113 -----
+2023-07-20 16:07:30,614 - ----- query starts at offset: 37600 -----
+2023-07-20 16:07:30,615 - ----- Start building query for NYT API -----
+2023-07-20 16:07:30,616 - ----- built query books -----
+2023-07-20 16:07:31,299 - -----Error:'num_results'-----
+2023-07-20 16:07:43,302 - ----- Total number of NYT API calls: 163 -----
+2023-07-20 16:07:43,305 - ----- Number of NYT Api calls for books: 114 -----
+2023-07-20 16:07:43,307 - ----- query starts at offset: 37620 -----
+2023-07-20 16:07:43,308 - ----- Start building query for NYT API -----
+2023-07-20 16:07:43,309 - ----- built query books -----
+2023-07-20 16:07:43,991 - -----Error:'num_results'-----
+2023-07-20 16:07:55,995 - ----- Total number of NYT API calls: 164 -----
+2023-07-20 16:07:55,997 - ----- Number of NYT Api calls for books: 115 -----
+2023-07-20 16:07:55,999 - ----- query starts at offset: 37640 -----
+2023-07-20 16:07:56,001 - ----- Start building query for NYT API -----
+2023-07-20 16:07:56,002 - ----- built query books -----
+2023-07-20 16:07:56,663 - -----Error:'num_results'-----
+2023-07-20 16:08:08,666 - ----- Total number of NYT API calls: 165 -----
+2023-07-20 16:08:08,668 - ----- Number of NYT Api calls for books: 116 -----
+2023-07-20 16:08:08,669 - ----- query starts at offset: 37660 -----
+2023-07-20 16:08:08,670 - ----- Start building query for NYT API -----
+2023-07-20 16:08:08,671 - ----- built query books -----
+2023-07-20 16:08:09,358 - -----Error:'num_results'-----
+2023-07-20 16:08:21,360 - ----- Total number of NYT API calls: 166 -----
+2023-07-20 16:08:21,364 - ----- Number of NYT Api calls for books: 117 -----
+2023-07-20 16:08:21,365 - ----- query starts at offset: 37680 -----
+2023-07-20 16:08:21,366 - ----- Start building query for NYT API -----
+2023-07-20 16:08:21,367 - ----- built query books -----
+2023-07-20 16:08:22,027 - -----Error:'num_results'-----
+2023-07-20 16:08:34,030 - ----- Total number of NYT API calls: 167 -----
+2023-07-20 16:08:34,033 - ----- Number of NYT Api calls for books: 118 -----
+2023-07-20 16:08:34,035 - ----- query starts at offset: 37700 -----
+2023-07-20 16:08:34,037 - ----- Start building query for NYT API -----
+2023-07-20 16:08:34,038 - ----- built query books -----
+2023-07-20 16:08:34,737 - -----Error:'num_results'-----
+2023-07-20 16:08:46,739 - ----- Total number of NYT API calls: 168 -----
+2023-07-20 16:08:46,740 - ----- Number of NYT Api calls for books: 119 -----
+2023-07-20 16:08:46,740 - ----- query starts at offset: 37720 -----
+2023-07-20 16:08:46,740 - ----- Start building query for NYT API -----
+2023-07-20 16:08:46,741 - ----- built query books -----
+2023-07-20 16:08:47,425 - -----Error:'num_results'-----
+2023-07-20 16:08:59,430 - ----- Total number of NYT API calls: 169 -----
+2023-07-20 16:08:59,432 - ----- Number of NYT Api calls for books: 120 -----
+2023-07-20 16:08:59,433 - ----- query starts at offset: 37740 -----
+2023-07-20 16:08:59,434 - ----- Start building query for NYT API -----
+2023-07-20 16:08:59,436 - ----- built query books -----
+2023-07-20 16:09:00,161 - -----Error:'num_results'-----
+2023-07-20 16:09:12,162 - ----- Total number of NYT API calls: 170 -----
+2023-07-20 16:09:12,166 - ----- Number of NYT Api calls for books: 121 -----
+2023-07-20 16:09:12,167 - ----- query starts at offset: 37760 -----
+2023-07-20 16:09:12,169 - ----- Start building query for NYT API -----
+2023-07-20 16:09:12,170 - ----- built query books -----
+2023-07-20 16:09:12,839 - -----Error:'num_results'-----
+2023-07-20 16:09:24,845 - ----- Total number of NYT API calls: 171 -----
+2023-07-20 16:09:24,848 - ----- Number of NYT Api calls for books: 122 -----
+2023-07-20 16:09:24,849 - ----- query starts at offset: 37780 -----
+2023-07-20 16:09:24,850 - ----- Start building query for NYT API -----
+2023-07-20 16:09:24,852 - ----- built query books -----
+2023-07-20 16:09:25,488 - -----Error:'num_results'-----
+2023-07-20 16:09:37,494 - ----- Total number of NYT API calls: 172 -----
+2023-07-20 16:09:37,497 - ----- Number of NYT Api calls for books: 123 -----
+2023-07-20 16:09:37,498 - ----- query starts at offset: 37800 -----
+2023-07-20 16:09:37,499 - ----- Start building query for NYT API -----
+2023-07-20 16:09:37,500 - ----- built query books -----
+2023-07-20 16:09:38,140 - -----Error:'num_results'-----
+2023-07-20 16:09:50,143 - ----- Total number of NYT API calls: 173 -----
+2023-07-20 16:09:50,145 - ----- Number of NYT Api calls for books: 124 -----
+2023-07-20 16:09:50,147 - ----- query starts at offset: 37820 -----
+2023-07-20 16:09:50,148 - ----- Start building query for NYT API -----
+2023-07-20 16:09:50,149 - ----- built query books -----
+2023-07-20 16:09:50,829 - -----Error:'num_results'-----
+2023-07-20 16:10:02,838 - ----- Total number of NYT API calls: 174 -----
+2023-07-20 16:10:02,839 - ----- Number of NYT Api calls for books: 125 -----
+2023-07-20 16:10:02,840 - ----- query starts at offset: 37840 -----
+2023-07-20 16:10:02,840 - ----- Start building query for NYT API -----
+2023-07-20 16:10:02,841 - ----- built query books -----
+2023-07-20 16:10:03,485 - -----Error:'num_results'-----
+2023-07-20 16:10:15,489 - ----- Total number of NYT API calls: 175 -----
+2023-07-20 16:10:15,492 - ----- Number of NYT Api calls for books: 126 -----
+2023-07-20 16:10:15,492 - ----- query starts at offset: 37860 -----
+2023-07-20 16:10:15,493 - ----- Start building query for NYT API -----
+2023-07-20 16:10:15,494 - ----- built query books -----
+2023-07-20 16:10:16,178 - -----Error:'num_results'-----
+2023-07-20 16:10:28,181 - ----- Total number of NYT API calls: 176 -----
+2023-07-20 16:10:28,185 - ----- Number of NYT Api calls for books: 127 -----
+2023-07-20 16:10:28,187 - ----- query starts at offset: 37880 -----
+2023-07-20 16:10:28,188 - ----- Start building query for NYT API -----
+2023-07-20 16:10:28,190 - ----- built query books -----
+2023-07-20 16:10:28,857 - -----Error:'num_results'-----
+2023-07-20 16:10:40,857 - ----- Total number of NYT API calls: 177 -----
+2023-07-20 16:10:40,857 - ----- Number of NYT Api calls for books: 128 -----
+2023-07-20 16:10:40,858 - ----- query starts at offset: 37900 -----
+2023-07-20 16:10:40,858 - ----- Start building query for NYT API -----
+2023-07-20 16:10:40,858 - ----- built query books -----
+2023-07-20 16:10:41,520 - -----Error:'num_results'-----
+2023-07-20 16:10:53,522 - ----- Total number of NYT API calls: 178 -----
+2023-07-20 16:10:53,524 - ----- Number of NYT Api calls for books: 129 -----
+2023-07-20 16:10:53,526 - ----- query starts at offset: 37920 -----
+2023-07-20 16:10:53,527 - ----- Start building query for NYT API -----
+2023-07-20 16:10:53,529 - ----- built query books -----
+2023-07-20 16:10:54,178 - -----Error:'num_results'-----
+2023-07-20 16:11:06,180 - ----- Total number of NYT API calls: 179 -----
+2023-07-20 16:11:06,181 - ----- Number of NYT Api calls for books: 130 -----
+2023-07-20 16:11:06,181 - ----- query starts at offset: 37940 -----
+2023-07-20 16:11:06,182 - ----- Start building query for NYT API -----
+2023-07-20 16:11:06,182 - ----- built query books -----
+2023-07-20 16:11:06,832 - -----Error:'num_results'-----
+2023-07-20 16:11:18,836 - ----- Total number of NYT API calls: 180 -----
+2023-07-20 16:11:18,839 - ----- Number of NYT Api calls for books: 131 -----
+2023-07-20 16:11:18,841 - ----- query starts at offset: 37960 -----
+2023-07-20 16:11:18,842 - ----- Start building query for NYT API -----
+2023-07-20 16:11:18,844 - ----- built query books -----
+2023-07-20 16:11:19,521 - -----Error:'num_results'-----
+2023-07-20 16:11:31,526 - ----- Total number of NYT API calls: 181 -----
+2023-07-20 16:11:31,529 - ----- Number of NYT Api calls for books: 132 -----
+2023-07-20 16:11:31,530 - ----- query starts at offset: 37980 -----
+2023-07-20 16:11:31,531 - ----- Start building query for NYT API -----
+2023-07-20 16:11:31,533 - ----- built query books -----
+2023-07-20 16:11:32,190 - -----Error:'num_results'-----
+2023-07-20 16:11:44,196 - ----- Total number of NYT API calls: 182 -----
+2023-07-20 16:11:44,198 - ----- Number of NYT Api calls for books: 133 -----
+2023-07-20 16:11:44,199 - ----- query starts at offset: 38000 -----
+2023-07-20 16:11:44,200 - ----- Start building query for NYT API -----
+2023-07-20 16:11:44,203 - ----- built query books -----
+2023-07-20 16:11:44,860 - -----Error:'num_results'-----
+2023-07-20 16:11:56,865 - ----- Total number of NYT API calls: 183 -----
+2023-07-20 16:11:56,868 - ----- Number of NYT Api calls for books: 134 -----
+2023-07-20 16:11:56,870 - ----- query starts at offset: 38020 -----
+2023-07-20 16:11:56,873 - ----- Start building query for NYT API -----
+2023-07-20 16:11:56,875 - ----- built query books -----
+2023-07-20 16:11:57,556 - -----Error:'num_results'-----
+2023-07-20 16:12:09,560 - ----- Total number of NYT API calls: 184 -----
+2023-07-20 16:12:09,563 - ----- Number of NYT Api calls for books: 135 -----
+2023-07-20 16:12:09,565 - ----- query starts at offset: 38040 -----
+2023-07-20 16:12:09,565 - ----- Start building query for NYT API -----
+2023-07-20 16:12:09,567 - ----- built query books -----
+2023-07-20 16:12:10,221 - -----Error:'num_results'-----
+2023-07-20 16:12:22,225 - ----- Total number of NYT API calls: 185 -----
+2023-07-20 16:12:22,226 - ----- Number of NYT Api calls for books: 136 -----
+2023-07-20 16:12:22,228 - ----- query starts at offset: 38060 -----
+2023-07-20 16:12:22,228 - ----- Start building query for NYT API -----
+2023-07-20 16:12:22,229 - ----- built query books -----
+2023-07-20 16:12:22,916 - -----Error:'num_results'-----
+2023-07-20 16:12:34,916 - ----- Total number of NYT API calls: 186 -----
+2023-07-20 16:12:34,917 - ----- Number of NYT Api calls for books: 137 -----
+2023-07-20 16:12:34,917 - ----- query starts at offset: 38080 -----
+2023-07-20 16:12:34,917 - ----- Start building query for NYT API -----
+2023-07-20 16:12:34,917 - ----- built query books -----
+2023-07-20 16:12:35,516 - -----Error:'num_results'-----
+2023-07-20 16:12:47,518 - ----- Total number of NYT API calls: 187 -----
+2023-07-20 16:12:47,519 - ----- Number of NYT Api calls for books: 138 -----
+2023-07-20 16:12:47,520 - ----- query starts at offset: 38100 -----
+2023-07-20 16:12:47,521 - ----- Start building query for NYT API -----
+2023-07-20 16:12:47,522 - ----- built query books -----
+2023-07-20 16:12:48,170 - -----Error:'num_results'-----
+2023-07-20 16:13:00,176 - ----- Total number of NYT API calls: 188 -----
+2023-07-20 16:13:00,177 - ----- Number of NYT Api calls for books: 139 -----
+2023-07-20 16:13:00,178 - ----- query starts at offset: 38120 -----
+2023-07-20 16:13:00,179 - ----- Start building query for NYT API -----
+2023-07-20 16:13:00,180 - ----- built query books -----
+2023-07-20 16:13:00,852 - -----Error:'num_results'-----
+2023-07-20 16:13:12,855 - ----- Total number of NYT API calls: 189 -----
+2023-07-20 16:13:12,857 - ----- Number of NYT Api calls for books: 140 -----
+2023-07-20 16:13:12,857 - ----- query starts at offset: 38140 -----
+2023-07-20 16:13:12,858 - ----- Start building query for NYT API -----
+2023-07-20 16:13:12,859 - ----- built query books -----
+2023-07-20 16:13:13,544 - -----Error:'num_results'-----
+2023-07-20 16:13:25,549 - ----- Total number of NYT API calls: 190 -----
+2023-07-20 16:13:25,552 - ----- Number of NYT Api calls for books: 141 -----
+2023-07-20 16:13:25,554 - ----- query starts at offset: 38160 -----
+2023-07-20 16:13:25,554 - ----- Start building query for NYT API -----
+2023-07-20 16:13:25,556 - ----- built query books -----
+2023-07-20 16:13:26,248 - -----Error:'num_results'-----
+2023-07-20 16:13:38,251 - ----- Total number of NYT API calls: 191 -----
+2023-07-20 16:13:38,254 - ----- Number of NYT Api calls for books: 142 -----
+2023-07-20 16:13:38,256 - ----- query starts at offset: 38180 -----
+2023-07-20 16:13:38,257 - ----- Start building query for NYT API -----
+2023-07-20 16:13:38,258 - ----- built query books -----
+2023-07-20 16:13:38,972 - -----Error:'num_results'-----
+2023-07-20 16:13:50,979 - ----- Total number of NYT API calls: 192 -----
+2023-07-20 16:13:50,982 - ----- Number of NYT Api calls for books: 143 -----
+2023-07-20 16:13:50,983 - ----- query starts at offset: 38200 -----
+2023-07-20 16:13:50,983 - ----- Start building query for NYT API -----
+2023-07-20 16:13:50,984 - ----- built query books -----
+2023-07-20 16:13:51,643 - -----Error:'num_results'-----
+2023-07-20 16:14:03,647 - ----- Total number of NYT API calls: 193 -----
+2023-07-20 16:14:03,650 - ----- Number of NYT Api calls for books: 144 -----
+2023-07-20 16:14:03,652 - ----- query starts at offset: 38220 -----
+2023-07-20 16:14:03,653 - ----- Start building query for NYT API -----
+2023-07-20 16:14:03,655 - ----- built query books -----
+2023-07-20 16:14:04,370 - -----Error:'num_results'-----
+2023-07-20 16:14:16,375 - ----- Total number of NYT API calls: 194 -----
+2023-07-20 16:14:16,379 - ----- Number of NYT Api calls for books: 145 -----
+2023-07-20 16:14:16,381 - ----- query starts at offset: 38240 -----
+2023-07-20 16:14:16,382 - ----- Start building query for NYT API -----
+2023-07-20 16:14:16,384 - ----- built query books -----
+2023-07-20 16:14:17,026 - -----Error:'num_results'-----
+2023-07-20 16:14:29,028 - ----- Total number of NYT API calls: 195 -----
+2023-07-20 16:14:29,028 - ----- Number of NYT Api calls for books: 146 -----
+2023-07-20 16:14:29,029 - ----- query starts at offset: 38260 -----
+2023-07-20 16:14:29,030 - ----- Start building query for NYT API -----
+2023-07-20 16:14:29,031 - ----- built query books -----
+2023-07-20 16:14:29,670 - -----Error:'num_results'-----
+2023-07-20 16:14:41,678 - ----- Total number of NYT API calls: 196 -----
+2023-07-20 16:14:41,680 - ----- Number of NYT Api calls for books: 147 -----
+2023-07-20 16:14:41,682 - ----- query starts at offset: 38280 -----
+2023-07-20 16:14:41,685 - ----- Start building query for NYT API -----
+2023-07-20 16:14:41,687 - ----- built query books -----
+2023-07-20 16:14:42,347 - -----Error:'num_results'-----
+2023-07-20 16:14:54,350 - ----- Total number of NYT API calls: 197 -----
+2023-07-20 16:14:54,352 - ----- Number of NYT Api calls for books: 148 -----
+2023-07-20 16:14:54,353 - ----- query starts at offset: 38300 -----
+2023-07-20 16:14:54,354 - ----- Start building query for NYT API -----
+2023-07-20 16:14:54,356 - ----- built query books -----
+2023-07-20 16:14:55,039 - -----Error:'num_results'-----
+2023-07-20 16:15:07,043 - ----- Total number of NYT API calls: 198 -----
+2023-07-20 16:15:07,047 - ----- Number of NYT Api calls for books: 149 -----
+2023-07-20 16:15:07,049 - ----- query starts at offset: 38320 -----
+2023-07-20 16:15:07,050 - ----- Start building query for NYT API -----
+2023-07-20 16:15:07,051 - ----- built query books -----
+2023-07-20 16:15:07,739 - -----Error:'num_results'-----
+2023-07-20 16:15:19,741 - ----- Total number of NYT API calls: 199 -----
+2023-07-20 16:15:19,743 - ----- Number of NYT Api calls for books: 150 -----
+2023-07-20 16:15:19,744 - ----- query starts at offset: 38340 -----
+2023-07-20 16:15:19,745 - ----- Start building query for NYT API -----
+2023-07-20 16:15:19,745 - ----- built query books -----
+2023-07-20 16:15:20,406 - -----Error:'num_results'-----
+2023-07-20 16:15:32,409 - ----- Total number of NYT API calls: 200 -----
+2023-07-20 16:15:32,412 - ----- Number of NYT Api calls for books: 151 -----
+2023-07-20 16:15:32,414 - ----- query starts at offset: 38360 -----
+2023-07-20 16:15:32,415 - ----- Start building query for NYT API -----
+2023-07-20 16:15:32,416 - ----- built query books -----
+2023-07-20 16:15:33,045 - -----Error:'num_results'-----
+2023-07-20 16:15:45,048 - ----- Total number of NYT API calls: 201 -----
+2023-07-20 16:15:45,052 - ----- Number of NYT Api calls for books: 152 -----
+2023-07-20 16:15:45,054 - ----- query starts at offset: 38380 -----
+2023-07-20 16:15:45,055 - ----- Start building query for NYT API -----
+2023-07-20 16:15:45,057 - ----- built query books -----
+2023-07-20 16:15:45,706 - -----Error:'num_results'-----
+2023-07-20 16:15:57,711 - ----- Total number of NYT API calls: 202 -----
+2023-07-20 16:15:57,716 - ----- Number of NYT Api calls for books: 153 -----
+2023-07-20 16:15:57,720 - ----- query starts at offset: 38400 -----
+2023-07-20 16:15:57,721 - ----- Start building query for NYT API -----
+2023-07-20 16:15:57,722 - ----- built query books -----
+2023-07-20 16:15:58,381 - -----Error:'num_results'-----
+2023-07-20 16:16:10,386 - ----- Total number of NYT API calls: 203 -----
+2023-07-20 16:16:10,390 - ----- Number of NYT Api calls for books: 154 -----
+2023-07-20 16:16:10,392 - ----- query starts at offset: 38420 -----
+2023-07-20 16:16:10,393 - ----- Start building query for NYT API -----
+2023-07-20 16:16:10,394 - ----- built query books -----
+2023-07-20 16:16:11,150 - -----Error:'num_results'-----
+2023-07-20 16:16:23,151 - ----- Total number of NYT API calls: 204 -----
+2023-07-20 16:16:23,152 - ----- Number of NYT Api calls for books: 155 -----
+2023-07-20 16:16:23,152 - ----- query starts at offset: 38440 -----
+2023-07-20 16:16:23,153 - ----- Start building query for NYT API -----
+2023-07-20 16:16:23,154 - ----- built query books -----
+2023-07-20 16:16:23,810 - -----Error:'num_results'-----
+2023-07-20 16:16:35,813 - ----- Total number of NYT API calls: 205 -----
+2023-07-20 16:16:35,814 - ----- Number of NYT Api calls for books: 156 -----
+2023-07-20 16:16:35,814 - ----- query starts at offset: 38460 -----
+2023-07-20 16:16:35,815 - ----- Start building query for NYT API -----
+2023-07-20 16:16:35,816 - ----- built query books -----
+2023-07-20 16:16:36,500 - -----Error:'num_results'-----
+2023-07-20 16:16:48,504 - ----- Total number of NYT API calls: 206 -----
+2023-07-20 16:16:48,508 - ----- Number of NYT Api calls for books: 157 -----
+2023-07-20 16:16:48,511 - ----- query starts at offset: 38480 -----
+2023-07-20 16:16:48,513 - ----- Start building query for NYT API -----
+2023-07-20 16:16:48,514 - ----- built query books -----
+2023-07-20 16:16:49,183 - -----Error:'num_results'-----
+2023-07-20 16:17:01,187 - ----- Total number of NYT API calls: 207 -----
+2023-07-20 16:17:01,190 - ----- Number of NYT Api calls for books: 158 -----
+2023-07-20 16:17:01,191 - ----- query starts at offset: 38500 -----
+2023-07-20 16:17:01,194 - ----- Start building query for NYT API -----
+2023-07-20 16:17:01,196 - ----- built query books -----
+2023-07-20 16:17:01,882 - -----Error:'num_results'-----
+2023-07-20 16:17:13,885 - ----- Total number of NYT API calls: 208 -----
+2023-07-20 16:17:13,887 - ----- Number of NYT Api calls for books: 159 -----
+2023-07-20 16:17:13,888 - ----- query starts at offset: 38520 -----
+2023-07-20 16:17:13,889 - ----- Start building query for NYT API -----
+2023-07-20 16:17:13,890 - ----- built query books -----
+2023-07-20 16:17:14,571 - -----Error:'num_results'-----
+2023-07-20 16:17:26,575 - ----- Total number of NYT API calls: 209 -----
+2023-07-20 16:17:26,579 - ----- Number of NYT Api calls for books: 160 -----
+2023-07-20 16:17:26,581 - ----- query starts at offset: 38540 -----
+2023-07-20 16:17:26,582 - ----- Start building query for NYT API -----
+2023-07-20 16:17:26,584 - ----- built query books -----
+2023-07-20 16:17:27,241 - -----Error:'num_results'-----
+2023-07-20 16:17:39,261 - ----- Total number of NYT API calls: 210 -----
+2023-07-20 16:17:39,264 - ----- Number of NYT Api calls for books: 161 -----
+2023-07-20 16:17:39,265 - ----- query starts at offset: 38560 -----
+2023-07-20 16:17:39,266 - ----- Start building query for NYT API -----
+2023-07-20 16:17:39,266 - ----- built query books -----
+2023-07-20 16:17:39,951 - -----Error:'num_results'-----
+2023-07-20 16:17:51,953 - ----- Total number of NYT API calls: 211 -----
+2023-07-20 16:17:51,956 - ----- Number of NYT Api calls for books: 162 -----
+2023-07-20 16:17:51,957 - ----- query starts at offset: 38580 -----
+2023-07-20 16:17:51,958 - ----- Start building query for NYT API -----
+2023-07-20 16:17:51,959 - ----- built query books -----
+2023-07-20 16:17:52,660 - -----Error:'num_results'-----
+2023-07-20 16:18:04,665 - ----- Total number of NYT API calls: 212 -----
+2023-07-20 16:18:04,668 - ----- Number of NYT Api calls for books: 163 -----
+2023-07-20 16:18:04,670 - ----- query starts at offset: 38600 -----
+2023-07-20 16:18:04,671 - ----- Start building query for NYT API -----
+2023-07-20 16:18:04,672 - ----- built query books -----
+2023-07-20 16:18:05,335 - -----Error:'num_results'-----
+2023-07-20 16:18:17,339 - ----- Total number of NYT API calls: 213 -----
+2023-07-20 16:18:17,342 - ----- Number of NYT Api calls for books: 164 -----
+2023-07-20 16:18:17,343 - ----- query starts at offset: 38620 -----
+2023-07-20 16:18:17,345 - ----- Start building query for NYT API -----
+2023-07-20 16:18:17,347 - ----- built query books -----
+2023-07-20 16:18:18,065 - -----Error:'num_results'-----
+2023-07-20 16:18:30,070 - ----- Total number of NYT API calls: 214 -----
+2023-07-20 16:18:30,073 - ----- Number of NYT Api calls for books: 165 -----
+2023-07-20 16:18:30,074 - ----- query starts at offset: 38640 -----
+2023-07-20 16:18:30,076 - ----- Start building query for NYT API -----
+2023-07-20 16:18:30,077 - ----- built query books -----
+2023-07-20 16:18:30,725 - -----Error:'num_results'-----
+2023-07-20 16:18:42,730 - ----- Total number of NYT API calls: 215 -----
+2023-07-20 16:18:42,732 - ----- Number of NYT Api calls for books: 166 -----
+2023-07-20 16:18:42,733 - ----- query starts at offset: 38660 -----
+2023-07-20 16:18:42,734 - ----- Start building query for NYT API -----
+2023-07-20 16:18:42,735 - ----- built query books -----
+2023-07-20 16:18:43,363 - -----Error:'num_results'-----
+2023-07-20 16:18:55,367 - ----- Total number of NYT API calls: 216 -----
+2023-07-20 16:18:55,370 - ----- Number of NYT Api calls for books: 167 -----
+2023-07-20 16:18:55,371 - ----- query starts at offset: 38680 -----
+2023-07-20 16:18:55,373 - ----- Start building query for NYT API -----
+2023-07-20 16:18:55,374 - ----- built query books -----
+2023-07-20 16:18:56,075 - -----Error:'num_results'-----
+2023-07-20 16:19:08,078 - ----- Total number of NYT API calls: 217 -----
+2023-07-20 16:19:08,082 - ----- Number of NYT Api calls for books: 168 -----
+2023-07-20 16:19:08,084 - ----- query starts at offset: 38700 -----
+2023-07-20 16:19:08,086 - ----- Start building query for NYT API -----
+2023-07-20 16:19:08,091 - ----- built query books -----
+2023-07-20 16:19:08,775 - -----Error:'num_results'-----
+2023-07-20 16:19:20,783 - ----- Total number of NYT API calls: 218 -----
+2023-07-20 16:19:20,786 - ----- Number of NYT Api calls for books: 169 -----
+2023-07-20 16:19:20,787 - ----- query starts at offset: 38720 -----
+2023-07-20 16:19:20,788 - ----- Start building query for NYT API -----
+2023-07-20 16:19:20,789 - ----- built query books -----
+2023-07-20 16:19:21,439 - -----Error:'num_results'-----
+2023-07-20 16:19:33,442 - ----- Total number of NYT API calls: 219 -----
+2023-07-20 16:19:33,446 - ----- Number of NYT Api calls for books: 170 -----
+2023-07-20 16:19:33,448 - ----- query starts at offset: 38740 -----
+2023-07-20 16:19:33,449 - ----- Start building query for NYT API -----
+2023-07-20 16:19:33,451 - ----- built query books -----
+2023-07-20 16:19:34,090 - -----Error:'num_results'-----
+2023-07-20 16:19:46,093 - ----- Total number of NYT API calls: 220 -----
+2023-07-20 16:19:46,096 - ----- Number of NYT Api calls for books: 171 -----
+2023-07-20 16:19:46,097 - ----- query starts at offset: 38760 -----
+2023-07-20 16:19:46,099 - ----- Start building query for NYT API -----
+2023-07-20 16:19:46,100 - ----- built query books -----
+2023-07-20 16:19:46,791 - -----Error:'num_results'-----
+2023-07-20 16:19:58,796 - ----- Total number of NYT API calls: 221 -----
+2023-07-20 16:19:58,799 - ----- Number of NYT Api calls for books: 172 -----
+2023-07-20 16:19:58,800 - ----- query starts at offset: 38780 -----
+2023-07-20 16:19:58,802 - ----- Start building query for NYT API -----
+2023-07-20 16:19:58,804 - ----- built query books -----
+2023-07-20 16:19:59,462 - -----Error:'num_results'-----
+2023-07-20 16:20:11,464 - ----- Total number of NYT API calls: 222 -----
+2023-07-20 16:20:11,467 - ----- Number of NYT Api calls for books: 173 -----
+2023-07-20 16:20:11,469 - ----- query starts at offset: 38800 -----
+2023-07-20 16:20:11,471 - ----- Start building query for NYT API -----
+2023-07-20 16:20:11,472 - ----- built query books -----
+2023-07-20 16:20:12,103 - -----Error:'num_results'-----
+2023-07-20 16:20:24,106 - ----- Total number of NYT API calls: 223 -----
+2023-07-20 16:20:24,108 - ----- Number of NYT Api calls for books: 174 -----
+2023-07-20 16:20:24,110 - ----- query starts at offset: 38820 -----
+2023-07-20 16:20:24,112 - ----- Start building query for NYT API -----
+2023-07-20 16:20:24,113 - ----- built query books -----
+2023-07-20 16:20:24,786 - -----Error:'num_results'-----
+2023-07-20 16:20:36,789 - ----- Total number of NYT API calls: 224 -----
+2023-07-20 16:20:36,793 - ----- Number of NYT Api calls for books: 175 -----
+2023-07-20 16:20:36,795 - ----- query starts at offset: 38840 -----
+2023-07-20 16:20:36,797 - ----- Start building query for NYT API -----
+2023-07-20 16:20:36,798 - ----- built query books -----
+2023-07-20 16:20:37,504 - -----Error:'num_results'-----
+2023-07-20 16:20:49,508 - ----- Total number of NYT API calls: 225 -----
+2023-07-20 16:20:49,511 - ----- Number of NYT Api calls for books: 176 -----
+2023-07-20 16:20:49,512 - ----- query starts at offset: 38860 -----
+2023-07-20 16:20:49,514 - ----- Start building query for NYT API -----
+2023-07-20 16:20:49,515 - ----- built query books -----
+2023-07-20 16:20:50,313 - -----Error:'num_results'-----
+2023-07-20 16:21:02,319 - ----- Total number of NYT API calls: 226 -----
+2023-07-20 16:21:02,321 - ----- Number of NYT Api calls for books: 177 -----
+2023-07-20 16:21:02,322 - ----- query starts at offset: 38880 -----
+2023-07-20 16:21:02,323 - ----- Start building query for NYT API -----
+2023-07-20 16:21:02,323 - ----- built query books -----
+2023-07-20 16:21:02,989 - -----Error:'num_results'-----
+2023-07-20 16:21:14,996 - ----- Total number of NYT API calls: 227 -----
+2023-07-20 16:21:15,000 - ----- Number of NYT Api calls for books: 178 -----
+2023-07-20 16:21:15,002 - ----- query starts at offset: 38900 -----
+2023-07-20 16:21:15,003 - ----- Start building query for NYT API -----
+2023-07-20 16:21:15,004 - ----- built query books -----
+2023-07-20 16:21:15,718 - -----Error:'num_results'-----
+2023-07-20 16:21:27,722 - ----- Total number of NYT API calls: 228 -----
+2023-07-20 16:21:27,725 - ----- Number of NYT Api calls for books: 179 -----
+2023-07-20 16:21:27,726 - ----- query starts at offset: 38920 -----
+2023-07-20 16:21:27,729 - ----- Start building query for NYT API -----
+2023-07-20 16:21:27,730 - ----- built query books -----
+2023-07-20 16:21:28,385 - -----Error:'num_results'-----
+2023-07-20 16:21:40,388 - ----- Total number of NYT API calls: 229 -----
+2023-07-20 16:21:40,390 - ----- Number of NYT Api calls for books: 180 -----
+2023-07-20 16:21:40,392 - ----- query starts at offset: 38940 -----
+2023-07-20 16:21:40,393 - ----- Start building query for NYT API -----
+2023-07-20 16:21:40,394 - ----- built query books -----
+2023-07-20 16:21:41,059 - -----Error:'num_results'-----
+2023-07-20 16:21:53,059 - ----- Total number of NYT API calls: 230 -----
+2023-07-20 16:21:53,060 - ----- Number of NYT Api calls for books: 181 -----
+2023-07-20 16:21:53,061 - ----- query starts at offset: 38960 -----
+2023-07-20 16:21:53,061 - ----- Start building query for NYT API -----
+2023-07-20 16:21:53,061 - ----- built query books -----
+2023-07-20 16:21:53,700 - -----Error:'num_results'-----
+2023-07-20 16:22:05,703 - ----- Total number of NYT API calls: 231 -----
+2023-07-20 16:22:05,706 - ----- Number of NYT Api calls for books: 182 -----
+2023-07-20 16:22:05,707 - ----- query starts at offset: 38980 -----
+2023-07-20 16:22:05,709 - ----- Start building query for NYT API -----
+2023-07-20 16:22:05,710 - ----- built query books -----
+2023-07-20 16:22:06,370 - -----Error:'num_results'-----
+2023-07-20 16:22:18,375 - ----- Total number of NYT API calls: 232 -----
+2023-07-20 16:22:18,378 - ----- Number of NYT Api calls for books: 183 -----
+2023-07-20 16:22:18,379 - ----- query starts at offset: 39000 -----
+2023-07-20 16:22:18,380 - ----- Start building query for NYT API -----
+2023-07-20 16:22:18,382 - ----- built query books -----
+2023-07-20 16:22:19,018 - -----Error:'num_results'-----
+2023-07-20 16:22:31,022 - ----- Total number of NYT API calls: 233 -----
+2023-07-20 16:22:31,023 - ----- Number of NYT Api calls for books: 184 -----
+2023-07-20 16:22:31,024 - ----- query starts at offset: 39020 -----
+2023-07-20 16:22:31,025 - ----- Start building query for NYT API -----
+2023-07-20 16:22:31,025 - ----- built query books -----
+2023-07-20 16:22:31,706 - -----Error:'num_results'-----
+2023-07-20 16:22:43,709 - ----- Total number of NYT API calls: 234 -----
+2023-07-20 16:22:43,713 - ----- Number of NYT Api calls for books: 185 -----
+2023-07-20 16:22:43,715 - ----- query starts at offset: 39040 -----
+2023-07-20 16:22:43,716 - ----- Start building query for NYT API -----
+2023-07-20 16:22:43,718 - ----- built query books -----
+2023-07-20 16:22:44,395 - -----Error:'num_results'-----
+2023-07-20 16:22:56,401 - ----- Total number of NYT API calls: 235 -----
+2023-07-20 16:22:56,404 - ----- Number of NYT Api calls for books: 186 -----
+2023-07-20 16:22:56,406 - ----- query starts at offset: 39060 -----
+2023-07-20 16:22:56,407 - ----- Start building query for NYT API -----
+2023-07-20 16:22:56,409 - ----- built query books -----
+2023-07-20 16:22:57,127 - -----Error:'num_results'-----
+2023-07-20 16:23:09,132 - ----- Total number of NYT API calls: 236 -----
+2023-07-20 16:23:09,134 - ----- Number of NYT Api calls for books: 187 -----
+2023-07-20 16:23:09,137 - ----- query starts at offset: 39080 -----
+2023-07-20 16:23:09,138 - ----- Start building query for NYT API -----
+2023-07-20 16:23:09,140 - ----- built query books -----
+2023-07-20 16:23:09,809 - -----Error:'num_results'-----
+2023-07-20 16:23:21,813 - ----- Total number of NYT API calls: 237 -----
+2023-07-20 16:23:21,817 - ----- Number of NYT Api calls for books: 188 -----
+2023-07-20 16:23:21,819 - ----- query starts at offset: 39100 -----
+2023-07-20 16:23:21,821 - ----- Start building query for NYT API -----
+2023-07-20 16:23:21,822 - ----- built query books -----
+2023-07-20 16:23:22,512 - -----Error:'num_results'-----
+2023-07-20 16:23:34,515 - ----- Total number of NYT API calls: 238 -----
+2023-07-20 16:23:34,518 - ----- Number of NYT Api calls for books: 189 -----
+2023-07-20 16:23:34,520 - ----- query starts at offset: 39120 -----
+2023-07-20 16:23:34,521 - ----- Start building query for NYT API -----
+2023-07-20 16:23:34,523 - ----- built query books -----
+2023-07-20 16:23:35,228 - -----Error:'num_results'-----
+2023-07-20 16:23:47,232 - ----- Total number of NYT API calls: 239 -----
+2023-07-20 16:23:47,233 - ----- Number of NYT Api calls for books: 190 -----
+2023-07-20 16:23:47,233 - ----- query starts at offset: 39140 -----
+2023-07-20 16:23:47,233 - ----- Start building query for NYT API -----
+2023-07-20 16:23:47,234 - ----- built query books -----
+2023-07-20 16:23:47,854 - -----Error:'num_results'-----
+2023-07-20 16:23:59,856 - ----- Total number of NYT API calls: 240 -----
+2023-07-20 16:23:59,858 - ----- Number of NYT Api calls for books: 191 -----
+2023-07-20 16:23:59,858 - ----- query starts at offset: 39160 -----
+2023-07-20 16:23:59,859 - ----- Start building query for NYT API -----
+2023-07-20 16:23:59,860 - ----- built query books -----
+2023-07-20 16:24:00,560 - -----Error:'num_results'-----
+2023-07-20 16:24:12,565 - ----- Total number of NYT API calls: 241 -----
+2023-07-20 16:24:12,568 - ----- Number of NYT Api calls for books: 192 -----
+2023-07-20 16:24:12,570 - ----- query starts at offset: 39180 -----
+2023-07-20 16:24:12,571 - ----- Start building query for NYT API -----
+2023-07-20 16:24:12,572 - ----- built query books -----
+2023-07-20 16:24:13,246 - -----Error:'num_results'-----
+2023-07-20 16:24:25,249 - ----- Total number of NYT API calls: 242 -----
+2023-07-20 16:24:25,251 - ----- Number of NYT Api calls for books: 193 -----
+2023-07-20 16:24:25,252 - ----- query starts at offset: 39200 -----
+2023-07-20 16:24:25,252 - ----- Start building query for NYT API -----
+2023-07-20 16:24:25,253 - ----- built query books -----
+2023-07-20 16:24:25,940 - -----Error:'num_results'-----
+2023-07-20 16:24:37,941 - ----- Total number of NYT API calls: 243 -----
+2023-07-20 16:24:37,943 - ----- Number of NYT Api calls for books: 194 -----
+2023-07-20 16:24:37,944 - ----- query starts at offset: 39220 -----
+2023-07-20 16:24:37,944 - ----- Start building query for NYT API -----
+2023-07-20 16:24:37,945 - ----- built query books -----
+2023-07-20 16:24:38,582 - -----Error:'num_results'-----
+2023-07-20 16:24:50,586 - ----- Total number of NYT API calls: 244 -----
+2023-07-20 16:24:50,588 - ----- Number of NYT Api calls for books: 195 -----
+2023-07-20 16:24:50,589 - ----- query starts at offset: 39240 -----
+2023-07-20 16:24:50,592 - ----- Start building query for NYT API -----
+2023-07-20 16:24:50,593 - ----- built query books -----
+2023-07-20 16:24:51,299 - -----Error:'num_results'-----
+2023-07-20 16:25:03,303 - ----- Total number of NYT API calls: 245 -----
+2023-07-20 16:25:03,307 - ----- Number of NYT Api calls for books: 196 -----
+2023-07-20 16:25:03,308 - ----- query starts at offset: 39260 -----
+2023-07-20 16:25:03,310 - ----- Start building query for NYT API -----
+2023-07-20 16:25:03,311 - ----- built query books -----
+2023-07-20 16:25:04,024 - -----Error:'num_results'-----
+2023-07-20 16:25:16,028 - ----- Total number of NYT API calls: 246 -----
+2023-07-20 16:25:16,032 - ----- Number of NYT Api calls for books: 197 -----
+2023-07-20 16:25:16,033 - ----- query starts at offset: 39280 -----
+2023-07-20 16:25:16,038 - ----- Start building query for NYT API -----
+2023-07-20 16:25:16,039 - ----- built query books -----
+2023-07-20 16:25:16,743 - -----Error:'num_results'-----
+2023-07-20 16:25:28,747 - ----- Total number of NYT API calls: 247 -----
+2023-07-20 16:25:28,748 - ----- Number of NYT Api calls for books: 198 -----
+2023-07-20 16:25:28,750 - ----- query starts at offset: 39300 -----
+2023-07-20 16:25:28,750 - ----- Start building query for NYT API -----
+2023-07-20 16:25:28,752 - ----- built query books -----
+2023-07-20 16:25:29,400 - -----Error:'num_results'-----
+2023-07-20 16:25:41,402 - ----- Total number of NYT API calls: 248 -----
+2023-07-20 16:25:41,405 - ----- Number of NYT Api calls for books: 199 -----
+2023-07-20 16:25:41,406 - ----- query starts at offset: 39320 -----
+2023-07-20 16:25:41,408 - ----- Start building query for NYT API -----
+2023-07-20 16:25:41,408 - ----- built query books -----
+2023-07-20 16:25:42,096 - -----Error:'num_results'-----
+2023-07-20 16:25:54,097 - ----- Total number of NYT API calls: 249 -----
+2023-07-20 16:25:54,098 - ----- Number of NYT Api calls for books: 200 -----
+2023-07-20 16:25:54,098 - ----- query starts at offset: 39340 -----
+2023-07-20 16:25:54,098 - ----- Start building query for NYT API -----
+2023-07-20 16:25:54,099 - ----- built query books -----
+2023-07-20 16:25:54,703 - -----Error:'num_results'-----
+2023-07-20 16:26:06,705 - ----- Total number of NYT API calls: 250 -----
+2023-07-20 16:26:06,710 - ----- Number of NYT Api calls for books: 201 -----
+2023-07-20 16:26:06,711 - ----- query starts at offset: 39360 -----
+2023-07-20 16:26:06,713 - ----- Start building query for NYT API -----
+2023-07-20 16:26:06,716 - ----- built query books -----
+2023-07-20 16:26:07,385 - -----Error:'num_results'-----
+2023-07-20 16:26:19,389 - ----- Total number of NYT API calls: 251 -----
+2023-07-20 16:26:19,392 - ----- Number of NYT Api calls for books: 202 -----
+2023-07-20 16:26:19,393 - ----- query starts at offset: 39380 -----
+2023-07-20 16:26:19,394 - ----- Start building query for NYT API -----
+2023-07-20 16:26:19,395 - ----- built query books -----
+2023-07-20 16:26:20,045 - -----Error:'num_results'-----
+2023-07-20 16:26:32,048 - ----- Total number of NYT API calls: 252 -----
+2023-07-20 16:26:32,051 - ----- Number of NYT Api calls for books: 203 -----
+2023-07-20 16:26:32,051 - ----- query starts at offset: 39400 -----
+2023-07-20 16:26:32,053 - ----- Start building query for NYT API -----
+2023-07-20 16:26:32,054 - ----- built query books -----
+2023-07-20 16:26:32,732 - -----Error:'num_results'-----
+2023-07-20 16:26:44,735 - ----- Total number of NYT API calls: 253 -----
+2023-07-20 16:26:44,739 - ----- Number of NYT Api calls for books: 204 -----
+2023-07-20 16:26:44,741 - ----- query starts at offset: 39420 -----
+2023-07-20 16:26:44,742 - ----- Start building query for NYT API -----
+2023-07-20 16:26:44,743 - ----- built query books -----
+2023-07-20 16:26:45,466 - -----Error:'num_results'-----
+2023-07-20 16:26:57,471 - ----- Total number of NYT API calls: 254 -----
+2023-07-20 16:26:57,473 - ----- Number of NYT Api calls for books: 205 -----
+2023-07-20 16:26:57,475 - ----- query starts at offset: 39440 -----
+2023-07-20 16:26:57,476 - ----- Start building query for NYT API -----
+2023-07-20 16:26:57,477 - ----- built query books -----
+2023-07-20 16:26:58,124 - -----Error:'num_results'-----
+2023-07-20 16:27:10,128 - ----- Total number of NYT API calls: 255 -----
+2023-07-20 16:27:10,137 - ----- Number of NYT Api calls for books: 206 -----
+2023-07-20 16:27:10,141 - ----- query starts at offset: 39460 -----
+2023-07-20 16:27:10,142 - ----- Start building query for NYT API -----
+2023-07-20 16:27:10,143 - ----- built query books -----
+2023-07-20 16:27:10,867 - -----Error:'num_results'-----
+2023-07-20 16:27:22,869 - ----- Total number of NYT API calls: 256 -----
+2023-07-20 16:27:22,870 - ----- Number of NYT Api calls for books: 207 -----
+2023-07-20 16:27:22,870 - ----- query starts at offset: 39480 -----
+2023-07-20 16:27:22,871 - ----- Start building query for NYT API -----
+2023-07-20 16:27:22,871 - ----- built query books -----
+2023-07-20 16:27:23,548 - -----Error:'num_results'-----
+2023-07-20 16:27:35,551 - ----- Total number of NYT API calls: 257 -----
+2023-07-20 16:27:35,554 - ----- Number of NYT Api calls for books: 208 -----
+2023-07-20 16:27:35,555 - ----- query starts at offset: 39500 -----
+2023-07-20 16:27:35,556 - ----- Start building query for NYT API -----
+2023-07-20 16:27:35,558 - ----- built query books -----
+2023-07-20 16:27:36,278 - -----Error:'num_results'-----
+2023-07-20 16:27:48,282 - ----- Total number of NYT API calls: 258 -----
+2023-07-20 16:27:48,286 - ----- Number of NYT Api calls for books: 209 -----
+2023-07-20 16:27:48,287 - ----- query starts at offset: 39520 -----
+2023-07-20 16:27:48,288 - ----- Start building query for NYT API -----
+2023-07-20 16:27:48,293 - ----- built query books -----
+2023-07-20 16:27:48,977 - -----Error:'num_results'-----
+2023-07-20 16:28:00,979 - ----- Total number of NYT API calls: 259 -----
+2023-07-20 16:28:00,982 - ----- Number of NYT Api calls for books: 210 -----
+2023-07-20 16:28:00,983 - ----- query starts at offset: 39540 -----
+2023-07-20 16:28:00,985 - ----- Start building query for NYT API -----
+2023-07-20 16:28:00,986 - ----- built query books -----
+2023-07-20 16:28:01,686 - -----Error:'num_results'-----
+2023-07-20 16:28:13,694 - ----- Total number of NYT API calls: 260 -----
+2023-07-20 16:28:13,696 - ----- Number of NYT Api calls for books: 211 -----
+2023-07-20 16:28:13,699 - ----- query starts at offset: 39560 -----
+2023-07-20 16:28:13,700 - ----- Start building query for NYT API -----
+2023-07-20 16:28:13,703 - ----- built query books -----
+2023-07-20 16:28:14,417 - -----Error:'num_results'-----
+2023-07-20 16:28:26,422 - ----- Total number of NYT API calls: 261 -----
+2023-07-20 16:28:26,426 - ----- Number of NYT Api calls for books: 212 -----
+2023-07-20 16:28:26,431 - ----- query starts at offset: 39580 -----
+2023-07-20 16:28:26,435 - ----- Start building query for NYT API -----
+2023-07-20 16:28:26,436 - ----- built query books -----
+2023-07-20 16:28:27,077 - -----Error:'num_results'-----
+2023-07-20 16:28:39,079 - ----- Total number of NYT API calls: 262 -----
+2023-07-20 16:28:39,080 - ----- Number of NYT Api calls for books: 213 -----
+2023-07-20 16:28:39,081 - ----- query starts at offset: 39600 -----
+2023-07-20 16:28:39,081 - ----- Start building query for NYT API -----
+2023-07-20 16:28:39,081 - ----- built query books -----
+2023-07-20 16:28:39,774 - -----Error:'num_results'-----
+2023-07-20 16:28:51,777 - ----- Total number of NYT API calls: 263 -----
+2023-07-20 16:28:51,779 - ----- Number of NYT Api calls for books: 214 -----
+2023-07-20 16:28:51,781 - ----- query starts at offset: 39620 -----
+2023-07-20 16:28:51,782 - ----- Start building query for NYT API -----
+2023-07-20 16:28:51,783 - ----- built query books -----
+2023-07-20 16:28:52,412 - -----Error:'num_results'-----
+2023-07-20 16:29:04,415 - ----- Total number of NYT API calls: 264 -----
+2023-07-20 16:29:04,419 - ----- Number of NYT Api calls for books: 215 -----
+2023-07-20 16:29:04,420 - ----- query starts at offset: 39640 -----
+2023-07-20 16:29:04,421 - ----- Start building query for NYT API -----
+2023-07-20 16:29:04,422 - ----- built query books -----
+2023-07-20 16:29:05,100 - -----Error:'num_results'-----
+2023-07-20 16:29:17,101 - ----- Total number of NYT API calls: 265 -----
+2023-07-20 16:29:17,104 - ----- Number of NYT Api calls for books: 216 -----
+2023-07-20 16:29:17,105 - ----- query starts at offset: 39660 -----
+2023-07-20 16:29:17,105 - ----- Start building query for NYT API -----
+2023-07-20 16:29:17,106 - ----- built query books -----
+2023-07-20 16:29:17,723 - -----Error:'num_results'-----
+2023-07-20 16:29:29,723 - ----- Total number of NYT API calls: 266 -----
+2023-07-20 16:29:29,728 - ----- Number of NYT Api calls for books: 217 -----
+2023-07-20 16:29:29,731 - ----- query starts at offset: 39680 -----
+2023-07-20 16:29:29,732 - ----- Start building query for NYT API -----
+2023-07-20 16:29:29,733 - ----- built query books -----
+2023-07-20 16:29:30,398 - -----Error:'num_results'-----
+2023-07-20 16:29:42,404 - ----- Total number of NYT API calls: 267 -----
+2023-07-20 16:29:42,407 - ----- Number of NYT Api calls for books: 218 -----
+2023-07-20 16:29:42,409 - ----- query starts at offset: 39700 -----
+2023-07-20 16:29:42,411 - ----- Start building query for NYT API -----
+2023-07-20 16:29:42,412 - ----- built query books -----
+2023-07-20 16:29:43,097 - -----Error:'num_results'-----
+2023-07-20 16:29:55,099 - ----- Total number of NYT API calls: 268 -----
+2023-07-20 16:29:55,101 - ----- Number of NYT Api calls for books: 219 -----
+2023-07-20 16:29:55,102 - ----- query starts at offset: 39720 -----
+2023-07-20 16:29:55,104 - ----- Start building query for NYT API -----
+2023-07-20 16:29:55,105 - ----- built query books -----
+2023-07-20 16:29:55,747 - -----Error:'num_results'-----
+2023-07-20 16:30:07,749 - ----- Total number of NYT API calls: 269 -----
+2023-07-20 16:30:07,750 - ----- Number of NYT Api calls for books: 220 -----
+2023-07-20 16:30:07,750 - ----- query starts at offset: 39740 -----
+2023-07-20 16:30:07,751 - ----- Start building query for NYT API -----
+2023-07-20 16:30:07,751 - ----- built query books -----
+2023-07-20 16:30:08,413 - -----Error:'num_results'-----
+2023-07-20 16:30:20,415 - ----- Next offset to use on API call: 39760 -----
+2023-07-20 16:30:20,422 - ----- Start of drop duplicates process for books  index -----
+2023-07-20 16:30:20,466 - POST http://es-container:9200/books/_search?scroll=5m [status:200 duration:0.038s]
+2023-07-20 16:30:20,491 - POST http://es-container:9200/_search/scroll [status:200 duration:0.011s]
+2023-07-20 16:30:20,510 - POST http://es-container:9200/_search/scroll [status:200 duration:0.010s]
+2023-07-20 16:30:20,526 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:20,543 - POST http://es-container:9200/_search/scroll [status:200 duration:0.009s]
+2023-07-20 16:30:20,559 - POST http://es-container:9200/_search/scroll [status:200 duration:0.009s]
+2023-07-20 16:30:20,577 - POST http://es-container:9200/_search/scroll [status:200 duration:0.010s]
+2023-07-20 16:30:20,594 - POST http://es-container:9200/_search/scroll [status:200 duration:0.009s]
+2023-07-20 16:30:20,622 - POST http://es-container:9200/_search/scroll [status:200 duration:0.009s]
+2023-07-20 16:30:20,637 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:20,654 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:20,670 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:20,687 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:20,703 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:20,720 - POST http://es-container:9200/_search/scroll [status:200 duration:0.009s]
+2023-07-20 16:30:20,736 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:20,752 - POST http://es-container:9200/_search/scroll [status:200 duration:0.009s]
+2023-07-20 16:30:20,775 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:20,792 - POST http://es-container:9200/_search/scroll [status:200 duration:0.009s]
+2023-07-20 16:30:20,807 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:20,823 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:20,843 - POST http://es-container:9200/_search/scroll [status:200 duration:0.012s]
+2023-07-20 16:30:20,859 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:20,875 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:20,890 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:20,905 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:20,922 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:20,946 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:20,963 - POST http://es-container:9200/_search/scroll [status:200 duration:0.009s]
+2023-07-20 16:30:20,979 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:20,995 - POST http://es-container:9200/_search/scroll [status:200 duration:0.009s]
+2023-07-20 16:30:21,011 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:21,026 - POST http://es-container:9200/_search/scroll [status:200 duration:0.007s]
+2023-07-20 16:30:21,043 - POST http://es-container:9200/_search/scroll [status:200 duration:0.009s]
+2023-07-20 16:30:21,059 - POST http://es-container:9200/_search/scroll [status:200 duration:0.008s]
+2023-07-20 16:30:21,069 - POST http://es-container:9200/_search/scroll [status:200 duration:0.003s]
+2023-07-20 16:30:21,073 - POST http://es-container:9200/_search/scroll [status:200 duration:0.001s]
+2023-07-20 16:30:21,074 - DELETE http://es-container:9200/_search/scroll [status:200 duration:0.000s]
+2023-07-20 16:30:21,084 - DELETE http://es-container:9200/books/_doc/omDKc4kBs-KA4a2k7EoQ [status:200 duration:0.009s]
+2023-07-20 16:30:21,090 - DELETE http://es-container:9200/books/_doc/o2DKc4kBs-KA4a2k7EoQ [status:200 duration:0.006s]
+2023-07-20 16:30:21,091 - DELETE http://es-container:9200/books/_doc/qGDKc4kBs-KA4a2k7EoQ [status:200 duration:0.001s]
+2023-07-20 16:30:21,093 - DELETE http://es-container:9200/books/_doc/qWDKc4kBs-KA4a2k7EoQ [status:200 duration:0.002s]
+2023-07-20 16:30:21,095 - DELETE http://es-container:9200/books/_doc/qmDKc4kBs-KA4a2k7EoQ [status:200 duration:0.001s]
+2023-07-20 16:30:21,096 - DELETE http://es-container:9200/books/_doc/rGDLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,098 - DELETE http://es-container:9200/books/_doc/rWDLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,101 - DELETE http://es-container:9200/books/_doc/sWDLc4kBs-KA4a2kH0o7 [status:200 duration:0.002s]
+2023-07-20 16:30:21,102 - DELETE http://es-container:9200/books/_doc/smDLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,103 - DELETE http://es-container:9200/books/_doc/uWDLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,104 - DELETE http://es-container:9200/books/_doc/umDLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,106 - DELETE http://es-container:9200/books/_doc/u2DLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,107 - DELETE http://es-container:9200/books/_doc/wWDLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,108 - DELETE http://es-container:9200/books/_doc/w2DLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,110 - DELETE http://es-container:9200/books/_doc/xmDLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,111 - DELETE http://es-container:9200/books/_doc/zGDLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,112 - DELETE http://es-container:9200/books/_doc/zmDLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,114 - DELETE http://es-container:9200/books/_doc/z2DLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,115 - DELETE http://es-container:9200/books/_doc/1GDLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,116 - DELETE http://es-container:9200/books/_doc/12DLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,118 - DELETE http://es-container:9200/books/_doc/2GDLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,120 - DELETE http://es-container:9200/books/_doc/2mDLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,121 - DELETE http://es-container:9200/books/_doc/22DLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,122 - DELETE http://es-container:9200/books/_doc/3GDLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,124 - DELETE http://es-container:9200/books/_doc/3mDLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,125 - DELETE http://es-container:9200/books/_doc/32DLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,126 - DELETE http://es-container:9200/books/_doc/4GDLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,128 - DELETE http://es-container:9200/books/_doc/42DLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,129 - DELETE http://es-container:9200/books/_doc/7GDLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,130 - DELETE http://es-container:9200/books/_doc/7mDLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,132 - DELETE http://es-container:9200/books/_doc/8GDLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,133 - DELETE http://es-container:9200/books/_doc/82DLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,134 - DELETE http://es-container:9200/books/_doc/92DLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,135 - DELETE http://es-container:9200/books/_doc/-WDLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,137 - DELETE http://es-container:9200/books/_doc/-2DLc4kBs-KA4a2k7Eru [status:200 duration:0.001s]
+2023-07-20 16:30:21,138 - DELETE http://es-container:9200/books/_doc/_GDLc4kBs-KA4a2k7Eru [status:200 duration:0.001s]
+2023-07-20 16:30:21,139 - DELETE http://es-container:9200/books/_doc/_mDLc4kBs-KA4a2k7Eru [status:200 duration:0.001s]
+2023-07-20 16:30:21,140 - DELETE http://es-container:9200/books/_doc/_2DLc4kBs-KA4a2k7Eru [status:200 duration:0.001s]
+2023-07-20 16:30:21,142 - DELETE http://es-container:9200/books/_doc/AWDLc4kBs-KA4a2k7Evu [status:200 duration:0.001s]
+2023-07-20 16:30:21,143 - DELETE http://es-container:9200/books/_doc/A2DLc4kBs-KA4a2k7Evu [status:200 duration:0.001s]
+2023-07-20 16:30:21,144 - DELETE http://es-container:9200/books/_doc/BWDLc4kBs-KA4a2k7Evu [status:200 duration:0.001s]
+2023-07-20 16:30:21,146 - DELETE http://es-container:9200/books/_doc/BmDLc4kBs-KA4a2k7Evu [status:200 duration:0.001s]
+2023-07-20 16:30:21,147 - DELETE http://es-container:9200/books/_doc/B2DLc4kBs-KA4a2k7Evu [status:200 duration:0.001s]
+2023-07-20 16:30:21,148 - DELETE http://es-container:9200/books/_doc/CGDLc4kBs-KA4a2k7Evu [status:200 duration:0.001s]
+2023-07-20 16:30:21,149 - DELETE http://es-container:9200/books/_doc/CWDLc4kBs-KA4a2k7Evu [status:200 duration:0.001s]
+2023-07-20 16:30:21,151 - DELETE http://es-container:9200/books/_doc/CmDLc4kBs-KA4a2k7Evu [status:200 duration:0.001s]
+2023-07-20 16:30:21,152 - DELETE http://es-container:9200/books/_doc/C2DLc4kBs-KA4a2k7Evu [status:200 duration:0.001s]
+2023-07-20 16:30:21,154 - DELETE http://es-container:9200/books/_doc/DWDLc4kBs-KA4a2k7Evu [status:200 duration:0.001s]
+2023-07-20 16:30:21,155 - DELETE http://es-container:9200/books/_doc/DmDLc4kBs-KA4a2k7Evu [status:200 duration:0.001s]
+2023-07-20 16:30:21,156 - DELETE http://es-container:9200/books/_doc/FmDMc4kBs-KA4a2kIEsn [status:200 duration:0.001s]
+2023-07-20 16:30:21,157 - DELETE http://es-container:9200/books/_doc/F2DMc4kBs-KA4a2kIEsn [status:200 duration:0.001s]
+2023-07-20 16:30:21,158 - DELETE http://es-container:9200/books/_doc/GWDMc4kBs-KA4a2kIEsn [status:200 duration:0.001s]
+2023-07-20 16:30:21,160 - DELETE http://es-container:9200/books/_doc/GmDMc4kBs-KA4a2kIEsn [status:200 duration:0.001s]
+2023-07-20 16:30:21,161 - DELETE http://es-container:9200/books/_doc/G2DMc4kBs-KA4a2kIEsn [status:200 duration:0.001s]
+2023-07-20 16:30:21,162 - DELETE http://es-container:9200/books/_doc/HGDMc4kBs-KA4a2kIEsn [status:200 duration:0.001s]
+2023-07-20 16:30:21,163 - DELETE http://es-container:9200/books/_doc/HWDMc4kBs-KA4a2kIEsn [status:200 duration:0.001s]
+2023-07-20 16:30:21,165 - DELETE http://es-container:9200/books/_doc/uGDLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,166 - DELETE http://es-container:9200/books/_doc/vGDLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,167 - DELETE http://es-container:9200/books/_doc/vmDLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,169 - DELETE http://es-container:9200/books/_doc/v2DLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,170 - DELETE http://es-container:9200/books/_doc/xWDLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,171 - DELETE http://es-container:9200/books/_doc/yGDLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,173 - DELETE http://es-container:9200/books/_doc/0mDLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,174 - DELETE http://es-container:9200/books/_doc/02DLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,175 - DELETE http://es-container:9200/books/_doc/1mDLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,176 - DELETE http://es-container:9200/books/_doc/2WDLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,177 - DELETE http://es-container:9200/books/_doc/4WDLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,179 - DELETE http://es-container:9200/books/_doc/5GDLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,180 - DELETE http://es-container:9200/books/_doc/5mDLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,181 - DELETE http://es-container:9200/books/_doc/6GDLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,182 - DELETE http://es-container:9200/books/_doc/62DLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,184 - DELETE http://es-container:9200/books/_doc/8WDLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,185 - DELETE http://es-container:9200/books/_doc/9GDLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,186 - DELETE http://es-container:9200/books/_doc/-mDLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,187 - DELETE http://es-container:9200/books/_doc/AGDLc4kBs-KA4a2k7Evu [status:200 duration:0.001s]
+2023-07-20 16:30:21,189 - DELETE http://es-container:9200/books/_doc/AmDLc4kBs-KA4a2k7Evu [status:200 duration:0.001s]
+2023-07-20 16:30:21,190 - DELETE http://es-container:9200/books/_doc/EGDMc4kBs-KA4a2kIEsn [status:200 duration:0.001s]
+2023-07-20 16:30:21,191 - DELETE http://es-container:9200/books/_doc/EWDMc4kBs-KA4a2kIEsn [status:200 duration:0.001s]
+2023-07-20 16:30:21,192 - DELETE http://es-container:9200/books/_doc/EmDMc4kBs-KA4a2kIEsn [status:200 duration:0.001s]
+2023-07-20 16:30:21,193 - DELETE http://es-container:9200/books/_doc/E2DMc4kBs-KA4a2kIEsn [status:200 duration:0.001s]
+2023-07-20 16:30:21,194 - DELETE http://es-container:9200/books/_doc/GGDMc4kBs-KA4a2kIEsn [status:200 duration:0.001s]
+2023-07-20 16:30:21,196 - DELETE http://es-container:9200/books/_doc/emDKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,197 - DELETE http://es-container:9200/books/_doc/e2DKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,198 - DELETE http://es-container:9200/books/_doc/fGDKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,199 - DELETE http://es-container:9200/books/_doc/fWDKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,200 - DELETE http://es-container:9200/books/_doc/fmDKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,202 - DELETE http://es-container:9200/books/_doc/f2DKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,203 - DELETE http://es-container:9200/books/_doc/gGDKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,204 - DELETE http://es-container:9200/books/_doc/gWDKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,205 - DELETE http://es-container:9200/books/_doc/gmDKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,206 - DELETE http://es-container:9200/books/_doc/hmDKc4kBs-KA4a2kuEqP [status:200 duration:0.001s]
+2023-07-20 16:30:21,208 - DELETE http://es-container:9200/books/_doc/h2DKc4kBs-KA4a2kuEqP [status:200 duration:0.001s]
+2023-07-20 16:30:21,209 - DELETE http://es-container:9200/books/_doc/iGDKc4kBs-KA4a2kuEqP [status:200 duration:0.001s]
+2023-07-20 16:30:21,210 - DELETE http://es-container:9200/books/_doc/iWDKc4kBs-KA4a2kuEqP [status:200 duration:0.001s]
+2023-07-20 16:30:21,211 - DELETE http://es-container:9200/books/_doc/i2DKc4kBs-KA4a2kuEqP [status:200 duration:0.001s]
+2023-07-20 16:30:21,213 - DELETE http://es-container:9200/books/_doc/jGDKc4kBs-KA4a2kuEqP [status:200 duration:0.001s]
+2023-07-20 16:30:21,214 - DELETE http://es-container:9200/books/_doc/b2DKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,215 - DELETE http://es-container:9200/books/_doc/cGDKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,216 - DELETE http://es-container:9200/books/_doc/dGDKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,218 - DELETE http://es-container:9200/books/_doc/dWDKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,219 - DELETE http://es-container:9200/books/_doc/d2DKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,220 - DELETE http://es-container:9200/books/_doc/pGDKc4kBs-KA4a2k7EoQ [status:200 duration:0.001s]
+2023-07-20 16:30:21,221 - DELETE http://es-container:9200/books/_doc/eWDKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,222 - DELETE http://es-container:9200/books/_doc/pWDKc4kBs-KA4a2k7EoQ [status:200 duration:0.001s]
+2023-07-20 16:30:21,223 - DELETE http://es-container:9200/books/_doc/pmDKc4kBs-KA4a2k7EoQ [status:200 duration:0.001s]
+2023-07-20 16:30:21,225 - DELETE http://es-container:9200/books/_doc/p2DKc4kBs-KA4a2k7EoQ [status:200 duration:0.001s]
+2023-07-20 16:30:21,226 - DELETE http://es-container:9200/books/_doc/q2DLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,227 - DELETE http://es-container:9200/books/_doc/rmDLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,228 - DELETE http://es-container:9200/books/_doc/r2DLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,229 - DELETE http://es-container:9200/books/_doc/sGDLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,231 - DELETE http://es-container:9200/books/_doc/s2DLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,232 - DELETE http://es-container:9200/books/_doc/imDKc4kBs-KA4a2kuEqP [status:200 duration:0.001s]
+2023-07-20 16:30:21,233 - DELETE http://es-container:9200/books/_doc/tGDLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,235 - DELETE http://es-container:9200/books/_doc/tWDLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,236 - DELETE http://es-container:9200/books/_doc/tmDLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,237 - DELETE http://es-container:9200/books/_doc/t2DLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,238 - DELETE http://es-container:9200/books/_doc/jWDKc4kBs-KA4a2kuEqP [status:200 duration:0.001s]
+2023-07-20 16:30:21,240 - DELETE http://es-container:9200/books/_doc/kGDKc4kBs-KA4a2kuEqP [status:200 duration:0.001s]
+2023-07-20 16:30:21,241 - DELETE http://es-container:9200/books/_doc/kWDKc4kBs-KA4a2kuEqP [status:200 duration:0.001s]
+2023-07-20 16:30:21,242 - DELETE http://es-container:9200/books/_doc/vWDLc4kBs-KA4a2kH0o7 [status:200 duration:0.001s]
+2023-07-20 16:30:21,243 - DELETE http://es-container:9200/books/_doc/lGDKc4kBs-KA4a2kuEqP [status:200 duration:0.001s]
+2023-07-20 16:30:21,245 - DELETE http://es-container:9200/books/_doc/l2DKc4kBs-KA4a2k7EoQ [status:200 duration:0.001s]
+2023-07-20 16:30:21,246 - DELETE http://es-container:9200/books/_doc/mGDKc4kBs-KA4a2k7EoQ [status:200 duration:0.001s]
+2023-07-20 16:30:21,247 - DELETE http://es-container:9200/books/_doc/wGDLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,248 - DELETE http://es-container:9200/books/_doc/mWDKc4kBs-KA4a2k7EoQ [status:200 duration:0.001s]
+2023-07-20 16:30:21,249 - DELETE http://es-container:9200/books/_doc/wmDLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,250 - DELETE http://es-container:9200/books/_doc/mmDKc4kBs-KA4a2k7EoQ [status:200 duration:0.001s]
+2023-07-20 16:30:21,252 - DELETE http://es-container:9200/books/_doc/xGDLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,253 - DELETE http://es-container:9200/books/_doc/m2DKc4kBs-KA4a2k7EoQ [status:200 duration:0.001s]
+2023-07-20 16:30:21,254 - DELETE http://es-container:9200/books/_doc/x2DLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,256 - DELETE http://es-container:9200/books/_doc/oGDKc4kBs-KA4a2k7EoQ [status:200 duration:0.001s]
+2023-07-20 16:30:21,257 - DELETE http://es-container:9200/books/_doc/yWDLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,258 - DELETE http://es-container:9200/books/_doc/ymDLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,259 - DELETE http://es-container:9200/books/_doc/y2DLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,260 - DELETE http://es-container:9200/books/_doc/zWDLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,262 - DELETE http://es-container:9200/books/_doc/0GDLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,263 - DELETE http://es-container:9200/books/_doc/0WDLc4kBs-KA4a2kUkql [status:200 duration:0.001s]
+2023-07-20 16:30:21,264 - DELETE http://es-container:9200/books/_doc/1WDLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,265 - DELETE http://es-container:9200/books/_doc/j2DKc4kBs-KA4a2kuEqP [status:200 duration:0.001s]
+2023-07-20 16:30:21,267 - DELETE http://es-container:9200/books/_doc/kmDKc4kBs-KA4a2kuEqP [status:200 duration:0.001s]
+2023-07-20 16:30:21,268 - DELETE http://es-container:9200/books/_doc/3WDLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,269 - DELETE http://es-container:9200/books/_doc/k2DKc4kBs-KA4a2kuEqP [status:200 duration:0.001s]
+2023-07-20 16:30:21,270 - DELETE http://es-container:9200/books/_doc/lWDKc4kBs-KA4a2kuEqP [status:200 duration:0.001s]
+2023-07-20 16:30:21,272 - DELETE http://es-container:9200/books/_doc/4mDLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,273 - DELETE http://es-container:9200/books/_doc/nGDKc4kBs-KA4a2k7EoQ [status:200 duration:0.001s]
+2023-07-20 16:30:21,274 - DELETE http://es-container:9200/books/_doc/nWDKc4kBs-KA4a2k7EoQ [status:200 duration:0.001s]
+2023-07-20 16:30:21,275 - DELETE http://es-container:9200/books/_doc/5WDLc4kBs-KA4a2khkob [status:200 duration:0.001s]
+2023-07-20 16:30:21,276 - DELETE http://es-container:9200/books/_doc/oWDKc4kBs-KA4a2k7EoQ [status:200 duration:0.001s]
+2023-07-20 16:30:21,278 - DELETE http://es-container:9200/books/_doc/52DLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,279 - DELETE http://es-container:9200/books/_doc/6WDLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,280 - DELETE http://es-container:9200/books/_doc/6mDLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,281 - DELETE http://es-container:9200/books/_doc/7WDLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,283 - DELETE http://es-container:9200/books/_doc/72DLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,284 - DELETE http://es-container:9200/books/_doc/8mDLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,285 - DELETE http://es-container:9200/books/_doc/9WDLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,287 - DELETE http://es-container:9200/books/_doc/9mDLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,288 - DELETE http://es-container:9200/books/_doc/-GDLc4kBs-KA4a2kuUp8 [status:200 duration:0.001s]
+2023-07-20 16:30:21,289 - DELETE http://es-container:9200/books/_doc/g2DKc4kBs-KA4a2kuEqP [status:200 duration:0.001s]
+2023-07-20 16:30:21,290 - DELETE http://es-container:9200/books/_doc/_WDLc4kBs-KA4a2k7Eru [status:200 duration:0.001s]
+2023-07-20 16:30:21,291 - DELETE http://es-container:9200/books/_doc/hGDKc4kBs-KA4a2kuEqP [status:200 duration:0.001s]
+2023-07-20 16:30:21,292 - DELETE http://es-container:9200/books/_doc/hWDKc4kBs-KA4a2kuEqP [status:200 duration:0.001s]
+2023-07-20 16:30:21,294 - DELETE http://es-container:9200/books/_doc/BGDLc4kBs-KA4a2k7Evu [status:200 duration:0.001s]
+2023-07-20 16:30:21,295 - DELETE http://es-container:9200/books/_doc/DGDLc4kBs-KA4a2k7Evu [status:200 duration:0.001s]
+2023-07-20 16:30:21,297 - DELETE http://es-container:9200/books/_doc/D2DMc4kBs-KA4a2kIEsn [status:200 duration:0.002s]
+2023-07-20 16:30:21,299 - DELETE http://es-container:9200/books/_doc/jmDKc4kBs-KA4a2kuEqP [status:200 duration:0.002s]
+2023-07-20 16:30:21,301 - DELETE http://es-container:9200/books/_doc/FGDMc4kBs-KA4a2kIEsn [status:200 duration:0.002s]
+2023-07-20 16:30:21,304 - DELETE http://es-container:9200/books/_doc/FWDMc4kBs-KA4a2kIEsn [status:200 duration:0.002s]
+2023-07-20 16:30:21,307 - DELETE http://es-container:9200/books/_doc/lmDKc4kBs-KA4a2kuEqP [status:200 duration:0.002s]
+2023-07-20 16:30:21,308 - DELETE http://es-container:9200/books/_doc/nmDKc4kBs-KA4a2k7EoQ [status:200 duration:0.001s]
+2023-07-20 16:30:21,310 - DELETE http://es-container:9200/books/_doc/n2DKc4kBs-KA4a2k7EoQ [status:200 duration:0.001s]
+2023-07-20 16:30:21,311 - DELETE http://es-container:9200/books/_doc/cWDKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,313 - DELETE http://es-container:9200/books/_doc/c2DKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,314 - DELETE http://es-container:9200/books/_doc/dmDKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,315 - DELETE http://es-container:9200/books/_doc/cmDKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,316 - DELETE http://es-container:9200/books/_doc/eGDKc4kBs-KA4a2khUon [status:200 duration:0.001s]
+2023-07-20 16:30:21,317 - ----- 175 deleted duplicated documents from books index -----
+2023-07-20 16:30:21,317 - End of drop duplicates process from books -----
+2023-07-20 16:30:21,318 - ----- ETL finished to run on books  -----
+2023-07-20 16:30:21,319 - ----- Starts runing ETL on movies -----
+2023-07-20 16:30:21,320 - HEAD http://es-container:9200/movies [status:200 duration:0.001s]
+2023-07-20 16:30:21,320 - ----- Start getting movies from NYT API -----
+2023-07-20 16:30:21,320 - ----- Number of NYT API calls 270 -----
+2023-07-20 16:30:21,321 - ----- Start building query for NYT API -----
+2023-07-20 16:30:21,321 - ----- built query movies -----
+2023-07-20 16:30:22,443 - HEAD http://es-container:9200/movies [status:200 duration:0.004s]
+2023-07-20 16:30:22,451 - POST http://es-container:9200/movies/_count [status:200 duration:0.005s]
+2023-07-20 16:30:22,452 - ----- Total number of NYT API calls: 270 -----
+2023-07-20 16:30:22,453 - ----- Number of NYT Api calls for movies: 1 -----
+2023-07-20 16:30:22,454 - ----- query starts at offset: 31300 -----
+2023-07-20 16:30:22,454 - ----- Start building query for NYT API -----
+2023-07-20 16:30:22,455 - ----- built query movies -----
+2023-07-20 16:30:23,838 - ----- Start building bulk list for movies index -----
+2023-07-20 16:30:23,845 - ----- Start saving documents ----
+2023-07-20 16:30:23,881 - PUT http://es-container:9200/_bulk [status:200 duration:0.031s]
+2023-07-20 16:30:23,882 - ----- 20 documents saved successfully  -----
+2023-07-20 16:30:23,883 - ----- Finish saving documents from bulk -----
+2023-07-20 16:30:35,884 - ----- Total number of NYT API calls: 271 -----
+2023-07-20 16:30:35,886 - ----- Number of NYT Api calls for movies: 2 -----
+2023-07-20 16:30:35,888 - ----- query starts at offset: 31320 -----
+2023-07-20 16:30:35,900 - ----- Start building query for NYT API -----
+2023-07-20 16:30:35,902 - ----- built query movies -----
+2023-07-20 16:30:37,220 - ----- Start building bulk list for movies index -----
+2023-07-20 16:30:37,222 - ----- Start saving documents ----
+2023-07-20 16:30:37,241 - PUT http://es-container:9200/_bulk [status:200 duration:0.017s]
+2023-07-20 16:30:37,242 - ----- 20 documents saved successfully  -----
+2023-07-20 16:30:37,242 - ----- Finish saving documents from bulk -----
+2023-07-20 16:30:49,243 - ----- Total number of NYT API calls: 272 -----
+2023-07-20 16:30:49,246 - ----- Number of NYT Api calls for movies: 3 -----
+2023-07-20 16:30:49,247 - ----- query starts at offset: 31340 -----
+2023-07-20 16:30:49,247 - ----- Start building query for NYT API -----
+2023-07-20 16:30:49,248 - ----- built query movies -----
+2023-07-20 16:30:50,614 - ----- Start building bulk list for movies index -----
+2023-07-20 16:30:50,618 - ----- Start saving documents ----
+2023-07-20 16:30:50,642 - PUT http://es-container:9200/_bulk [status:200 duration:0.022s]
+2023-07-20 16:30:50,643 - ----- 20 documents saved successfully  -----
+2023-07-20 16:30:50,644 - ----- Finish saving documents from bulk -----
+2023-07-20 16:31:02,645 - ----- Total number of NYT API calls: 273 -----
+2023-07-20 16:31:02,647 - ----- Number of NYT Api calls for movies: 4 -----
+2023-07-20 16:31:02,648 - ----- query starts at offset: 31360 -----
+2023-07-20 16:31:02,651 - ----- Start building query for NYT API -----
+2023-07-20 16:31:02,652 - ----- built query movies -----
+2023-07-20 16:31:04,837 - ----- Start building bulk list for movies index -----
+2023-07-20 16:31:04,839 - ----- Start saving documents ----
+2023-07-20 16:31:04,868 - PUT http://es-container:9200/_bulk [status:200 duration:0.027s]
+2023-07-20 16:31:04,869 - ----- 20 documents saved successfully  -----
+2023-07-20 16:31:04,869 - ----- Finish saving documents from bulk -----
+2023-07-20 16:31:16,877 - ----- Total number of NYT API calls: 274 -----
+2023-07-20 16:31:16,880 - ----- Number of NYT Api calls for movies: 5 -----
+2023-07-20 16:31:16,881 - ----- query starts at offset: 31380 -----
+2023-07-20 16:31:16,882 - ----- Start building query for NYT API -----
+2023-07-20 16:31:16,883 - ----- built query movies -----
+2023-07-20 16:31:18,281 - ----- Start building bulk list for movies index -----
+2023-07-20 16:31:18,282 - ----- Start saving documents ----
+2023-07-20 16:31:18,288 - PUT http://es-container:9200/_bulk [status:200 duration:0.005s]
+2023-07-20 16:31:18,288 - ----- 15 documents saved successfully  -----
+2023-07-20 16:31:18,289 - ----- Finish saving documents from bulk -----
+2023-07-20 16:31:30,289 - ----- Total number of NYT API calls: 275 -----
+2023-07-20 16:31:30,290 - ----- Number of NYT Api calls for movies: 6 -----
+2023-07-20 16:31:30,292 - ----- query starts at offset: 31400 -----
+2023-07-20 16:31:30,293 - ----- Start building query for NYT API -----
+2023-07-20 16:31:30,294 - ----- built query movies -----
+2023-07-20 16:31:31,666 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:31:43,669 - ----- Total number of NYT API calls: 276 -----
+2023-07-20 16:31:43,672 - ----- Number of NYT Api calls for movies: 7 -----
+2023-07-20 16:31:43,674 - ----- query starts at offset: 31420 -----
+2023-07-20 16:31:43,676 - ----- Start building query for NYT API -----
+2023-07-20 16:31:43,677 - ----- built query movies -----
+2023-07-20 16:31:45,031 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:31:57,034 - ----- Total number of NYT API calls: 277 -----
+2023-07-20 16:31:57,037 - ----- Number of NYT Api calls for movies: 8 -----
+2023-07-20 16:31:57,039 - ----- query starts at offset: 31440 -----
+2023-07-20 16:31:57,040 - ----- Start building query for NYT API -----
+2023-07-20 16:31:57,042 - ----- built query movies -----
+2023-07-20 16:31:58,403 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:32:10,407 - ----- Total number of NYT API calls: 278 -----
+2023-07-20 16:32:10,411 - ----- Number of NYT Api calls for movies: 9 -----
+2023-07-20 16:32:10,412 - ----- query starts at offset: 31460 -----
+2023-07-20 16:32:10,414 - ----- Start building query for NYT API -----
+2023-07-20 16:32:10,415 - ----- built query movies -----
+2023-07-20 16:32:11,763 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:32:23,764 - ----- Total number of NYT API calls: 279 -----
+2023-07-20 16:32:23,765 - ----- Number of NYT Api calls for movies: 10 -----
+2023-07-20 16:32:23,766 - ----- query starts at offset: 31480 -----
+2023-07-20 16:32:23,766 - ----- Start building query for NYT API -----
+2023-07-20 16:32:23,766 - ----- built query movies -----
+2023-07-20 16:32:25,182 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:32:37,185 - ----- Total number of NYT API calls: 280 -----
+2023-07-20 16:32:37,187 - ----- Number of NYT Api calls for movies: 11 -----
+2023-07-20 16:32:37,189 - ----- query starts at offset: 31500 -----
+2023-07-20 16:32:37,192 - ----- Start building query for NYT API -----
+2023-07-20 16:32:37,193 - ----- built query movies -----
+2023-07-20 16:32:38,558 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:32:50,563 - ----- Total number of NYT API calls: 281 -----
+2023-07-20 16:32:50,565 - ----- Number of NYT Api calls for movies: 12 -----
+2023-07-20 16:32:50,566 - ----- query starts at offset: 31520 -----
+2023-07-20 16:32:50,568 - ----- Start building query for NYT API -----
+2023-07-20 16:32:50,569 - ----- built query movies -----
+2023-07-20 16:32:51,935 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:33:03,939 - ----- Total number of NYT API calls: 282 -----
+2023-07-20 16:33:03,942 - ----- Number of NYT Api calls for movies: 13 -----
+2023-07-20 16:33:03,944 - ----- query starts at offset: 31540 -----
+2023-07-20 16:33:03,945 - ----- Start building query for NYT API -----
+2023-07-20 16:33:03,947 - ----- built query movies -----
+2023-07-20 16:33:05,336 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:33:17,338 - ----- Total number of NYT API calls: 283 -----
+2023-07-20 16:33:17,339 - ----- Number of NYT Api calls for movies: 14 -----
+2023-07-20 16:33:17,340 - ----- query starts at offset: 31560 -----
+2023-07-20 16:33:17,340 - ----- Start building query for NYT API -----
+2023-07-20 16:33:17,341 - ----- built query movies -----
+2023-07-20 16:33:18,672 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:33:30,674 - ----- Total number of NYT API calls: 284 -----
+2023-07-20 16:33:30,677 - ----- Number of NYT Api calls for movies: 15 -----
+2023-07-20 16:33:30,678 - ----- query starts at offset: 31580 -----
+2023-07-20 16:33:30,679 - ----- Start building query for NYT API -----
+2023-07-20 16:33:30,681 - ----- built query movies -----
+2023-07-20 16:33:32,070 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:33:44,072 - ----- Total number of NYT API calls: 285 -----
+2023-07-20 16:33:44,075 - ----- Number of NYT Api calls for movies: 16 -----
+2023-07-20 16:33:44,076 - ----- query starts at offset: 31600 -----
+2023-07-20 16:33:44,077 - ----- Start building query for NYT API -----
+2023-07-20 16:33:44,078 - ----- built query movies -----
+2023-07-20 16:33:45,411 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:33:57,413 - ----- Total number of NYT API calls: 286 -----
+2023-07-20 16:33:57,416 - ----- Number of NYT Api calls for movies: 17 -----
+2023-07-20 16:33:57,418 - ----- query starts at offset: 31620 -----
+2023-07-20 16:33:57,419 - ----- Start building query for NYT API -----
+2023-07-20 16:33:57,419 - ----- built query movies -----
+2023-07-20 16:33:58,751 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:34:10,755 - ----- Total number of NYT API calls: 287 -----
+2023-07-20 16:34:10,757 - ----- Number of NYT Api calls for movies: 18 -----
+2023-07-20 16:34:10,759 - ----- query starts at offset: 31640 -----
+2023-07-20 16:34:10,761 - ----- Start building query for NYT API -----
+2023-07-20 16:34:10,763 - ----- built query movies -----
+2023-07-20 16:34:12,097 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:34:24,100 - ----- Total number of NYT API calls: 288 -----
+2023-07-20 16:34:24,103 - ----- Number of NYT Api calls for movies: 19 -----
+2023-07-20 16:34:24,104 - ----- query starts at offset: 31660 -----
+2023-07-20 16:34:24,105 - ----- Start building query for NYT API -----
+2023-07-20 16:34:24,107 - ----- built query movies -----
+2023-07-20 16:34:25,420 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:34:37,423 - ----- Total number of NYT API calls: 289 -----
+2023-07-20 16:34:37,427 - ----- Number of NYT Api calls for movies: 20 -----
+2023-07-20 16:34:37,428 - ----- query starts at offset: 31680 -----
+2023-07-20 16:34:37,430 - ----- Start building query for NYT API -----
+2023-07-20 16:34:37,431 - ----- built query movies -----
+2023-07-20 16:34:38,727 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:34:50,729 - ----- Total number of NYT API calls: 290 -----
+2023-07-20 16:34:50,734 - ----- Number of NYT Api calls for movies: 21 -----
+2023-07-20 16:34:50,736 - ----- query starts at offset: 31700 -----
+2023-07-20 16:34:50,737 - ----- Start building query for NYT API -----
+2023-07-20 16:34:50,738 - ----- built query movies -----
+2023-07-20 16:34:52,141 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:35:04,145 - ----- Total number of NYT API calls: 291 -----
+2023-07-20 16:35:04,149 - ----- Number of NYT Api calls for movies: 22 -----
+2023-07-20 16:35:04,152 - ----- query starts at offset: 31720 -----
+2023-07-20 16:35:04,155 - ----- Start building query for NYT API -----
+2023-07-20 16:35:04,157 - ----- built query movies -----
+2023-07-20 16:35:05,544 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:35:17,547 - ----- Total number of NYT API calls: 292 -----
+2023-07-20 16:35:17,550 - ----- Number of NYT Api calls for movies: 23 -----
+2023-07-20 16:35:17,553 - ----- query starts at offset: 31740 -----
+2023-07-20 16:35:17,555 - ----- Start building query for NYT API -----
+2023-07-20 16:35:17,556 - ----- built query movies -----
+2023-07-20 16:35:18,843 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:35:30,847 - ----- Total number of NYT API calls: 293 -----
+2023-07-20 16:35:30,850 - ----- Number of NYT Api calls for movies: 24 -----
+2023-07-20 16:35:30,852 - ----- query starts at offset: 31760 -----
+2023-07-20 16:35:30,854 - ----- Start building query for NYT API -----
+2023-07-20 16:35:30,855 - ----- built query movies -----
+2023-07-20 16:35:32,232 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:35:44,236 - ----- Total number of NYT API calls: 294 -----
+2023-07-20 16:35:44,240 - ----- Number of NYT Api calls for movies: 25 -----
+2023-07-20 16:35:44,241 - ----- query starts at offset: 31780 -----
+2023-07-20 16:35:44,243 - ----- Start building query for NYT API -----
+2023-07-20 16:35:44,244 - ----- built query movies -----
+2023-07-20 16:35:45,578 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:35:57,581 - ----- Total number of NYT API calls: 295 -----
+2023-07-20 16:35:57,585 - ----- Number of NYT Api calls for movies: 26 -----
+2023-07-20 16:35:57,586 - ----- query starts at offset: 31800 -----
+2023-07-20 16:35:57,587 - ----- Start building query for NYT API -----
+2023-07-20 16:35:57,588 - ----- built query movies -----
+2023-07-20 16:35:58,907 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:36:10,913 - ----- Total number of NYT API calls: 296 -----
+2023-07-20 16:36:10,915 - ----- Number of NYT Api calls for movies: 27 -----
+2023-07-20 16:36:10,916 - ----- query starts at offset: 31820 -----
+2023-07-20 16:36:10,917 - ----- Start building query for NYT API -----
+2023-07-20 16:36:10,918 - ----- built query movies -----
+2023-07-20 16:36:12,277 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:36:24,279 - ----- Total number of NYT API calls: 297 -----
+2023-07-20 16:36:24,283 - ----- Number of NYT Api calls for movies: 28 -----
+2023-07-20 16:36:24,284 - ----- query starts at offset: 31840 -----
+2023-07-20 16:36:24,286 - ----- Start building query for NYT API -----
+2023-07-20 16:36:24,287 - ----- built query movies -----
+2023-07-20 16:36:25,593 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:36:37,596 - ----- Total number of NYT API calls: 298 -----
+2023-07-20 16:36:37,600 - ----- Number of NYT Api calls for movies: 29 -----
+2023-07-20 16:36:37,602 - ----- query starts at offset: 31860 -----
+2023-07-20 16:36:37,603 - ----- Start building query for NYT API -----
+2023-07-20 16:36:37,605 - ----- built query movies -----
+2023-07-20 16:36:38,942 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:36:50,945 - ----- Total number of NYT API calls: 299 -----
+2023-07-20 16:36:50,945 - ----- Number of NYT Api calls for movies: 30 -----
+2023-07-20 16:36:50,945 - ----- query starts at offset: 31880 -----
+2023-07-20 16:36:50,946 - ----- Start building query for NYT API -----
+2023-07-20 16:36:50,946 - ----- built query movies -----
+2023-07-20 16:36:52,227 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:37:04,230 - ----- Total number of NYT API calls: 300 -----
+2023-07-20 16:37:04,233 - ----- Number of NYT Api calls for movies: 31 -----
+2023-07-20 16:37:04,235 - ----- query starts at offset: 31900 -----
+2023-07-20 16:37:04,236 - ----- Start building query for NYT API -----
+2023-07-20 16:37:04,238 - ----- built query movies -----
+2023-07-20 16:37:05,581 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:37:17,583 - ----- Total number of NYT API calls: 301 -----
+2023-07-20 16:37:17,584 - ----- Number of NYT Api calls for movies: 32 -----
+2023-07-20 16:37:17,584 - ----- query starts at offset: 31920 -----
+2023-07-20 16:37:17,585 - ----- Start building query for NYT API -----
+2023-07-20 16:37:17,585 - ----- built query movies -----
+2023-07-20 16:37:18,984 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:37:30,987 - ----- Total number of NYT API calls: 302 -----
+2023-07-20 16:37:30,991 - ----- Number of NYT Api calls for movies: 33 -----
+2023-07-20 16:37:30,994 - ----- query starts at offset: 31940 -----
+2023-07-20 16:37:30,995 - ----- Start building query for NYT API -----
+2023-07-20 16:37:30,998 - ----- built query movies -----
+2023-07-20 16:37:32,464 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:37:44,467 - ----- Total number of NYT API calls: 303 -----
+2023-07-20 16:37:44,471 - ----- Number of NYT Api calls for movies: 34 -----
+2023-07-20 16:37:44,473 - ----- query starts at offset: 31960 -----
+2023-07-20 16:37:44,474 - ----- Start building query for NYT API -----
+2023-07-20 16:37:44,475 - ----- built query movies -----
+2023-07-20 16:37:45,851 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:37:57,854 - ----- Total number of NYT API calls: 304 -----
+2023-07-20 16:37:57,856 - ----- Number of NYT Api calls for movies: 35 -----
+2023-07-20 16:37:57,857 - ----- query starts at offset: 31980 -----
+2023-07-20 16:37:57,858 - ----- Start building query for NYT API -----
+2023-07-20 16:37:57,859 - ----- built query movies -----
+2023-07-20 16:37:59,231 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:38:11,232 - ----- Total number of NYT API calls: 305 -----
+2023-07-20 16:38:11,232 - ----- Number of NYT Api calls for movies: 36 -----
+2023-07-20 16:38:11,233 - ----- query starts at offset: 32000 -----
+2023-07-20 16:38:11,233 - ----- Start building query for NYT API -----
+2023-07-20 16:38:11,233 - ----- built query movies -----
+2023-07-20 16:38:12,600 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:38:24,604 - ----- Total number of NYT API calls: 306 -----
+2023-07-20 16:38:24,607 - ----- Number of NYT Api calls for movies: 37 -----
+2023-07-20 16:38:24,608 - ----- query starts at offset: 32020 -----
+2023-07-20 16:38:24,609 - ----- Start building query for NYT API -----
+2023-07-20 16:38:24,609 - ----- built query movies -----
+2023-07-20 16:38:25,971 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:38:37,976 - ----- Total number of NYT API calls: 307 -----
+2023-07-20 16:38:37,979 - ----- Number of NYT Api calls for movies: 38 -----
+2023-07-20 16:38:37,981 - ----- query starts at offset: 32040 -----
+2023-07-20 16:38:37,983 - ----- Start building query for NYT API -----
+2023-07-20 16:38:37,986 - ----- built query movies -----
+2023-07-20 16:38:39,393 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:38:51,395 - ----- Total number of NYT API calls: 308 -----
+2023-07-20 16:38:51,399 - ----- Number of NYT Api calls for movies: 39 -----
+2023-07-20 16:38:51,401 - ----- query starts at offset: 32060 -----
+2023-07-20 16:38:51,403 - ----- Start building query for NYT API -----
+2023-07-20 16:38:51,405 - ----- built query movies -----
+2023-07-20 16:38:52,741 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:39:04,745 - ----- Total number of NYT API calls: 309 -----
+2023-07-20 16:39:04,749 - ----- Number of NYT Api calls for movies: 40 -----
+2023-07-20 16:39:04,755 - ----- query starts at offset: 32080 -----
+2023-07-20 16:39:04,757 - ----- Start building query for NYT API -----
+2023-07-20 16:39:04,758 - ----- built query movies -----
+2023-07-20 16:39:06,086 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:39:18,087 - ----- Total number of NYT API calls: 310 -----
+2023-07-20 16:39:18,089 - ----- Number of NYT Api calls for movies: 41 -----
+2023-07-20 16:39:18,090 - ----- query starts at offset: 32100 -----
+2023-07-20 16:39:18,091 - ----- Start building query for NYT API -----
+2023-07-20 16:39:18,092 - ----- built query movies -----
+2023-07-20 16:39:19,463 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:39:31,465 - ----- Total number of NYT API calls: 311 -----
+2023-07-20 16:39:31,468 - ----- Number of NYT Api calls for movies: 42 -----
+2023-07-20 16:39:31,470 - ----- query starts at offset: 32120 -----
+2023-07-20 16:39:31,471 - ----- Start building query for NYT API -----
+2023-07-20 16:39:31,472 - ----- built query movies -----
+2023-07-20 16:39:32,785 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:39:44,788 - ----- Total number of NYT API calls: 312 -----
+2023-07-20 16:39:44,792 - ----- Number of NYT Api calls for movies: 43 -----
+2023-07-20 16:39:44,794 - ----- query starts at offset: 32140 -----
+2023-07-20 16:39:44,796 - ----- Start building query for NYT API -----
+2023-07-20 16:39:44,797 - ----- built query movies -----
+2023-07-20 16:39:46,136 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:39:58,139 - ----- Total number of NYT API calls: 313 -----
+2023-07-20 16:39:58,144 - ----- Number of NYT Api calls for movies: 44 -----
+2023-07-20 16:39:58,145 - ----- query starts at offset: 32160 -----
+2023-07-20 16:39:58,147 - ----- Start building query for NYT API -----
+2023-07-20 16:39:58,148 - ----- built query movies -----
+2023-07-20 16:39:59,415 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:40:11,420 - ----- Total number of NYT API calls: 314 -----
+2023-07-20 16:40:11,420 - ----- Number of NYT Api calls for movies: 45 -----
+2023-07-20 16:40:11,421 - ----- query starts at offset: 32180 -----
+2023-07-20 16:40:11,421 - ----- Start building query for NYT API -----
+2023-07-20 16:40:11,422 - ----- built query movies -----
+2023-07-20 16:40:12,800 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:40:24,802 - ----- Total number of NYT API calls: 315 -----
+2023-07-20 16:40:24,805 - ----- Number of NYT Api calls for movies: 46 -----
+2023-07-20 16:40:24,807 - ----- query starts at offset: 32200 -----
+2023-07-20 16:40:24,808 - ----- Start building query for NYT API -----
+2023-07-20 16:40:24,810 - ----- built query movies -----
+2023-07-20 16:40:26,199 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:40:38,201 - ----- Total number of NYT API calls: 316 -----
+2023-07-20 16:40:38,203 - ----- Number of NYT Api calls for movies: 47 -----
+2023-07-20 16:40:38,204 - ----- query starts at offset: 32220 -----
+2023-07-20 16:40:38,205 - ----- Start building query for NYT API -----
+2023-07-20 16:40:38,206 - ----- built query movies -----
+2023-07-20 16:40:39,511 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:40:51,516 - ----- Total number of NYT API calls: 317 -----
+2023-07-20 16:40:51,518 - ----- Number of NYT Api calls for movies: 48 -----
+2023-07-20 16:40:51,520 - ----- query starts at offset: 32240 -----
+2023-07-20 16:40:51,521 - ----- Start building query for NYT API -----
+2023-07-20 16:40:51,522 - ----- built query movies -----
+2023-07-20 16:40:52,900 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:41:04,902 - ----- Total number of NYT API calls: 318 -----
+2023-07-20 16:41:04,905 - ----- Number of NYT Api calls for movies: 49 -----
+2023-07-20 16:41:04,906 - ----- query starts at offset: 32260 -----
+2023-07-20 16:41:04,907 - ----- Start building query for NYT API -----
+2023-07-20 16:41:04,908 - ----- built query movies -----
+2023-07-20 16:41:06,324 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:41:18,331 - ----- Total number of NYT API calls: 319 -----
+2023-07-20 16:41:18,333 - ----- Number of NYT Api calls for movies: 50 -----
+2023-07-20 16:41:18,333 - ----- query starts at offset: 32280 -----
+2023-07-20 16:41:18,334 - ----- Start building query for NYT API -----
+2023-07-20 16:41:18,334 - ----- built query movies -----
+2023-07-20 16:41:19,668 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:41:31,672 - ----- Total number of NYT API calls: 320 -----
+2023-07-20 16:41:31,675 - ----- Number of NYT Api calls for movies: 51 -----
+2023-07-20 16:41:31,677 - ----- query starts at offset: 32300 -----
+2023-07-20 16:41:31,678 - ----- Start building query for NYT API -----
+2023-07-20 16:41:31,679 - ----- built query movies -----
+2023-07-20 16:41:33,073 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:41:45,076 - ----- Total number of NYT API calls: 321 -----
+2023-07-20 16:41:45,079 - ----- Number of NYT Api calls for movies: 52 -----
+2023-07-20 16:41:45,081 - ----- query starts at offset: 32320 -----
+2023-07-20 16:41:45,082 - ----- Start building query for NYT API -----
+2023-07-20 16:41:45,084 - ----- built query movies -----
+2023-07-20 16:41:46,490 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:41:58,493 - ----- Total number of NYT API calls: 322 -----
+2023-07-20 16:41:58,496 - ----- Number of NYT Api calls for movies: 53 -----
+2023-07-20 16:41:58,498 - ----- query starts at offset: 32340 -----
+2023-07-20 16:41:58,500 - ----- Start building query for NYT API -----
+2023-07-20 16:41:58,501 - ----- built query movies -----
+2023-07-20 16:41:59,843 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:42:11,847 - ----- Total number of NYT API calls: 323 -----
+2023-07-20 16:42:11,849 - ----- Number of NYT Api calls for movies: 54 -----
+2023-07-20 16:42:11,850 - ----- query starts at offset: 32360 -----
+2023-07-20 16:42:11,851 - ----- Start building query for NYT API -----
+2023-07-20 16:42:11,851 - ----- built query movies -----
+2023-07-20 16:42:13,116 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:42:25,122 - ----- Total number of NYT API calls: 324 -----
+2023-07-20 16:42:25,125 - ----- Number of NYT Api calls for movies: 55 -----
+2023-07-20 16:42:25,127 - ----- query starts at offset: 32380 -----
+2023-07-20 16:42:25,129 - ----- Start building query for NYT API -----
+2023-07-20 16:42:25,131 - ----- built query movies -----
+2023-07-20 16:42:26,478 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:42:38,484 - ----- Total number of NYT API calls: 325 -----
+2023-07-20 16:42:38,486 - ----- Number of NYT Api calls for movies: 56 -----
+2023-07-20 16:42:38,488 - ----- query starts at offset: 32400 -----
+2023-07-20 16:42:38,489 - ----- Start building query for NYT API -----
+2023-07-20 16:42:38,490 - ----- built query movies -----
+2023-07-20 16:42:39,807 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:42:51,811 - ----- Total number of NYT API calls: 326 -----
+2023-07-20 16:42:51,815 - ----- Number of NYT Api calls for movies: 57 -----
+2023-07-20 16:42:51,816 - ----- query starts at offset: 32420 -----
+2023-07-20 16:42:51,818 - ----- Start building query for NYT API -----
+2023-07-20 16:42:51,819 - ----- built query movies -----
+2023-07-20 16:42:53,193 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:43:05,197 - ----- Total number of NYT API calls: 327 -----
+2023-07-20 16:43:05,200 - ----- Number of NYT Api calls for movies: 58 -----
+2023-07-20 16:43:05,202 - ----- query starts at offset: 32440 -----
+2023-07-20 16:43:05,204 - ----- Start building query for NYT API -----
+2023-07-20 16:43:05,206 - ----- built query movies -----
+2023-07-20 16:43:06,501 - -----Error:object of type 'NoneType' has no len()-----
+2023-07-20 16:43:18,503 - ----- Total number of NYT API calls: 328 -----
+2023-07-20 16:43:18,506 - ----- Number of NYT Api calls for movies: 59 -----
+2023-07-20 16:43:18,507 - ----- query starts at offset: 32460 -----
+2023-07-20 16:43:18,510 - ----- Start building query for NYT API -----
+2023-07-20 16:43:18,511 - ----- built query movies -----
+2023-07-20 16:43:19,182 - -----Error:'num_results'-----
+2023-07-20 16:43:31,187 - ----- Total number of NYT API calls: 329 -----
+2023-07-20 16:43:31,190 - ----- Number of NYT Api calls for movies: 60 -----
+2023-07-20 16:43:31,192 - ----- query starts at offset: 32480 -----
+2023-07-20 16:43:31,193 - ----- Start building query for NYT API -----
+2023-07-20 16:43:31,195 - ----- built query movies -----
+2023-07-20 16:43:31,902 - -----Error:'num_results'-----
+2023-07-20 16:43:43,906 - ----- Total number of NYT API calls: 330 -----
+2023-07-20 16:43:43,910 - ----- Number of NYT Api calls for movies: 61 -----
+2023-07-20 16:43:43,911 - ----- query starts at offset: 32500 -----
+2023-07-20 16:43:43,913 - ----- Start building query for NYT API -----
+2023-07-20 16:43:43,914 - ----- built query movies -----
+2023-07-20 16:43:44,584 - -----Error:'num_results'-----
+2023-07-20 16:43:56,588 - ----- Total number of NYT API calls: 331 -----
+2023-07-20 16:43:56,591 - ----- Number of NYT Api calls for movies: 62 -----
+2023-07-20 16:43:56,593 - ----- query starts at offset: 32520 -----
+2023-07-20 16:43:56,594 - ----- Start building query for NYT API -----
+2023-07-20 16:43:56,596 - ----- built query movies -----
+2023-07-20 16:43:57,292 - -----Error:'num_results'-----
+2023-07-20 16:44:09,301 - ----- Total number of NYT API calls: 332 -----
+2023-07-20 16:44:09,304 - ----- Number of NYT Api calls for movies: 63 -----
+2023-07-20 16:44:09,306 - ----- query starts at offset: 32540 -----
+2023-07-20 16:44:09,309 - ----- Start building query for NYT API -----
+2023-07-20 16:44:09,318 - ----- built query movies -----
+2023-07-20 16:44:10,014 - -----Error:'num_results'-----
+2023-07-20 16:44:22,019 - ----- Total number of NYT API calls: 333 -----
+2023-07-20 16:44:22,022 - ----- Number of NYT Api calls for movies: 64 -----
+2023-07-20 16:44:22,024 - ----- query starts at offset: 32560 -----
+2023-07-20 16:44:22,027 - ----- Start building query for NYT API -----
+2023-07-20 16:44:22,028 - ----- built query movies -----
+2023-07-20 16:44:22,713 - -----Error:'num_results'-----
+2023-07-20 16:44:34,719 - ----- Total number of NYT API calls: 334 -----
+2023-07-20 16:44:34,721 - ----- Number of NYT Api calls for movies: 65 -----
+2023-07-20 16:44:34,723 - ----- query starts at offset: 32580 -----
+2023-07-20 16:44:34,724 - ----- Start building query for NYT API -----
+2023-07-20 16:44:34,725 - ----- built query movies -----
+2023-07-20 16:44:35,403 - -----Error:'num_results'-----
+2023-07-20 16:44:47,404 - ----- Total number of NYT API calls: 335 -----
+2023-07-20 16:44:47,405 - ----- Number of NYT Api calls for movies: 66 -----
+2023-07-20 16:44:47,405 - ----- query starts at offset: 32600 -----
+2023-07-20 16:44:47,406 - ----- Start building query for NYT API -----
+2023-07-20 16:44:47,406 - ----- built query movies -----
+2023-07-20 16:44:48,029 - -----Error:'num_results'-----
+2023-07-20 16:45:00,035 - ----- Total number of NYT API calls: 336 -----
+2023-07-20 16:45:00,035 - ----- Number of NYT Api calls for movies: 67 -----
+2023-07-20 16:45:00,036 - ----- query starts at offset: 32620 -----
+2023-07-20 16:45:00,036 - ----- Start building query for NYT API -----
+2023-07-20 16:45:00,036 - ----- built query movies -----
+2023-07-20 16:45:00,694 - -----Error:'num_results'-----
+2023-07-20 16:45:12,698 - ----- Total number of NYT API calls: 337 -----
+2023-07-20 16:45:12,699 - ----- Number of NYT Api calls for movies: 68 -----
+2023-07-20 16:45:12,700 - ----- query starts at offset: 32640 -----
+2023-07-20 16:45:12,700 - ----- Start building query for NYT API -----
+2023-07-20 16:45:12,701 - ----- built query movies -----
+2023-07-20 16:45:13,362 - -----Error:'num_results'-----
+2023-07-20 16:45:25,365 - ----- Total number of NYT API calls: 338 -----
+2023-07-20 16:45:25,367 - ----- Number of NYT Api calls for movies: 69 -----
+2023-07-20 16:45:25,368 - ----- query starts at offset: 32660 -----
+2023-07-20 16:45:25,369 - ----- Start building query for NYT API -----
+2023-07-20 16:45:25,371 - ----- built query movies -----
+2023-07-20 16:45:26,080 - -----Error:'num_results'-----
+2023-07-20 16:45:38,081 - ----- Total number of NYT API calls: 339 -----
+2023-07-20 16:45:38,083 - ----- Number of NYT Api calls for movies: 70 -----
+2023-07-20 16:45:38,085 - ----- query starts at offset: 32680 -----
+2023-07-20 16:45:38,086 - ----- Start building query for NYT API -----
+2023-07-20 16:45:38,087 - ----- built query movies -----
+2023-07-20 16:45:39,006 - -----Error:'num_results'-----
+2023-07-20 16:45:51,011 - ----- Total number of NYT API calls: 340 -----
+2023-07-20 16:45:51,014 - ----- Number of NYT Api calls for movies: 71 -----
+2023-07-20 16:45:51,015 - ----- query starts at offset: 32700 -----
+2023-07-20 16:45:51,017 - ----- Start building query for NYT API -----
+2023-07-20 16:45:51,018 - ----- built query movies -----
+2023-07-20 16:45:51,718 - -----Error:'num_results'-----
+2023-07-20 16:46:03,721 - ----- Total number of NYT API calls: 341 -----
+2023-07-20 16:46:03,724 - ----- Number of NYT Api calls for movies: 72 -----
+2023-07-20 16:46:03,727 - ----- query starts at offset: 32720 -----
+2023-07-20 16:46:03,729 - ----- Start building query for NYT API -----
+2023-07-20 16:46:03,730 - ----- built query movies -----
+2023-07-20 16:46:04,387 - -----Error:'num_results'-----
+2023-07-20 16:46:16,392 - ----- Total number of NYT API calls: 342 -----
+2023-07-20 16:46:16,394 - ----- Number of NYT Api calls for movies: 73 -----
+2023-07-20 16:46:16,395 - ----- query starts at offset: 32740 -----
+2023-07-20 16:46:16,396 - ----- Start building query for NYT API -----
+2023-07-20 16:46:16,397 - ----- built query movies -----
+2023-07-20 16:46:17,065 - -----Error:'num_results'-----
+2023-07-20 16:46:29,069 - ----- Total number of NYT API calls: 343 -----
+2023-07-20 16:46:29,072 - ----- Number of NYT Api calls for movies: 74 -----
+2023-07-20 16:46:29,074 - ----- query starts at offset: 32760 -----
+2023-07-20 16:46:29,075 - ----- Start building query for NYT API -----
+2023-07-20 16:46:29,077 - ----- built query movies -----
+2023-07-20 16:46:29,776 - -----Error:'num_results'-----
+2023-07-20 16:46:41,781 - ----- Total number of NYT API calls: 344 -----
+2023-07-20 16:46:41,782 - ----- Number of NYT Api calls for movies: 75 -----
+2023-07-20 16:46:41,782 - ----- query starts at offset: 32780 -----
+2023-07-20 16:46:41,783 - ----- Start building query for NYT API -----
+2023-07-20 16:46:41,783 - ----- built query movies -----
+2023-07-20 16:46:42,474 - -----Error:'num_results'-----
+2023-07-20 16:46:54,476 - ----- Total number of NYT API calls: 345 -----
+2023-07-20 16:46:54,476 - ----- Number of NYT Api calls for movies: 76 -----
+2023-07-20 16:46:54,477 - ----- query starts at offset: 32800 -----
+2023-07-20 16:46:54,477 - ----- Start building query for NYT API -----
+2023-07-20 16:46:54,477 - ----- built query movies -----
+2023-07-20 16:46:55,158 - -----Error:'num_results'-----
+2023-07-20 16:47:07,163 - ----- Total number of NYT API calls: 346 -----
+2023-07-20 16:47:07,167 - ----- Number of NYT Api calls for movies: 77 -----
+2023-07-20 16:47:07,168 - ----- query starts at offset: 32820 -----
+2023-07-20 16:47:07,170 - ----- Start building query for NYT API -----
+2023-07-20 16:47:07,172 - ----- built query movies -----
+2023-07-20 16:47:07,796 - -----Error:'num_results'-----
+2023-07-20 16:47:19,798 - ----- Total number of NYT API calls: 347 -----
+2023-07-20 16:47:19,800 - ----- Number of NYT Api calls for movies: 78 -----
+2023-07-20 16:47:19,803 - ----- query starts at offset: 32840 -----
+2023-07-20 16:47:19,806 - ----- Start building query for NYT API -----
+2023-07-20 16:47:19,808 - ----- built query movies -----
+2023-07-20 16:47:20,466 - -----Error:'num_results'-----
+2023-07-20 16:47:32,467 - ----- Total number of NYT API calls: 348 -----
+2023-07-20 16:47:32,468 - ----- Number of NYT Api calls for movies: 79 -----
+2023-07-20 16:47:32,469 - ----- query starts at offset: 32860 -----
+2023-07-20 16:47:32,470 - ----- Start building query for NYT API -----
+2023-07-20 16:47:32,471 - ----- built query movies -----
+2023-07-20 16:47:33,109 - -----Error:'num_results'-----
+2023-07-20 16:47:45,114 - ----- Total number of NYT API calls: 349 -----
+2023-07-20 16:47:45,116 - ----- Number of NYT Api calls for movies: 80 -----
+2023-07-20 16:47:45,118 - ----- query starts at offset: 32880 -----
+2023-07-20 16:47:45,119 - ----- Start building query for NYT API -----
+2023-07-20 16:47:45,120 - ----- built query movies -----
+2023-07-20 16:47:45,832 - -----Error:'num_results'-----
+2023-07-20 16:47:57,836 - ----- Total number of NYT API calls: 350 -----
+2023-07-20 16:47:57,837 - ----- Number of NYT Api calls for movies: 81 -----
+2023-07-20 16:47:57,838 - ----- query starts at offset: 32900 -----
+2023-07-20 16:47:57,839 - ----- Start building query for NYT API -----
+2023-07-20 16:47:57,839 - ----- built query movies -----
+2023-07-20 16:47:58,599 - -----Error:'num_results'-----
+2023-07-20 16:48:10,603 - ----- Total number of NYT API calls: 351 -----
+2023-07-20 16:48:10,607 - ----- Number of NYT Api calls for movies: 82 -----
+2023-07-20 16:48:10,608 - ----- query starts at offset: 32920 -----
+2023-07-20 16:48:10,609 - ----- Start building query for NYT API -----
+2023-07-20 16:48:10,610 - ----- built query movies -----
+2023-07-20 16:48:11,299 - -----Error:'num_results'-----
+2023-07-20 16:48:23,302 - ----- Total number of NYT API calls: 352 -----
+2023-07-20 16:48:23,306 - ----- Number of NYT Api calls for movies: 83 -----
+2023-07-20 16:48:23,308 - ----- query starts at offset: 32940 -----
+2023-07-20 16:48:23,309 - ----- Start building query for NYT API -----
+2023-07-20 16:48:23,310 - ----- built query movies -----
+2023-07-20 16:48:23,976 - -----Error:'num_results'-----
+2023-07-20 16:48:35,977 - ----- Total number of NYT API calls: 353 -----
+2023-07-20 16:48:35,979 - ----- Number of NYT Api calls for movies: 84 -----
+2023-07-20 16:48:35,980 - ----- query starts at offset: 32960 -----
+2023-07-20 16:48:35,982 - ----- Start building query for NYT API -----
+2023-07-20 16:48:35,983 - ----- built query movies -----
+2023-07-20 16:48:36,597 - -----Error:'num_results'-----
+2023-07-20 16:48:48,602 - ----- Total number of NYT API calls: 354 -----
+2023-07-20 16:48:48,603 - ----- Number of NYT Api calls for movies: 85 -----
+2023-07-20 16:48:48,605 - ----- query starts at offset: 32980 -----
+2023-07-20 16:48:48,606 - ----- Start building query for NYT API -----
+2023-07-20 16:48:48,607 - ----- built query movies -----
+2023-07-20 16:48:49,288 - -----Error:'num_results'-----
+2023-07-20 16:49:01,290 - ----- Total number of NYT API calls: 355 -----
+2023-07-20 16:49:01,292 - ----- Number of NYT Api calls for movies: 86 -----
+2023-07-20 16:49:01,292 - ----- query starts at offset: 33000 -----
+2023-07-20 16:49:01,293 - ----- Start building query for NYT API -----
+2023-07-20 16:49:01,293 - ----- built query movies -----
+2023-07-20 16:49:02,004 - -----Error:'num_results'-----
+2023-07-20 16:49:14,007 - ----- Total number of NYT API calls: 356 -----
+2023-07-20 16:49:14,011 - ----- Number of NYT Api calls for movies: 87 -----
+2023-07-20 16:49:14,012 - ----- query starts at offset: 33020 -----
+2023-07-20 16:49:14,014 - ----- Start building query for NYT API -----
+2023-07-20 16:49:14,015 - ----- built query movies -----
+2023-07-20 16:49:14,668 - -----Error:'num_results'-----
+2023-07-20 16:49:26,675 - ----- Total number of NYT API calls: 357 -----
+2023-07-20 16:49:26,676 - ----- Number of NYT Api calls for movies: 88 -----
+2023-07-20 16:49:26,676 - ----- query starts at offset: 33040 -----
+2023-07-20 16:49:26,677 - ----- Start building query for NYT API -----
+2023-07-20 16:49:26,678 - ----- built query movies -----
+2023-07-20 16:49:27,364 - -----Error:'num_results'-----
+2023-07-20 16:49:39,369 - ----- Total number of NYT API calls: 358 -----
+2023-07-20 16:49:39,371 - ----- Number of NYT Api calls for movies: 89 -----
+2023-07-20 16:49:39,372 - ----- query starts at offset: 33060 -----
+2023-07-20 16:49:39,373 - ----- Start building query for NYT API -----
+2023-07-20 16:49:39,374 - ----- built query movies -----
+2023-07-20 16:49:40,036 - -----Error:'num_results'-----
+2023-07-20 16:49:52,044 - ----- Total number of NYT API calls: 359 -----
+2023-07-20 16:49:52,045 - ----- Number of NYT Api calls for movies: 90 -----
+2023-07-20 16:49:52,046 - ----- query starts at offset: 33080 -----
+2023-07-20 16:49:52,047 - ----- Start building query for NYT API -----
+2023-07-20 16:49:52,048 - ----- built query movies -----
+2023-07-20 16:49:52,717 - -----Error:'num_results'-----
+2023-07-20 16:50:04,721 - ----- Total number of NYT API calls: 360 -----
+2023-07-20 16:50:04,724 - ----- Number of NYT Api calls for movies: 91 -----
+2023-07-20 16:50:04,725 - ----- query starts at offset: 33100 -----
+2023-07-20 16:50:04,727 - ----- Start building query for NYT API -----
+2023-07-20 16:50:04,728 - ----- built query movies -----
+2023-07-20 16:50:05,402 - -----Error:'num_results'-----
+2023-07-20 16:50:17,403 - ----- Total number of NYT API calls: 361 -----
+2023-07-20 16:50:17,404 - ----- Number of NYT Api calls for movies: 92 -----
+2023-07-20 16:50:17,405 - ----- query starts at offset: 33120 -----
+2023-07-20 16:50:17,405 - ----- Start building query for NYT API -----
+2023-07-20 16:50:17,406 - ----- built query movies -----
+2023-07-20 16:50:18,057 - -----Error:'num_results'-----
+2023-07-20 16:50:30,061 - ----- Total number of NYT API calls: 362 -----
+2023-07-20 16:50:30,064 - ----- Number of NYT Api calls for movies: 93 -----
+2023-07-20 16:50:30,065 - ----- query starts at offset: 33140 -----
+2023-07-20 16:50:30,067 - ----- Start building query for NYT API -----
+2023-07-20 16:50:30,068 - ----- built query movies -----
+2023-07-20 16:50:30,745 - -----Error:'num_results'-----
+2023-07-20 16:50:42,751 - ----- Total number of NYT API calls: 363 -----
+2023-07-20 16:50:42,752 - ----- Number of NYT Api calls for movies: 94 -----
+2023-07-20 16:50:42,752 - ----- query starts at offset: 33160 -----
+2023-07-20 16:50:42,753 - ----- Start building query for NYT API -----
+2023-07-20 16:50:42,753 - ----- built query movies -----
+2023-07-20 16:50:43,401 - -----Error:'num_results'-----
+2023-07-20 16:50:55,403 - ----- Total number of NYT API calls: 364 -----
+2023-07-20 16:50:55,405 - ----- Number of NYT Api calls for movies: 95 -----
+2023-07-20 16:50:55,407 - ----- query starts at offset: 33180 -----
+2023-07-20 16:50:55,408 - ----- Start building query for NYT API -----
+2023-07-20 16:50:55,409 - ----- built query movies -----
+2023-07-20 16:50:56,060 - -----Error:'num_results'-----
+2023-07-20 16:51:08,061 - ----- Total number of NYT API calls: 365 -----
+2023-07-20 16:51:08,066 - ----- Number of NYT Api calls for movies: 96 -----
+2023-07-20 16:51:08,068 - ----- query starts at offset: 33200 -----
+2023-07-20 16:51:08,069 - ----- Start building query for NYT API -----
+2023-07-20 16:51:08,070 - ----- built query movies -----
+2023-07-20 16:51:08,769 - -----Error:'num_results'-----
+2023-07-20 16:51:20,775 - ----- Total number of NYT API calls: 366 -----
+2023-07-20 16:51:20,779 - ----- Number of NYT Api calls for movies: 97 -----
+2023-07-20 16:51:20,782 - ----- query starts at offset: 33220 -----
+2023-07-20 16:51:20,785 - ----- Start building query for NYT API -----
+2023-07-20 16:51:20,786 - ----- built query movies -----
+2023-07-20 16:51:21,467 - -----Error:'num_results'-----
+2023-07-20 16:51:33,469 - ----- Total number of NYT API calls: 367 -----
+2023-07-20 16:51:33,472 - ----- Number of NYT Api calls for movies: 98 -----
+2023-07-20 16:51:33,475 - ----- query starts at offset: 33240 -----
+2023-07-20 16:51:33,475 - ----- Start building query for NYT API -----
+2023-07-20 16:51:33,476 - ----- built query movies -----
+2023-07-20 16:51:34,142 - -----Error:'num_results'-----
+2023-07-20 16:51:46,145 - ----- Total number of NYT API calls: 368 -----
+2023-07-20 16:51:46,148 - ----- Number of NYT Api calls for movies: 99 -----
+2023-07-20 16:51:46,149 - ----- query starts at offset: 33260 -----
+2023-07-20 16:51:46,150 - ----- Start building query for NYT API -----
+2023-07-20 16:51:46,151 - ----- built query movies -----
+2023-07-20 16:51:46,875 - -----Error:'num_results'-----
+2023-07-20 16:51:58,877 - ----- Total number of NYT API calls: 369 -----
+2023-07-20 16:51:58,881 - ----- Number of NYT Api calls for movies: 100 -----
+2023-07-20 16:51:58,881 - ----- query starts at offset: 33280 -----
+2023-07-20 16:51:58,882 - ----- Start building query for NYT API -----
+2023-07-20 16:51:58,883 - ----- built query movies -----
+2023-07-20 16:51:59,586 - -----Error:'num_results'-----
+2023-07-20 16:52:11,590 - ----- Total number of NYT API calls: 370 -----
+2023-07-20 16:52:11,590 - ----- Number of NYT Api calls for movies: 101 -----
+2023-07-20 16:52:11,591 - ----- query starts at offset: 33300 -----
+2023-07-20 16:52:11,591 - ----- Start building query for NYT API -----
+2023-07-20 16:52:11,592 - ----- built query movies -----
+2023-07-20 16:52:12,207 - -----Error:'num_results'-----
+2023-07-20 16:52:24,207 - ----- Total number of NYT API calls: 371 -----
+2023-07-20 16:52:24,208 - ----- Number of NYT Api calls for movies: 102 -----
+2023-07-20 16:52:24,208 - ----- query starts at offset: 33320 -----
+2023-07-20 16:52:24,209 - ----- Start building query for NYT API -----
+2023-07-20 16:52:24,210 - ----- built query movies -----
+2023-07-20 16:52:24,813 - -----Error:'num_results'-----
+2023-07-20 16:52:36,817 - ----- Total number of NYT API calls: 372 -----
+2023-07-20 16:52:36,819 - ----- Number of NYT Api calls for movies: 103 -----
+2023-07-20 16:52:36,820 - ----- query starts at offset: 33340 -----
+2023-07-20 16:52:36,821 - ----- Start building query for NYT API -----
+2023-07-20 16:52:36,821 - ----- built query movies -----
+2023-07-20 16:52:37,509 - -----Error:'num_results'-----
+2023-07-20 16:52:49,512 - ----- Total number of NYT API calls: 373 -----
+2023-07-20 16:52:49,516 - ----- Number of NYT Api calls for movies: 104 -----
+2023-07-20 16:52:49,518 - ----- query starts at offset: 33360 -----
+2023-07-20 16:52:49,519 - ----- Start building query for NYT API -----
+2023-07-20 16:52:49,521 - ----- built query movies -----
+2023-07-20 16:52:50,255 - -----Error:'num_results'-----
+2023-07-20 16:53:02,260 - ----- Total number of NYT API calls: 374 -----
+2023-07-20 16:53:02,263 - ----- Number of NYT Api calls for movies: 105 -----
+2023-07-20 16:53:02,264 - ----- query starts at offset: 33380 -----
+2023-07-20 16:53:02,265 - ----- Start building query for NYT API -----
+2023-07-20 16:53:02,266 - ----- built query movies -----
+2023-07-20 16:53:02,911 - -----Error:'num_results'-----
+2023-07-20 16:53:14,913 - ----- Total number of NYT API calls: 375 -----
+2023-07-20 16:53:14,915 - ----- Number of NYT Api calls for movies: 106 -----
+2023-07-20 16:53:14,916 - ----- query starts at offset: 33400 -----
+2023-07-20 16:53:14,917 - ----- Start building query for NYT API -----
+2023-07-20 16:53:14,918 - ----- built query movies -----
+2023-07-20 16:53:15,620 - -----Error:'num_results'-----
+2023-07-20 16:53:27,626 - ----- Total number of NYT API calls: 376 -----
+2023-07-20 16:53:27,629 - ----- Number of NYT Api calls for movies: 107 -----
+2023-07-20 16:53:27,631 - ----- query starts at offset: 33420 -----
+2023-07-20 16:53:27,633 - ----- Start building query for NYT API -----
+2023-07-20 16:53:27,634 - ----- built query movies -----
+2023-07-20 16:53:28,241 - -----Error:'num_results'-----
+2023-07-20 16:53:40,244 - ----- Total number of NYT API calls: 377 -----
+2023-07-20 16:53:40,248 - ----- Number of NYT Api calls for movies: 108 -----
+2023-07-20 16:53:40,250 - ----- query starts at offset: 33440 -----
+2023-07-20 16:53:40,251 - ----- Start building query for NYT API -----
+2023-07-20 16:53:40,252 - ----- built query movies -----
+2023-07-20 16:53:40,941 - -----Error:'num_results'-----
+2023-07-20 16:53:52,944 - ----- Total number of NYT API calls: 378 -----
+2023-07-20 16:53:52,947 - ----- Number of NYT Api calls for movies: 109 -----
+2023-07-20 16:53:52,948 - ----- query starts at offset: 33460 -----
+2023-07-20 16:53:52,948 - ----- Start building query for NYT API -----
+2023-07-20 16:53:52,949 - ----- built query movies -----
+2023-07-20 16:53:53,673 - -----Error:'num_results'-----
+2023-07-20 16:54:05,674 - ----- Total number of NYT API calls: 379 -----
+2023-07-20 16:54:05,675 - ----- Number of NYT Api calls for movies: 110 -----
+2023-07-20 16:54:05,676 - ----- query starts at offset: 33480 -----
+2023-07-20 16:54:05,676 - ----- Start building query for NYT API -----
+2023-07-20 16:54:05,677 - ----- built query movies -----
+2023-07-20 16:54:06,329 - -----Error:'num_results'-----
+2023-07-20 16:54:18,331 - ----- Total number of NYT API calls: 380 -----
+2023-07-20 16:54:18,333 - ----- Number of NYT Api calls for movies: 111 -----
+2023-07-20 16:54:18,334 - ----- query starts at offset: 33500 -----
+2023-07-20 16:54:18,336 - ----- Start building query for NYT API -----
+2023-07-20 16:54:18,337 - ----- built query movies -----
+2023-07-20 16:54:19,039 - -----Error:'num_results'-----
+2023-07-20 16:54:31,042 - ----- Total number of NYT API calls: 381 -----
+2023-07-20 16:54:31,044 - ----- Number of NYT Api calls for movies: 112 -----
+2023-07-20 16:54:31,045 - ----- query starts at offset: 33520 -----
+2023-07-20 16:54:31,047 - ----- Start building query for NYT API -----
+2023-07-20 16:54:31,048 - ----- built query movies -----
+2023-07-20 16:54:31,724 - -----Error:'num_results'-----
