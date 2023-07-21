@@ -53,11 +53,11 @@ landing_page = html.Div(className="landing_page", children=[
 
 ## acquire lists for dropdonw and sliders
 
-sectionsList = dashboardLists.getSectionList() 
-timeScaleList = dashboardLists.getTimeScaleList()
-stepsList = dashboardLists.getStepsList()
-sizesList = dashboardLists.getSizesList()
-booksList = dashboardLists.getBookLists()
+sectionsList = dashboardLists.DashboardLists.get_section_list() 
+timeScaleList = dashboardLists.DashboardLists.get_time_scale_list()
+stepsList = dashboardLists.DashboardLists.get_steps_list()
+sizesList = dashboardLists.DashboardLists.get_sizes_list()
+booksLists = dashboardLists.DashboardLists.get_book_lists()
 
 
 
@@ -92,7 +92,7 @@ news_page = html.Div(children=[
              
             # dropdown
             html.Div(dcc.Dropdown(id = 'news-page-dropdow-plot-1',
-                    options= ['world', 'us','sport'],#######FIX ME ############################# [{'label':i, 'value':i} for i in rookies],  
+                    options= [{'label':i, 'value':i} for i in sectionsList],  
                     value= 'news-section'), className='dropDown'),
             #bar plot 
             dcc.Graph(id='bar-plot-1', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="articles / journalist")),           
@@ -126,7 +126,7 @@ news_page = html.Div(children=[
        html.Div([
         # dropdown
             html.Div(dcc.Dropdown(id = 'news-page-dropdow-plot-2',
-                    options= ['world', 'us','sport'],#######FIX ME ############################# [{'label':i, 'value':i} for i in rookies],  
+                    options= [{'label':i, 'value':i} for i in sectionsList],  
                     value= 'news-section'), className='dropDown'),
             #bar plot 
             dcc.Graph(id='bar-plot-2', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="articles / person")),           
@@ -147,7 +147,7 @@ news_page = html.Div(children=[
        html.Div([
         # dropdown
             html.Div(dcc.Dropdown(id = 'news-page-dropdow-plot-4',
-                    options= ['world', 'us','sport'],#######FIX ME ############################# [{'label':i, 'value':i} for i in rookies],  
+                    options= [{'label':i, 'value':i} for i in sectionsList],  
                     value= 'news-section'), className='dropDown'),
             #bar plot 
             dcc.Graph(id='line-plot-4', className="bar-plots-1row", figure=px.line(df, x="section", y="time_scale", title="articles / day")),           
@@ -168,7 +168,7 @@ news_page = html.Div(children=[
        html.Div([
         # dropdown
             html.Div(dcc.Dropdown(id = 'news-page-dropdow-plot-5',
-                    options= ['world', 'us','sport'],#######FIX ME ############################# [{'label':i, 'value':i} for i in rookies],  
+                    options= [{'label':i, 'value':i} for i in sectionsList],  
                     value= 'news-section'), className='dropDown'),
             #bar plot 
             dcc.Graph(id='bar-plot-5', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="descriptions / article")),           
@@ -303,8 +303,8 @@ books_page = html.Div([
         html.Div([
         # dropdown
             html.Div(dcc.Dropdown(id = 'books-page-dropdow-plot-3',
-                    options= ['world', 'us','sport'],#######FIX ME ############################# [{'label':i, 'value':i} for i in rookies],  
-                    value= 'books-section'), className='dropDown'),
+                    options= [{'label':i, 'value':i} for i in booksLists], 
+                    value= 'books-section'), className='dropDown2'),
             #bar plot 
             dcc.Graph(id='books-bar-plot-3', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Top writers / list")),           
             # slider
