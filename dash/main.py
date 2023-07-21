@@ -53,7 +53,13 @@ landing_page = html.Div(className="landing_page", children=[
 
 ## acquire lists for dropdonw and sliders
 
-sectionsList=transform.getSectionList(); 
+sectionsList = dashboardLists.getSectionList() 
+timeScaleList = dashboardLists.getTimeScaleList()
+stepsList = dashboardLists.getStepsList()
+sizesList = dashboardLists.getSizesList()
+booksList = dashboardLists.getBookLists()
+
+
 
 ######FIX ME #############################
 ######FAKE DATA ##########################
