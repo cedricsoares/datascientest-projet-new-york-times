@@ -15,10 +15,47 @@ import queries
 # and movies and available on port 0.0.0.0 #
 ############################################
 
+
+###########################################
+# app necessary data and functions ########
+###########################################
+
 colors = {
     'background': '#474747',
     'text': '#26CAE9'
 }
+
+
+## acquire lists for dropdonw and sliders
+###########################################
+
+sectionsList = dashboardLists.DashboardLists.get_section_list() 
+timeScaleList = dashboardLists.DashboardLists.get_time_scale_list()
+stepsList = dashboardLists.DashboardLists.get_steps_list()
+sizesList = dashboardLists.DashboardLists.get_sizes_list()
+booksLists = dashboardLists.DashboardLists.get_books_lists()
+yearsList = dashboardLists.DashboardLists.get_years_list()
+
+
+######FIX ME #############################
+######FAKE DATA ##########################
+
+data = [
+    {"section": "A", "time_scale": "2020", "step": 1},
+    {"section": "B", "time_scale": "2020", "step": 2},
+    {"section": "C", "time_scale": "2020", "step": 3},
+    {"section": "D", "time_scale": "2020", "step": 4},
+    {"section": "E", "time_scale": "2020", "step": 5}
+]
+
+data2 = {
+    "section": ["A", "B", "C", "D", "E"],
+    "time_scale": [10, 15, 8, 12, 6]
+}
+
+df = pd.DataFrame(data2)
+######FAKE DATA ##########################
+
 
 
 
@@ -51,34 +88,6 @@ landing_page = html.Div(className="landing_page", children=[
 ###########################################
 
 
-## acquire lists for dropdonw and sliders
-
-sectionsList = dashboardLists.DashboardLists.get_section_list() 
-timeScaleList = dashboardLists.DashboardLists.get_time_scale_list()
-stepsList = dashboardLists.DashboardLists.get_steps_list()
-sizesList = dashboardLists.DashboardLists.get_sizes_list()
-booksLists = dashboardLists.DashboardLists.get_book_lists()
-
-
-
-######FIX ME #############################
-######FAKE DATA ##########################
-
-data = [
-    {"section": "A", "time_scale": "2020", "step": 1},
-    {"section": "B", "time_scale": "2020", "step": 2},
-    {"section": "C", "time_scale": "2020", "step": 3},
-    {"section": "D", "time_scale": "2020", "step": 4},
-    {"section": "E", "time_scale": "2020", "step": 5}
-]
-
-data2 = {
-    "section": ["A", "B", "C", "D", "E"],
-    "time_scale": [10, 15, 8, 12, 6]
-}
-
-df = pd.DataFrame(data2)
-######FAKE DATA ##########################
 
 
 news_page = html.Div(children=[
@@ -405,14 +414,19 @@ html.Div([
         html.Div([          
             #bar plot 
             dcc.Graph(id='movies-bar-plot-2', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Top 5 most prolific journalists")),           
+           
+            #slider output
+            html.Div(id='slider-output-container', className= 'sliderOutput'), 
             # slider
             dcc.Slider(className='slider',id='movies-page-slider-plot-2',
-                min=0,
-                max=5,
+                min=min(yearsList),
+                max=max(yearsList),
                 ######FIX ME #############################
-                # code ex: marks={i: position for i, position in enumerate(positions_list)},
-                value=3,    
-                )        
+                marks= {year: str(year) for year in [1936, 1950, 1970, 1990, 2010, 2023]},
+                value=1990,
+                step=1    
+                ), 
+                       
         ], className="single_plot_ctnr"),            
 
         # Div chart 3
@@ -421,6 +435,7 @@ html.Div([
             #bar plot 
             dcc.Graph(id='movies-bar-plot-3', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Top 5 MPAA ratings catregories all time")),           
         ], className="single_plot_ctnr"),
+           
     ],className= "plots_ctnr"),
 
 
@@ -450,6 +465,13 @@ def update_movies_bar_plot2(size):
         return fig
         ######FIX ME #############################
         #### FIX ME INCLUDE QUERY LOGIC ....
+
+@app.callback(
+    Output('slider-output-container', 'children'),
+    Input('movies-page-slider-plot-2', 'value'))
+def update_output(value):
+    return 'You have selected "{}"'.format(value)
+
 
 # bar plot 3 ##############################
 @app.callback(

@@ -97,6 +97,11 @@ button{
     min-width: 70%; 
 }
 
+.sliderOutput{
+    min-width: 70%; 
+    min-height: 20px;
+}
+
 /*Landing page ***********************/
 
 .landing_page {

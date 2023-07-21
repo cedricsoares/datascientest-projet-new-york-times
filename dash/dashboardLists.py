@@ -53,7 +53,7 @@ class DashboardLists:
         return [5,10,15,20]
 
     @classmethod
-    def get_book_lists(cls):
+    def get_books_lists(cls):
         return [
         "Hardcover Fiction", 
         "Hardcover Nonfiction", 
