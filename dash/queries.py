@@ -41,7 +41,7 @@ logging.basicConfig(filename=log_filename, level=logging.INFO)
 ###########################################
 
 # apiCall # function #########################
-def apiCall(endpoint):
+def api_call(endpoint):
 
     """Return Dataframe from api call 
 Args:
