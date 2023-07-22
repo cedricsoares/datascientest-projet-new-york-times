@@ -291,14 +291,14 @@ books_page = html.Div([
 
             #bar plot 
             dcc.Graph(id='books-bar-plot-1', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Top NYT Bestsellers")),           
-            # slider
-            dcc.Slider(className='slider',id='books-page-slider-plot-1',
-                min=0,
-                max=5,
-                ######FIX ME #############################
-                # code ex: marks={i: position for i, position in enumerate(positions_list)},
-                value=3,    
-                )        
+            
+            # dropdown
+            html.Div(dcc.Dropdown(id = 'books-page-dropdown-sizes-plot-1',
+                    options= [{'label':i, 'value':i} for i in sizesList],  
+                    placeholder="Select step...",
+                    value= sizesList[3] # Set default value
+                    ), className='dropDown'),
+
         ], className="single_plot_ctnr"),
    
 
@@ -307,14 +307,14 @@ books_page = html.Div([
 
             #bar plot 
             dcc.Graph(id='books-bar-plot-2', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Books / Bestsellers list")),           
-            # slider
-            dcc.Slider(className='slider',id='books-page-slider-plot-2',
-                min=0,
-                max=5,
-                ######FIX ME #############################
-                # code ex: marks={i: position for i, position in enumerate(positions_list)},
-                value=3,    
-                )        
+            
+            # dropdown
+            html.Div(dcc.Dropdown(id = 'books-page-dropdown-sizes-plot-2',
+                    options= [{'label':i, 'value':i} for i in sizesList],  
+                    placeholder="Select step...",
+                    value= sizesList[3] # Set default value
+                    ), className='dropDown'),  
+
         ], className="single_plot_ctnr"),
 
     ],className= "plots_ctnr_2"),
@@ -323,34 +323,38 @@ books_page = html.Div([
     html.Div([
         # Div chart 3
         html.Div([
-        # dropdown
-            html.Div(dcc.Dropdown(id = 'books-page-dropdow-plot-3',
-                    options= [{'label':i, 'value':i} for i in booksLists], 
-                    value= 'books-section'), className='dropDown2'),
+              
             #bar plot 
             dcc.Graph(id='books-bar-plot-3', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="Top writers / list")),           
-            # slider
-            dcc.Slider(className='slider',id='books-page-slider-plot-3',
-                min=0,
-                max=5,
-                ######FIX ME #############################
-                # code ex: marks={i: position for i, position in enumerate(positions_list)},
-                value=3,    
-                )        
+            
+            # dropdown
+            html.Div(dcc.Dropdown(id = 'books-page-dropdown-lists-plot-3',
+                    options= [{'label':i, 'value':i} for i in booksLists],  
+                    placeholder="Select a list...",
+                    value= booksLists[0] # Set default value
+                    ), className='dropDown'),
+
+            # dropdown
+            html.Div(dcc.Dropdown(id = 'books-page-dropdown-sizes-plot-3',
+                    options= [{'label':i, 'value':i} for i in sizesList],  
+                    placeholder="Select step...",
+                    value= sizesList[3] # Set default value
+                    ), className='dropDown'),        
+
         ], className="single_plot_ctnr"),
 
      # Div chart 4
        html.Div([
             #bar plot 
             dcc.Graph(id='books-bar-plot-4', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title=" Publishers / bestsellers")),           
-            # slider
-            dcc.Slider(className='slider',id='books-page-slider-plot-4',
-                min=0,
-                max=5,
-                ######FIX ME #############################
-                # code ex: marks={i: position for i, position in enumerate(positions_list)},
-                value=3,    
-                )        
+            
+            # dropdown
+            html.Div(dcc.Dropdown(id = 'books-page-dropdown-sizes-plot-4',
+                    options= [{'label':i, 'value':i} for i in sizesList],  
+                    placeholder="Select step...",
+                    value= sizesList[3] # Set default value
+                    ), className='dropDown'), 
+
         ], className="single_plot_ctnr"),
 
     ],className= "plots_ctnr_2"),
@@ -363,7 +367,7 @@ books_page = html.Div([
 # bar plot 1 ##############################
 @app.callback(
     Output('books-bar-plot-1', 'figure'),
-    [Input('books-page-slider-plot-1', 'size')])
+    [Input('books-page-dropdown-sizes-plot-1', 'size')])
 def update_books_bar_plot1(size): 
         fig = px.bar(df, x="section", y="time_scale", title="Top NYT Bestsellers")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
@@ -374,7 +378,7 @@ def update_books_bar_plot1(size):
 # bar plot 2 ##############################
 @app.callback(
     Output('books-bar-plot-2', 'figure'),
-    [Input('books-page-slider-plot-2', 'size')])
+   [Input('books-page-dropdown-sizes-plot-2', 'size')])
 def update_books_bar_plot2(size): 
         fig = px.bar(df, x="section", y="time_scale", title="Books / Bestsellers list")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
@@ -386,8 +390,8 @@ def update_books_bar_plot2(size):
 # bar plot 3 ##############################
 @app.callback(
     Output('books-bar-plot-3', 'figure'),
-    [Input('books-page-dropdow-plot-3', 'list'),
-     Input('books-page-slider-plot-3', 'size')])
+    [Input('books-page-dropdown-lists-plot-3', 'size'),
+     Input('books-page-dropdown-sizes-plot-3', 'size')])
 def update_books_bar_plot3(list, size): 
         fig = px.bar(df, x="section", y="time_scale", title="Top writers / list")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
@@ -398,7 +402,7 @@ def update_books_bar_plot3(list, size):
 # bar plot 4 ##############################
 @app.callback(
     Output('books-bar-plot-4', 'figure'),
-     [Input('books-page-slider-plot-4', 'size')])
+    [Input('books-page-dropdown-sizes-plot-4', 'size')])
 def update_books_bar_plot4(size): 
         fig = px.bar(df, x="section", y="time_scale", title="Publisher / list")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
