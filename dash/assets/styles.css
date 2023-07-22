@@ -21,6 +21,7 @@ button{
 .dropDown{
     min-width: 50%;
     color: #26CAE9 !important;
+    margin-bottom: 3%;
 }
 
 .dropDown2{
@@ -97,10 +98,18 @@ button{
     min-width: 70%; 
 }
 
+.slider .rc-slider-mark-text {
+    transform: rotate(-45deg);
+    
+}
+
+
 .sliderOutput{
     min-width: 70%; 
     min-height: 20px;
 }
+
+
 
 /*Landing page ***********************/
 
@@ -127,7 +136,7 @@ button{
 }
 
 .pie-chart-style-1{
-    width:90%;
+    width:100%;
 }
 
 /*Books page ***********************/
