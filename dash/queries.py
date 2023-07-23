@@ -5,6 +5,9 @@ import pandas as pd
 import datetime
 #import logging
 from passlib.context import CryptContext
+from requests.auth import HTTPBasicAuth
+import json
+
 
 ############################################
 #### DASH Data Queries #####################
@@ -20,7 +23,7 @@ from passlib.context import CryptContext
 ###########################################
 ## FIX ME FOR PROD WITH CONTAINER PORT
 # url = "http://api:8000"
-url = "http://0.0.0.0:8000/"  #########
+url = "http://0.0.0.0:8000"  #########
 ###########################################
 
 """
@@ -54,12 +57,17 @@ Returns:
     username = 'dashboard'
     password = 'dst_NYT_dashboard'
     path = url + endpoint  
+    print(path)
     try:
-        response = requests.get(path, params={'username': username, 'password': password})
+        response = requests.get(path, auth=HTTPBasicAuth(username, password))
+        print(response)
         # Convert the response to JSON
         data = response.json()
+        print(data)
+        data_list = json.loads(data["data"])
         # Convert JSON to pandas DataFrame
-        df = pd.DataFrame(data)
+        df = pd.DataFrame(data_list)
+        print(df.head())
         # return DF
         return df
 
@@ -73,72 +81,55 @@ Returns:
 # News ####################################
 ###########################################
 
-
-# News - section necessary lists ##########
-###########################################
-
-# News - sections #########################
-"""Return sections list for dropdown/slider
-Args:
-     none
-Returns:
-    List of Strings
-"""
-""" CODE SPACE ###########################"""
-
-# News - time-scale #######################
-"""Return time scale list for dropdown/slider
-Args:
-     none
-Returns:
-    List of Strings    #### TO DOUBLE CHECK
-"""
-""" CODE SPACE ###########################"""
-
-# News - size #############################
-"""Return sections list for dropdown/slider
-Args:
-     none
-Returns:
-    List of Strings  #### TO DOUBLE CHECK
-"""
-""" CODE SPACE ###########################"""
-
-
 # News - queries functions ################
 ###########################################
 
 # News # bar plot 1 # Articles/Journalist #
-"""Return sections list for dropdown/slider
+
+
+def get_articles_per_journalist(section, time_scale):
+    """Return sections list for dropdown/slider
 Args:
     - Section - news section
     - timeScale - scope of the search
 Returns:
     -  Dataframe 
 """
+    endpoint=f"/news/top-journalists?section={section}&time_scale={time_scale}"
+    print(endpoint)
+    dfRes= api_call(endpoint)
+    return dfRes
 
-""" CODE SPACE ###########################"""
 
 # News # pie chart 2 # Articles/Section ###
-"""Return sections list for dropdown/slider
+def get_articles_per_section(time_scale):
+
+    """Return sections list for dropdown/slider
 Args:
     - timeScale - scope of the search
 Returns:
     - Dataframe 
-"""
+"""  
+    endpoint=f"/news/sections-proportions?time_scale={time_scale}"
+    print(endpoint)
+    dfRes= api_call(endpoint)
+    return dfRes
+    
 
-""" CODE SPACE ###########################"""
 
 # News # bar plot 3 # Articles/Person ###
-"""Return sections list for dropdown/slider
+def get_articles_per_person(section, time_scale):
+    """Return sections list for dropdown/slider
 Args:
     - Section - news section
     - timeScale - scope of the search
 Returns:
     - Dataframe 
 """
-
-""" CODE SPACE ###########################"""
+    endpoint=f"/news/top-persons?section={section}&time_scale={time_scale}"
+    print(endpoint)
+    dfRes= api_call(endpoint)
+    return dfRes
 
 # News # line plot 4 # Articles/day ###
 """Return sections list for dropdown/slider
@@ -219,14 +210,21 @@ Returns:
 ###########################################
 
 # Movies # bar plot 1 # Reviews / year ####
-"""Return sections list for dropdown/slider
+def get_reviews_per_year():
+    """Return sections list for dropdown/slider
 Args:
     - None
 Returns:
     - Dataframe 
 """
+    endpoint="/movies/count-per-year"
+    print(endpoint)
+    dfRes= api_call(endpoint)
+    return dfRes
 
-""" CODE SPACE ###########################"""
+
+
+
 
 # Movies  # bar plot 2 # Top 5 most prolific Journalist#
 """Return sections list for dropdown/slider

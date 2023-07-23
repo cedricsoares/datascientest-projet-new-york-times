@@ -39,7 +39,8 @@ users = {
     }
 }
 
-es = AsyncElasticsearch(hosts="http://es-container:9200")
+es = AsyncElasticsearch(hosts="http://0.0.0.0:9200") ############# FIX ME  to es-container instead of es-container
+
 
 
 class elasticResponse(BaseModel):
