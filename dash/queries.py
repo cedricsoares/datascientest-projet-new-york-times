@@ -96,7 +96,6 @@ Returns:
     -  Dataframe 
 """
     endpoint=f"/news/top-journalists?section={section}&time_scale={time_scale}"
-    print(endpoint)
     dfRes= api_call(endpoint)
     return dfRes
 
@@ -111,7 +110,6 @@ Returns:
     - Dataframe 
 """  
     endpoint=f"/news/sections-proportions?time_scale={time_scale}"
-    print(endpoint)
     dfRes= api_call(endpoint)
     return dfRes
     
@@ -127,7 +125,6 @@ Returns:
     - Dataframe 
 """
     endpoint=f"/news/top-persons?section={section}&time_scale={time_scale}"
-    print(endpoint)
     dfRes= api_call(endpoint)
     return dfRes
 
@@ -147,8 +144,8 @@ Returns:
     return dfRes
 
 
-def get_top_topics(section, time_scale):
 # News # bar plot 5 # descriptions/article ##
+def get_top_topics(section, time_scale):
     """Return sections list for dropdown/slider
 Args:
     - Section - news section
@@ -172,14 +169,20 @@ Returns:
 ###########################################
 
 # Books # bar plot 1 # Top NYT Bestsellers #
-"""Return sections list for dropdown/slider
+def get_top_topics(size):
+    """Return sections list for dropdown/slider
 Args:
     - Size 
 Returns:
     - Dataframe 
 """
+    endpoint=f"/books/top-writers?size={size}"
+    print(endpoint)
+    dfRes= api_call(endpoint)
+    print(dfRes.head())
+    return dfRes
 
-""" CODE SPACE ###########################"""
+
 
 # Books # bar plot 2 # books/ Bestseller list#
 """Return sections list for dropdown/slider
