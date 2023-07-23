@@ -3,7 +3,7 @@ import requests
 import os 
 import pandas as pd
 import datetime
-#import logging
+import logging
 from passlib.context import CryptContext
 from requests.auth import HTTPBasicAuth
 import json
@@ -22,21 +22,21 @@ import json
 
 ###########################################
 ## FIX ME FOR PROD WITH CONTAINER PORT
-# url = "http://api:8000"
-url = "http://0.0.0.0:8000"  #########
+url = "http://api:8000"
+#url = "http://0.0.0.0:8000"  #########
 ###########################################
 
-"""
+
 ###########################################
 # Set up the logger to log to a file
 # Define the directory
 # Define the directory
-log_directory = "/Users/edouardphilippe/Documents/repo/NYT/NYT 2.2/dash/logs/dash/"
+log_directory = "./dash/logs/dash/"
 # Create the directory if it doesn't exist
 os.makedirs(log_directory, exist_ok=True)
-log_filename = "/app/logs/dash/dash_logs_{}.txt".format(datetime.date.today().isoformat())
+log_filename = "./logs/dash/dash_logs_{}.txt".format(datetime.date.today().isoformat())
 logging.basicConfig(filename=log_filename, level=logging.INFO)
-"""
+
 
 
 ###########################################
@@ -57,10 +57,9 @@ Returns:
     username = 'dashboard'
     password = 'dst_NYT_dashboard'
     path = url + endpoint  
-    print(path)
     try:
         response = requests.get(path, auth=HTTPBasicAuth(username, password))
-        print(response)
+
         # Convert the response to JSON
         data = response.json()
 
@@ -72,9 +71,9 @@ Returns:
         return df
 
     except requests.exceptions.RequestException as e:
-        print(e)
-    # Log the error
-       # logging.error("Request failed: " + str(e))
+        print(path, response, e)
+        # Log the error
+        logging.error("Request failed: " + str(e), path, response)
 
 
 ###########################################
@@ -202,9 +201,7 @@ Returns:
     - Dataframe 
 """
     endpoint=f"/books/top-writers-by-lists?list={list}&size={size}"
-    print(endpoint)
     dfRes= api_call(endpoint)
-    print(dfRes.head())
     return dfRes
 
 
@@ -262,4 +259,3 @@ Returns:
     dfRes= api_call(endpoint)
     return dfRes
 
-""" CODE SPACE ###########################"""

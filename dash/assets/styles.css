@@ -60,7 +60,7 @@ button{
     width: 100%;
 }
 .plots_ctnr_2{
-    width: 85%;
+    width: 100%;
     height:auto;
     display: flex;
     flex-direction: row;
@@ -69,7 +69,7 @@ button{
 }
 
 .plots_ctnr{
-    width: 95%;
+    width: 100%;
     height:auto;
     display: flex;
     flex-direction: row;
@@ -78,7 +78,7 @@ button{
 }
 
 .single_plot_ctnr{
-    width: 30%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,6 +107,7 @@ button{
 .sliderOutput{
     min-width: 70%; 
     min-height: 20px;
+    justify-content: center;
 }
 
 

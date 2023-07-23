@@ -57,17 +57,17 @@ services:
       elasticsearch:
         condition: "service_healthy"
 
-#  dash:
- #   container_name: dash-container
-#    build: ./dash
-#    volumes:
-#      - logs:/app/logs
-#    networks:
-#      - frontend
-#    depends_on:
-#      - api
-#    ports:
-#     - 8050:8050    
+  dash:
+    container_name: dash-container
+    build: ./dash
+    volumes:
+      - logs:/app/logs
+    networks:
+      - frontend
+    depends_on:
+      - api
+    ports:
+      - 8050:8050    
 
 volumes:
   data:

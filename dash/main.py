@@ -234,7 +234,9 @@ def update_news_bar_plot1(newsSection, timescale):
         # query API to get dataframe
         queriedDf = queries.get_articles_per_journalist(newsSection,timescale)
         queriedDf.head()
-        fig = px.bar(queriedDf, x="key", y="doc_count", title="articles / journalist",labels={"key": "journalist", "doc_count": "articles"})
+          # Add a new column with truncated journalist names
+        queriedDf['key_truncated'] = queriedDf['key'].apply(lambda x: (x[:17] + '...') if len(x) > 20 else x)
+        fig = px.bar(queriedDf, x="key_truncated", y="doc_count", title="articles / journalist",labels={"key_truncated": "journalist", "doc_count": "articles"})
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         
         return fig
