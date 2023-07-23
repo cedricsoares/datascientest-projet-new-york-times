@@ -36,8 +36,6 @@ sizesList = dashboardLists.DashboardLists.get_sizes_list()
 booksLists = dashboardLists.DashboardLists.get_books_lists()
 yearsList = dashboardLists.DashboardLists.get_years_list()
 
-
-######FIX ME #############################
 ######FAKE DATA ##########################
 
 data = [
@@ -97,8 +95,7 @@ news_page = html.Div(children=[
     html.Div([
         html.Div([          
             #bar plot 
-            dcc.Graph(id='bar-plot-1', className="bar-plots-1row",
-                       figure=px.bar(df, x="section", y="time_scale", title="articles / journalist")),
+            dcc.Graph(id='bar-plot-1', className="bar-plots-1row"),
                                          
             # dropdown
             html.Div(dcc.Dropdown(id = 'news-page-dropdown-sections-plot-1',
@@ -214,27 +211,48 @@ news_page = html.Div(children=[
 # 1 # bar plot 1 ##############################
 @app.callback(
     Output('bar-plot-1', 'figure'),
-    [Input('news-page-dropdown-sections-plot-1', 'newsSection'),
-     Input('news-page-dropdown-time_scale-plot-1', 'timeScale')])
-def update_news_bar_plot1(newsSection, timescale):
+    [Input('news-page-dropdown-sections-plot-1', 'value'),
+     Input('news-page-dropdown-time_scale-plot-1', 'value')])
+def update_news_bar_plot1(newsSection, timescale):   
+    # return a fake dataframe
+    if newsSection is None or newsSection not in sectionsList and timescale is None or timescale not in timeScaleList: 
         fig = px.bar(df, x="section", y="time_scale", title="articles / journalist")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
-     
+        
         return fig
-        ######FIX ME #############################
-        #### FIX ME INCLUDE QUERY LOGIC ....
+        
+    else:
+        # query API to get dataframe
+        queriedDf = queries.get_articles_per_journalist(newsSection,timescale)
+        queriedDf.head()
+        fig = px.bar(queriedDf, x="key", y="doc_count", title="articles / journalist",labels={"key": "journalist", "doc_count": "articles"})
+        fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        
+        return fig
         
 
 # 2 # Pie Chart ##############################
 @app.callback(
     Output('pie-chart', 'figure'),
-    [Input('news-page-dropdown-time_scale-plot-2', 'timeScale')])
+    [Input('news-page-dropdown-time_scale-plot-2', 'value')])
 def update_news_pie_chart(timescale):  
+    # return a fake dataframe
+    if timescale is None or timescale not in timeScaleList: 
         fig= px.pie(df, values="time_scale", title="article /section")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+      
         return fig 
-        ######FIX ME #############################
-        #### FIX ME INCLUDE QUERY LOGIC ....
+    
+    else: 
+        # query API to get dataframe
+        queriedDf = queries.get_articles_per_section(timescale)
+        queriedDf.head()
+        fig = px.pie(queriedDf, values='doc_count', names='key', title="article /section")
+        fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        
+        return fig
+        
+        
 
 # 3 # bar plot 2 ##############################
 @app.callback(
@@ -424,7 +442,7 @@ html.Div([
         html.Div([
         
             #bar plot 
-            dcc.Graph(id='movies-bar-plot-1', className="bar-plots-1row", figure=px.bar(df, x="section", y="time_scale", title="reviews / year")),                    
+            dcc.Graph(id='movies-bar-plot-1', className="bar-plots-1row"),                    
         ], className="single_plot_ctnr"),
             
        # Div Bar chart
@@ -465,11 +483,14 @@ html.Div([
     Output('movies-bar-plot-1', 'figure'),
     Input('url', 'pathname'))
 def update_movies_bar_plot1(path): 
-        fig = px.bar(df, x="section", y="time_scale", title="reviews / year")
-        fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
-        return fig
-        ######FIX ME #############################
-        #### FIX ME INCLUDE QUERY LOGIC ....
+        
+        # query API to get dataframe
+    queriedDf = queries.get_reviews_per_year()
+    queriedDf.head()
+    fig = px.bar(queriedDf, x="section", y="time_scale", title="articles / journalist")
+    fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        
+    return fig
 
 # bar plot 2 ##############################
 @app.callback(
