@@ -65,7 +65,6 @@ Returns:
         data = response.json()
 
         data_list = json.loads(data["data"])
-        print(data_list)
         # Convert JSON to pandas DataFrame
         df = pd.DataFrame(data_list)
         
@@ -221,7 +220,6 @@ Returns:
     dfRes= api_call(endpoint)
     return dfRes
 
-""" CODE SPACE ###########################"""
 
 ###########################################
 # Movies ##################################
@@ -230,39 +228,38 @@ Returns:
 # Movies - queries functions ################
 ###########################################
 
-# Movies # bar plot 1 # Reviews / year ####
 def get_reviews_per_year():
-    """Return sections list for dropdown/slider
+    """Movies # bar plot 1 # Reviews / year
 Args:
     - None
 Returns:
     - Dataframe 
 """
     endpoint="/movies/count-per-year"
-    print(endpoint)
     dfRes= api_call(endpoint)
     return dfRes
 
 
-
-
-
-# Movies  # bar plot 2 # Top 5 most prolific Journalist#
-"""Return sections list for dropdown/slider
-Args:
+def get_top_reviewers_per_year(year):
+    """  Movies  - bar plot 2 - Top 5 most prolific Journalist
     - year 
 Returns:
     - Dataframe 
 """
+    endpoint=f"/movies/top-reviwers?year={year}" 
+    dfRes= api_call(endpoint)
+    return dfRes
 
-""" CODE SPACE ###########################"""
 
-# Movies # bar plot 3 # top 5  MPAA Ratings of all time ###
-"""Return sections list for dropdown/slider
+def get_top_mpaa_ratings():
+    """Movies # bar plot 3 # top 5  MPAA Ratings of all time 
 Args:
     - None 
 Returns:
     - Dataframe 
 """
+    endpoint=f"/movies/top-mpaa-rating" 
+    dfRes= api_call(endpoint)
+    return dfRes
 
 """ CODE SPACE ###########################"""

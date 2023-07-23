@@ -555,10 +555,10 @@ html.Div([
     Input('url', 'pathname'))
 def update_movies_bar_plot1(path): 
         
-        # query API to get dataframe
+    # query API to get dataframe
     queriedDf = queries.get_reviews_per_year()
     queriedDf.head()
-    fig = px.bar(queriedDf, x="section", y="time_scale", title="articles / journalist")
+    fig = px.bar(queriedDf, x="key_as_string", y="doc_count", title="movies / years",labels={"key_as_string": "years", "doc_count": "movies"})
     fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         
     return fig
@@ -566,14 +566,22 @@ def update_movies_bar_plot1(path):
 # bar plot 2 ##############################
 @app.callback(
     Output('movies-bar-plot-2', 'figure'),
-    [Input('movies-page-slider-plot-2', 'size')])
-def update_movies_bar_plot2(size): 
-        fig = px.bar(df, x="section", y="time_scale", title="Top 5 most prolific journalists")
+    [Input('movies-page-slider-plot-2', 'value')])
+def update_movies_bar_plot2(year):    
+    if year is None or year not in yearsList: 
+        # return a fake graph in case there is a bad connection
+        fake_graph('top reviewers')
+        
+    else:
+        # query API to get dataframe
+        queriedDf = queries.get_top_reviewers_per_year(year)
+        queriedDf.head()
+        fig = px.bar(queriedDf, x="key", y="doc_count", title="top reviewers",labels={"key": "person", "doc_count": "reviews"})
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        
         return fig
-        ######FIX ME #############################
-        #### FIX ME INCLUDE QUERY LOGIC ....
 
+# bar plot 2 indicator label ################
 @app.callback(
     Output('slider-output-container', 'children'),
     Input('movies-page-slider-plot-2', 'value'))
@@ -581,14 +589,20 @@ def update_output(value):
     return 'You have selected "{}"'.format(value)
 
 
+
 # bar plot 3 ##############################
 @app.callback(
     Output('movies-bar-plot-3', 'figure'),
     Input('url', 'pathname'))
-def update_movies_bar_plot3(size): 
-        fig = px.bar(df, x="section", y="time_scale", title="Top 5 MPAA ratings of all time")
-        fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
-        return fig
+def update_movies_bar_plot3(path): 
+    # query API to get dataframe
+    queriedDf = queries.get_top_mpaa_ratings()
+    queriedDf.head()
+    fig = px.bar(queriedDf, x="key", y="doc_count", title="movies / years",labels={"key": "ratings", "doc_count": "movies"})
+    fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        
+    return fig
+
         ######FIX ME #############################
         #### FIX ME INCLUDE QUERY LOGIC ....
 
