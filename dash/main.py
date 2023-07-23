@@ -261,7 +261,7 @@ def update_news_pie_chart(timescale):
      Input('news-page-dropdown-time_scale-plot-3', 'value')])
 def update_news_bar_plot1(newsSection, timescale): 
 
-        # return a fake dataframe
+    # return a fake dataframe
     if newsSection is None or newsSection not in sectionsList and timescale is None or timescale not in timeScaleList: 
         fig = px.bar(df, x="section", y="time_scale", title="articles / person")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
@@ -281,11 +281,24 @@ def update_news_bar_plot1(newsSection, timescale):
 
 @app.callback(
     Output('line-plot-4', 'figure'),
-    [Input('news-page-dropdown-sections-plot-4', 'newsSection'),
-     Input('news-page-dropdown-steps-plot-4', 'timeScale')])
-def update_news_bar_plot1(newsSection, timescale): 
+    [Input('news-page-dropdown-sections-plot-4', 'value'),
+     Input('news-page-dropdown-steps-plot-4', 'value')])
+def update_news_bar_plot1(newsSection, step): 
+       
+
+    # return a fake dataframe
+    if newsSection is None or newsSection not in sectionsList and step is None or step not in stepsList: 
         fig = px.line(df, x="section", y="time_scale", title="articles / day")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        return fig
+        
+    else:
+        # query API to get dataframe
+        queriedDf = queries.get_articles_per_period(newsSection,step)
+        queriedDf.head()
+        fig = px.line(queriedDf, x="key_as_string", y="doc_count", title="articles / period",labels={"key_as_string": "steps", "doc_count": "articles"})
+        fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+
         return fig
         ######FIX ME #############################
         #### FIX ME INCLUDE QUERY LOGIC ....
@@ -294,14 +307,24 @@ def update_news_bar_plot1(newsSection, timescale):
 # 5 # bar plot 3 ##############################
 @app.callback(
     Output('bar-plot-5', 'figure'),
-    [Input('news-page-dropdown-sections-plot-5', 'newsSection'),
-     Input('news-page-dropdown-time_scale-plot-5', 'timeScale')])
+    [Input('news-page-dropdown-sections-plot-5', 'value'),
+     Input('news-page-dropdown-time_scale-plot-5', 'value')])
 def update_news_bar_plot1(newsSection, timescale): 
-        fig = px.bar(df, x="section", y="time_scale", title="descriptions / article")
+     # return a fake dataframe
+    if newsSection is None or newsSection not in sectionsList and timescale is None or timescale not in timeScaleList: 
+        fig = px.bar(df, x="section", y="time_scale", title="top topics")
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        
         return fig
-        ######FIX ME #############################
-        #### FIX ME INCLUDE QUERY LOGIC ....
+        
+    else:
+        # query API to get dataframe
+        queriedDf = queries.get_top_topics(newsSection,timescale)
+        queriedDf.head()
+        fig = px.bar(queriedDf, x="key", y="doc_count", title="top topics",labels={"key": "person", "doc_count": "articles"})
+        fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        
+        return fig
 
 
 ###########################################

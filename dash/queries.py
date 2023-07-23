@@ -63,11 +63,11 @@ Returns:
         print(response)
         # Convert the response to JSON
         data = response.json()
-        print(data)
+
         data_list = json.loads(data["data"])
         # Convert JSON to pandas DataFrame
         df = pd.DataFrame(data_list)
-        print(df.head())
+    
         # return DF
         return df
 
@@ -131,26 +131,36 @@ Returns:
     dfRes= api_call(endpoint)
     return dfRes
 
+
 # News # line plot 4 # Articles/day ###
-"""Return sections list for dropdown/slider
+def get_articles_per_period(section, step):
+    """Return sections list for dropdown/slider
 Args:
     - Section - news section
     - step - scope of the search
 Returns:
     - Dataframe 
 """
+    endpoint=f"/news/articles-count?section={section}&step={step}"
+    print(endpoint)
+    dfRes= api_call(endpoint)
+    return dfRes
 
-""" CODE SPACE ###########################"""
 
+def get_top_topics(section, time_scale):
 # News # bar plot 5 # descriptions/article ##
-"""Return sections list for dropdown/slider
+    """Return sections list for dropdown/slider
 Args:
     - Section - news section
     - timeScale - scope of the search
 Returns:
     - Dataframe 
 """
-
+    endpoint=f"/news/top-topics?section={section}&time_scale={time_scale}"
+    print(endpoint)
+    dfRes= api_call(endpoint)
+    print(dfRes.head())
+    return dfRes
 """ CODE SPACE ###########################"""
 
 
