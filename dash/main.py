@@ -429,9 +429,9 @@ def update_books_bar_plot1(size):
         
     else:
         # query API to get dataframe
-        queriedDf = queries.get_top_topics(size)
+        queriedDf = queries.get_top_writers(size)
         queriedDf.head()
-        fig = px.bar(queriedDf, x="key", y="doc_count", title="top topics",labels={"key": "person", "doc_count": "articles"})
+        fig = px.bar(queriedDf, x="key", y="doc_count", title="top topics",labels={"key": "person", "doc_count": "books"})
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         
         return fig
@@ -442,36 +442,61 @@ def update_books_bar_plot1(size):
 # bar plot 2 ##############################
 @app.callback(
     Output('books-bar-plot-2', 'figure'),
-   [Input('books-page-dropdown-sizes-plot-2', 'size')])
+   [Input('books-page-dropdown-sizes-plot-2', 'value')])
 def update_books_bar_plot2(size): 
-        fig = px.bar(df, x="section", y="time_scale", title="Books / Bestsellers list")
+    
+    if size is None or size not in sizesList: 
+        # return a fake graph in case there is a bad connection
+        fake_graph('Count by book lists')
+        
+    else:
+        # query API to get dataframe
+        queriedDf = queries.get_count_by_lists(size)
+        queriedDf.head()
+        fig = px.bar(queriedDf, x="key", y="doc_count", title="Count by book lists",labels={"key": "person", "doc_count": "books"})
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        
         return fig
-        ######FIX ME #############################
-        #### FIX ME INCLUDE QUERY LOGIC ....
+
 
 
 # bar plot 3 ##############################
 @app.callback(
     Output('books-bar-plot-3', 'figure'),
-    [Input('books-page-dropdown-lists-plot-3', 'size'),
-     Input('books-page-dropdown-sizes-plot-3', 'size')])
+    [Input('books-page-dropdown-lists-plot-3', 'value'),
+     Input('books-page-dropdown-sizes-plot-3', 'value')])
 def update_books_bar_plot3(list, size): 
-        fig = px.bar(df, x="section", y="time_scale", title="Top writers / list")
+    # return a fake dataframe
+    if list is None or list not in booksLists and size is None or size not in sizesList: 
+        # return a fake graph in case there is a bad connection
+        fake_graph('top writers by book lists')
+
+    else:
+        # query API to get dataframe
+        queriedDf = queries.get_top_writers_by_lists(list,size)
+        queriedDf.head()
+        fig = px.bar(queriedDf, x="key", y="doc_count", title="top writers by book lists",labels={"key": "person", "doc_count": "books"})
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        
         return fig
-        ######FIX ME #############################
-        #### FIX ME INCLUDE QUERY LOGIC ....
 
 # bar plot 4 ##############################
 @app.callback(
     Output('books-bar-plot-4', 'figure'),
-    [Input('books-page-dropdown-sizes-plot-4', 'size')])
+    [Input('books-page-dropdown-sizes-plot-4', 'value')])
 def update_books_bar_plot4(size): 
-        fig = px.bar(df, x="section", y="time_scale", title="Publisher / list")
+    if size is None or size not in sizesList: 
+        # return a fake graph in case there is a bad connection
+        fake_graph('top publishers')
+        
+    else:
+        # query API to get dataframe
+        queriedDf = queries.get_top_publishers(size)
+        queriedDf.head()
+        fig = px.bar(queriedDf, x="key", y="doc_count", title="top publishers",labels={"key": "person", "doc_count": "books"})
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
+        
         return fig
-
 
 
 ###########################################

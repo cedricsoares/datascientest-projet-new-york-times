@@ -65,9 +65,10 @@ Returns:
         data = response.json()
 
         data_list = json.loads(data["data"])
+        print(data_list)
         # Convert JSON to pandas DataFrame
         df = pd.DataFrame(data_list)
-    
+        
         # return DF
         return df
 
@@ -139,7 +140,6 @@ Returns:
     - Dataframe 
 """
     endpoint=f"/news/articles-count?section={section}&step={step}"
-    print(endpoint)
     dfRes= api_call(endpoint)
     return dfRes
 
@@ -154,9 +154,7 @@ Returns:
     - Dataframe 
 """
     endpoint=f"/news/top-topics?section={section}&time_scale={time_scale}"
-    print(endpoint)
     dfRes= api_call(endpoint)
-    print(dfRes.head())
     return dfRes
 """ CODE SPACE ###########################"""
 
@@ -169,7 +167,7 @@ Returns:
 ###########################################
 
 # Books # bar plot 1 # Top NYT Bestsellers #
-def get_top_topics(size):
+def get_top_writers(size):
     """Return sections list for dropdown/slider
 Args:
     - Size 
@@ -177,41 +175,51 @@ Returns:
     - Dataframe 
 """
     endpoint=f"/books/top-writers?size={size}"
-    print(endpoint)
     dfRes= api_call(endpoint)
-    print(dfRes.head())
     return dfRes
 
 
 
 # Books # bar plot 2 # books/ Bestseller list#
-"""Return sections list for dropdown/slider
+def get_count_by_lists(size):
+    """Return sections list for dropdown/slider
 Args:
     - Size 
 Returns:
     - Dataframe 
 """
+    endpoint=f"/books/count-by-lists?size={size}" 
+    dfRes= api_call(endpoint)
+    return dfRes
 
-""" CODE SPACE ###########################"""
 
 # Books # bar plot 3 # Articles/Person ###
-"""Return sections list for dropdown/slider
+def get_top_writers_by_lists(list,size):
+    """Return sections list for dropdown/slider
 Args:
     - list - (books NYT list)
     - Size 
 Returns:
     - Dataframe 
 """
+    endpoint=f"/books/top-writers-by-lists?list={list}&size={size}"
+    print(endpoint)
+    dfRes= api_call(endpoint)
+    print(dfRes.head())
+    return dfRes
 
-""" CODE SPACE ###########################"""
 
 # Books # bar plot 4 # publishers/bestsellers ##
-"""Return sections list for dropdown/slider
+def get_top_publishers(size):
+    """Return sections list for dropdown/slider
 Args:
     - Size 
 Returns:
     - Dataframe 
 """
+    endpoint=f"/books/top-publishers?size={size}" 
+    dfRes= api_call(endpoint)
+    return dfRes
 
 """ CODE SPACE ###########################"""
 
