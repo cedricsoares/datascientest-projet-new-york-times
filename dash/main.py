@@ -236,7 +236,8 @@ def update_news_bar_plot1(newsSection, timescale):
         queriedDf.head()
           # Add a new column with truncated journalist names
         queriedDf['key_truncated'] = queriedDf['key'].apply(lambda x: (x[:17] + '...') if len(x) > 20 else x)
-        fig = px.bar(queriedDf, x="key_truncated", y="doc_count", title="articles / journalist",labels={"key_truncated": "journalist", "doc_count": "articles"})
+        fig = px.bar(queriedDf, x="key_truncated", y="doc_count", title="articles in section / journalist",
+                     labels={"key_truncated": "journalist", "doc_count": "articles"}, color_discrete_sequence=['aquamarine'])
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         
         return fig
@@ -279,7 +280,8 @@ def update_news_bar_plot1(newsSection, timescale):
         # query API to get dataframe
         queriedDf = queries.get_articles_per_person(newsSection,timescale)
         queriedDf.head()
-        fig = px.bar(queriedDf, x="key", y="doc_count", title="articles / person",labels={"key": "person", "doc_count": "articles"})
+        fig = px.bar(queriedDf, x="key", y="doc_count", title="articles / person",
+                     labels={"key": "person", "doc_count": "articles"}, color_discrete_sequence=['coral'])
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         
         return fig
@@ -325,7 +327,8 @@ def update_news_bar_plot1(newsSection, timescale):
         # query API to get dataframe
         queriedDf = queries.get_top_topics(newsSection,timescale)
         queriedDf.head()
-        fig = px.bar(queriedDf, x="key", y="doc_count", title="top topics",labels={"key": "person", "doc_count": "articles"})
+        fig = px.bar(queriedDf, x="key", y="doc_count", title="top topics",
+                     labels={"key": "person", "doc_count": "articles"}, color_discrete_sequence=['goldenrod'])
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         
         return fig
@@ -433,7 +436,8 @@ def update_books_bar_plot1(size):
         # query API to get dataframe
         queriedDf = queries.get_top_writers(size)
         queriedDf.head()
-        fig = px.bar(queriedDf, x="key", y="doc_count", title="top topics",labels={"key": "person", "doc_count": "books"})
+        fig = px.bar(queriedDf, x="key", y="doc_count", title="top topics",
+                     labels={"key": "person", "doc_count": "books"}, color_discrete_sequence=['cornflowerblue'])
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         
         return fig
@@ -455,7 +459,8 @@ def update_books_bar_plot2(size):
         # query API to get dataframe
         queriedDf = queries.get_count_by_lists(size)
         queriedDf.head()
-        fig = px.bar(queriedDf, x="key", y="doc_count", title="Count by book lists",labels={"key": "person", "doc_count": "books"})
+        fig = px.bar(queriedDf, x="key", y="doc_count", title="Count by book lists",
+                     labels={"key": "person", "doc_count": "books"}, color_discrete_sequence=['darkorange'])
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         
         return fig
@@ -477,7 +482,8 @@ def update_books_bar_plot3(list, size):
         # query API to get dataframe
         queriedDf = queries.get_top_writers_by_lists(list,size)
         queriedDf.head()
-        fig = px.bar(queriedDf, x="key", y="doc_count", title="top writers by book lists",labels={"key": "person", "doc_count": "books"})
+        fig = px.bar(queriedDf, x="key", y="doc_count", title="top writers by book list",
+                     labels={"key": "person", "doc_count": "books"},color_discrete_sequence=['lightgreen'])
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         
         return fig
@@ -495,7 +501,8 @@ def update_books_bar_plot4(size):
         # query API to get dataframe
         queriedDf = queries.get_top_publishers(size)
         queriedDf.head()
-        fig = px.bar(queriedDf, x="key", y="doc_count", title="top publishers",labels={"key": "person", "doc_count": "books"})
+        fig = px.bar(queriedDf, x="key", y="doc_count", title="top publishers",
+                     labels={"key": "person", "doc_count": "books"},color_discrete_sequence=['lightcoral'])
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         
         return fig
@@ -560,7 +567,8 @@ def update_movies_bar_plot1(path):
     # query API to get dataframe
     queriedDf = queries.get_reviews_per_year()
     queriedDf.head()
-    fig = px.bar(queriedDf, x="key_as_string", y="doc_count", title="movies / years",labels={"key_as_string": "years", "doc_count": "movies"})
+    fig = px.bar(queriedDf, x="key_as_string", y="doc_count", title="movies / years",
+                 labels={"key_as_string": "years", "doc_count": "movies"},color_discrete_sequence=['mediumorchid'])
     fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         
     return fig
@@ -578,7 +586,8 @@ def update_movies_bar_plot2(year):
         # query API to get dataframe
         queriedDf = queries.get_top_reviewers_per_year(year)
         queriedDf.head()
-        fig = px.bar(queriedDf, x="key", y="doc_count", title="top reviewers",labels={"key": "person", "doc_count": "reviews"})
+        fig = px.bar(queriedDf, x="key", y="doc_count", title="top movies reviewers",
+                     labels={"key": "person", "doc_count": "reviews"},color_discrete_sequence=['orange'])
         fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         
         return fig
@@ -600,7 +609,8 @@ def update_movies_bar_plot3(path):
     # query API to get dataframe
     queriedDf = queries.get_top_mpaa_ratings()
     queriedDf.head()
-    fig = px.bar(queriedDf, x="key", y="doc_count", title="movies / years",labels={"key": "ratings", "doc_count": "movies"})
+    fig = px.bar(queriedDf, x="key", y="doc_count", title="ratings / years",
+                 labels={"key": "ratings", "doc_count": "movies"},color_discrete_sequence=['limegreen'])
     fig.update_layout(plot_bgcolor=colors['background'],paper_bgcolor=colors['background'],font_color=colors['text'])
         
     return fig
