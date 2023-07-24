@@ -55,6 +55,9 @@ MANIFEST
 *.spec
 
 #logs
+logs/api/
+logs/dash/
+logs/etl/
 api_logs_*.*
 etl_logs_*.*
 dash_logs_*.*

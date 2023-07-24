@@ -39,7 +39,7 @@ users = {
     }
 }
 
-es = AsyncElasticsearch(hosts="http://es-container:9200") ############# FIX ME  to es-container instead of es-container
+es = AsyncElasticsearch(hosts="http://es-container:9200") 
 
 
 

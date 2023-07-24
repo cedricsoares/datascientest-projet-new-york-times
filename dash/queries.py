@@ -23,7 +23,6 @@ import json
 ###########################################
 ## FIX ME FOR PROD WITH CONTAINER PORT
 url = "http://api-container:8000"
-#url = "http://0.0.0.0:8000"  #########
 ###########################################
 
 
