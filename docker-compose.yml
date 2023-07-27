@@ -59,6 +59,7 @@ services:
       elasticsearch:
         condition: "service_healthy"
 
+
   dash:
     container_name: dash-container
     build: ./dash
@@ -70,6 +71,8 @@ services:
       - api
     ports:
       - 8050:8050    
+
+      
 
 volumes:
   data:
