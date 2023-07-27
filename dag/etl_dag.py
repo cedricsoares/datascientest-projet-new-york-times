@@ -13,6 +13,7 @@ from airflow import DAG
 
 SLACK_CONN_ID = 'slack'
 MOUNT_PATH = Variable.get('local_logs')
+NETWORK_ID = Variable.get('network_id')
 
 def convert_datetime(datetime_string):
 
@@ -93,7 +94,7 @@ dag = DAG(
 elastic_healthcheck = DockerOperator(
     image='curlimages/curl',
     command='curl -u elastic:elastic -s -f es-container:9200/_cat/health',
-    network_mode='7671e00e7805',
+    network_mode=NETWORK_ID,
     task_id='elastic_healthcheck',
     doc_md=''''# elastic_healthcheck
     Task that checks Elastisearch by sending and http request''',
@@ -111,9 +112,9 @@ run_etl = DockerOperator(
             type='bind'
         )
     ],
-    network_mode='7671e00e7805',
+    network_mode=NETWORK_ID,
     task_id='run_etl',
-    doc_md=''''# run_etl
+    doc_md=''''# run_etl'7671e00e7805'
     Task that runs ETL''',
     dag=dag,
     retries=5
