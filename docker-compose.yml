@@ -53,6 +53,8 @@ services:
     networks:
       - backend
       - frontend
+    ports:
+      - 8000:8000
     depends_on:
       elasticsearch:
         condition: "service_healthy"
