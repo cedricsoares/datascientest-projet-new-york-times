@@ -37,6 +37,15 @@ booksLists = dashboardLists.DashboardLists.get_books_lists()
 yearsList = dashboardLists.DashboardLists.get_years_list()
 
 ######FAKE DATA ##########################
+data = [
+    {"section": "A", "time_scale": "2020", "step": 1},
+    {"section": "B", "time_scale": "2020", "step": 2},
+    {"section": "C", "time_scale": "2020", "step": 3},
+    {"section": "D", "time_scale": "2020", "step": 4},
+    {"section": "E", "time_scale": "2020", "step": 5}
+]
+
+
 
 data2 = {
     "section": ["A", "B", "C", "D", "E"],
