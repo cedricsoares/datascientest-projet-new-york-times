@@ -1,0 +1,26 @@
+name: Docker Image CI
+
+on:
+  pull_request:
+    branches: [ "master" ]
+    types:
+      - closed
+
+jobs:
+  build:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: docker login
+      env: 
+        DOCKER_USER: ${{secrets.DOCKER_USER}}
+        DOCKER_PASSWORD: ${{secrest.DOCKER_PASSWORD}}
+      run: |
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - name: Build the Docker image with date tag
+      run: docker build . --file etl/Dockerfile --tag cedricsoares/ny_times-etl:$(date +%s) --tag cedricsoares/ny_times-etl:latest
+    - name: Docker Push
+      run: docker push ${{secrets.DOCKER_USER}}/cedricsoares/ny_times-etl
+
