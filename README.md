@@ -104,7 +104,7 @@ Chaque index utilise les settings suivants :
 
 ### Le DAG 
 
-[DAG Airflow](https://drive.google.com/uc?id=18fLo_6Xlawg_30dmAtBdmlRzfqhnb90e)
+![DAG Airflow](https://drive.google.com/uc?id=18fLo_6Xlawg_30dmAtBdmlRzfqhnb90e)
 
 Le DAG réalise deux taches:
 
