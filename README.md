@@ -44,7 +44,7 @@ L'utilisateur que nous avons retenu est un rédactreur en chef du titre qui souh
 
 ### Vue globale 
 
-![Schéma Global](https://drive.google.com/file/d/15eTb-tRUYqv3saPNhLksQ0Vr4LIn_EwF/view?usp=share_link "Schéma global") 
+![Schéma Global](https://drive.google.com/file/d/15eTb-tRUYqv3saPNhLksQ0Vr4LIn_EwF/view) 
 
 La solution proposée se compose de : 
 
@@ -60,13 +60,13 @@ La solution proposée se compose de :
 
 ### Stack technique du projet 
 
-![Stack Technique](https://drive.google.com/file/d/1RYbTblEa8fZXzOX_oNVWpPzepTTtjXR_/view?usp=sharing "Stack technique du projet")
+![Stack Technique](https://drive.google.com/file/d/1RYbTblEa8fZXzOX_oNVWpPzepTTtjXR_/view)
 
 ### L'ETL
 
 #### Digramme de fonctionnement 
 
-![Diagramme de fonctionnement](https://drive.google.com/file/d/1VLkzxuwBknjf3FcdmaFbJ1QpSV3p4tid/view?usp=drive_link "Digramme de fonctionnement")
+![Diagramme de fonctionnement](https://drive.google.com/file/d/1VLkzxuwBknjf3FcdmaFbJ1QpSV3p4tid/view)
 
 ### La base de données Elasticsearch
 
@@ -91,7 +91,7 @@ Chaque index utilise les settings suivants :
 
 ### Structuration des routes de l'API et des graphiques du dashboard 
 
-![Tableau de board API - Dashboard](https://drive.google.com/file/d/11elwT33eSY_XH-4XriE8Jcf3a1ynjJTj/view?usp=share_link "Tableau de bord de l'impmlétation de l'API du  dashboard")
+![Tableau de board API - Dashboard](https://drive.google.com/file/d/11elwT33eSY_XH-4XriE8Jcf3a1ynjJTj/view)
 
 
 #### Le dashboard
@@ -99,12 +99,12 @@ Chaque index utilise les settings suivants :
 
 #### L'API 
 
-![Screenshot de l'Api](https://drive.google.com/file/d/1ZLY2V5RMm2VQPuoKgnDo-zmLlAdOUicq/view?usp=sharing "Screenshot de l'api")
+![Screenshot de l'Api](https://drive.google.com/file/d/1ZLY2V5RMm2VQPuoKgnDo-zmLlAdOUicq/view)
 
 
 ### Le DAG 
 
-[DAG Airflow](https://drive.google.com/file/d/18fLo_6Xlawg_30dmAtBdmlRzfqhnb90e/view?usp=share_link "DAG Airflow")
+[DAG Airflow](https://drive.google.com/file/d/18fLo_6Xlawg_30dmAtBdmlRzfqhnb90e/view)
 
 Le DAG réalise deux taches:
 
@@ -130,14 +130,15 @@ En plus du code des services, le repository contient une series de notebooks aya
 
 * Hormis le DAG l'ensemble des services se lance avec la commande
 
-'''
-docker-compose up -d
-'''
+    ```
+    docker-compose up -d
+    ```
 
 * Le fichier du code du DAG doit être mis dans le dossier `DAG` d'une configuration Airflow locale. Celle-ci doit avoir accès à l'API Docker sur le poste où elle est lancée. Deux variables d'environement sont à paramétrer:
 
     * `local_logs`: Le chemin d'accès absolu du fichier `logs` dans le dossier du projet clonné
     * `network_id`: L'identifiant du network docker `ny_times_backend`. Ce dernier est retrouvable en utilisant la commande suivante:
+
         ```
         docker networl ls
         ``` 
