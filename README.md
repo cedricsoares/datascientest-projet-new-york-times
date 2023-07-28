@@ -73,7 +73,7 @@ La solution proposée se compose de :
 #### Les spécications
 
 Nous avons implémenté trois index :
-
+ 
 * news
 
 * books 
