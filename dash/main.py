@@ -36,7 +36,7 @@ sizesList = dashboardLists.DashboardLists.get_sizes_list()
 booksLists = dashboardLists.DashboardLists.get_books_lists()
 yearsList = dashboardLists.DashboardLists.get_years_list()
 
-######FAKE DATA ##########################
+######NEEDED FAKE DATA ##########################
 data = [
     {"section": "A", "time_scale": "2020", "step": 1},
     {"section": "B", "time_scale": "2020", "step": 2},
@@ -44,8 +44,6 @@ data = [
     {"section": "D", "time_scale": "2020", "step": 4},
     {"section": "E", "time_scale": "2020", "step": 5}
 ]
-
-
 
 data2 = {
     "section": ["A", "B", "C", "D", "E"],
@@ -120,7 +118,7 @@ news_page = html.Div(children=[
             html.Div(dcc.Dropdown(id = 'news-page-dropdown-time_scale-plot-1',
                     options= [{'label':i, 'value':i} for i in timeScaleList ],  
                     placeholder="Select time scale...",
-                    value= timeScaleList[0] # Set default value
+                    value= timeScaleList[2] # Set default value
                     ), className='dropDown'),
 
         
@@ -135,7 +133,7 @@ news_page = html.Div(children=[
             html.Div(dcc.Dropdown(id = 'news-page-dropdown-time_scale-plot-2',
                     options= [{'label':i, 'value':i} for i in timeScaleList ],  
                     placeholder="Select time scale...",
-                    value= timeScaleList[0] # Set default value
+                    value= timeScaleList[1] # Set default value
                     ), className='dropDown'),
             
         ], className="single_plot_ctnr"),
@@ -158,7 +156,7 @@ news_page = html.Div(children=[
             html.Div(dcc.Dropdown(id = 'news-page-dropdown-time_scale-plot-3',
                     options= [{'label':i, 'value':i} for i in timeScaleList ],  
                     placeholder="Select time scale...",
-                    value= timeScaleList[0] # Set default value
+                    value= timeScaleList[2] # Set default value
 
                     ), className='dropDown'),     
         ], className="single_plot_ctnr"),
@@ -208,7 +206,7 @@ news_page = html.Div(children=[
             html.Div(dcc.Dropdown(id = 'news-page-dropdown-time_scale-plot-5',
                     options= [{'label':i, 'value':i} for i in timeScaleList ],  
                     placeholder="Select time scale...",
-                    value= timeScaleList[0] # Set default value
+                    value= timeScaleList[2] # Set default value
                     ), className='dropDown'),
 
         ], className="single_plot_ctnr"),
