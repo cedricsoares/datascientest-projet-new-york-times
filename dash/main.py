@@ -36,6 +36,7 @@ sizesList = dashboardLists.DashboardLists.get_sizes_list()
 booksLists = dashboardLists.DashboardLists.get_books_lists()
 yearsList = dashboardLists.DashboardLists.get_years_list()
 
+
 ######NEEDED FAKE DATA ##########################
 data = [
     {"section": "A", "time_scale": "2020", "step": 1},
