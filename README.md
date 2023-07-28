@@ -44,7 +44,7 @@ L'utilisateur que nous avons retenu est un rédactreur en chef du titre qui souh
 
 ### Vue globale 
 
-![Schéma Global](https://drive.google.com/file/uc?id=15eTb-tRUYqv3saPNhLksQ0Vr4LIn_EwF) 
+![Schéma Global](https://drive.google.com/uc?id=15eTb-tRUYqv3saPNhLksQ0Vr4LIn_EwF) 
 
 La solution proposée se compose de : 
 
@@ -60,13 +60,13 @@ La solution proposée se compose de :
 
 ### Stack technique du projet 
 
-![Stack Technique](https://drive.google.com/file/uc?id=1RYbTblEa8fZXzOX_oNVWpPzepTTtjXR_)
+![Stack Technique](https://drive.google.com/uc?id=1RYbTblEa8fZXzOX_oNVWpPzepTTtjXR_)
 
 ### L'ETL
 
 #### Digramme de fonctionnement 
 
-![Diagramme de fonctionnement](https://drive.google.com/file/uc?id1VLkzxuwBknjf3FcdmaFbJ1QpSV3p4tid)
+![Diagramme de fonctionnement](https://drive.google.com/uc?id1VLkzxuwBknjf3FcdmaFbJ1QpSV3p4tid)
 
 ### La base de données Elasticsearch
 
@@ -91,7 +91,7 @@ Chaque index utilise les settings suivants :
 
 ### Structuration des routes de l'API et des graphiques du dashboard 
 
-![Tableau de board API - Dashboard](https://drive.google.com/file/uc?id=11elwT33eSY_XH-4XriE8Jcf3a1ynjJTj)
+![Tableau de board API - Dashboard](https://drive.google.com/uc?id=11elwT33eSY_XH-4XriE8Jcf3a1ynjJTj)
 
 
 #### Le dashboard
@@ -99,12 +99,12 @@ Chaque index utilise les settings suivants :
 
 #### L'API 
 
-![Screenshot de l'Api](https://drive.google.com/file/uc?id=1ZLY2V5RMm2VQPuoKgnDo-zmLlAdOUicq)
+![Screenshot de l'Api](https://drive.google.com/uc?id=1ZLY2V5RMm2VQPuoKgnDo-zmLlAdOUicq)
 
 
 ### Le DAG 
 
-[DAG Airflow](https://drive.google.com/file/uc?id=18fLo_6Xlawg_30dmAtBdmlRzfqhnb90e)
+[DAG Airflow](https://drive.google.com/uc?id=18fLo_6Xlawg_30dmAtBdmlRzfqhnb90e)
 
 Le DAG réalise deux taches:
 
@@ -140,7 +140,7 @@ En plus du code des services, le repository contient une series de notebooks aya
     * `network_id`: L'identifiant du network docker `ny_times_backend`. Ce dernier est retrouvable en utilisant la commande suivante:
 
         ```
-        docker networl ls
+        docker network ls
         ``` 
 
     Les alertes Slack nécessitent de créer un webhook sur la plateforme de paramétrer une une connexion dans Airfflow. Le code des alertes est déjà implémenté dans le DAG. [L'article Chris Young publié sur Towards Data Science](https://towardsdatascience.com/automated-alerts-for-airflow-with-slack-5c6ec766a823) indique comment réaliser le paramétrage.
