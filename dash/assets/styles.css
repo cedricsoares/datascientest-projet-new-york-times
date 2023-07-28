@@ -1,0 +1,148 @@
+body {
+    background-color: #474747;
+    height: 100vh;
+    color: #26CAE9;
+}
+
+h1{
+    margin-top: 5%;
+}
+
+button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.dropDown{
+    min-width: 50%;
+    color: #26CAE9 !important;
+    margin-bottom: 3%;
+}
+
+.dropDown2{
+    min-width: 100%;
+    color: #26CAE9 !important;
+}
+
+.Select-control{
+    background-color: #474747 !important;
+    color: #26CAE9 !important;
+}
+.Select-menu-outer {
+    background-color: #474747;
+    color: #26CAE9 !important;
+}
+.Select-value-label{
+    color: #26CAE9 !important;
+}
+
+.pages {
+    background-color: #474747;
+    color: #26CAE9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    max-height: 1100px;
+    width: 100%;
+}
+
+.title_ctnr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.plots_ctnr_2{
+    width: 100%;
+    height:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin:3%;
+}
+
+.plots_ctnr{
+    width: 100%;
+    height:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:3%;
+}
+
+.single_plot_ctnr{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.dropDown{
+    min-width: 50%;
+    background-color: #474747 !important;
+}
+
+
+
+
+.slider{
+    min-width: 70%; 
+}
+
+.slider .rc-slider-mark-text {
+    transform: rotate(-45deg);
+    
+}
+
+
+.sliderOutput{
+    min-width: 70%; 
+    min-height: 20px;
+    justify-content: center;
+}
+
+
+
+/*Landing page ***********************/
+
+.landing_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.button_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/*News page ***********************/
+
+.bar-plots-1row{    
+    width:90%
+}
+
+.pie-chart-style-1{
+    width:100%;
+}
+
+/*Books page ***********************/
+
+
+
+
+/*Movies page ***********************/
