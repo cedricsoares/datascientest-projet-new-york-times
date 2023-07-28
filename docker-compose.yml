@@ -53,9 +53,25 @@ services:
     networks:
       - backend
       - frontend
+    ports:
+      - 8000:8000  
     depends_on:
       elasticsearch:
         condition: "service_healthy"
+
+
+  dash:
+    container_name: dash-container
+    build: ./dash
+    volumes:
+      - logs:/app/logs
+    networks:
+      - frontend
+    depends_on:
+      - api
+    ports:
+      - 8050:8050    
+
       
 
 volumes:
