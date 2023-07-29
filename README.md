@@ -117,6 +117,61 @@ Le DAG envoie des alertes sur le groupe Slack de l'équipe en cas de succès ou 
 
 ## Le repository
 
+```
+.
+├── README.md
+├── api
+│   ├── Dockerfile
+│   ├── __init__.py
+│   ├── logs
+│   ├── main.py
+│   ├── requirements.txt
+│   └── start.sh
+├── dag
+│   └── etl_dag.py
+├── dash
+│   ├── Dockerfile
+│   ├── __init__.py
+│   ├── assets
+│   ├── dashboardLists.py
+│   ├── main.py
+│   ├── queries.py
+│   ├── requirements.txt
+│   └── start.sh
+├── data
+│   ├── _state
+│   ├── indices
+│   ├── node.lock
+│   ├── nodes
+│   └── snapshot_cache
+├── docker-compose.yml
+├── etl
+│   ├── Dockerfile
+│   ├── __init__.py
+│   ├── app.py
+│   ├── constants.py
+│   ├── extract.py
+│   ├── load.py
+│   ├── logs
+│   ├── requirements.txt
+│   ├── session.py
+│   ├── start.sh
+│   ├── transform.py
+│   └── utils.py
+├── logs
+│   ├── api
+│   ├── dash
+│   └── etl
+├── notebooks
+│   ├── ES_load.ipynb
+│   ├── api results
+│   ├── api_exploaration.ipynb
+│   ├── books_queries.ipynb
+│   ├── movies_queries.ipynb
+│   └── news_queries.ipynb
+└── requirements.txt
+```
+
 En plus du code des services, le repository contient une series de notebooks ayant servi :
 
 * À découvrir les API du New York Times 
