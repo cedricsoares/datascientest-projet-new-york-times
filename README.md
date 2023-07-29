@@ -96,6 +96,8 @@ Chaque index utilise les settings suivants :
 
 #### Le dashboard
 
+![Dashboard](https://drive.google.com/uc?id=1qBCBidKy6U8DVcGVJs_2AmQXwltjkzKb)
+
 
 #### L'API 
 
