@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import timedelta
 
 import pendulum
 import pytz
@@ -87,7 +87,7 @@ dag = DAG(
             ''',
             tags=['NYT', 'ETL', 'datascientest'],
             default_args=default_args,
-            schedule_interval='0 11 * * *',
+            schedule_interval='0 9 * * *',
             catchup=False
 )
 
@@ -95,6 +95,7 @@ elastic_healthcheck = DockerOperator(
     image='curlimages/curl',
     command='curl -u elastic:elastic -s -f es-container:9200/_cat/health',
     network_mode=NETWORK_ID,
+    auto_remove=True,
     task_id='elastic_healthcheck',
     doc_md=''''# elastic_healthcheck
     Task that checks Elastisearch by sending and http request''',
@@ -113,8 +114,9 @@ run_etl = DockerOperator(
         )
     ],
     network_mode=NETWORK_ID,
+    auto_remove=True,
     task_id='run_etl',
-    doc_md=''''# run_etl'7671e00e7805'
+    doc_md=''''# run_etl
     Task that runs ETL''',
     dag=dag,
     retries=5
