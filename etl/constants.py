@@ -309,7 +309,15 @@ MOVIES_MAPPING = {
         },
         "opening_date": {"type": "date", "format": "yyyy-MM-dd"},
         "publication_date": {"type": "date", "format": "yyyy-MM-dd"},
-        "summary_short": {"type": "text"}
+        "summary_short":  {
+                            'type': 'text',
+                            'analyzer': 'english',
+                            'fields': {
+                                'keyword': {
+                                                "type": "keyword"
+                                            }
+                                }
+                        },
     }
 }
 
