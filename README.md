@@ -21,9 +21,9 @@ Il nous a été laissé la liberté de la finalité du projet et de la stack tec
 
 ## Notre proposition 
 
-Notre équipe a décidé de réaliser un ensemble de services dont la finalité est un dashboard permettant de suivre les contenus produit par les équipes du New York Times. 
+Notre équipe a décidé de réaliser un ensemble de services dont la finalité est un dashboard permettant de suivre les contenus produits par les équipes du New York Times. 
 
-L'utilisateur que nous avons retenu est un rédactreur en chef du titre qui souhaitre suivre la production journalistique et identifier des tendances dans :
+L'utilisateur que nous avons retenu est un rédacteur en chef du titre qui souhaite suivre la production journalistique et identifier des tendances dans :
 
 * Les articles relatifs aux news
 
@@ -37,7 +37,7 @@ L'utilisateur que nous avons retenu est un rédactreur en chef du titre qui souh
     * 60 appels maximum par minute
     * 500 appels maximum par jour
 
-* Un projet devait être réalisé en 1.5 mois
+* Un projet devant être réalisé en 1.5 mois
 
 
 ## La solution technique 
@@ -50,7 +50,7 @@ La solution proposée se compose de :
 
 * Un ETL qui a la charge de récupérer les contenus du New York Times.
 
-* Une base de données Elasticsearch.
+* Une base de données Elasticsearch où son entreprosés les documents récupérés.
 
 * Un dashboard Dash.
 
@@ -86,7 +86,7 @@ Chaque index utilise les settings suivants :
 
 * 2 réplicats 
 
-* Un analyseurs `English` sur tous les champs texte
+* Un analyseur `English` sur tous les champs texte
 
 
 ### Structuration des routes de l'API et des graphiques du dashboard 
