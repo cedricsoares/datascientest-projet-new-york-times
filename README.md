@@ -202,7 +202,7 @@ En plus du code des services, le repository contient une series de notebooks aya
 
     Les alertes Slack nécessitent de créer un webhook sur la plateforme de paramétrer une une connexion dans Airfflow. Le code des alertes est déjà implémenté dans le DAG. [L'article Chris Young publié sur Towards Data Science](https://towardsdatascience.com/automated-alerts-for-airflow-with-slack-5c6ec766a823) indique comment réaliser le paramétrage.
 
-    Avant d'activer le DAG il est également nécessaire d'enregistrer une API Key sur le portail développeurs du Newy York Times dans un fichier `.env`. Ce dernier sera aussi nécessaire afin d'utiliser les notebooks d'exploration. Le fichier sera a ranger dans chacun de ces dossiers `etl` et `notebooks`. La démarche pour récupérer l'API KEY est indiquée ci-dessous. 
+    Avant d'activer le DAG il est également nécessaire d'enregistrer une API Key sur le portail développeurs du New York Times dans un fichier `.env`. Ce dernier sera aussi nécessaire afin d'utiliser les notebooks d'exploration. Le fichier sera a ranger dans chacun de ces dossiers `etl` et `notebooks`. La démarche pour récupérer l'API KEY est indiquée ci-dessous. 
 
 
     ### Paramétrage de l'API New York Times Developer
