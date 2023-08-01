@@ -14,6 +14,8 @@ from airflow import DAG
 SLACK_CONN_ID = 'slack'
 MOUNT_PATH = Variable.get('local_logs')
 NETWORK_ID = Variable.get('network_id')
+APY_KEY = Variable.get('api_key')
+
 
 def convert_datetime(datetime_string):
 
@@ -106,6 +108,7 @@ elastic_healthcheck = DockerOperator(
 
 run_etl = DockerOperator(
     image='cedricsoares/ny_times-etl:1.0.0',
+    environment={'API_KEY': API_KEY},
     mounts=[
         Mount(
             source=MOUNT_PATH,
