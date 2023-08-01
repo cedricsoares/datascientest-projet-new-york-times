@@ -54,13 +54,6 @@ MANIFEST
 *.manifest
 *.spec
 
-#logs
-logs/api/
-logs/dash/
-logs/etl/
-api_logs_*.*
-etl_logs_*.*
-dash_logs_*.*
 
 # Installer logs
 pip-log.txt

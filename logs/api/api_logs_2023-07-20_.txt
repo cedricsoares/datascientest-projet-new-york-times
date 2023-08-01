@@ -1,6 +1,0 @@
-INFO:     Will watch for changes in these directories: ['/app']
-INFO:     Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
-INFO:     Started reloader process [8] using StatReload
-INFO:     Started server process [11]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
