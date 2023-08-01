@@ -22,5 +22,5 @@ jobs:
     - name: Build the Docker image with date tag
       run: docker build . --file etl/Dockerfile --tag cedricsoares/ny_times-etl:$(date +%s) --tag cedricsoares/ny_times-etl:latest
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/cedricsoares/ny_times-etl
+      run: docker push ${{secrets.DOCKER_USER}}/ny_times-etl
 
