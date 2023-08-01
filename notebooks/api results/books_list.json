@@ -1,0 +1,1203 @@
+['Combined Print and E-Book Fiction', 'Combined Print and E-Book Nonfiction']
+{   'copyright': 'Copyright (c) 2023 The New York Times Company.  All Rights '
+                 'Reserved.',
+    'last_modified': '2023-06-14T22:14:41-04:00',
+    'num_results': 15,
+    'results': [   {   'amazon_product_url': 'https://www.amazon.com/dp/0316404594?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'James Patterson and '
+                                                         'Brendan DuBois',
+                                               'contributor': 'by James '
+                                                              'Patterson and '
+                                                              'Brendan DuBois',
+                                               'contributor_note': '',
+                                               'description': 'John Sampson '
+                                                              'seeks justice '
+                                                              'after Alex '
+                                                              'Cross gets '
+                                                              'injured.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '0316404691',
+                                               'primary_isbn13': '9780316404693',
+                                               'publisher': 'Little, Brown',
+                                               'title': 'CROSS DOWN'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Fiction',
+                       'isbns': [   {   'isbn10': '0316404594',
+                                        'isbn13': '9780316404594'},
+                                    {   'isbn10': '0316404691',
+                                        'isbn13': '9780316404693'}],
+                       'list_name': 'Combined Print and E-Book Fiction',
+                       'published_date': '2023-06-25',
+                       'rank': 1,
+                       'rank_last_week': 0,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 1},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/0593441273?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Emily Henry',
+                                               'contributor': 'by Emily Henry',
+                                               'contributor_note': '',
+                                               'description': 'A former couple '
+                                                              'pretend to be '
+                                                              'together for '
+                                                              'the sake of '
+                                                              'their friends '
+                                                              'during their '
+                                                              'annual getaway '
+                                                              'in Maine.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '0593441273',
+                                               'primary_isbn13': '9780593441275',
+                                               'publisher': 'Berkley',
+                                               'title': 'HAPPY PLACE'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Fiction',
+                       'isbns': [   {   'isbn10': '0593441273',
+                                        'isbn13': '9780593441275'},
+                                    {   'isbn10': '0593441206',
+                                        'isbn13': '9780593441206'},
+                                    {   'isbn10': '0593675118',
+                                        'isbn13': '9780593675113'},
+                                    {   'isbn10': '0593740149',
+                                        'isbn13': '9780593740149'}],
+                       'list_name': 'Combined Print and E-Book Fiction',
+                       'published_date': '2023-06-25',
+                       'rank': 2,
+                       'rank_last_week': 1,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 7},
+                   {   'amazon_product_url': 'http://www.amazon.com/Ends-Us-Novel-Colleen-Hoover-ebook/dp/B0176M3U10?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Colleen Hoover',
+                                               'contributor': 'by Colleen '
+                                                              'Hoover',
+                                               'contributor_note': '',
+                                               'description': 'A battered wife '
+                                                              'raised in a '
+                                                              'violent home '
+                                                              'attempts to '
+                                                              'halt the cycle '
+                                                              'of abuse.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '1501110365',
+                                               'primary_isbn13': '9781501110368',
+                                               'publisher': 'Atria',
+                                               'title': 'IT ENDS WITH US'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Fiction',
+                       'isbns': [   {   'isbn10': '1501110365',
+                                        'isbn13': '9781501110368'},
+                                    {   'isbn10': '1501110373',
+                                        'isbn13': '9781501110375'},
+                                    {   'isbn10': '1982143657',
+                                        'isbn13': '9781982143657'},
+                                    {   'isbn10': '1508212694',
+                                        'isbn13': '9781508212690'},
+                                    {   'isbn10': '1797107453',
+                                        'isbn13': '9781797107455'},
+                                    {   'isbn10': '1804228206',
+                                        'isbn13': '9781804228203'},
+                                    {   'isbn10': '1432899791',
+                                        'isbn13': '9781432899790'},
+                                    {   'isbn10': '1668021048',
+                                        'isbn13': '9781668021040'}],
+                       'list_name': 'Combined Print and E-Book Fiction',
+                       'published_date': '2023-06-25',
+                       'rank': 3,
+                       'rank_last_week': 2,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 104},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/1668001225?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Colleen Hoover',
+                                               'contributor': 'by Colleen '
+                                                              'Hoover',
+                                               'contributor_note': '',
+                                               'description': 'In the sequel '
+                                                              'to “It Ends '
+                                                              'With Us,” Lily '
+                                                              'deals with her '
+                                                              'jealous '
+                                                              'ex-husband as '
+                                                              'she reconnects '
+                                                              'with her first '
+                                                              'boyfriend.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '1668001225',
+                                               'primary_isbn13': '9781668001226',
+                                               'publisher': 'Atria',
+                                               'title': 'IT STARTS WITH US'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Fiction',
+                       'isbns': [   {'isbn10': '', 'isbn13': ''},
+                                    {   'isbn10': '1668001225',
+                                        'isbn13': '9781668001226'},
+                                    {   'isbn10': '1668001233',
+                                        'isbn13': '9781668001233'},
+                                    {   'isbn10': '179714510X',
+                                        'isbn13': '9781797145105'}],
+                       'list_name': 'Combined Print and E-Book Fiction',
+                       'published_date': '2023-06-25',
+                       'rank': 4,
+                       'rank_last_week': 3,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 34},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/1649374046?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Rebecca Yarros',
+                                               'contributor': 'by Rebecca '
+                                                              'Yarros',
+                                               'contributor_note': '',
+                                               'description': 'Violet '
+                                                              'Sorrengail is '
+                                                              'urged by the '
+                                                              'commanding '
+                                                              'general, who '
+                                                              'also is her '
+                                                              'mother, to '
+                                                              'become a '
+                                                              'candidate for '
+                                                              'the elite '
+                                                              'dragon riders.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '1649374089',
+                                               'primary_isbn13': '9781649374080',
+                                               'publisher': 'Red Tower',
+                                               'title': 'FOURTH WING'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Fiction',
+                       'isbns': [   {   'isbn10': '1649374046',
+                                        'isbn13': '9781649374042'},
+                                    {   'isbn10': '1649374089',
+                                        'isbn13': '9781649374080'},
+                                    {   'isbn10': '1705085059',
+                                        'isbn13': '9781705085059'},
+                                    {   'isbn10': '1705085032',
+                                        'isbn13': '9781705085035'}],
+                       'list_name': 'Combined Print and E-Book Fiction',
+                       'published_date': '2023-06-25',
+                       'rank': 5,
+                       'rank_last_week': 9,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 6},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/038554734X?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Bonnie Garmus',
+                                               'contributor': 'by Bonnie '
+                                                              'Garmus',
+                                               'contributor_note': '',
+                                               'description': 'A scientist and '
+                                                              'single mother '
+                                                              'living in '
+                                                              'California in '
+                                                              'the 1960s '
+                                                              'becomes a star '
+                                                              'on a TV cooking '
+                                                              'show.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '038554734X',
+                                               'primary_isbn13': '9780385547345',
+                                               'publisher': 'Doubleday',
+                                               'title': 'LESSONS IN '
+                                                        'CHEMISTRY'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Fiction',
+                       'isbns': [   {   'isbn10': '038554734X',
+                                        'isbn13': '9780385547345'},
+                                    {   'isbn10': '0593507533',
+                                        'isbn13': '9780593507537'},
+                                    {   'isbn10': '0385547374',
+                                        'isbn13': '9780385547376'}],
+                       'list_name': 'Combined Print and E-Book Fiction',
+                       'published_date': '2023-06-25',
+                       'rank': 6,
+                       'rank_last_week': 6,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 31},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/0802162177?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Abraham Verghese',
+                                               'contributor': 'by Abraham '
+                                                              'Verghese',
+                                               'contributor_note': '',
+                                               'description': 'Three '
+                                                              'generations of '
+                                                              'a family living '
+                                                              'on South '
+                                                              'India’s Malabar '
+                                                              'Coast suffer '
+                                                              'the loss of a '
+                                                              'family member '
+                                                              'by drowning.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '0802162177',
+                                               'primary_isbn13': '9780802162175',
+                                               'publisher': 'Grove',
+                                               'title': 'THE COVENANT OF '
+                                                        'WATER'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Fiction',
+                       'isbns': [   {   'isbn10': '0802162177',
+                                        'isbn13': '9780802162175'},
+                                    {   'isbn10': '1705070248',
+                                        'isbn13': '9781705070246'},
+                                    {   'isbn10': '1705070221',
+                                        'isbn13': '9781705070222'}],
+                       'list_name': 'Combined Print and E-Book Fiction',
+                       'published_date': '2023-06-25',
+                       'rank': 7,
+                       'rank_last_week': 4,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 6},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/0063239035?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Tessa Bailey',
+                                               'contributor': 'by Tessa Bailey',
+                                               'contributor_note': '',
+                                               'description': 'The second book '
+                                                              'in the Vine '
+                                                              'Mess series. An '
+                                                              'heiress, who '
+                                                              'lost her job '
+                                                              'and fiancé, '
+                                                              'schemes to '
+                                                              'marry a '
+                                                              'vineyard owner, '
+                                                              'who is clueless '
+                                                              'about making '
+                                                              'wine, to gain '
+                                                              'access to her '
+                                                              'trust fund.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '0063239035',
+                                               'primary_isbn13': '9780063239036',
+                                               'publisher': 'Avon',
+                                               'title': 'UNFORTUNATELY YOURS'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Fiction',
+                       'isbns': [   {   'isbn10': '0063239035',
+                                        'isbn13': '9780063239036'},
+                                    {   'isbn10': '0063239043',
+                                        'isbn13': '9780063239043'},
+                                    {   'isbn10': '0063239078',
+                                        'isbn13': '9780063239074'}],
+                       'list_name': 'Combined Print and E-Book Fiction',
+                       'published_date': '2023-06-25',
+                       'rank': 8,
+                       'rank_last_week': 0,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 1},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/0593540069?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Stuart Woods and '
+                                                         'Brett Battles',
+                                               'contributor': 'by Stuart Woods '
+                                                              'and Brett '
+                                                              'Battles',
+                                               'contributor_note': '',
+                                               'description': 'The 64th book '
+                                                              'in the Stone '
+                                                              'Barrington '
+                                                              'series. Stone '
+                                                              'encounters some '
+                                                              'familiar '
+                                                              'enemies.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '0593540077',
+                                               'primary_isbn13': '9780593540077',
+                                               'publisher': 'Putnam',
+                                               'title': 'NEAR MISS'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Fiction',
+                       'isbns': [   {   'isbn10': '0593540077',
+                                        'isbn13': '9780593540077'},
+                                    {   'isbn10': '0593540069',
+                                        'isbn13': '9780593540060'}],
+                       'list_name': 'Combined Print and E-Book Fiction',
+                       'published_date': '2023-06-25',
+                       'rank': 9,
+                       'rank_last_week': 0,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 1},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/0593543939?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Mike Maden',
+                                               'contributor': 'by Mike Maden',
+                                               'contributor_note': '',
+                                               'description': 'The 17th book '
+                                                              'in the Oregon '
+                                                              'Files series. '
+                                                              'Juan Cabrillo’s '
+                                                              'crew takes on a '
+                                                              'force of '
+                                                              'bio-hacked '
+                                                              'soldiers.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '0593543947',
+                                               'primary_isbn13': '9780593543948',
+                                               'publisher': 'Putnam',
+                                               'title': 'CLIVE CUSSLER: FIRE '
+                                                        'STRIKE'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Fiction',
+                       'isbns': [   {   'isbn10': '0593543939',
+                                        'isbn13': '9780593543931'},
+                                    {   'isbn10': '0593543947',
+                                        'isbn13': '9780593543948'}],
+                       'list_name': 'Combined Print and E-Book Fiction',
+                       'published_date': '2023-06-25',
+                       'rank': 10,
+                       'rank_last_week': 0,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 1},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/1791392792?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Colleen Hoover',
+                                               'contributor': 'by Colleen '
+                                                              'Hoover',
+                                               'contributor_note': '',
+                                               'description': 'Lowen Ashleigh '
+                                                              'is hired by the '
+                                                              'husband of an '
+                                                              'injured writer '
+                                                              'to complete her '
+                                                              'popular series '
+                                                              'and uncovers a '
+                                                              'horrifying '
+                                                              'truth.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '1538724731',
+                                               'primary_isbn13': '9781538724736',
+                                               'publisher': 'Grand Central',
+                                               'title': 'VERITY'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Fiction',
+                       'isbns': [   {   'isbn10': '1791392792',
+                                        'isbn13': '9781791392796'},
+                                    {   'isbn10': '153872474X',
+                                        'isbn13': '9781538724743'},
+                                    {   'isbn10': '1538724731',
+                                        'isbn13': '9781538724736'},
+                                    {   'isbn10': '1538739720',
+                                        'isbn13': '9781538739723'}],
+                       'list_name': 'Combined Print and E-Book Fiction',
+                       'published_date': '2023-06-25',
+                       'rank': 11,
+                       'rank_last_week': 7,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 79},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/1668026031?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Hannah Grace',
+                                               'contributor': 'by Hannah Grace',
+                                               'contributor_note': '',
+                                               'description': 'Anastasia might '
+                                                              'need the help '
+                                                              'of the captain '
+                                                              'of a college '
+                                                              'hockey team to '
+                                                              'get on the '
+                                                              'Olympic figure '
+                                                              'skating team.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '1668026031',
+                                               'primary_isbn13': '9781668026038',
+                                               'publisher': 'Atria',
+                                               'title': 'ICEBREAKER'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Fiction',
+                       'isbns': [   {   'isbn10': '1668026031',
+                                        'isbn13': '9781668026038'},
+                                    {   'isbn10': '166802604X',
+                                        'isbn13': '9781668026045'}],
+                       'list_name': 'Combined Print and E-Book Fiction',
+                       'published_date': '2023-06-25',
+                       'rank': 12,
+                       'rank_last_week': 10,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 4},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/1250284112?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Nora Roberts',
+                                               'contributor': 'by Nora Roberts',
+                                               'contributor_note': '',
+                                               'description': 'After her '
+                                                              'roommate is '
+                                                              'killed by a con '
+                                                              'artist, a '
+                                                              'former Army '
+                                                              'brat builds a '
+                                                              'new life at her '
+                                                              "mother's home "
+                                                              'in Vermont.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '1250284112',
+                                               'primary_isbn13': '9781250284112',
+                                               'publisher': "St. Martin's",
+                                               'title': 'IDENTITY'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Fiction',
+                       'isbns': [   {   'isbn10': '1250284112',
+                                        'isbn13': '9781250284112'},
+                                    {   'isbn10': '1250284325',
+                                        'isbn13': '9781250284327'},
+                                    {   'isbn10': '1250893348',
+                                        'isbn13': '9781250893345'}],
+                       'list_name': 'Combined Print and E-Book Fiction',
+                       'published_date': '2023-06-25',
+                       'rank': 13,
+                       'rank_last_week': 5,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 3},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/1982117087?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Lisa See',
+                                               'contributor': 'by Lisa See',
+                                               'contributor_note': '',
+                                               'description': 'Tan Yunxian '
+                                                              'learns the '
+                                                              'pillars of '
+                                                              'Chinese '
+                                                              'medicine from '
+                                                              'her grandmother '
+                                                              'but is sent '
+                                                              'into an '
+                                                              'arranged '
+                                                              'marriage and '
+                                                              'pressured by '
+                                                              'her '
+                                                              'mother-in-law.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '1982117087',
+                                               'primary_isbn13': '9781982117085',
+                                               'publisher': 'Scribner',
+                                               'title': "LADY TAN'S CIRCLE OF "
+                                                        'WOMEN'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Fiction',
+                       'isbns': [   {   'isbn10': '1982117087',
+                                        'isbn13': '9781982117085'},
+                                    {   'isbn10': '1982117109',
+                                        'isbn13': '9781982117108'}],
+                       'list_name': 'Combined Print and E-Book Fiction',
+                       'published_date': '2023-06-25',
+                       'rank': 14,
+                       'rank_last_week': 0,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 1},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/1501161938?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Taylor Jenkins Reid',
+                                               'contributor': 'by Taylor '
+                                                              'Jenkins Reid',
+                                               'contributor_note': '',
+                                               'description': 'A movie icon '
+                                                              'recounts '
+                                                              'stories of her '
+                                                              'loves and '
+                                                              'career to a '
+                                                              'struggling '
+                                                              'magazine '
+                                                              'writer.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '1501161938',
+                                               'primary_isbn13': '9781501161933',
+                                               'publisher': 'Washington '
+                                                            'Square/Atria',
+                                               'title': 'THE SEVEN HUSBANDS OF '
+                                                        'EVELYN HUGO'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Fiction',
+                       'isbns': [   {   'isbn10': '1501161938',
+                                        'isbn13': '9781501161933'},
+                                    {   'isbn10': '150113924X',
+                                        'isbn13': '9781501139246'},
+                                    {   'isbn10': '1501139231',
+                                        'isbn13': '9781501139239'},
+                                    {   'isbn10': '1797106325',
+                                        'isbn13': '9781797106328'}],
+                       'list_name': 'Combined Print and E-Book Fiction',
+                       'published_date': '2023-06-25',
+                       'rank': 15,
+                       'rank_last_week': 12,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 100}],
+    'status': 'OK'}
+{   'copyright': 'Copyright (c) 2023 The New York Times Company.  All Rights '
+                 'Reserved.',
+    'last_modified': '2023-06-14T22:14:41-04:00',
+    'num_results': 15,
+    'results': [   {   'amazon_product_url': 'https://www.amazon.com/dp/1250878357?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Elliot Page',
+                                               'contributor': 'by Elliot Page',
+                                               'contributor_note': '',
+                                               'description': 'The '
+                                                              'Oscar-nominated '
+                                                              'star details '
+                                                              'discovering '
+                                                              'himself as a '
+                                                              'trans person '
+                                                              'and navigating '
+                                                              'abuse in '
+                                                              'Hollywood.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '1250878357',
+                                               'primary_isbn13': '9781250878359',
+                                               'publisher': 'Flatiron',
+                                               'title': 'PAGEBOY'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Nonfiction',
+                       'isbns': [   {   'isbn10': '1250878357',
+                                        'isbn13': '9781250878359'},
+                                    {   'isbn10': '1250878365',
+                                        'isbn13': '9781250878366'}],
+                       'list_name': 'Combined Print and E-Book Nonfiction',
+                       'published_date': '2023-06-25',
+                       'rank': 1,
+                       'rank_last_week': 0,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 1},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/0385534264?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'David Grann',
+                                               'contributor': 'by David Grann',
+                                               'contributor_note': '',
+                                               'description': 'The survivors '
+                                                              'of a '
+                                                              'shipwrecked '
+                                                              'British vessel '
+                                                              'on a secret '
+                                                              'mission during '
+                                                              'an imperial war '
+                                                              'with Spain have '
+                                                              'different '
+                                                              'accounts of '
+                                                              'events.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '0385534264',
+                                               'primary_isbn13': '9780385534260',
+                                               'publisher': 'Doubleday',
+                                               'title': 'THE WAGER'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Nonfiction',
+                       'isbns': [   {   'isbn10': '0385534264',
+                                        'isbn13': '9780385534260'},
+                                    {   'isbn10': '0385534272',
+                                        'isbn13': '9780385534277'},
+                                    {   'isbn10': '0307747492',
+                                        'isbn13': '9780307747495'},
+                                    {   'isbn10': '0307747484',
+                                        'isbn13': '9780307747488'}],
+                       'list_name': 'Combined Print and E-Book Nonfiction',
+                       'published_date': '2023-06-25',
+                       'rank': 2,
+                       'rank_last_week': 1,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 8},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/0593236599?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Peter Attia with '
+                                                         'Bill Gifford',
+                                               'contributor': 'by Peter Attia '
+                                                              'with Bill '
+                                                              'Gifford',
+                                               'contributor_note': '',
+                                               'description': 'A look at '
+                                                              'recent '
+                                                              'scientific '
+                                                              'research on '
+                                                              'aging and '
+                                                              'longevity.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '0593236599',
+                                               'primary_isbn13': '9780593236598',
+                                               'publisher': 'Harmony',
+                                               'title': 'OUTLIVE'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Nonfiction',
+                       'isbns': [   {   'isbn10': '0593236599',
+                                        'isbn13': '9780593236598'},
+                                    {   'isbn10': '0593236602',
+                                        'isbn13': '9780593236604'},
+                                    {   'isbn10': '0593664442',
+                                        'isbn13': '9780593664445'}],
+                       'list_name': 'Combined Print and E-Book Nonfiction',
+                       'published_date': '2023-06-25',
+                       'rank': 3,
+                       'rank_last_week': 3,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 11},
+                   {   'amazon_product_url': 'https://www.amazon.com/Killers-Flower-Moon-Osage-Murders/dp/0385534248?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'David Grann',
+                                               'contributor': 'by David Grann',
+                                               'contributor_note': '',
+                                               'description': 'The story of a '
+                                                              'murder spree in '
+                                                              '1920s Oklahoma '
+                                                              'that targeted '
+                                                              'Osage Indians, '
+                                                              'whose lands '
+                                                              'contained oil.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '0307742482',
+                                               'primary_isbn13': '9780307742483',
+                                               'publisher': 'Doubleday',
+                                               'title': 'KILLERS OF THE FLOWER '
+                                                        'MOON'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Nonfiction',
+                       'isbns': [   {   'isbn10': '0385534248',
+                                        'isbn13': '9780385534246'},
+                                    {   'isbn10': '0385534256',
+                                        'isbn13': '9780385534253'},
+                                    {   'isbn10': '1524755931',
+                                        'isbn13': '9781524755935'},
+                                    {   'isbn10': '0307742482',
+                                        'isbn13': '9780307742483'},
+                                    {   'isbn10': '1471166554',
+                                        'isbn13': '9781471166556'},
+                                    {   'isbn10': '1984883860',
+                                        'isbn13': '9781984883865'},
+                                    {   'isbn10': '0857209043',
+                                        'isbn13': '9780857209047'}],
+                       'list_name': 'Combined Print and E-Book Nonfiction',
+                       'published_date': '2023-06-25',
+                       'rank': 4,
+                       'rank_last_week': 2,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': 'https://www.nytimes.com/2017/04/28/books/review/killers-of-the-flower-moon-david-grann.html',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 80},
+                   {   'amazon_product_url': 'http://www.amazon.com/The-Body-Keeps-Score-Healing/dp/0670785938?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Bessel van der Kolk',
+                                               'contributor': 'by Bessel van '
+                                                              'der Kolk',
+                                               'contributor_note': '',
+                                               'description': 'How trauma '
+                                                              'affects the '
+                                                              'body and mind, '
+                                                              'and innovative '
+                                                              'treatments for '
+                                                              'recovery.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '0143127748',
+                                               'primary_isbn13': '9780143127741',
+                                               'publisher': 'Penguin',
+                                               'title': 'THE BODY KEEPS THE '
+                                                        'SCORE'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Nonfiction',
+                       'isbns': [   {   'isbn10': '0670785938',
+                                        'isbn13': '9780670785933'},
+                                    {   'isbn10': '0143127748',
+                                        'isbn13': '9780143127741'},
+                                    {   'isbn10': '1469092352',
+                                        'isbn13': '9781469092355'}],
+                       'list_name': 'Combined Print and E-Book Nonfiction',
+                       'published_date': '2023-06-25',
+                       'rank': 5,
+                       'rank_last_week': 4,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': 'https://www.nytimes.com/2018/10/18/books/review/how-to-rewire-your-traumatized-brain.html',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 146},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/1982185821?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Jennette McCurdy',
+                                               'contributor': 'by Jennette '
+                                                              'McCurdy',
+                                               'contributor_note': '',
+                                               'description': 'The actress and '
+                                                              'filmmaker '
+                                                              'describes her '
+                                                              'eating '
+                                                              'disorders and '
+                                                              'difficult '
+                                                              'relationship '
+                                                              'with her '
+                                                              'mother.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '1982185821',
+                                               'primary_isbn13': '9781982185824',
+                                               'publisher': 'Simon & Schuster',
+                                               'title': "I'M GLAD MY MOM "
+                                                        'DIED'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Nonfiction',
+                       'isbns': [   {   'isbn10': '1982185821',
+                                        'isbn13': '9781982185824'},
+                                    {   'isbn10': '1982185848',
+                                        'isbn13': '9781982185848'},
+                                    {   'isbn10': '179714796X',
+                                        'isbn13': '9781797147963'}],
+                       'list_name': 'Combined Print and E-Book Nonfiction',
+                       'published_date': '2023-06-25',
+                       'rank': 6,
+                       'rank_last_week': 5,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 44},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/1476773920?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'David Von Drehle',
+                                               'contributor': 'by David Von '
+                                                              'Drehle',
+                                               'contributor_note': '',
+                                               'description': 'The Washington '
+                                                              'Post columnist '
+                                                              'shares stories '
+                                                              'and wisdom he '
+                                                              'learned from a '
+                                                              'neighbor who '
+                                                              'was more than a '
+                                                              'century old.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '1476773920',
+                                               'primary_isbn13': '9781476773926',
+                                               'publisher': 'Simon & Schuster',
+                                               'title': 'THE BOOK OF CHARLIE'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Nonfiction',
+                       'isbns': [   {   'isbn10': '1476773920',
+                                        'isbn13': '9781476773926'},
+                                    {   'isbn10': '1476773947',
+                                        'isbn13': '9781476773940'}],
+                       'list_name': 'Combined Print and E-Book Nonfiction',
+                       'published_date': '2023-06-25',
+                       'rank': 7,
+                       'rank_last_week': 8,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 3},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/0525657746?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Michelle Zauner',
+                                               'contributor': 'by Michelle '
+                                                              'Zauner',
+                                               'contributor_note': '',
+                                               'description': 'The daughter of '
+                                                              'a Korean mother '
+                                                              'and Jewish '
+                                                              'American '
+                                                              'father, and '
+                                                              'leader of the '
+                                                              'indie rock '
+                                                              'project '
+                                                              'Japanese '
+                                                              'Breakfast, '
+                                                              'describes '
+                                                              'creating her '
+                                                              'own identity '
+                                                              'after losing '
+                                                              'her mother to '
+                                                              'cancer.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '1984898957',
+                                               'primary_isbn13': '9781984898951',
+                                               'publisher': 'Vintage',
+                                               'title': 'CRYING IN H MART'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Nonfiction',
+                       'isbns': [   {   'isbn10': '0525657746',
+                                        'isbn13': '9780525657743'},
+                                    {   'isbn10': '0525657754',
+                                        'isbn13': '9780525657750'},
+                                    {   'isbn10': '1984898957',
+                                        'isbn13': '9781984898951'}],
+                       'list_name': 'Combined Print and E-Book Nonfiction',
+                       'published_date': '2023-06-25',
+                       'rank': 8,
+                       'rank_last_week': 6,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 64},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/0063034964?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Jason Chaffetz',
+                                               'contributor': 'by Jason '
+                                                              'Chaffetz',
+                                               'contributor_note': '',
+                                               'description': 'The Fox News '
+                                                              'contributor and '
+                                                              'former '
+                                                              'congressman '
+                                                              'argues that '
+                                                              'liberals remain '
+                                                              'in power no '
+                                                              'matter who gets '
+                                                              'elected.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '0063034964',
+                                               'primary_isbn13': '9780063034969',
+                                               'publisher': 'Broadside',
+                                               'title': 'THE PUPPETEERS'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Nonfiction',
+                       'isbns': [   {   'isbn10': '0063034964',
+                                        'isbn13': '9780063034969'},
+                                    {   'isbn10': '0063034972',
+                                        'isbn13': '9780063034976'}],
+                       'list_name': 'Combined Print and E-Book Nonfiction',
+                       'published_date': '2023-06-25',
+                       'rank': 9,
+                       'rank_last_week': 0,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 1},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/0593593804?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Prince Harry',
+                                               'contributor': 'by Prince Harry',
+                                               'contributor_note': '',
+                                               'description': 'The Duke of '
+                                                              'Sussex details '
+                                                              'his struggles '
+                                                              'with the royal '
+                                                              'family, loss of '
+                                                              'his mother, '
+                                                              'service in the '
+                                                              'British Army '
+                                                              'and marriage to '
+                                                              'Meghan Markle.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '0593593804',
+                                               'primary_isbn13': '9780593593806',
+                                               'publisher': 'Random House',
+                                               'title': 'SPARE'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Nonfiction',
+                       'isbns': [   {   'isbn10': '0593593804',
+                                        'isbn13': '9780593593806'},
+                                    {   'isbn10': '0593593812',
+                                        'isbn13': '9780593593813'},
+                                    {   'isbn10': '0593675096',
+                                        'isbn13': '9780593675090'}],
+                       'list_name': 'Combined Print and E-Book Nonfiction',
+                       'published_date': '2023-06-25',
+                       'rank': 10,
+                       'rank_last_week': 7,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 22},
+                   {   'amazon_product_url': 'https://www.amazon.com/Braiding-Sweetgrass-Indigenous-Scientific-Knowledge/dp/1571313567?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Robin Wall Kimmerer',
+                                               'contributor': 'by Robin Wall '
+                                                              'Kimmerer',
+                                               'contributor_note': '',
+                                               'description': 'A botanist and '
+                                                              'member of the '
+                                                              'Citizen '
+                                                              'Potawatomi '
+                                                              'Nation espouses '
+                                                              'having an '
+                                                              'understanding '
+                                                              'and '
+                                                              'appreciation of '
+                                                              'plants and '
+                                                              'animals.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '1571313567',
+                                               'primary_isbn13': '9781571313560',
+                                               'publisher': 'Milkweed Editions',
+                                               'title': 'BRAIDING SWEETGRASS'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Nonfiction',
+                       'isbns': [   {   'isbn10': '1571313567',
+                                        'isbn13': '9781571313560'},
+                                    {   'isbn10': '1515975908',
+                                        'isbn13': '9781515975908'},
+                                    {   'isbn10': '1571318712',
+                                        'isbn13': '9781571318718'},
+                                    {   'isbn10': '1571311777',
+                                        'isbn13': '9781571311771'}],
+                       'list_name': 'Combined Print and E-Book Nonfiction',
+                       'published_date': '2023-06-25',
+                       'rank': 11,
+                       'rank_last_week': 9,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 81},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/0063269279?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Maureen Ryan',
+                                               'contributor': 'by Maureen Ryan',
+                                               'contributor_note': '',
+                                               'description': 'The '
+                                                              'contributing '
+                                                              'editor at '
+                                                              'Vanity Fair '
+                                                              'examines the '
+                                                              'patterns of '
+                                                              'abuse and '
+                                                              'exploitation in '
+                                                              'Hollywood.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '0063269279',
+                                               'primary_isbn13': '9780063269279',
+                                               'publisher': 'Mariner',
+                                               'title': 'BURN IT DOWN'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Nonfiction',
+                       'isbns': [   {   'isbn10': '0063269279',
+                                        'isbn13': '9780063269279'},
+                                    {   'isbn10': '0063269287',
+                                        'isbn13': '9780063269286'}],
+                       'list_name': 'Combined Print and E-Book Nonfiction',
+                       'published_date': '2023-06-25',
+                       'rank': 12,
+                       'rank_last_week': 0,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 1},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/1250890926?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Andy Cohen',
+                                               'contributor': 'by Andy Cohen',
+                                               'contributor_note': '',
+                                               'description': 'The host and '
+                                                              'executive '
+                                                              'producer of '
+                                                              '“Watch What '
+                                                              'Happens Live” '
+                                                              'juggles '
+                                                              'fatherhood and '
+                                                              'his career.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '1250890926',
+                                               'primary_isbn13': '9781250890924',
+                                               'publisher': 'Holt',
+                                               'title': 'THE DADDY DIARIES'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Nonfiction',
+                       'isbns': [   {   'isbn10': 'None',
+                                        'isbn13': '9781250865830'},
+                                    {   'isbn10': '1250890926',
+                                        'isbn13': '9781250890924'},
+                                    {   'isbn10': '1250890934',
+                                        'isbn13': '9781250890931'}],
+                       'list_name': 'Combined Print and E-Book Nonfiction',
+                       'published_date': '2023-06-25',
+                       'rank': 13,
+                       'rank_last_week': 11,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 5},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/0593498062?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'Javier Zamora',
+                                               'contributor': 'by Javier '
+                                                              'Zamora',
+                                               'contributor_note': '',
+                                               'description': 'The poet '
+                                                              'describes his '
+                                                              'journey over '
+                                                              'two months from '
+                                                              'El Salvador to '
+                                                              'the United '
+                                                              'States to '
+                                                              'reconnect with '
+                                                              'his parents who '
+                                                              'left years '
+                                                              'earlier.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '0593498089',
+                                               'primary_isbn13': '9780593498088',
+                                               'publisher': 'Hogarth',
+                                               'title': 'SOLITO'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Nonfiction',
+                       'isbns': [   {   'isbn10': '0593498062',
+                                        'isbn13': '9780593498064'},
+                                    {   'isbn10': '0593498070',
+                                        'isbn13': '9780593498071'},
+                                    {   'isbn10': '0593498089',
+                                        'isbn13': '9780593498088'}],
+                       'list_name': 'Combined Print and E-Book Nonfiction',
+                       'published_date': '2023-06-25',
+                       'rank': 14,
+                       'rank_last_week': 0,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 5},
+                   {   'amazon_product_url': 'https://www.amazon.com/dp/0316392456?tag=NYTBSREV-20',
+                       'asterisk': 0,
+                       'bestsellers_date': '2023-06-10',
+                       'book_details': [   {   'age_group': '',
+                                               'author': 'David Sedaris',
+                                               'contributor': 'by David '
+                                                              'Sedaris',
+                                               'contributor_note': '',
+                                               'description': 'The humorist '
+                                                              'portrays '
+                                                              'personal and '
+                                                              'public '
+                                                              'upheavals of '
+                                                              'his life in its '
+                                                              'seventh decade '
+                                                              'and the world '
+                                                              'in the time of '
+                                                              'a pandemic.',
+                                               'price': '0.00',
+                                               'primary_isbn10': '031639243X',
+                                               'primary_isbn13': '9780316392433',
+                                               'publisher': 'Back Bay',
+                                               'title': 'HAPPY-GO-LUCKY'}],
+                       'dagger': 0,
+                       'display_name': 'Combined Print & E-Book Nonfiction',
+                       'isbns': [   {   'isbn10': '0316392456',
+                                        'isbn13': '9780316392457'},
+                                    {   'isbn10': '0316392448',
+                                        'isbn13': '9780316392440'},
+                                    {   'isbn10': '1668604590',
+                                        'isbn13': '9781668604595'},
+                                    {   'isbn10': '1668604582',
+                                        'isbn13': '9781668604588'},
+                                    {   'isbn10': '031639243X',
+                                        'isbn13': '9780316392433'}],
+                       'list_name': 'Combined Print and E-Book Nonfiction',
+                       'published_date': '2023-06-25',
+                       'rank': 15,
+                       'rank_last_week': 15,
+                       'reviews': [   {   'article_chapter_link': '',
+                                          'book_review_link': '',
+                                          'first_chapter_link': '',
+                                          'sunday_review_link': ''}],
+                       'weeks_on_list': 11}],
+    'status': 'OK'}

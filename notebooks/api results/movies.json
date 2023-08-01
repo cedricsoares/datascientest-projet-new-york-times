@@ -1,0 +1,448 @@
+{   'copyright': 'Copyright (c) 2023 The New York Times Company. All Rights '
+                 'Reserved.',
+    'has_more': True,
+    'num_results': 20,
+    'results': [   {   'byline': 'Manohla Dargis',
+                       'critics_pick': 0,
+                       'date_updated': '2023-06-14 22:14:04',
+                       'display_title': 'The Flash',
+                       'headline': '‘The Flash’ Review: Electric Company',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of The '
+                                                          'Flash',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/06/14/movies/the-flash-review-ezra-miller.html'},
+                       'mpaa_rating': 'PG-13',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/06/15/multimedia/15flash-review-gkcq/15flash-review-gkcq-mediumThreeByTwo440.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': '2023-06-16',
+                       'publication_date': '2023-06-14',
+                       'summary_short': 'In the latest DC Comics blowout, Ezra '
+                                        'Miller suits up as the speedy '
+                                        'superhero alongside special guests '
+                                        'like Batman (hello, Michael Keaton).'},
+                   {   'byline': 'Elisabeth Vincentelli',
+                       'critics_pick': 0,
+                       'date_updated': '2023-06-06 11:01:03',
+                       'display_title': 'All Man: The International Male Story',
+                       'headline': '‘All Man’ Review: International Male, a '
+                                   'Wishbook on Many Levels',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of All '
+                                                          'Man: The '
+                                                          'International Male '
+                                                          'Story',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/06/06/movies/all-man-review-international-male-a-wishbook-on-many-levels.html'},
+                       'mpaa_rating': '',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/06/09/multimedia/08ALLMALE-PIX-bhqp/08ALLMALE-PIX-bhqp-mediumThreeByTwo440.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': None,
+                       'publication_date': '2023-06-06',
+                       'summary_short': 'The catalog was more than a place to '
+                                        'peruse the latest fashions. It '
+                                        'reshaped society’s definitions of '
+                                        'masculinity.'},
+                   {   'byline': 'Lisa Kennedy',
+                       'critics_pick': 0,
+                       'date_updated': '2023-05-25 15:07:03',
+                       'display_title': 'White Balls on Walls',
+                       'headline': '‘White Balls on Walls’ Review: Time With '
+                                   'the Gatekeepers',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of '
+                                                          'White Balls on '
+                                                          'Walls',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/05/25/movies/white-balls-on-walls-review.html'},
+                       'mpaa_rating': '',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/05/25/multimedia/25white-balls-on-walls-review-wkcf/25white-balls-on-walls-review-wkcf-mediumThreeByTwo440.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': None,
+                       'publication_date': '2023-05-25',
+                       'summary_short': 'The Stedelijk Museum in Amsterdam '
+                                        'becomes a somewhat flimsy case study '
+                                        'for fine-art diversity and inclusion '
+                                        'conversations in this documentary.'},
+                   {   'byline': 'Wesley Morris',
+                       'critics_pick': 0,
+                       'date_updated': '2023-05-24 20:35:03',
+                       'display_title': 'The Little Mermaid',
+                       'headline': '‘The Little Mermaid’ Review: The '
+                                   'Renovations Are Only Skin Deep',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of The '
+                                                          'Little Mermaid',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/05/24/movies/little-mermaid-review-halle-bailey.html'},
+                       'mpaa_rating': 'PG',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/05/25/multimedia/25little-mermaid-review-fmlc/25little-mermaid-review-fmlc-mediumThreeByTwo440-v3.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': '2023-05-26',
+                       'publication_date': '2023-05-24',
+                       'summary_short': 'Disney’s live-action remake, with '
+                                        'Halle Bailey starring as Ariel and a '
+                                        'diverse cast, is a dutiful corrective '
+                                        'with noble intentions and little '
+                                        'fun.'},
+                   {   'byline': 'Jeannette Catsoulis',
+                       'critics_pick': 1,
+                       'date_updated': '2023-05-18 11:04:03',
+                       'display_title': 'Sanctuary',
+                       'headline': '‘Sanctuary’ Review: Who’s the Boss?',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of '
+                                                          'Sanctuary',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/05/18/movies/sanctuary-review.html'},
+                       'mpaa_rating': 'R',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/05/19/multimedia/sanctuary1-tjmp/sanctuary1-tjmp-mediumThreeByTwo440-v3.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': '2023-05-19',
+                       'publication_date': '2023-05-18',
+                       'summary_short': 'A wealthy heir and his longtime '
+                                        'employee vie for control over their '
+                                        'uncommon relationship in this twisty '
+                                        'duet.'},
+                   {   'byline': 'Glenn Kenny',
+                       'critics_pick': 0,
+                       'date_updated': '2023-05-18 13:01:03',
+                       'display_title': "White Men Can't Jump",
+                       'headline': '‘White Men Can’t Jump’ Review: Bouncing '
+                                   'Off the Rim',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of '
+                                                          "White Men Can't "
+                                                          'Jump',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/05/18/movies/white-men-cant-jump-review.html'},
+                       'mpaa_rating': 'R',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/05/19/multimedia/18white-men-cant-jump-review-qjpk/18white-men-cant-jump-review-qjpk-mediumThreeByTwo440.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': '2023-05-19',
+                       'publication_date': '2023-05-18',
+                       'summary_short': 'Even the trash talk in a remake of '
+                                        'the 1992 street ball comedy has no '
+                                        'spark, despite the best efforts of '
+                                        'Sinqua Walls and Jack Harlow.'},
+                   {   'byline': 'Teo Bugbee',
+                       'critics_pick': 1,
+                       'date_updated': '2023-05-11 11:05:03',
+                       'display_title': 'Monica',
+                       'headline': '‘Monica’ Review: Mother and Daughter, Both '
+                                   'Alike in Dignity',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of '
+                                                          'Monica',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/05/11/movies/monica-review.html'},
+                       'mpaa_rating': 'R',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/05/10/multimedia/monica1-lftg/monica1-lftg-mediumThreeByTwo440.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': None,
+                       'publication_date': '2023-05-11',
+                       'summary_short': 'Trace Lysette and Patricia Clarkson '
+                                        'star in this subtle chamber drama.'},
+                   {   'byline': 'Calum Marsh',
+                       'critics_pick': 0,
+                       'date_updated': '2023-05-09 11:01:03',
+                       'display_title': 'Dealing with Dad',
+                       'headline': '‘Dealing With Dad’ Review: A Family '
+                                   'Dysfunction',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of '
+                                                          'Dealing with Dad',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/05/09/movies/dealing-with-dad-review.html'},
+                       'mpaa_rating': '',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/05/08/multimedia/dealing1-qwvf/dealing1-qwvf-mediumThreeByTwo440.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': '2023-05-09',
+                       'publication_date': '2023-05-09',
+                       'summary_short': 'A fragmented family reunites to help '
+                                        'their depressed patriarch in this '
+                                        'surprisingly lighthearted film about '
+                                        'serious subjects.'},
+                   {   'byline': 'Chris Azzopardi',
+                       'critics_pick': 0,
+                       'date_updated': '2023-04-26 18:27:10',
+                       'display_title': 'Wynonna Judd: Between Hell and '
+                                        'Hallelujah',
+                       'headline': '‘Wynonna Judd: Between Hell and '
+                                   'Hallelujah’ Review: The Show Must Go On',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of '
+                                                          'Wynonna Judd: '
+                                                          'Between Hell and '
+                                                          'Hallelujah',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/04/26/movies/wynonna-judd-between-hell-and-hallelujah-review.html'},
+                       'mpaa_rating': '',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/04/26/multimedia/26wynonna-judd-doc-review1-lvkq/26wynonna-judd-doc-review1-lvkq-mediumThreeByTwo440.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': '2023-04-26',
+                       'publication_date': '2023-04-26',
+                       'summary_short': 'A documentary about the country star, '
+                                        'whose mother and singing partner, '
+                                        'Naomi Judd, died last year, mostly '
+                                        'fails to kindle unguided emotions.'},
+                   {   'byline': 'Natalia Winkelman',
+                       'critics_pick': 0,
+                       'date_updated': '2023-04-25 19:32:03',
+                       'display_title': 'Centurion: The Dancing Stallion',
+                       'headline': '‘Centurion: The Dancing Stallion’ Review: '
+                                   'Romance on the Ranch',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of '
+                                                          'Centurion: The '
+                                                          'Dancing Stallion',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/04/25/movies/centurion-the-dancing-stallion-review.html'},
+                       'mpaa_rating': 'PG',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/04/25/multimedia/25centurion-review-qcgf/25centurion-review-qcgf-mediumThreeByTwo440.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': None,
+                       'publication_date': '2023-04-25',
+                       'summary_short': 'A young woman training for a horse '
+                                        'dancing competition confronts a '
+                                        'medical crisis in this conventional '
+                                        'family melodrama.'},
+                   {   'byline': 'Amy Nicholson',
+                       'critics_pick': 0,
+                       'date_updated': '2023-04-13 18:08:04',
+                       'display_title': 'Hilma',
+                       'headline': '‘Hilma’ Review: An Artist With Spirit',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of '
+                                                          'Hilma',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/04/13/movies/hilma-review.html'},
+                       'mpaa_rating': '',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/04/14/multimedia/13hilma-review-pwzj/13hilma-review-pwzj-mediumThreeByTwo440.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': None,
+                       'publication_date': '2023-04-13',
+                       'summary_short': 'The film gets off to a rough start, '
+                                        'but the director wins the audience '
+                                        'back with his sincere connection to '
+                                        'the artist Hilma af Klint.'},
+                   {   'byline': 'Claire Shaffer',
+                       'critics_pick': 1,
+                       'date_updated': '2023-03-30 17:34:03',
+                       'display_title': 'Rye Lane',
+                       'headline': '‘Rye Lane’ Review: A Lively Modern Rom-Com '
+                                   'With a British Accent',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of Rye '
+                                                          'Lane',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/03/30/movies/rye-lane-review.html'},
+                       'mpaa_rating': 'R',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/03/30/multimedia/30rye-lane1-gtfz/30rye-lane1-gtfz-mediumThreeByTwo440.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': '2023-03-31',
+                       'publication_date': '2023-03-30',
+                       'summary_short': 'Raine Allen-Miller’s feature debut '
+                                        'revives the genre with exuberant '
+                                        'performances and a vibrant South '
+                                        'London setting.'},
+                   {   'byline': 'Ben Kenigsberg',
+                       'critics_pick': 0,
+                       'date_updated': '2023-03-30 11:06:02',
+                       'display_title': 'Space Oddity',
+                       'headline': '‘Space Oddity’ Review: Failure to Launch',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of '
+                                                          'Space Oddity',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/03/30/movies/space-oddity-review.html'},
+                       'mpaa_rating': 'PG-13',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/03/29/multimedia/space1-hkzp/space1-hkzp-mediumThreeByTwo440.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': None,
+                       'publication_date': '2023-03-30',
+                       'summary_short': 'Men will literally contemplate '
+                                        'traveling to Mars instead of going to '
+                                        'therapy in “Space Oddity,” directed '
+                                        'by Kyra Sedgwick.'},
+                   {   'byline': 'Lisa Kennedy',
+                       'critics_pick': 1,
+                       'date_updated': '2023-03-23 16:44:03',
+                       'display_title': 'The Worst Ones',
+                       'headline': '‘The Worst Ones’ Review: The Gazes of '
+                                   'Children',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of The '
+                                                          'Worst Ones',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/03/23/movies/the-worst-ones-review.html'},
+                       'mpaa_rating': '',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/03/23/multimedia/23worst-ones-review-jhpw/23worst-ones-review-jhpw-mediumThreeByTwo440-v4.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': '2023-03-24',
+                       'publication_date': '2023-03-23',
+                       'summary_short': 'In their feature, the directors Lisa '
+                                        'Akoka and Romane Gueret build a '
+                                        'provocative critique of filmmaking '
+                                        'practices.'},
+                   {   'byline': 'Jeannette Catsoulis',
+                       'critics_pick': 1,
+                       'date_updated': '2023-03-23 11:02:10',
+                       'display_title': 'The Lost King',
+                       'headline': '‘The Lost King’ Review: A Royal Obsession',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of The '
+                                                          'Lost King',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/03/23/movies/the-lost-king-review.html'},
+                       'mpaa_rating': 'PG-13',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/03/22/multimedia/lostking1-zklj/lostking1-zklj-mediumThreeByTwo440.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': None,
+                       'publication_date': '2023-03-23',
+                       'summary_short': 'Sally Hawkins lights a fire under '
+                                        'this droll dramedy about the search '
+                                        'for the final resting place of '
+                                        'Richard III.'},
+                   {   'byline': 'Glenn Kenny',
+                       'critics_pick': 0,
+                       'date_updated': '2023-03-16 11:02:03',
+                       'display_title': 'Pinball: The Man Who Saved the Game',
+                       'headline': 'Review: ‘Pinball: The Man Who Saved the '
+                                   'Game’',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of '
+                                                          'Pinball: The Man '
+                                                          'Who Saved the Game',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/03/16/movies/review-pinball-the-man-who-saved-the-game.html'},
+                       'mpaa_rating': '',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/03/16/multimedia/16pinball-review-pix1-qvjg/16pinball-review-pix1-qvjg-mediumThreeByTwo440.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': '2023-03-17',
+                       'publication_date': '2023-03-16',
+                       'summary_short': 'The mesmerizing silver ball, banned '
+                                        'for decades in New York for its '
+                                        'perils, pings from bumper to bumper '
+                                        'in a film that tilts toward the '
+                                        'underwhelming.'},
+                   {   'byline': 'Manohla Dargis',
+                       'critics_pick': 1,
+                       'date_updated': '2023-03-09 19:08:05',
+                       'display_title': 'Stonewalling',
+                       'headline': '‘Stonewalling’ Review: A Young Woman’s '
+                                   'Exchange Value',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of '
+                                                          'Stonewalling',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/03/09/movies/stonewalling-review.html'},
+                       'mpaa_rating': '',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/03/09/multimedia/09stonewalling2-lmgz/09stonewalling2-lmgz-mediumThreeByTwo440.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': None,
+                       'publication_date': '2023-03-09',
+                       'summary_short': 'In this haunting drama, a 20-year-old '
+                                        'Chinese woman struggles to find her '
+                                        'place in a country where she faces a '
+                                        'series of seemingly impossible '
+                                        'hurdles.'},
+                   {   'byline': 'Jeannette Catsoulis',
+                       'critics_pick': 0,
+                       'date_updated': '2023-03-09 12:03:02',
+                       'display_title': 'Luther: The Fallen Sun',
+                       'headline': '‘Luther: The Fallen Sun’ Review: Psycho '
+                                   'Filler',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of '
+                                                          'Luther: The Fallen '
+                                                          'Sun',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/03/09/movies/luther-the-fallen-sun-review.html'},
+                       'mpaa_rating': 'R',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/03/08/multimedia/luther2-gmkw/luther2-gmkw-mediumThreeByTwo440.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': '2023-03-10',
+                       'publication_date': '2023-03-09',
+                       'summary_short': 'A smoldering Idris Elba is no match '
+                                        'for the preposterousness of this '
+                                        'feature-length Netflix continuation '
+                                        'of the popular BBC crime thriller.'},
+                   {   'byline': 'Amy Nicholson',
+                       'critics_pick': 0,
+                       'date_updated': '2023-02-24 02:01:03',
+                       'display_title': 'We Have a Ghost',
+                       'headline': '‘We Have a Ghost’ Review: Me and My Boo',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of We '
+                                                          'Have a Ghost',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/02/23/movies/we-have-a-ghost-review.html'},
+                       'mpaa_rating': 'PG-13',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/02/22/multimedia/ghost1-hjpq/ghost1-hjpq-mediumThreeByTwo440.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': '2023-02-24',
+                       'publication_date': '2023-02-24',
+                       'summary_short': 'David Harbour stars as an apparition '
+                                        'haunting a family’s home in this '
+                                        'supernatural Netflix comedy.'},
+                   {   'byline': 'Brandon Yu',
+                       'critics_pick': 0,
+                       'date_updated': '2023-02-23 12:03:03',
+                       'display_title': 'Bruiser',
+                       'headline': '‘Bruiser’ Review: Of Fathers and Fractures',
+                       'link': {   'suggested_link_text': 'Read the New York '
+                                                          'Times Review of '
+                                                          'Bruiser',
+                                   'type': 'article',
+                                   'url': 'https://www.nytimes.com/2023/02/23/movies/bruiser-review.html'},
+                       'mpaa_rating': '',
+                       'multimedia': {   'height': 140,
+                                         'src': 'https://static01.nyt.com/images/2023/02/23/multimedia/23bruiser-review-1-wflj/23bruiser-review-1-wflj-mediumThreeByTwo440.jpg',
+                                         'type': 'mediumThreeByTwo210',
+                                         'width': 210},
+                       'opening_date': '2023-02-24',
+                       'publication_date': '2023-02-23',
+                       'summary_short': 'A teenage boy is caught between the '
+                                        'man who raised him and a new guiding '
+                                        'figure in this affecting study of '
+                                        'masculinity and coming of age.'}],
+    'status': 'OK'}

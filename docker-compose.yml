@@ -1,0 +1,66 @@
+version: "3.0"
+
+services:
+  elasticsearch:
+    container_name: es-container
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.1.2
+    volumes:
+      - data:/usr/share/elasticsearch/data
+    environment:
+      - xpack.security.enabled=false
+      - "discovery.type=single-node"
+    networks:
+      - backend
+    ports:
+      - 9200:9200
+    healthcheck:
+      test: curl -u elastic:elastic -s -f es-container:9200/_cat/health >/dev/null || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  api:
+    container_name: api-container
+    build: ./api
+    volumes:
+      - logs:/app/logs
+    networks:
+      - backend
+      - frontend
+    ports:
+      - 8000:8000
+    depends_on:
+      elasticsearch:
+        condition: "service_healthy"
+
+  dash:
+    container_name: dash-container
+    build: ./dash
+    volumes:
+      - logs:/app/logs
+    networks:
+      - frontend
+    depends_on:
+      - api
+    ports:
+      - 8050:8050    
+
+volumes:
+  data:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ./data
+  logs:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ./logs
+
+networks:
+  backend:
+    driver: bridge
+  frontend:
+    driver: bridge

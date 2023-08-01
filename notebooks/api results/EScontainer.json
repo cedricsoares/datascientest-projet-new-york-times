@@ -1,0 +1,233 @@
+
+"Id": "289c124ae198c282c866e6d3ccab9088d1964f36a72348ee0f79b9f93d922362",
+"Created": "2023-06-19T09:54:12.723231Z",
+"Path": "/bin/tini",
+"Args": [
+    "--",
+    "/usr/local/bin/docker-entrypoint.sh",
+    "eswrapper"
+],
+"State": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 78,
+    "Error": "",
+    "StartedAt": "2023-06-19T09:54:13.6298743Z",
+    "FinishedAt": "2023-06-19T09:54:46.411066Z"
+},
+"Image": "sha256:8552a239ee1e62b3bc7d1ab3d7537b33ec2b9b7931ccf65f4283962fbfa092cc",
+"ResolvConfPath": "/var/lib/docker/containers/289c124ae198c282c866e6d3ccab9088d1964f36a72348ee0f79b9f93d922362/resolv.conf",
+"HostnamePath": "/var/lib/docker/containers/289c124ae198c282c866e6d3ccab9088d1964f36a72348ee0f79b9f93d922362/hostname",
+"HostsPath": "/var/lib/docker/containers/289c124ae198c282c866e6d3ccab9088d1964f36a72348ee0f79b9f93d922362/hosts",
+"LogPath": "/var/lib/docker/containers/289c124ae198c282c866e6d3ccab9088d1964f36a72348ee0f79b9f93d922362/289c124ae198c282c866e6d3ccab9088d1964f36a72348ee0f79b9f93d922362-json.log",
+"Name": "/es01",
+"RestartCount": 0,
+"Driver": "overlay2",
+"Platform": "linux",
+"MountLabel": "",
+"ProcessLabel": "",
+"AppArmorProfile": "",
+"ExecIDs": null,
+"HostConfig": {
+    "Binds": null,
+    "ContainerIDFile": "",
+    "LogConfig": {
+        "Type": "json-file",
+        "Config": {}
+    },
+    "NetworkMode": "default",
+    "PortBindings": {
+        "9200/tcp": [
+            {
+                "HostIp": "",
+                "HostPort": "9200"
+            }
+        ]
+    },
+    "RestartPolicy": {
+        "Name": "no",
+        "MaximumRetryCount": 0
+    },
+    "AutoRemove": false,
+    "VolumeDriver": "",
+    "VolumesFrom": null,
+    "ConsoleSize": [
+        33,
+        187
+    ],
+    "CapAdd": null,
+    "CapDrop": null,
+    "CgroupnsMode": "host",
+    "Dns": [],
+    "DnsOptions": [],
+    "DnsSearch": [],
+    "ExtraHosts": null,
+    "GroupAdd": null,
+    "IpcMode": "private",
+    "Cgroup": "",
+    "Links": null,
+    "OomScoreAdj": 0,
+    "PidMode": "",
+    "Privileged": false,
+    "PublishAllPorts": false,
+    "ReadonlyRootfs": false,
+    "SecurityOpt": null,
+    "UTSMode": "",
+    "UsernsMode": "",
+    "ShmSize": 67108864,
+    "Runtime": "runc",
+    "Isolation": "",
+    "CpuShares": 0,
+    "Memory": 0,
+    "NanoCpus": 0,
+    "CgroupParent": "",
+    "BlkioWeight": 0,
+    "BlkioWeightDevice": [],
+    "BlkioDeviceReadBps": [],
+    "BlkioDeviceWriteBps": [],
+    "BlkioDeviceReadIOps": [],
+    "BlkioDeviceWriteIOps": [],
+    "CpuPeriod": 0,
+    "CpuQuota": 0,
+    "CpuRealtimePeriod": 0,
+    "CpuRealtimeRuntime": 0,
+    "CpusetCpus": "",
+    "CpusetMems": "",
+    "Devices": [],
+    "DeviceCgroupRules": null,
+    "DeviceRequests": null,
+    "MemoryReservation": 0,
+    "MemorySwap": 0,
+    "MemorySwappiness": null,
+    "OomKillDisable": false,
+    "PidsLimit": null,
+    "Ulimits": null,
+    "CpuCount": 0,
+    "CpuPercent": 0,
+    "IOMaximumIOps": 0,
+    "IOMaximumBandwidth": 0,
+    "MaskedPaths": [
+        "/proc/asound",
+        "/proc/acpi",
+        "/proc/kcore",
+        "/proc/keys",
+        "/proc/latency_stats",
+        "/proc/timer_list",
+        "/proc/timer_stats",
+        "/proc/sched_debug",
+        "/proc/scsi",
+        "/sys/firmware"
+    ],
+    "ReadonlyPaths": [
+        "/proc/bus",
+        "/proc/fs",
+        "/proc/irq",
+        "/proc/sys",
+        "/proc/sysrq-trigger"
+    ]
+},
+"GraphDriver": {
+    "Data": {
+        "LowerDir": "/var/lib/docker/overlay2/3abffa70ad69661af536c32692422978d77b6bb67be120b73fa1f36cf6382065-init/diff:/var/lib/docker/overlay2/c822784759c1c061fa87d4c1d710951f9a6dc5c828cc696bdf1dd340451cbd20/diff:/var/lib/docker/overlay2/aef948a9ae24675825cd05737309fce12f8aa76bc4ee35bbe966b668150b35f1/diff:/var/lib/docker/overlay2/a8d08fd5ec3a0151f62b733daf60f3c479de92406d76e0fa0484c3f6aa3cf328/diff:/var/lib/docker/overlay2/9332ba2ed242fd69e6c2a08e7a419661f81087f0235cf726b5eb8a33265b8b8b/diff:/var/lib/docker/overlay2/b6ecd5417764cdeb822a6d9d40a1111c764697ae3794b62397f696ab5ca4e5fd/diff:/var/lib/docker/overlay2/c9782aa06bfec88f548e34411bbc106ab25391d81e9e5eca0d012901f00a86bf/diff:/var/lib/docker/overlay2/89e8c7374c93d69792f9f08e17f96e1b1669461a45e372dc1758645b78bc08bc/diff:/var/lib/docker/overlay2/31f9ae11e987a56bcf345f186febda4110baddd9beed04f6ab5339711ebaa347/diff:/var/lib/docker/overlay2/6b5d93db970e71e5a4b81d327aab19bde102eac620923388c3ecad01fbe00a8c/diff:/var/lib/docker/overlay2/bf2b9a3458dc0f2f6ea59efcc249f3f60aa3ccf66c948ed1b02af70f553a0148/diff",
+        "MergedDir": "/var/lib/docker/overlay2/3abffa70ad69661af536c32692422978d77b6bb67be120b73fa1f36cf6382065/merged",
+        "UpperDir": "/var/lib/docker/overlay2/3abffa70ad69661af536c32692422978d77b6bb67be120b73fa1f36cf6382065/diff",
+        "WorkDir": "/var/lib/docker/overlay2/3abffa70ad69661af536c32692422978d77b6bb67be120b73fa1f36cf6382065/work"
+    },
+    "Name": "overlay2"
+},
+"Mounts": [],
+"Config": {
+    "Hostname": "289c124ae198",
+    "Domainname": "",
+    "User": "1000:0",
+    "AttachStdin": true,
+    "AttachStdout": true,
+    "AttachStderr": true,
+    "ExposedPorts": {
+        "9200/tcp": {},
+        "9300/tcp": {}
+    },
+    "Tty": true,
+    "OpenStdin": true,
+    "StdinOnce": true,
+    "Env": [
+        "PATH=/usr/share/elasticsearch/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "ELASTIC_CONTAINER=true"
+    ],
+    "Cmd": [
+        "eswrapper"
+    ],
+    "Image": "docker.elastic.co/elasticsearch/elasticsearch:8.8.1",
+    "Volumes": null,
+    "WorkingDir": "/usr/share/elasticsearch",
+    "Entrypoint": [
+        "/bin/tini",
+        "--",
+        "/usr/local/bin/docker-entrypoint.sh"
+    ],
+    "OnBuild": null,
+    "Labels": {
+        "org.label-schema.build-date": "2023-06-05T21:32:25.188464208Z",
+        "org.label-schema.license": "Elastic-License-2.0",
+        "org.label-schema.name": "Elasticsearch",
+        "org.label-schema.schema-version": "1.0",
+        "org.label-schema.url": "https://www.elastic.co/products/elasticsearch",
+        "org.label-schema.usage": "https://www.elastic.co/guide/en/elasticsearch/reference/index.html",
+        "org.label-schema.vcs-ref": "f8edfccba429b6477927a7c1ce1bc6729521305e",
+        "org.label-schema.vcs-url": "https://github.com/elastic/elasticsearch",
+        "org.label-schema.vendor": "Elastic",
+        "org.label-schema.version": "8.8.1",
+        "org.opencontainers.image.created": "2023-06-05T21:32:25.188464208Z",
+        "org.opencontainers.image.documentation": "https://www.elastic.co/guide/en/elasticsearch/reference/index.html",
+        "org.opencontainers.image.licenses": "Elastic-License-2.0",
+        "org.opencontainers.image.ref.name": "ubuntu",
+        "org.opencontainers.image.revision": "f8edfccba429b6477927a7c1ce1bc6729521305e",
+        "org.opencontainers.image.source": "https://github.com/elastic/elasticsearch",
+        "org.opencontainers.image.title": "Elasticsearch",
+        "org.opencontainers.image.url": "https://www.elastic.co/products/elasticsearch",
+        "org.opencontainers.image.vendor": "Elastic",
+        "org.opencontainers.image.version": "8.8.1"
+    }
+},
+"NetworkSettings": {
+    "Bridge": "",
+    "SandboxID": "16b86d87c90954681ca863d7d8107e31c46fdb7ff7128b7ee82826cf64587c09",
+    "HairpinMode": false,
+    "LinkLocalIPv6Address": "",
+    "LinkLocalIPv6PrefixLen": 0,
+    "Ports": {},
+    "SandboxKey": "/var/run/docker/netns/16b86d87c909",
+    "SecondaryIPAddresses": null,
+    "SecondaryIPv6Addresses": null,
+    "EndpointID": "",
+    "Gateway": "",
+    "GlobalIPv6Address": "",
+    "GlobalIPv6PrefixLen": 0,
+    "IPAddress": "",
+    "IPPrefixLen": 0,
+    "IPv6Gateway": "",
+    "MacAddress": "",
+    "Networks": {
+        "bridge": {
+            "IPAMConfig": null,
+            "Links": null,
+            "Aliases": null,
+            "NetworkID": "f9d614698a357b3a35a9d14cfbd31ab49b09829640f2302376fdd8fbaa4263aa",
+            "EndpointID": "",
+            "Gateway": "",
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "MacAddress": "",
+            "DriverOpts": null
+        }
+    }
+}
+}
