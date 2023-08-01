@@ -19,20 +19,6 @@ services:
       timeout: 10s
       retries: 5
 
-  etl:
-    container_name: etl-container
-    build: ./etl
-    env_file: .env
-    volumes:
-      - logs:/app/logs
-    networks:
-      - backend
-    ports:
-      - 80:80
-    depends_on:
-      elasticsearch:
-        condition: "service_healthy"
-
   api:
     container_name: api-container
     build: ./api
@@ -78,4 +64,3 @@ networks:
     driver: bridge
   frontend:
     driver: bridge
-
