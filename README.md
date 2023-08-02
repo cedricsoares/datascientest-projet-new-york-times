@@ -7,7 +7,7 @@ Le projet a été réalisé dans le cadre du bootcamp Data Engineer proposé par
 L'équipe qui à réalisé le projet se compose de:
 * Anna Temerko: [Github](https://github.com/anna-tem) / [Linkedin](https://www.linkedin.com/in/anna-temerko-688467200/)
 
-* Mathieu: Mathieu Lefebvre: [Github](https://github.com/MathieuLefebvre) / [Linkedin](https://www.linkedin.com/in/mathieulefebvre/)
+* Mathieu Lefebvre: [Github](https://github.com/MathieuLefebvre) / [Linkedin](https://www.linkedin.com/in/mathieulefebvre/)
 
 * Edouard Philippe: [Github](https://github.com/ep2207) / [Linkedin](https://www.linkedin.com/in/edouard-philippe-84ab53180/)
 
